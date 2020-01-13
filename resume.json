@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "theme": "paper"
+  },
+  "basics": {
+    "name": "Hiromi Shikata",
+    "label": "Full Stack Developer",
+    "picture": "",
+    "email": "info+resume@hs-office.com",
+    "phone": "+81-80-2392-4773",
+    "website": "",
+    "summary": "I'm a full-stack engineer. I've worked mostly at startups over than 20 projects.",
+    "location": {
+      "city": "Minato-ku",
+      "countryCode": "JP",
+      "region": "Tokyo, Japan"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "HiromiShikata",
+        "url": "https://github.com/hiromishikata"
+      },
+      {
+        "network": "Twitter",
+        "username": "hiromishikata",
+        "url": "https://twitter.com/hiromishikata"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "hiromishikata",
+        "url": "https://www.linkedin.com/in/hiromishikata"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Company",
+      "position": "President",
+      "website": "http://company.com",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "summary": "Description...",
+      "highlights": ["Started the company"]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Collage",
+      "area": "Qualified　Bornsetter",
+      "studyType": "",
+      "startDate": "2004-04-01",
+      "endDate": "2007-03-31"
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Backend Development",
+      "level": "Expert",
+      "keywords": [
+        "RESTful API",
+        "Clean Architecture",
+        "DDD",
+        "Swagger",
+        "Serverless",
+        "AWS",
+        "Docker",
+        "docker-compose",
+        "MySQL",
+        "Postgres",
+        "DynamoDB",
+        "MongoDB",
+        "Redis",
+        "TypeScript",
+        "Go",
+        "Python",
+        "Rust"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Expert",
+      "keywords": [
+        "CI/CD",
+        "CircleCI",
+        "Testing Automation",
+        "Documentation Automation",
+        "SchemaSpy",
+        "CloudMapper",
+        "e2e Testing"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "level": "Senior",
+      "keywords": ["AWS ECS Fargate", "AWS Lambda", "Terraform", "Ansible"]
+    },
+    {
+      "name": "Frontend Development",
+      "level": "Intermediate",
+      "keywords": [
+        "React",
+        "Fargate",
+        "Storybook",
+        "BroserStack",
+        "Vue",
+        "Angular"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Japanese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Limited Working"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Home Automation",
+      "keywords": ["IoT", "Zapier", "IFTTT", "Universal Remote Control"]
+    },
+    {
+      "name": "Mirror Polish",
+      "keywords": ["Film", "Buffing Compounds", "Nail"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference..."
+    }
+  ]
+}
