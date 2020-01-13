@@ -71,7 +71,7 @@ jobs:
       - run: npx standard-version
       - run: npm run format
       - run: git add -A
-      - run: git commit --amend -m\"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
+      - run: git commit --amend -m"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
       - run: git push --follow-tags origin master
 
 workflows:
