@@ -57,7 +57,7 @@ jobs:
       #      - run: sudo apt install -y software-properties-common
       #      - run: sudo add-apt-repository ppa:malteworld/ppa -y && sudo apt update && sudo apt install pdftk
       - run: sudo apt update && sudo apt install pdftk
-      - run: tdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages
+      - run: pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages
       - run:
           name: Allow only 1 page
           command: exit $[$(tdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
