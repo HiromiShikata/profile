@@ -1,0 +1,49 @@
+version: 2.1
+
+executors:
+  default:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:13
+
+commands:
+  workspace:
+    steps:
+      - attach_workspace:
+          at: ~/
+
+jobs:
+  setup:
+    executor: default
+    steps:
+      - checkout
+      - run: npm i
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - repo
+
+  lint-commit:
+    executor: default
+    steps:
+      - workspace
+      - run: npx commitlint --from origin/master --to $CIRCLE_BRANCH || exit 1
+
+  lint-src:
+    executor: default
+    steps:
+      - workspace
+      - run: npm run format && exit $(git diff | wc -l)
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - setup
+      - lint-commit:
+          requires:
+            - setup
+
+      - lint-src:
+          requires:
+            - setup
