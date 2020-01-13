@@ -61,6 +61,15 @@ jobs:
           name: Allow only 1 page
           command: exit $[$(tdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
 
+  release:
+    executor: default
+    steps:
+      - workspace
+      - run: git config --global user.email "CircoeCI"
+      - run: git config --global user.name "CircleCI"
+      - run: npm run release
+      - run: git push --follow-tags origin master
+
 workflows:
   version: 2
   build:
@@ -81,3 +90,11 @@ workflows:
             branches:
               only:
                 - master
+      - release:
+          requires:
+            - generate-docs
+          filters:
+            branches:
+              only:
+                - master
+
