@@ -9,7 +9,6 @@
     "format:md": "prettier --parser markdown --write ./**/*.md",
     "format:js": "prettier --write ./**/*.js",
     "format": "npm run format:json && npm run format:yml && npm run format:md && npm run format:js",
-    "release": "standard-version && git commit --amend -m\"$(git log --pretty=format:'%s' | head -n 1) [skip ci]\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

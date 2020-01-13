@@ -54,8 +54,9 @@ jobs:
       - store_artifacts:
           path: ~/repo/resume
           destination: resume
-      - run: sudo apt install -y software-properties-common
-      - run: sudo add-apt-repository ppa:malteworld/ppa -y && sudo apt update && sudo apt install pdftk
+      #      - run: sudo apt install -y software-properties-common
+      #      - run: sudo add-apt-repository ppa:malteworld/ppa -y && sudo apt update && sudo apt install pdftk
+      - run: sudo apt update && sudo apt install pdftk
       - run: tdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages
       - run:
           name: Allow only 1 page
@@ -67,7 +68,10 @@ jobs:
       - workspace
       - run: git config --global user.email "CircoeCI"
       - run: git config --global user.name "CircleCI"
-      - run: npm run release
+      - run: npx standard-version
+      - run: npm run format
+      - run: git add -A
+      - run: git commit --amend -m\"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
       - run: git push --follow-tags origin master
 
 workflows:
@@ -84,17 +88,19 @@ workflows:
             - setup
       - generate-docs:
           requires:
-            - lint-commit
-            - lint-src
-          filters:
-            branches:
-              only:
-                - master
+            - setup
+      #            - lint-commit
+      #            - lint-src
+      #          filters:
+      #            branches:
+      #              only:
+      #                - master
       - release:
           requires:
-            - generate-docs
-          filters:
-            branches:
-              only:
-                - master
+            - setup
+#            - generate-docs
+#          filters:
+#            branches:
+#              only:
+#                - master
 
