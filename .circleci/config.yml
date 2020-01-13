@@ -74,6 +74,7 @@ jobs:
       - run: npm run format
       - run: git add -A
       - run: git commit --amend -m"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
+      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run: git push --follow-tags origin master
 
 workflows:
