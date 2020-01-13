@@ -79,13 +79,13 @@ workflows:
   build:
     jobs:
       - setup
-      - lint-commit:
-          requires:
-            - setup
-
-      - lint-src:
-          requires:
-            - setup
+      #      - lint-commit:
+      #          requires:
+      #            - setup
+      #
+      #      - lint-src:
+      #          requires:
+      #            - setup
       - generate-docs:
           requires:
             - setup
