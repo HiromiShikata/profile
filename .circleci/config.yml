@@ -1,0 +1,104 @@
+version: 2.1
+
+executors:
+  default:
+    working_directory: ~/repo
+    docker:
+      - image: circleci/node:13
+
+commands:
+  workspace:
+    steps:
+      - attach_workspace:
+          at: ~/
+
+jobs:
+  setup:
+    executor: default
+    steps:
+      - checkout
+      - run: npm i
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - repo
+
+  lint-commit:
+    executor: default
+    steps:
+      - workspace
+      - run: npx commitlint --from origin/master --to $CIRCLE_BRANCH || exit 1
+
+  lint-src:
+    executor: default
+    steps:
+      - workspace
+      - run: npm run format && exit $(git diff | wc -l)
+
+  generate-docs:
+    executor: default
+    steps:
+      - workspace
+      - run: mkdir -p resume
+      - run: ./node_modules/resume-cli/index.js export resume/${CIRCLE_PROJECT_USERNAME}.html --format html --theme paper
+      - run:
+          name: Install Headless Chrome dependencies
+          command: |
+            sudo apt-get install -yq \
+            gconf-service libasound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
+            libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
+            libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
+            libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
+            fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
+      - run: ./node_modules/resume-cli/index.js export resume/${CIRCLE_PROJECT_USERNAME}.pdf  --format pdf  --theme paper
+      - store_artifacts:
+          path: ~/repo/resume
+          destination: resume
+      - run: sudo apt update && sudo apt install pdftk
+      - run:
+          name: Allow only 1 page
+          command: exit $[$(pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
+
+  release:
+    executor: default
+    steps:
+      - workspace
+      - add_ssh_keys:
+          fingerprints:
+            - "b6:c1:e2:3f:03:29:8a:a1:5d:78:c8:ff:e3:77:f6:d0"
+      - run: git config --global user.email "CircoeCI"
+      - run: git config --global user.name "CircleCI"
+      - run: npx standard-version
+      - run: npm run format
+      - run: git add -A
+      - run: git commit --amend -m"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
+      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
+      - run: git push --follow-tags origin master
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - setup
+      - lint-commit:
+          requires:
+            - setup
+
+      - lint-src:
+          requires:
+            - setup
+      - generate-docs:
+          requires:
+            - lint-commit
+            - lint-src
+          filters:
+            branches:
+              only:
+                - master
+      - release:
+          requires:
+            - generate-docs
+          filters:
+            branches:
+              only:
+                - master
