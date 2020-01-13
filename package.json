@@ -24,7 +24,9 @@
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
     "@commitlint/config-conventional": "^8.3.4",
+    "jsonresume-theme-paper": "^0.3.5",
     "prettier": "^1.19.1",
+    "resume-cli": "^1.2.7",
     "standard-version": "^7.0.1"
   }
 }
