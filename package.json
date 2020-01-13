@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/HiromiShikata/profile/issues"
   },
-  "homepage": "https://github.com/HiromiShikata/profile#readme"
+  "homepage": "https://github.com/HiromiShikata/profile#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4"
+  }
 }
