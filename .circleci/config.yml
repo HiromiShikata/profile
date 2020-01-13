@@ -57,15 +57,17 @@ jobs:
       #      - run: sudo apt install -y software-properties-common
       #      - run: sudo add-apt-repository ppa:malteworld/ppa -y && sudo apt update && sudo apt install pdftk
       - run: sudo apt update && sudo apt install pdftk
-      - run: pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages
       - run:
           name: Allow only 1 page
-          command: exit $[$(tdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
+          command: exit $[$(pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
 
   release:
     executor: default
     steps:
       - workspace
+      - add_ssh_keys:
+          fingerprints:
+            - "b6:c1:e2:3f:03:29:8a:a1:5d:78:c8:ff:e3:77:f6:d0"
       - run: git config --global user.email "CircoeCI"
       - run: git config --global user.name "CircleCI"
       - run: npx standard-version
