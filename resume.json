@@ -6,15 +6,10 @@
     "name": "Hiromi Shikata",
     "label": "Full Stack Developer",
     "picture": "",
-    "email": "info+resume@hs-office.com",
+    "email": "simorih@gmail.com",
     "phone": "+81-80-2392-4773",
-    "website": "",
+    "website": "https://github.com/HiromiShikata",
     "summary": "I'm a full-stack engineer. I've worked mostly at startups over than 20 projects.",
-    "location": {
-      "city": "Minato-ku",
-      "countryCode": "JP",
-      "region": "Tokyo, Japan"
-    },
     "profiles": [
       {
         "network": "GitHub",
@@ -35,13 +30,28 @@
   },
   "work": [
     {
-      "company": "Company",
-      "position": "President",
-      "website": "http://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Description...",
-      "highlights": ["Started the company"]
+      "company": "Web service company",
+      "position": "Back-end development (3days/week)",
+      "startDate": "2019-08-26",
+      "endDate": "2020-02-29",
+      "summary": "Node, TypeScript, koa, Swagger, CleanArchitecture, DDD, TDD, Jest, Docker, docker-compose, ECS Fargate, RDS, MySQL, ElastiCashe, Redis, GitHub, CircleCI, Ubuntu, Alpine",
+      "highlights": [
+        "Designed system architecture, decided FW & tools, developed, wrote e2e & unit tests, made CI/CD env, controlled developers & tasks & meetings."
+      ]
+    },
+    {
+      "company": "AI startup company",
+      "position": "Infrastructure, Back-end development (3days/week)",
+      "startDate": "2018-11-01",
+      "endDate": "2019-07-31",
+      "summary": "Docker, Terraform, Ansible, docker-compose, MongoDB, Redis, Serverless, DynamoDB, CleanArchitecture, GitHub, CircleCI, Ubuntu, AMI"
+    },
+    {
+      "company": "IoT startup company",
+      "position": "Backend development (3days/week)",
+      "startDate": "2018-03-01",
+      "endDate": "2019-07-31",
+      "summary": "Python2&3, Flask, TypeScript, koa, Swagger, Serverless, Docker, DynamoDB, Lambda, Terraform, CircleCI, Ubuntu, CleanArchitecture, GitHub"
     }
   ],
   "volunteer": [],
@@ -64,6 +74,7 @@
         "RESTful API",
         "Clean Architecture",
         "DDD",
+        "TDD",
         "Swagger",
         "Serverless",
         "AWS",
@@ -77,7 +88,9 @@
         "TypeScript",
         "Go",
         "Python",
-        "Rust"
+        "Rust",
+        "Ubuntu",
+        "Alpine"
       ]
     },
     {
@@ -87,10 +100,12 @@
         "CI/CD",
         "CircleCI",
         "Testing Automation",
-        "Documentation Automation",
+        "Document Automation",
         "SchemaSpy",
         "CloudMapper",
-        "e2e Testing"
+        "e2e Testing",
+        "BrowserStack",
+        "github-flow"
       ]
     },
     {
@@ -101,14 +116,7 @@
     {
       "name": "Frontend Development",
       "level": "Intermediate",
-      "keywords": [
-        "React",
-        "Fargate",
-        "Storybook",
-        "BroserStack",
-        "Vue",
-        "Angular"
-      ]
+      "keywords": ["React", "Figma", "Storybook"]
     }
   ],
   "languages": [
@@ -124,17 +132,17 @@
   "interests": [
     {
       "name": "Home Automation",
-      "keywords": ["IoT", "Zapier", "IFTTT", "Universal Remote Control"]
+      "keywords": ["IoT", "Zapier", "IFTTT", "Universal Remote Control", "LEGO"]
     },
     {
-      "name": "Mirror Polish",
-      "keywords": ["Film", "Buffing Compounds", "Nail"]
+      "name": "Minimal style",
+      "keywords": ["Folding Keyboard", "Smartphone as Monitor"]
     }
   ],
   "references": [
     {
-      "name": "Jane Doe",
-      "reference": "Reference..."
+      "name": "",
+      "reference": ""
     }
   ]
 }
