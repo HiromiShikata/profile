@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "theme": "paper"
+  },
+  "basics": {
+    "name": "Hiromi Shikata",
+    "label": "Full Stack Developer",
+    "picture": "",
+    "email": "info+resume@hs-office.com",
+    "phone": "+81-80-2392-4773",
+    "website": "",
+    "summary": "I'm a full-stack engineer. I've worked mostly at startups over than 20 projects.",
+    "location": {
+      "city": "Minato-ku",
+      "countryCode": "JP",
+      "region": "Tokyo, Japan"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "HiromiShikata",
+        "url": "https://github.com/hiromishikata"
+      },
+      {
+        "network": "Twitter",
+        "username": "hiromishikata",
+        "url": "https://twitter.com/hiromishikata"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "hiromishikata",
+        "url": "https://www.linkedin.com/in/hiromishikata"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Web service company",
+      "position": "Back-end development (3days/week)",
+      "startDate": "2019-08-26",
+      "endDate": "2020-02-29",
+      "summary": "Node, TypeScript, koa, Swagger, CleanArchitecture, DDD, TDD, Jest, Docker, ECS(Fargate), RDS, MySQL, ElastiCashe, Redis, GitHub, CircleCI, Linux, Ubuntu, Alpine, Slack, Trello, Scrum, 1on1, KPT, ",
+      "highlights": [
+        "Designed system architecture, decided FW, tools.",
+        "Developed APIs, wrote e2e and unit tests.",
+        "Controlled developers, tasks, meetings.",
+        "Built CI/CD environment"
+      ]
+    },
+    {
+      "company": "AI startup company",
+      "position": "Infrastructure, Back-end development (3days/week)",
+      "startDate": "2018-11-01",
+      "endDate": "2019-07-31",
+      "summary": "Docker, Terraform, Ansible, MongoDB, Redis pub/sub, Artillery, TypeScript, Serverless, DynamoDB, GitHub, CircleCI, Linux, Ubuntu, AMI, Slack",
+      "highlights": [
+        "Migrated to Atlas from MongoDB on EC2.",
+        "Built pub/sub system with ElastiCache.",
+        "Replaced the application built on ECS with Docker on AWS ECS(Fagate).",
+        "Built all in Terraform, and prohibited manual work.",
+        "Done Load testing & Stress testing with Artilley.",
+        "Automatic checking of container and infrastructure codes is perfomed in CircleCI.",
+        "Developed a new Slack bot by TypeScript on Lambda for our shuffle lunch."
+      ]
+    },
+    {
+      "company": "HR startup company",
+      "position": " (1days/week)",
+      "startDate": "2018-11-01",
+      "endDate": "2019-03-31",
+      "summary": "nginx, Ansible, Jupyter Notebook, Terraform, Docker, AWS SageMaker, Python3, Linux, Ubuntu, AMI, GitHub, CircleCI, Slack,",
+      "highlights": [
+        "Built A/B test environment for Machine learning models on AWS SageMaker by Terraform & AWS cli.",
+        "Provisioned Docker container by ansible.",
+        "Checking terraform, shells code at CircleCI."
+      ]
+    },
+
+    {
+      "company": "IoT startup company",
+      "position": "Backend development (3days/week)",
+      "startDate": "2018-03-01",
+      "endDate": "2019-07-31",
+      "summary": "Python2, Python3, Flask, Flasgger, TypeScript, koa, Swagger, Serverless, Docker, DynamoDB, API Gateway, Lambda, Terraform, Ansible, CircleCI, Linux, Ubuntu, CleanArchitecture, TDD, DDD, GitHub, Slack, JIRA, Confluence",
+      "highlights": [
+        "Redeveloped the server used AWS Lambda & API Gateway to use Serverless FW.",
+        "The design was simple but redesigned to Clean Architecture because of its high reliance on external service.",
+        "Introduced type hint of Python, CI/CD, Swagger, Document on CircleCI.",
+        "Provisioned development machine by Ansible."
+      ]
+    },
+    {
+      "company": "Ads tech startup company",
+      "position": "Backend development (4days/week)",
+      "startDate": "2018-03-01",
+      "endDate": "2018-10-31",
+      "summary": "Go, Echo, Goswagger, Swagger, MySQL, Aerospike, Redis, Linux, Ubuntu, SchemaSpy, Docker, Ansible, docker-compose, GitHub, CircleCI, Slack, ",
+      "highlights": [
+        "Developed back-end server, batch.",
+        "Redesigned API of admin console with a Clean Architecture.",
+        "Introduced Swagger, Docker, Ansible.",
+        "Made ERD from real schema, built automatically in CircleCI job",
+        "Organized a study session on design, how to use tools, and development flow."
+      ]
+    },
+    {
+      "company": "Fintech company",
+      "position": "Backend Developer (1days/week)",
+      "startDate": "2018-02-01",
+      "endDate": "2018-02-28",
+      "summary": "Kotlin, spark, Linux, Ubuntu, SchemaSpy, Swagger, API Blueprint, Gradle, Docker, AWS ECS Fargate, CircleCI, MySQL, GitHub, Backlog, Slack, ",
+      "highlights": []
+    },
+    {
+      "company": "Ads creative company",
+      "position": "Backend Developer (5days/week, includes remote work: 3days)",
+      "startDate": "2017-03-01",
+      "endDate": "2017-09-30",
+      "summary": "TypeScript, Elixer, Node, Express, phoenix, postgress, Linux, Ubuntu, CentOS, GitHub, ZenHub, CircleCI, Swagger, Ansible, mix, Codebeat, Codacy, Docker, AWS, Slack",
+      "highlights": []
+    },
+    {
+      "company": "Ads creative company",
+      "position": "Full Stack Developer (3days/week)",
+      "startDate": "2016-11-01",
+      "endDate": "2017-02-28",
+      "summary": "JavaScript, Node, loopback, Angular, MongoDB, CSS, Linux, Ubuntu, CentOS, GitHub, CircleCI, Swagger, GitHub projects, Slack, ",
+      "highlights": []
+    },
+    {
+      "company": "IoT startup company",
+      "position": "Back End Developer (5days/week)",
+      "startDate": "2016-08-01",
+      "endDate": "2017-02-28",
+      "summary": "Scala, sbt, play2, MySQL, Linux, Ubuntu, Ansible, GitHub, CircleCI, Asana, Swagger, Slack, ",
+      "highlights": []
+    },
+    {
+      "company": "IoT startup company",
+      "position": "Android Developer (2days/week, includes remote work a day)",
+      "startDate": "2016-06-01",
+      "endDate": "2017-09-30",
+      "summary": "Scala, sbt, Android, Linux, Ubuntu, Bluetooth, BLE, Beacon, CircleCI, GitHub, DaployGate, GitHub issues, Slack, ",
+      "highlights": []
+    },
+    {
+      "company": "IoT startup",
+      "position": "Android Developer (3days/week, full remote)",
+      "startDate": "2016-04-01",
+      "endDate": "2016-05-31",
+      "summary": "Java, Gradle, Fabric, Android, Linux, Ubuntu, CircleCI, GitHub, Pivotal Tarcker, Bluetooth, Beacon, BLE, Slack, ",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Collage",
+      "area": "Qualified　Bornsetter",
+      "studyType": "",
+      "startDate": "2004-04-01",
+      "endDate": "2007-03-31"
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Backend Development",
+      "level": "Expert",
+      "keywords": [
+        "RESTful API",
+        "Clean Architecture",
+        "DDD",
+        "Swagger",
+        "Serverless",
+        "AWS",
+        "Docker",
+        "docker-compose",
+        "MySQL",
+        "Postgres",
+        "DynamoDB",
+        "MongoDB",
+        "Redis",
+        "TypeScript",
+        "Go",
+        "Python",
+        "Rust"
+      ]
+    },
+    {
+      "name": "DevOps",
+      "level": "Expert",
+      "keywords": [
+        "CI/CD",
+        "CircleCI",
+        "Testing Automation",
+        "Documentation Automation",
+        "SchemaSpy",
+        "CloudMapper",
+        "e2e Testing"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "level": "Senior",
+      "keywords": ["AWS ECS Fargate", "AWS Lambda", "Terraform", "Ansible"]
+    },
+    {
+      "name": "Frontend Development",
+      "level": "Intermediate",
+      "keywords": [
+        "React",
+        "Fargate",
+        "Storybook",
+        "BroserStack",
+        "Vue",
+        "Angular"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Japanese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Limited Working"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Home Automation",
+      "keywords": ["IoT", "Zapier", "IFTTT", "Universal Remote Control"]
+    },
+    {
+      "name": "Mirror Polish",
+      "keywords": ["Film", "Buffing Compounds", "Nail"]
+    }
+  ],
+  "references": [
+    {
+      "name": "",
+      "reference": ""
+    }
+  ]
+}
