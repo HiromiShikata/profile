@@ -150,6 +150,39 @@
       "endDate": "2016-05-31",
       "summary": "Java, Gradle, Fabric, Android, Linux, Ubuntu, CircleCI, GitHub, Pivotal Tarcker, Bluetooth, Beacon, BLE, Slack, ",
       "highlights": []
+    },
+    {
+      "company": "IoT startup",
+      "position": "Back End & Electronic Prototype Developer (4days/week)",
+      "startDate": "2016-04-01",
+      "endDate": "2016-07-31",
+      "summary": "Javascript, Arduino, 3D CAD, OnShape, Node, Angular, Twitter Bootstrap, MySQL, Linux, Ubuntu, GitHub, Slack, ",
+      "highlights": []
+    },
+    {
+      "company": "IoT startup",
+      "position": "Back End Developer (3days/week, full remote)",
+      "startDate": "2016-03-01",
+      "endDate": "2016-03-31",
+      "summary": "JavaScript, HTML, Node, npm, bower, Grunt, MySQL, Linux, Ubuntu, Sequelize, CircleCI, GitHub, Swagger, Slack, ",
+      "highlights": []
+    },
+    {
+      "company": "IoT startup",
+      "position": "Back End Developer (3days/week, full remote)",
+      "startDate": "2016-01-16",
+      "endDate": "2016-02-28",
+      "summary": "JavaScript, HTML, Node, experss, Swagger, npm, bower, Grunt, pm2, SendGrid, KiiCloud, GCP, sinon, jasmine, mocha, CiecleCI, GitHub, GitHub issues, Twitter Bootstrap, Linux, Ubuntu, Slack, ",
+      "highlights": []
+    },
+
+    {
+      "company": "IoT startup",
+      "position": "Back End Developer & Electronic Prototype Developer (1days/week)",
+      "startDate": "2015-12-01",
+      "endDate": "2016-03-31",
+      "summary": "JavaScript, Node, Angular, Twitter Bootstrap, SQLite, npm, bower, grunt, sequelize, Swagger, Ansible, GitHub, Slack, ",
+      "highlights": []
     }
   ],
   "volunteer": [],
