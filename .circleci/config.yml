@@ -75,10 +75,7 @@ jobs:
       - run: git config --global user.email "CircoeCI"
       - run: git config --global user.name "CircleCI"
       - run: npx standard-version
-      - run: sed -i s@"\- \[HTML\]([^)]*HiromiShikata.full.html)"@"- [HTML](https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.html)"@g README.md
-      - run: sed -i s@"\- \[HTML Full\]([^)]*HiromiShikata.html)"@"- [HTML Full](https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.html)"@g README.md
-      - run: sed -i s@"\- \[PDF\]([^)]*HiromiShikata.full.pdf)"@"- [PDF](https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.pdf)"@g README.md
-      - run: sed -i s@"\- \[PDF Full\]([^)]*HiromiShikata.pdf)"@"- [PDF Full](https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.pdf)"@g README.md
+      - run: sed -i s@"https://[0-9]*-233568510-gh.circle-artifacts.com"@"https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com"@g README.md
       - run: npm run format
       - run: git add -A
       - run: git commit --amend -m"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
