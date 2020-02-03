@@ -75,7 +75,7 @@ jobs:
       - run: git config --global user.email "CircoeCI"
       - run: git config --global user.name "CircleCI"
       - run: npx standard-version
-      - run: sed -i s/"\- \[Resume\]([^)]*)"/"- [Resume](https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.html)"/ README.md
+      - run: sed -i s@"\- \[Resume\]([^)]*)"@"- [Resume](https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.html)"@g README.md
       - run: npm run format
       - run: git add -A
       - run: git commit --amend -m"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
