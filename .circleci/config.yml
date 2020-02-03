@@ -58,6 +58,12 @@ jobs:
       - run:
           name: Allow only 1 page
           command: exit $[$(pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
+      - run: rm resume.json && mv resume.full.json resume.json
+      - run: ./node_modules/resume-cli/index.js export resume/${CIRCLE_PROJECT_USERNAME}.full.html --format html --theme paper
+      - run: ./node_modules/resume-cli/index.js export resume/${CIRCLE_PROJECT_USERNAME}.full.pdf  --format pdf  --theme paper
+      - store_artifacts:
+          path: ~/repo/resume
+          destination: resume
 
   release:
     executor: default
@@ -69,6 +75,7 @@ jobs:
       - run: git config --global user.email "CircoeCI"
       - run: git config --global user.name "CircleCI"
       - run: npx standard-version
+      - run: echo "https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.html"
       - run: npm run format
       - run: git add -A
       - run: git commit --amend -m"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
