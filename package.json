@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format:json": "prettier --parser json --write ./**/*.json ./*.json",
-    "format:yml": "prettier --parser yaml --write ./**/*.yml ./*.yml",
+    "format:yml": "prettier --parser yaml --write ./**/*.yml # ./*.yml",
     "format:md": "prettier --parser markdown --write ./**/*.md",
     "format:js": "prettier --write ./**/*.js",
     "format": "npm run format:json && npm run format:yml && npm run format:md && npm run format:js",
