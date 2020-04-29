@@ -30,7 +30,7 @@
     "jsonresume-theme-paper": "x.x.x",
     "lodash": "^4.17.15",
     "mustache": "^4.0.1",
-    "prettier": "^2.0.4",
+    "prettier": "^2.0.5",
     "resume-cli": "x.x.x",
     "standard-version": "^7.1.0",
     "underscore.string": "^3.3.5"
@@ -39,7 +39,7 @@
     "ansi-styles": "^4.2.1",
     "formidable": "^1.2.2",
     "glob": "^7.1.6",
-    "marked": "^0.8.2",
+    "marked": "^1.0.0",
     "p-limit": "^2.3.0"
   }
 }
