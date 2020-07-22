@@ -5,7 +5,7 @@
 
 ## Resume
 
-- [HTML](https://349-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.html)
-- [HTML Full](https://349-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.html)
-- [PDF](https://349-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.pdf)
-- [PDF Full](https://349-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.pdf)
+- [HTML](https://358-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.html)
+- [HTML Full](https://358-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.html)
+- [PDF](https://358-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.pdf)
+- [PDF Full](https://358-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.pdf)
