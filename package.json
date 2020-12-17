@@ -36,7 +36,7 @@
     "underscore.string": "^3.3.5"
   },
   "dependencies": {
-    "ansi-styles": "^4.2.1",
+    "ansi-styles": "^5.0.0",
     "formidable": "^1.2.2",
     "glob": "^7.1.6",
     "marked": "^1.0.0",
