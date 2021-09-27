@@ -23,8 +23,10 @@
 - 既に運用されているモバイルアプリに CI/CD 環境がなかったので構築をお手伝いする案件でした。
 - 自動のデプロイから整備し、インテグレーションテストを整備しました。
 - 既に運用されていて品質担保が急務だったこと、テスタブルなコードに変更の必要があったため単体テストをあとまわしました。
-- 働く時間も場所もバラバラでタスクの話を slack で行っていたので情報が散らばり、作業の優先順位もつかず無駄なコミュニケーションで前に進めなくなっていましたのでタスク管理ツールで情報を整理する環境を整備し浸透・規律維持を行いました。
-- 会社が急拡大しパートタイムメンバのみでの実装がビジネス要求に追いつかずトラブルが噴出していたことと新しい技術を取り入れやすくするため海外のエンジニアの採用しチームビルドを行いました。
+- 働く時間も場所もバラバラでタスクの話を slack で行っていたので情報が散らばり、作業の優先順位もつかず無駄なコミュニケーションで前に進めなくなっていましたのでタスク管理ツールで情報を整理する環境を整備し浸透・規律が維持できる体制を整えました。
+- 当時 TypeScript 系で一番型安全な ORM が Prisma に見えたので Prisma を導入しました。
+- - モノレポのメリットを得るためモノレボ構成に移行しました。CI にかかるコストがクリティカルになってきたため差分のある箇所のみ job を実行するよう変更しました。
+- 会社が急拡大しパートタイムメンバのみでの実装がビジネス要求に追いつかずトラブルが噴出していたことと新しい技術を取り入れやすくするため、海外のエンジニアを採用し海外メンバーを中心としたチームビルドを行いました。
 - 国籍や稼働している物理的な場所が多岐にわたるため、リアルタイムのミーティングの時間や timezone などのルールの整備を行い、1on1 やスクラムイベントの整備など開発をスムーズに進める環境の整備を行いました。
 - 開発以外の作業も人手不足で大量にスタックしていたためオンラインアシスタントサービスを導入し社内の作業負荷を減らす体制を作るとともに開発業務にも関わっていただきマニュアルテストやオンボード、各種ツールや手続き、コミュニケーションのハブになってもらう体制を構築しました。
 - 人数が増え全員の目線合わせやデリバリーにコミットする意識が薄れ始めていたので体制を変更しスクラムの経験豊富な PM を採用して少人数のチームを作っていく体制に変更しました。
@@ -53,17 +55,27 @@ Ubuntu
 
 #### その他ミドルウェア、サーバー等
 
-- firebase
-- fireauth
-- firebase functions
-- OpenAPI
-- Docker
-- Docker Compose
-- CloudSQL
-- Google App Engine
-- GitHub
-- CircleCI
-- Slack
+Clean Architecture,
+Micro Service Architecture,
+Monolithic Repository,
+Feature Flags,
+firebase,
+fireauth,
+firebase functions,
+firebase config,
+Prisma 2,
+OpenAPI,
+Docker,
+Docker Compose,
+CloudSQL,
+Google App Engine,
+CircleCI,
+GitHub,
+GitHub Issues,
+GitHub Projects,
+github-flow,
+Zapier,
+Slack,
 
 #### 役割
 
@@ -75,7 +87,7 @@ Ubuntu
 
 #### プロジェクト規模
 
-エンジニア初期 3 名、後半 20 名程度
+エンジニア初期 3 名、最大 35 名程度
 
 ### 大手家電メーカーデータレイク基盤構築
 
@@ -107,18 +119,18 @@ RedShift
 
 #### その他ミドルウェア、サーバー等
 
-AWS Redshift
-AWS CloudFormation
-AWS Batch
-AWS CodePipeline
-AWS CodeBuild
-AWS CodeCommit
-ShellSpec
-Bazel
-Docker
-BitBucket
-JIRA
-Slack
+AWS Redshift,
+AWS CloudFormation,
+AWS Batch,
+AWS CodePipeline,
+AWS CodeBuild,
+AWS CodeCommit,
+ShellSpec,
+Bazel,
+Docker,
+BitBucket,
+JIRA,
+Slack,
 
 #### 役割
 
@@ -153,9 +165,9 @@ TypeScript
 
 #### フレームワーク
 
-Node.js
-koa
-TypeORM
+Node.js,
+koa,
+TypeORM,
 
 #### DB
 
@@ -164,16 +176,16 @@ Redis
 
 #### その他ミドルウェア、サーバー等
 
-GitHub
-CircleCI
-Slack
-Docker
-docker-compose
-OpenAPI
-AWS ECS(Fargate)
-AWS ElastiCashe
-AWS RDS
-GitHub projects
+GitHub,
+CircleCI,
+Slack,
+Docker,
+docker-compose,
+OpenAPI,
+AWS ECS(Fargate),
+AWS ElastiCashe,
+AWS RDS,
+GitHub projects,
 
 #### 役割
 
@@ -215,8 +227,8 @@ n/a
 
 #### DB
 
-MongoDB
-Redis
+MongoDB,
+Redis,
 
 #### その他ミドルウェア、サーバー等
 
@@ -391,7 +403,8 @@ DockrCompose
 
 開発担当 25 名
 
-###新規サービスのユーザー向け Web 画面開発
+### 新規サービスのユーザー向け Web 画面開発
+
 2018/02-2018/02 週 4
 
 - Kotlin で API サーバーを構築する案件でした。
