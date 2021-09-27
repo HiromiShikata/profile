@@ -40,6 +40,7 @@ jobs:
     steps:
       - workspace
       - run: mkdir -p resume
+      - run: npm i
       - run: ./node_modules/resume-cli/index.js export resume/${CIRCLE_PROJECT_USERNAME}.html --format html --theme paper
       - run:
           name: Install Headless Chrome dependencies
