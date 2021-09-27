@@ -27,7 +27,7 @@ jobs:
     executor: default
     steps:
       - workspace
-      - run: npx commitlint --from origin/master --to $CIRCLE_BRANCH || exit 1
+      - run: npx commitlint --from origin/main --to $CIRCLE_BRANCH || exit 1
 
   lint-src:
     executor: default
@@ -80,7 +80,7 @@ jobs:
       - run: git add -A
       - run: git commit --amend -m"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
       - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
-      - run: git push --follow-tags origin master
+      - run: git push --follow-tags origin main
 
 workflows:
   version: 2
@@ -101,11 +101,11 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - main
       - release:
           requires:
             - generate-docs
           filters:
             branches:
               only:
-                - master
+                - main
