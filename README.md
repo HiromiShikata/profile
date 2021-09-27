@@ -10,3 +10,4 @@
 - [PDF](https://424-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.pdf)
 - [PDF Full](https://424-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.pdf)
 - [HTML in Japanese](https://hiromishikata.github.io/profile/RESUME.ja)
+- [HTML Masked-Name in Japanese](https://hiromishikata.github.io/profile/RESUME.masked-name.ja)
