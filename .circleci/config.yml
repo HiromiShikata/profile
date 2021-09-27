@@ -72,7 +72,7 @@ jobs:
       - workspace
       - add_ssh_keys:
           fingerprints:
-            - "b6:c1:e2:3f:03:29:8a:a1:5d:78:c8:ff:e3:77:f6:d0"
+            - "97:25:99:35:bf:23:24:9a:49:11:7c:78:dd:a0:1f:ea"
       - run: git config --global user.email "CircoeCI"
       - run: git config --global user.name "CircleCI"
       - run: npx standard-version
