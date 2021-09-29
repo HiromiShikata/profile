@@ -78,9 +78,9 @@ jobs:
       - run: git config --global user.name "CircleCI"
       - run: npx standard-version
       - run: sed -i s@"https://[0-9]*-233568510-gh.circle-artifacts.com"@"https://${CIRCLE_PREVIOUS_BUILD_NUM}-233568510-gh.circle-artifacts.com"@g README.md
-      - run: npm run format
       - run: rm RESUME.masked-name.ja.md -f
       - run: sed s@"志方 裕美"@"\*\*\*\*\*\*\*\*"@g RESUME.ja.md >> RESUME.masked-name.ja.md
+      - run: npm run format
       - run: git add -A
       - run: git commit --amend -m"$(git log --pretty=format:'%s' | head -n 1) [skip ci]"
       - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
