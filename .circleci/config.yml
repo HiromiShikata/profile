@@ -41,8 +41,7 @@ jobs:
       - workspace
       - run: mkdir -p resume
       - run: npm i
-      - run: npx yaml2json resume.short.yaml > resume.json
-      - run: ./node_modules/resume-cli/build/main.js export resume/${CIRCLE_PROJECT_USERNAME}.html --format html --theme paper
+      - run: npm run generate-from-json --output_dir=resume --file=resume.short
       - run:
           name: Install Headless Chrome dependencies
           command: |
@@ -52,7 +51,6 @@ jobs:
             libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
             libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
             fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
-      - run: ./node_modules/resume-cli/build/main.js export resume/${CIRCLE_PROJECT_USERNAME}.pdf  --format pdf  --theme paper
       - store_artifacts:
           path: ~/repo/resume
           destination: resume
@@ -60,9 +58,8 @@ jobs:
       - run:
           name: Allow only 1 page
           command: exit $[$(pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
-      - run: npx yaml2json resume.full.yaml > resume.json
-      - run: ./node_modules/resume-cli/build/main.js export resume/${CIRCLE_PROJECT_USERNAME}.full.html --format html --theme paper
-      - run: ./node_modules/resume-cli/build/main.js export resume/${CIRCLE_PROJECT_USERNAME}.full.pdf  --format pdf  --theme paper
+      - run: npm run generate-from-json --output_dir=resume --file=resume.full
+      - run: npm run generate-from-json --output_dir=resume --file=resume.ja.full
       - store_artifacts:
           path: ~/repo/resume
           destination: resume

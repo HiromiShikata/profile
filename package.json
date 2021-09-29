@@ -9,9 +9,11 @@
     "format:md": "prettier --parser markdown --write ./**/*.md",
     "format:js": "prettier --write ./**/*.js",
     "format": "npm run format:json && npm run format:yml && npm run format:md && npm run format:js",
-    "generate:pdf": "mkdir -p dist && ./node_modules/resume-cli/build/main.js export dist/output.pdf --format pdf --theme paper",
-    "generate:html": "mkdir -p dist && ./node_modules/resume-cli/build/main.js export dist/output.html --format html --theme paper",
-    "generate": "npm run generate:pdf && npm run generate:html",
+    "generate:pdf": "npm run generate:file --output_dir=${npm_config_output_dir} --file=${npm_config_file} --format=pdf",
+    "generate:html": "npm run generate:file --output_dir=${npm_config_output_dir} --file=${npm_config_file} --format=html",
+    "generate:file": "mkdir -p ${npm_config_output_dir} && ./node_modules/resume-cli/build/main.js export -r ${npm_config_file}.json ${npm_config_output_dir}/HiromiShikata.${npm_config_file}.${npm_config_format} --format ${npm_config_format} --theme paper",
+    "generate": "npm run generate:pdf --output_dir=${npm_config_output_dir} --file=${npm_config_file} && npm run generate:html --output_dir=${npm_config_output_dir} file=${npm_config_file}",
+    "generate-from-json": "yaml2json ${npm_config_file}.yaml > ${npm_config_file}.json && npm run generate:html --output_dir=${npm_config_output_dir} file=${npm_config_file}",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
