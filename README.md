@@ -5,9 +5,25 @@
 
 ## Resume
 
-- [HTML](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.html)
-- [HTML Full](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.html)
-- [PDF](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.pdf)
-- [PDF Full](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.full.pdf)
-- [HTML in Japanese](https://hiromishikata.github.io/profile/RESUME.ja)
-- [HTML Masked-Name in Japanese](https://hiromishikata.github.io/profile/RESUME.masked-name.ja)
+### English
+
+#### Full
+
+- [HTML](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.resume.full.html)
+- [PDF](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.resume.full.pdf)
+
+#### Short
+
+- [HTML](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.resume.short.html)
+- [PDF](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.resume.short.pdf)
+
+### Japanese
+
+- [HTML](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.resume.ja.html)
+- [PDF](https://1024-233568510-gh.circle-artifacts.com/0/resume/HiromiShikata.resume.ja.pdf)
+- [MD](https://hiromishikata.github.io/profile/RESUME.ja)
+- [MD Masked-Name](https://hiromishikata.github.io/profile/RESUME.masked-name.ja)
+
+## Meeting
+
+- [Meeting](https://hiromi.appointlet.com/s/30-umino/hiromi)
