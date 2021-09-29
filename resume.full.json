@@ -8,7 +8,7 @@
     "picture": "",
     "email": "shikata@uminoseisaku.com",
     "phone": "+81-50-5354-8192",
-    "website": "",
+    "website": "https://hiromi.appointlet.com/s/30-umino/hiromi",
     "summary": "I'm a full-stack engineer. I've worked mostly at startups over than 20 projects.",
     "location": {
       "city": "Minato-ku",
@@ -22,18 +22,63 @@
         "url": "https://github.com/hiromishikata"
       },
       {
-        "network": "Twitter",
+        "network": "Meeting (30min)",
         "username": "hiromishikata",
-        "url": "https://twitter.com/hiromishikata"
+        "url": "https://hiromi.appointlet.com/s/30-umino/hiromi"
       },
       {
         "network": "LinkedIn",
         "username": "hiromishikata",
         "url": "https://www.linkedin.com/in/hiromishikata"
+      },
+      {
+        "network": "Twitter",
+        "username": "hiromishikata",
+        "url": "https://twitter.com/hiromishikata"
       }
     ]
   },
   "work": [
+    {
+      "company": "Urban development startup company",
+      "position": "Back-end development & Management (2days/week)",
+      "startDate": "2020-03-01",
+      "endDate": "current",
+      "summary": "Clean Architecture, Micro Service Architecture, Monolithic Repository, Ubuntu, TypeScript, Dart, Open API Generator, Express, Flutter, firestore, Postgres, Feature Flags, firebase, fireauth, firebase functions, firebase config, Prisma 2, OpenAPI, Docker, Docker Compose, GCP CloudSQL, GCP App Engine, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Zapier, Slack, ",
+
+      "highlights": [
+        "They didn't have a CI / CD environment for a mobile app that was already in operation, so it was a project to help build.",
+        "I have set up from automatic deployment and have set up integration tests.",
+        "I put off unit testing because the application was already in production and quality assurance was an urgent need, and I needed to change the testable code.",
+        "Since I was talking about tasks in slack because the working hours and places were different, information was scattered, and I could not move forward due to useless communication without prioritizing work, so I created an environment to organize information with task management tools. I have put in place a system that can maintain permeation and discipline. ",
+        "At that time, the most type-safe ORM in the TypeScript family seemed to be Prisma, so I introduced Prisma.",
+        "I have moved to a monorepo configuration to get the benefits of monorepo. Since the cost of CI has become critical, I have changed to execute jobs only where there are differences.",
+        "In order to make it easier for the company to expand rapidly and the implementation with only part-time members could not keep up with the business demands and troubles erupted and to incorporate new technology, I hired overseas engineers and built a team centered on overseas members. ",
+        "Since there are a wide variety of nationalities and physical locations where I operate, I have prepared rules such as real-time meeting times and timezones, and created an environment that facilitates development such as 1on1 and scrum events.",
+        "Since work other than development was also stuck in large numbers due to labor shortage, I introduced an online assistant service to create a system to reduce the workload in the company and also get involved in development work, manual testing, onboarding, various tools and procedures, communication I have built a system to become a hub of. ",
+        "As the number of people increased and the awareness of everyone's eyes and commitment to delivery began to diminish, I changed the system and changed to a system that employs Scrum's experienced PM to form a small team.",
+        "Business side member couldn't decide the specifications and only the deadline was approaching, there was no one who could sort out the business issues, and the person who entered in the PM roll worked better. Since the size of the whole movement became invisible, I increased the number of PM roles and eliminated it from the ambiguity of the business layer, and I are building a system to go around without me. ",
+        "Since I couldn't grasp the situation of each engineer, I changed 1on1 to work with PM and both of me, and now I talk to PM about the project and the engineer's own task, longer term, interest. I tried to keep the value of working at this company high by grasping the direction and where I want to improve my skills. ",
+        "My success in hiring people who are better than the average Japanese engineer in about a month, the cost is about one-third that of hiring Japanese people, and my cliant appreciate that it is designed according to the business philosophy. "
+      ]
+    },
+
+    {
+      "company": "Hardware maker",
+      "position": "Back-end development (4days/week)",
+      "startDate": "2020-02-08",
+      "endDate": "2020-12-23",
+      "summary": "Ubuntu, AWS CloudFormation, AWS Redshift, AWS CloudFormation, AWS Batch, AWS CodePipeline, AWS CodeBuild, AWS CodeCommit, ShellSpec, Bazel, Docker, BitBucket, JIRA, Slack,",
+      "highlights": [
+        "It was an improvement project for a data lake that is already in operation.",
+        "Deployment and testing were done manually, so I automated it.",
+        "I did the automation with AWS CodeBuild, CodePipeline, CodeCommit because I didn't want to reach the AWS environment and Atlassian.",
+        "Deploying and testing on a data lake was an interesting project with many considerations that differed from normal application development.",
+        "Since the amount of data used in the integration test is large, I placed the data for each version in s3 and built it to specify the version of the data in the test code.",
+        "Since it was a team that did a lot of mob programming and had a relatively constant conversation, I proposed and experimented with the development of a trunk base.",
+        "Since there was a lot of Shell as part of the process, I adopted ShellSpec as the test framework and I created a sample to build and test with Bazel."
+      ]
+    },
     {
       "company": "Web service company",
       "position": "Back-end development (3days/week)",
