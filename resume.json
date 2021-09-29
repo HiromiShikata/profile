@@ -1,7 +1,5 @@
 {
-  "meta": {
-    "theme": "paper"
-  },
+  "meta": { "theme": "paper" },
   "basics": {
     "name": "Hiromi Shikata",
     "label": "Full Stack Developer",
@@ -120,14 +118,8 @@
     }
   ],
   "languages": [
-    {
-      "language": "Japanese",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "English",
-      "fluency": "Limited Working"
-    }
+    { "language": "Japanese", "fluency": "Native speaker" },
+    { "language": "English", "fluency": "Limited Working" }
   ],
   "interests": [
     {
@@ -139,10 +131,5 @@
       "keywords": ["Folding Keyboard", "Smartphone as Monitor"]
     }
   ],
-  "references": [
-    {
-      "name": "",
-      "reference": ""
-    }
-  ]
+  "references": [{ "name": "", "reference": "" }]
 }

@@ -41,6 +41,7 @@ jobs:
       - workspace
       - run: mkdir -p resume
       - run: npm i
+      - run: npx yaml2json resume.yaml > resume.json
       - run: ./node_modules/resume-cli/build/main.js export resume/${CIRCLE_PROJECT_USERNAME}.html --format html --theme paper
       - run:
           name: Install Headless Chrome dependencies
