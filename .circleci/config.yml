@@ -55,14 +55,14 @@ jobs:
           path: ~/repo/resume
           destination: resume
       - run: sudo apt update && sudo apt install pdftk
-      - run:
-          name: Allow only 1 page
-          command: exit $[$(pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
       - run: npm run generate-from-json --output_dir=resume --file=resume.full
       - run: npm run generate-from-json --output_dir=resume --file=resume.ja.full
       - store_artifacts:
           path: ~/repo/resume
           destination: resume
+      - run:
+          name: Allow only 1 page
+          command: exit $[$(pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
 
   release:
     executor: default
