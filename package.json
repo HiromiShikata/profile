@@ -28,7 +28,7 @@
   "homepage": "https://github.com/HiromiShikata/profile#readme",
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
     "jsonresume-theme-paper": "x.x.x",
     "lodash": "^4.17.15",
     "mustache": "^4.0.1",
