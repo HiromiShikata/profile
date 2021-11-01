@@ -41,7 +41,6 @@ jobs:
       - workspace
       - run: mkdir -p resume
       - run: npm i
-      - run: npm run generate-from-json --output_dir=resume --file=resume.short
       - run:
           name: Install Headless Chrome dependencies
           command: |
@@ -51,10 +50,8 @@ jobs:
             libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
             libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
             fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
-      - store_artifacts:
-          path: ~/repo/resume
-          destination: resume
       - run: sudo apt update && sudo apt install pdftk
+      - run: npm run generate-from-json --output_dir=resume --file=resume.short
       - run: npm run generate-from-json --output_dir=resume --file=resume.full
       - run: npm run generate-from-json --output_dir=resume --file=resume.ja.full
       - store_artifacts:
@@ -62,7 +59,7 @@ jobs:
           destination: resume
       - run:
           name: Allow only 1 page
-          command: exit $[$(pdftk resume/HiromiShikata.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
+          command: exit $[$(pdftk resume/HiromiShikata.resume.short.pdf dump_data | grep NumberOfPages | awk '{print $2}') -1 ]
 
   release:
     executor: default
