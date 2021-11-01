@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "ansi-styles": "^6.1.0",
-    "formidable": "^1.2.2",
+    "formidable": "^2.0.1",
     "glob": "^7.1.6",
     "marked": "^3.0.4",
     "p-limit": "^4.0.0"
