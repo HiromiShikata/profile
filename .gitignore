@@ -203,3 +203,5 @@ typings/
 
 .idea
 dist
+resume
+resume.short.json
