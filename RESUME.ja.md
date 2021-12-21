@@ -34,29 +34,17 @@
 - 各エンジニアの状況を私が把握できなくなってきていたので 1on1 は PM と私の 2 人とも全員と行うよう変更し、目下プロジェクトとエンジニア自身の課題は PM と話し、より長期的な事、興味の方向性やスキルを磨きたいところなどの把握は私で行ってこの会社で働く価値を高く保つよう努めました。
 - 日本人の平均的なエンジニアよりも優れた人の採用に 1 ヶ月程度で成功するようになったこと、コストが日本人採用時に比べ 1/3 程度で運用できていること、システムをビジネスの理念に合わせた設計にできていることを評価していただきました。
 
-#### OS
-
-Ubuntu
-
-#### 言語
-
-- TypeScript
-- Dart
-
-#### フレームワーク
-
-- Express
-- Flutter
-
-#### DB
-
-- firestore
-- Postgres(CloudSQL)
-
-#### その他ミドルウェア、サーバー等
-
+#### Technologies
+Ubuntu,
+TypeScript,
+Dart,
+Express,
+Flutter,
+firestore,
+Postgres,
+Google CloudSQL,
 Clean Architecture,
-Micro Service Architecture,
+Microservice Architecture,
 Monolithic Repository,
 Feature Flags,
 firebase,
@@ -103,24 +91,10 @@ Slack,
 
 #### OS
 
-Ubuntu
-
-#### 言語
-
--
-
-#### フレームワーク
-
-AWS CloudFormation
-
-#### DB
-
-RedShift
-
-#### その他ミドルウェア、サーバー等
-
-AWS Redshift,
+Ubuntu,
+SQL,
 AWS CloudFormation,
+AWS Redshift,
 AWS Batch,
 AWS CodePipeline,
 AWS CodeBuild,
@@ -131,14 +105,6 @@ Docker,
 BitBucket,
 JIRA,
 Slack,
-
-#### 役割
-
-メンバー
-
-#### 担当
-
-開発
 
 #### プロジェクト規模
 
@@ -155,45 +121,27 @@ Slack,
 - オフショアチームの対応を行いました(daily check-in mtg, 設計の共有, タスクのコントロールなど)
 - ビジネスレイヤの取りまとめの作業もありましたがこちらはうまく行きませんでした
 
-#### OS
+#### Technologies
 
-Linux(ubuntu, Alpine)
-
-#### 言語
-
-TypeScript
-
-#### フレームワーク
-
+Linux,
+Ubuntu,
+Alpine,
+TypeScript,
 Node.js,
 koa,
 TypeORM,
-
-#### DB
-
 MySQL5.6
 Redis
-
-#### その他ミドルウェア、サーバー等
-
 GitHub,
 CircleCI,
 Slack,
 Docker,
 docker-compose,
 OpenAPI,
-AWS ECS(Fargate),
+AWS ECS Fargate,
 AWS ElastiCashe,
 AWS RDS,
 GitHub projects,
-
-#### 役割
-
-メンバー
-
-#### 担当
-
-開発
 
 #### プロジェクト規模
 
@@ -213,39 +161,21 @@ GitHub projects,
 - 今回はインフラ専用リポジトリを作成いただき、インフラのためのコード化が自由にできる状況を用意していただいたので、CirlceCI 上で各コンテナの自動チェックやインフラコードの自動テストを行い手間の削減と再現性、変更時の安全性を担保しています。
 - コーポレートサイドから要望のあった slack bot を探していたのですがマッチするものがなかなか見つからなかったので 新しく開発し、喜ばれました。
 
-#### OS
+#### Technologies
 
-Linux(ubuntu, AMI)
-
-#### 言語
-
-n/a
-
-#### フレームワーク
-
-n/a
-
-#### DB
-
+Linux,
+Ubuntu, 
+AMI,
+HCL,
 MongoDB,
 Redis,
-
-#### その他ミドルウェア、サーバー等
-
-GitHub
-CircleCI
-Slack
-Docker
-Ansible
-Terraform
-
-#### 役割
-
-メンバー
-
-#### 担当
-
-開発
+GitHub,
+CircleCI,
+Slack,
+Docker,
+Docker Compose,
+Ansible,
+Terraform,
 
 #### プロジェクト規模
 
@@ -261,40 +191,19 @@ Terraform
 - 開発の環境を Ansible と docker 双方でできるよう、docker image を Ansible で構築するようにしました。
 - 今回はアプリケーション構築ではなくインフラでしたが CI/CD を導入し AI エンジンのコードが git に push され次第学習が進むよう構築を進めています。
 
-#### OS
+#### Technologies
 
-Linux(ubuntu)
-
-#### 言語
-
-Python3
-
-#### フレームワーク
-
-n/a
-
-#### DB
-
-n/a
-
-#### その他ミドルウェア、サーバー等
-
-GitHub
-CircleCI
+Linux,
+Ubuntu,
+Python3,
+GitHub,
+CircleCI,
 Slack
 Docker
 Ansible
 Jupyter Notebook
 Terraform
 AWS SageMaker
-
-#### 役割
-
-メンバー
-
-#### 担当
-
-開発
 
 #### プロジェクト規模
 
@@ -312,25 +221,14 @@ AWS SageMaker
 - python2 から python3 へ移行し、type hint を導入したのと mypy での解析で不具合を防ぐよう取り組みました。
 - Ansible で Ubuntu, Mac のローカルの開発環境構築自動化を行いました。
 
-#### OS
-
-Linux(ubuntu)
-
-#### 言語
-
-Python2
-Python3
-
-#### フレームワーク
-
-Flask (Flasgger)
-
-#### DB
-
-DynamoDB
-
-#### その他ミドルウェア、サーバー等
-
+#### Technologies
+Linux,
+Ubuntu,
+Python2,
+Python3,
+Flask,
+Flasgger,
+DynamoDB,
 GitHub
 CircleCI
 Slack
@@ -361,35 +259,23 @@ Ansible
 - 若いメンバーも多くチームの設計、開発ツールの使い方、開発フロー関連の知識の底上げが必要と感じていたためランチ帯や業務後でのスキルアップを図るイベントをいくつか行いました。
 - 開発環境構築の資料やスクリプトなどが一切なかったため、Ansible で Ubuntu と Mac 用の playbook を作成し、メンバーに共有しました。
 
-#### OS
+#### Technologies
 
-Linux(ubuntu)
-
-#### 言語
-
-Golang
-
-#### フレームワーク
-
-Echo
-Goswagger
-
-#### DB
-
-MySQL
-Aerospike
-Redis
-
-#### その他ミドルウェア、サーバー等
-
-GitHub
-CircleCI
-Slack
-GoSwagger
-Docker
-SchemaSpy
-Ansible
-DockrCompose
+Linux,
+Ubuntu,
+Golang,
+Echo,
+Goswagger,
+MySQL,
+Aerospike,
+Redis,
+GitHub,
+CircleCI,
+Slack,
+Docker,
+SchemaSpy,
+Ansible,
+DockrCompose,
 
 #### 役割
 
@@ -413,35 +299,25 @@ DockrCompose
 - フロントエンドのメンバーが足りていなかったため js 周りの調査やエラー解消を行いました。
 - 内製ではリスクが高いとの判断から開発は外注することになり内製チームは解散になりました。
 
-#### OS
+#### Technologies
 
-Linux (Ubuntu, alpine)
-
-#### 言語
-
-Kotlin
-
-#### フレームワーク
-
-spark
-exporsed
-
-#### DB
-
-MySQL
-
-#### その他ミドルウェア、サーバー等
-
-GitHub
-Backlog
-CircleCI
-Slack
-Swagger
-API Blueprint
-Gradle
-Docker
-AWS
-SchemaSpy
+Linux,
+Ubuntu,
+Alpine,
+Kotlin,
+spark,
+exporsed,
+MySQL,
+GitHub,
+Backlog,
+CircleCI,
+Slack,
+Swagger,
+API Blueprint,
+Gradle,
+Docker,
+AWS,
+SchemaSpy,
 
 #### 役割
 
@@ -469,27 +345,17 @@ SchemaSpy
 
 要件定義、言語選定、設計、開発、テスト
 
-#### OS
+#### Technologies
 
-Linux (Ubuntu, CentOS)
-
-#### 言語
-
-TypeScript
-Elixir
-
-#### フレームワーク
-
+Linux,
+Ubuntu,
+CentOS,
+TypeScript,
+Elixir,
 nodejs
 express
 phoenix
-
-#### DB
-
 Postgres
-
-#### その他ミドルウェア、サーバー等
-
 GitHub
 ZenHub
 CircleCI
@@ -527,27 +393,18 @@ AWS
 
 開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu, CentOS)
-
-#### 言語
 
 Javascript
 css
 
-#### フレームワーク
-
-node
+Node.js
 loopback
 angularJS
 
-#### DB
-
 MongoDB
-
-#### その他ミドルウェア、サーバー等
-
 GitHub
 CircleCI
 Slack
@@ -580,25 +437,14 @@ GitHubProject
 
 要件定義、言語選定、設計、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
-
-#### 言語
-
 Scala
 sbt
-
-#### フレームワーク
-
 play2
 
-#### DB
-
 MySQL
-
-#### その他ミドルウェア、サーバー等
-
 Ansible
 GitHub
 CircleCI
@@ -633,25 +479,13 @@ Scala での Android 開発は初めてですので多くのことを学ばせ�
 
 調査、開発、テスト
 
-#### OS
+#### Technologies
 
-Linux (Ubuntu)
-(開発マシン)
-
-#### 言語
+Linux (Ubuntu),
 
 Scala
 sbt
-
-#### フレームワーク
-
 Android
-
-#### DB
-
-なし
-
-#### その他ミドルウェア、サーバー等
 
 CircleCI
 GiHub
@@ -687,27 +521,16 @@ BLE
 
 調査、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
-(開発マシン)
-
-#### 言語
 
 Java
 Gradle
 Fabric
 
-#### フレームワーク
 
 Android
-
-#### DB
-
-なし
-
-#### その他ミドルウェア、サーバー等
-
 CircleCI
 GiHub
 PivotalTracker
@@ -743,29 +566,19 @@ Beacon
 
 調査、設計、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
-
-#### 言語
 
 javascript
 Arduino
 3DCad
 
-#### フレームワーク
-
 nodejs
 AngularJS
 TwitterBootstrap
-
-#### DB
-
 SQLite
 MySQL
-
-#### その他ミドルウェア、サーバー等
-
 npm
 bower
 Grunt
@@ -806,27 +619,19 @@ Swagger
 
 調査、設計、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
 
-#### 言語
-
 javascript
 html
-
-#### フレームワーク
-
 nodejs
 npm
 bower
 Grunt
 
-#### DB
-
 mysql
 
-#### その他ミドルウェア、サーバー等
 
 Sequelize
 CircleCI
@@ -865,24 +670,15 @@ Slack
 
 調査、設計、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
-
-#### 言語
 
 javascript
 html
 
-#### フレームワーク
-
 nodejs
 
-#### DB
-
-なし
-
-#### その他ミドルウェア、サーバー等
 
 Swagger
 npm
@@ -926,25 +722,13 @@ TwitterBootstrap
 
 調査、設計、開発、テスト
 
-#### OS
-
+#### Technologies
 Linux (Ubuntu)
-
-#### 言語
-
 javascript
-
-#### フレームワーク
-
 nodejs
 AngularJS
 TwitterBootstrap
-
-#### DB
-
 SQLite
-
-#### その他ミドルウェア、サーバー等
 
 npm
 bower
@@ -983,26 +767,15 @@ Swagger
 
 設計、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
-(開発マシン)
-
-#### 言語
 
 Java
 Gradle
 
-#### フレームワーク
-
 Android annotations,
 Android Spring REST client,
-
-#### DB
-
-なし
-
-#### その他ミドルウェア、サーバー等
 
 CircleCI
 Git
@@ -1036,26 +809,19 @@ ChatWork
 
 調査、設計、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
 
-#### 言語
 
 javascript
 html
 
-#### フレームワーク
-
 nodejs
 AngularJS
 
-#### DB
 
 mysql
-
-#### その他ミドルウェア、サーバー等
-
 npm
 bower
 Grunt
@@ -1095,26 +861,18 @@ Sequelize
 
 調査、設計、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
-(開発マシン)
 
-#### 言語
 
 Java
 Gradle
 
-#### フレームワーク
 
 Android annotations,
 Android Spring REST client,
 
-#### DB
-
-なし
-
-#### その他ミドルウェア、サーバー等
 
 CircleCI
 Deploy Gate
@@ -1153,27 +911,18 @@ Slack
 
 調査、設計、開発、テスト
 
-#### OS
+#### Technologies
 
 Linux (Ubuntu)
-(開発マシン)
-
-#### 言語
 
 Java
 Gradle
 
-#### フレームワーク
 
 Android annotations,
 Android Spring REST client,
 Beacon
 
-#### DB
-
-なし
-
-#### その他ミドルウェア、サーバー等
 
 CircleCI
 Git
@@ -1207,16 +956,13 @@ Slack
 マイコンのプログラム設計、開発
 回路設計、開発
 
-#### OS
+#### Technologies
 
 Linux(Ubuntu12)
-
-#### 言語
 
 arduino
 C++
 
-#### その他ミドルウェア、サーバー等
 
 #### 役割
 
@@ -1249,28 +995,21 @@ C++
 プロトタイプのハードウェア回路設計、開発
 筐体内ソフトウェア設計、開発
 
-#### OS
+#### Technologies
 
 Linux(Ubuntu12, Ubuntu14)
 
-#### 言語
+
 
 arduino
 Javascript
-
-#### フレームワーク
 
 NodeJS,
 AngularJS
 TwitterBootstrap3,
 Mongoose,
 
-#### DB
-
 MongoDB
-
-#### その他ミドルウェア、サーバー等
-
 Jenkins,
 Git,
 Ansible,
@@ -1313,22 +1052,19 @@ kibana,
 
 設計、開発、テスト
 
-#### OS
+#### Technologies
 
-WindowsLinux
-(開発マシン)
-
-#### 言語
+Windows,
+Linux
 
 Scala
 Java
 Javascript
 Gradle
 
-#### フレームワーク
 
 Skinny (Scala)
-Flyway
+Flyway,
 Jetty,
 Tomcat,
 Android annotations,
@@ -1338,11 +1074,7 @@ AngularJS
 jQuery,
 Robolectric
 
-#### DB
-
 Postgres 9.4
-
-#### その他ミドルウェア、サーバー等
 
 Jenkins
 Git
@@ -1376,26 +1108,18 @@ Redmine
 
 設計、開発、単体テスト
 
-#### OS
+#### Technologies
 
-WindowsLinux
-(開発マシン)
-
-#### 言語
+Windows,
+Linux,
 
 Java
 Gradle
 C++(少し)
 
-#### フレームワーク
-
-なし、Cocs2dx(少し)
-
-#### DB
+Cocs2dx(少し)
 
 SQLite
-
-#### その他ミドルウェア、サーバー等
 
 Jenkins
 Nexus
@@ -1430,26 +1154,15 @@ SVN
 
 設計、開発、単体テスト
 
-#### OS
+#### Technologies
 
 Windows
-(開発マシン)
-
-#### 言語
-
 Java
 Shell(少し)
 Groovy(少し)
 
-#### フレームワーク
-
-なし
-
-#### DB
-
 SQLite
 
-#### その他ミドルウェア、サーバー等
 
 Git
 Jenkins
@@ -1487,11 +1200,9 @@ Jenkins
 
 設計、開発、テスト、運用
 
-#### OS
+#### Technologies
 
 Linux
-
-#### 言語
 
 Java
 FTL
@@ -1499,17 +1210,8 @@ HTML
 CSS
 JavaScript
 shell
-
-#### フレームワーク
-
 Spring
-
-#### DB
-
 MySQL
-
-#### その他ミドルウェア、サーバー等
-
 SVN
 Git
 Apache
@@ -1545,11 +1247,9 @@ Android
 追加機能開発(機能ごとの DB 設計〜単体テストまで)
 CS 調査
 
-#### OS
+#### Technologies
 
 Linux
-
-#### 言語
 
 Java
 FTL
@@ -1558,15 +1258,10 @@ CSS
 JavaScript
 shell
 
-#### フレームワーク
 
 Seaser
 
-#### DB
-
 MySQL
-
-#### その他ミドルウェア、サーバー等
 
 Apache
 Tomcat
@@ -1597,11 +1292,10 @@ Tomcat
 
 全行程
 
-#### OS
+#### Technologies
 
 Linux
 
-#### 言語
 
 Java
 JSP
@@ -1610,16 +1304,9 @@ CSS
 JavaScript
 shell
 
-#### フレームワーク
-
 Struts
 
-#### DB
-
 MySQL
-
-#### その他ミドルウェア、サーバー等
-
 Apache
 Tomcat
 
@@ -1663,23 +1350,15 @@ Java 側の詳細設計、開発、テスト
 - Web アプリケーションについてはチームの中で私が一番詳しかった為、機能実現に向けた技術的な提案や Web 特有の制約事項の説明を行い、設計に協力しました。
 - リリースも近く、スケジュールもぎりぎりだったため、いつも以上に体調管理に気をつけました。お蔭様で 1 度も病欠せず、業務に専念することが出来ました。
 
-#### OS
-
-#### 言語
+#### Technologies
+Windows
 
 Java
 JSP
 PL/SQL
 
-#### フレームワーク
-
 Struts ベース独自 FW
-
-#### DB
-
 Oracle
-
-#### その他ミドルウェア、サーバー等
 
 Apache
 
@@ -1724,24 +1403,19 @@ Apache
 - すでに構築されているモバイルサイトの派生プロジェクトですのでソースや設計はモバイルサイトに準じた方法をとりました。
 - その他、別に製作してあるモバイルサイトの管理サイトに PC サイト用の機能追加を行いました。
 
-#### OS
+#### Technologies
 
 Linux(RH)
-
-#### 言語
 
 Java
 JSP
 
-#### フレームワーク
 
 Struts2
 
-#### DB
 
 MySQL
 
-#### その他ミドルウェア、サーバー等
 
 Apache
 
@@ -1787,11 +1461,9 @@ Apache
 - 個人情報を扱うため、厳密な権限管理ができるようにしました。
 - 運用負担がかからないよう、クライアント側で各種設定ができるようにしておきましたので問い合わせは 2 年半たっても数件にとどまりました。
 
-#### OS
+#### Technologies
 
 Linux(RedHat)
-
-#### 言語
 
 Java
 JSP
@@ -1799,11 +1471,9 @@ HTML
 JavaScript
 CSS
 
-#### フレームワーク
 
 Struts2
 
-#### DB
 
 MySQL
 
@@ -1834,11 +1504,9 @@ MySQL
 
 - モバイルサイトの作成や実行可能 Jar の作成、メール送信機能は初めてでしたがインターネットで情報を集め自力で作成することができました。
 
-#### OS
+#### Technologies
 
-Linux（RedHat）
-
-#### 言語
+Linux (RedHat)
 
 Java
 JSP
@@ -1846,15 +1514,10 @@ HTML
 JavaScript
 CSS
 
-#### フレームワーク
-
 Struts
-
-#### DB
 
 MySQL
 
-#### その他ミドルウェア、サーバー等
 
 Apache
 
@@ -1893,11 +1556,10 @@ Apache
 - クライアントは社内の人事異動や部署名変更が頻繁で、顧客アテンド担当者の管理が大変だったとの事なのでアテンド担当者の所属部署やアテンド担当者をすべて別の担当者に引き継ぐなど、一括操作ができるよう利便性に考慮しました。
 - 個人情報を扱うため、機能画面ごとの厳密な権限管理をし、権限は役割に合わせて一括で管理、ユーザー側で自由に変更できるよう設計を工夫しました。
 
-#### OS
+#### Technologies
 
 Linux
 
-#### 言語
 
 Java
 JSP
@@ -1905,15 +1567,11 @@ HTML
 JavaScript
 CSS
 
-#### フレームワーク
 
 Struts
 
-#### DB
 
 MySQL
-
-#### その他ミドルウェア、サーバー等
 
 Apache
 
@@ -1949,15 +1607,11 @@ SAP プロジェクトからの帰宅後や休日を使用して PHP で構築�
 
 全行程
 
-#### OS
+#### Technologies
 
 Windows
 
-#### 言語
-
 PHP
-
-#### DB
 
 MySQL
 
@@ -1986,15 +1640,10 @@ SAP 導入・アドオン開発。
 - 移行対象モジュールが使用しているモジュールを正確に知ることができずに設計チームが困っていることを知り、空き時間で同時移行するべきモジュールを一覧にするプログラムを作り、提供しました。
 - 二次受けの企業と共同で行う ABAP 講習の講師を 1 日のみ依頼され汎用モジュール開発の講習を行いました。
 
-#### OS
+#### Technologies
 
 SAP
-
-#### 言語
-
 ABAP
-
-#### DB
 
 Oracle
 
@@ -2030,15 +1679,12 @@ SAP 導入・アドオン開発。
 - プログラムを始めて半年の頃に作った個人用の調査プログラムが好評で、設計チームでも使われることになり、割り当てられた仕事以外でも貢献することができました。また、このツールなしでは仕事ができないと今でもプロジェクトに残っている先輩に言っていただき、今でも使われていることを知りました。作ったものが便利だと思ってもらえることを非常に嬉しく思います。
 - チームにはプロジェクトの初期メンバーとしてアサインされましたが、当初 6 名程度だったチームは評判が良く、要員追加されて十数名程度にまでなりました。開発フェーズが終盤になると当時の 1 次受けコンサルティング会社の別プロジェクトへチームまるごと移動するよう依頼される等チームの評価向上に微力ながら貢献しました。
 
-#### OS
+#### Technologies
 
 SAP
 
-#### 言語
-
 ABAP
 
-#### DB
 
 Oracle
 
