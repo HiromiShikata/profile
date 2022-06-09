@@ -1,6 +1,6 @@
 # 職務経歴書
 
-2022/01/13 現在
+2022/06/09 現在
 
 氏名: 志方 裕美
 
@@ -15,19 +15,60 @@
 - 現在に至る
 
 ## 開発経歴
+### ECサイトフルスクラッチ構築案件プロジェクトマネジメント
+
 ### 実店舗向け広告プロダクト開発支援
 
+#### Technologies
+- Android
+- Kotlin
+- GitHub
+- GitHub Actions
+- Testing Automation
+- GitHub Projects
+- Conful
+- Slack
+
 ### コンシューマー向けアプリスタートアップ顧問 
-2022/02-現在
+2022/02-現在(週1~3日程度)
+#### Technologies
+- Flutter
+- Dart
+- Python 3
+- AWS
+- OpenSearch
+- ElasticSearch
+- GoLang
+- Terraform
+- Ubuntu
+- AWS Batch
+- Microservice Architecture
+- DDD
+- Clean Architecture
+- RDS
+- AWS Aurola
+- MySQL
+- Docker
+- docker-conpose
+- Ansible
+- CircleCI
+- GitHub
+- Slack
+- GitHub Actions
+- Terraform Cloud
+- JIRA
+- Conful
 
 ### 製造業向けSaasスタートアップ顧問
 2022/01-現在
 
-### 研究成果のSaaS化
+### 研究成果のSaaS化 技術検証兼プロジェクトマネジメント
 2021/12-2022/03
-### Technologies
+#### Technologies
 - MATLAB
 - python
+- GitHub
+- CircleCI
 
 ### ハードウエアから取得した画像をクラウドで分析するMVP開発(ヘルスケア)
 
