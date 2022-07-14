@@ -1,6 +1,6 @@
 # 職務経歴書
 
-2022/06/09 現在
+2022/07/14 現在
 
 氏名: 志方 裕美
 
@@ -15,10 +15,24 @@
 - 現在に至る
 
 ## 開発経歴
+### スタートアップ技術顧問
+2022/07
+
+
+
 ### ECサイトフルスクラッチ構築案件プロジェクトマネジメント
+2022/03~
+#### Technologies
+- FlutterFlow
+- firebase
+- GitHub
+- lark
+- CircleCI
+- GitHub actions
+
 
 ### 実店舗向け広告プロダクト開発支援
-
+2021/02~現在(週1-3
 #### Technologies
 - Android
 - Kotlin
