@@ -21,7 +21,7 @@
 
 
 ### ECサイトフルスクラッチ構築案件プロジェクトマネジメント
-2022/03~
+2022/03~07
 #### Technologies
 - FlutterFlow
 - firebase
@@ -72,6 +72,8 @@
 - Terraform Cloud
 - JIRA
 - Conful
+- AWS EKS
+- GitHub Projects
 
 ### 製造業向けSaasスタートアップ顧問
 2022/01-現在
