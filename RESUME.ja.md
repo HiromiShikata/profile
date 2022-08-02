@@ -42,6 +42,7 @@
 - GitHub Projects
 - Conful
 - Slack
+- Mokito
 
 ### コンシューマー向けアプリスタートアップ顧問 
 2022/02-現在(週1~3日程度)
@@ -74,6 +75,9 @@
 - Conful
 - AWS EKS
 - GitHub Projects
+- gRPC
+- OpenAPI
+- pytest
 
 ### 製造業向けSaasスタートアップ顧問
 2022/01-現在
@@ -111,6 +115,8 @@ TypeScript,
 Dart,
 Express,
 FlutterFlow,
+Flutter,
+Mermeid,
 no-code,
 firestore,
 DDD,
@@ -127,6 +133,7 @@ GitHub Issues,
 GitHub Projects,
 github-flow,
 Slack,
+Jest
 
 #### 役割
 
@@ -189,6 +196,9 @@ GitHub Projects,
 github-flow,
 Zapier,
 Slack,
+Jest,
+Jasmin
+
 
 #### 役割
 
@@ -226,6 +236,8 @@ Docker,
 BitBucket,
 JIRA,
 Slack,
+Bats,
+
 
 #### プロジェクト規模
 
@@ -356,6 +368,7 @@ Slack
 Docker
 Serverless
 Ansible
+Swagger
 
 #### 役割
 
