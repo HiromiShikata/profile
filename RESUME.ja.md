@@ -15,6 +15,13 @@
 - 現在に至る
 
 ## 開発経歴
+
+### CircleCI Orb
+#### Technologies
+- CircleCI
+- Bash
+- Ubuntu
+
 ### スタートアップ技術顧問
 2022/07
 
