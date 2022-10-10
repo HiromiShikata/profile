@@ -11,10 +11,56 @@
 - 2008/09: 某 SI 系企業　退社
 - 2008/10: 某 IT コンサル系社内ベンチャー　入社
 - 2008/10: 開発部に配属
-- 2011/10: 独立
+- 2011/10: フリーランスとして独立
+- 2018/02: 海野制作株式会社設立
 - 現在に至る
 
 ## 開発経歴
+
+<!--
+### title
+
+2020/12-現在(週 0.5)
+
+- team, tech, growth, 
+
+
+#### Technologies
+Ubuntu,
+TypeScript,
+Dart,
+Express,
+FlutterFlow,
+Flutter,
+Mermeid,
+no-code,
+firestore,
+DDD,
+Clean Architecture,
+Microservice Architecture,
+Monolithic Repository,
+firebase,
+fireauth,
+firebase functions,
+GitHub Actions
+CircleCI,
+GitHub,
+GitHub Issues,
+GitHub Projects,
+github-flow,
+Slack,
+Jest
+
+#### 役割
+
+開発、マネジメント
+
+#### プロジェクト規模
+
+エンジニア初期 2 名
+
+-->
+
 
 ### CircleCI Orb
 #### Technologies
@@ -24,7 +70,6 @@
 
 ### スタートアップ技術顧問
 2022/07
-
 
 
 ### ECサイトフルスクラッチ構築案件プロジェクトマネジメント
