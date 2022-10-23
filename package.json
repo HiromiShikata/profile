@@ -33,7 +33,7 @@
     "lodash": "^4.17.15",
     "mustache": "^4.0.1",
     "prettier": "^2.0.5",
-    "resume-cli": "x.x.x",
+    "resume-cli": "3.0.8",
     "standard-version": "^9.0.0",
     "underscore.string": "^3.3.5",
     "yamljs": "^0.3.0"
