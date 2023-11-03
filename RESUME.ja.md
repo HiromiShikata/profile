@@ -116,6 +116,9 @@ Pages の機能でリダイレクトを設定し、リダイレクトの先を�
 
 
 #### Technologies
+Scrapy,
+Spider,
+Playwright,
 kubenetes,
 AWS lambda,
 AWS Batch,
