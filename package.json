@@ -41,7 +41,7 @@
   "dependencies": {
     "ansi-styles": "^6.1.0",
     "formidable": "^3.0.0",
-    "glob": "^7.1.6",
+    "glob": "^10.3.10",
     "marked": "^4.0.8",
     "p-limit": "^4.0.0"
   }
