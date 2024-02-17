@@ -42,7 +42,7 @@
     "ansi-styles": "^6.1.0",
     "formidable": "^3.0.0",
     "glob": "^10.0.0",
-    "marked": "^4.0.8",
+    "marked": "^12.0.0",
     "p-limit": "^4.0.0"
   }
 }
