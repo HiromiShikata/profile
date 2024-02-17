@@ -22,7 +22,7 @@
 
 2020/12-現在(週 0.5)
 
-- team, tech, growth, 
+- team, tech, growth,
 
 
 #### Technologies
@@ -60,12 +60,13 @@ Jest
 エンジニア初期 2 名
 
 -->
+
 ### 他
+
 - CDKでSQSを使用する環境構築を行いました。
 
-
-
 ### 製造業向けSaaSスタートアップ顧問
+
 2022/01-現在
 
 - 前任の責任者が辞め入社したばかりのリーダーに負荷がかかっていてどのように進めていけばよいかの迷いが大きかった箇所に関してサポートを行いました。
@@ -80,12 +81,9 @@ Jest
 - リーダーが入社した当初からの技術的な負債の解消をリーダーが一人で抱えていた課題の解消のため、技術志向のメンバーが入るよう会議体を変更してディスカッションと実行を行いました。
 - 理想はリーダーのトップダウンな指示なしにメンバーが自発的に動くこととしたので課題の洗い出しと認識、評価などの一番最初にリーダーにやっていただいたようなことから始めました。ディスカッションの中でメンバーとリーダーとの価値観や課題認識等の差が埋まり最初の課題は3週間程度で解消し、メンバーの視野が広がる効果がありました。現在次の改善を進めるため同じメンバーでディスカッションを継続しています。
 
-  
-
 ### 教育系スタートアップ製品のUS版構築
+
 202211-202308(週3)
-
-
 
 ### コンシューマ向けフードテックスタートアップ
 
@@ -102,20 +100,20 @@ Jest
 - 自動テストが全くなかったので私で手を入れたところからユニットテストを追加しベースを作成したので他のメンバーもテストを作成してくれるようになりました。
 - クレデンシャルが当時いたエンジニアの個人に紐づいているものが多く、チームを離れたあと様々なものが突然動かなくなったので取り急ぎクレデンシャルを更新してまずは動かしつつ、タスクとして創業者のクレデンシャルを使用するよう積んでおき、チームの変化時に同じことが起きないようにしました。
 - ci/cdが全くなかったのでCircleCI,
-GitHubActionsを導入し手作業の大部分を自動化しました。メンバーも内容を理解し使いこなせるようになったのと、自ら他のCIなども探して試したりしてくれるようになりました。
+  GitHubActionsを導入し手作業の大部分を自動化しました。メンバーも内容を理解し使いこなせるようになったのと、自ら他のCIなども探して試したりしてくれるようになりました。
 - モノレポの恩恵を受けるため混乱しがちなCIのファイルを分割統治できるorbを作成しました。他のプロジェクトでも同じ課題を抱えていたのでプロジェクト外で作成しオープンソースとして公開しました。
 - トランクベース開発に移行しデイリーで数回のデプロイが継続的にできるよう体制とコードベースを構築しました。
 - ドキュメントにOpenAPI, Mermaid,
-などテキストベースで管理できエコシステムの充実したフォーマットを採用し、ドキュメントとソースコードとの乖離を防ぐよう構築しました。ドキュメントはCircleCIでホストし、生成と同時に適切なメンバーのみが見れるよう権限管理をCircleCIの機能で行いました。
+  などテキストベースで管理できエコシステムの充実したフォーマットを採用し、ドキュメントとソースコードとの乖離を防ぐよう構築しました。ドキュメントはCircleCIでホストし、生成と同時に適切なメンバーのみが見れるよう権限管理をCircleCIの機能で行いました。
 - ドキュメントへのコードベースからのリンクが必要ですがCircleCIでホストしている成果物のURLが毎回変わってしまうのでGitHub
-Pages の機能でリダイレクトを設定し、リダイレクトの先を自動コミットしてドキュメントが自動で最新に保たれる仕組みを構築しました。
+  Pages の機能でリダイレクトを設定し、リダイレクトの先を自動コミットしてドキュメントが自動で最新に保たれる仕組みを構築しました。
 - 若いメンバーが実装で止まってしまうことが多く、ケアを行いました。
 - 資金調達に難航する時期がありましたのでコスト、稼働調整、体制などについての提案を行いました。
 - チーム拡張タイミングには優秀でコミュニケーション能力の高いグローバル人材を採用し、複数のタイムゾーンのリモートチームにも関わらず効率の良いチーム構築を行いました。
 - 高額になり始めていたプロキシ代を節約するため、インフラの再構築を行いました
 
-
 #### Technologies
+
 Scrapy,
 Spider,
 Playwright,
@@ -156,17 +154,19 @@ Slack,
 Jest
 
 #### 役割
+
 開発、マネジメント
 
 #### プロジェクト規模
+
 エンジニア初期 6 名
 
-
-
-
 ### ECサイトフルスクラッチ構築案件プロジェクトマネジメント
+
 2022/03~07
+
 #### Technologies
+
 - FlutterFlow
 - firebase
 - GitHub
@@ -174,10 +174,12 @@ Jest
 - CircleCI
 - GitHub actions
 
-
 ### 実店舗向け広告プロダクト開発支援
+
 2021/02~現在(週1-3
+
 #### Technologies
+
 - Android
 - Kotlin
 - GitHub
@@ -188,9 +190,12 @@ Jest
 - Slack
 - Mokito
 
-### コンシューマー向けアプリスタートアップ顧問 
+### コンシューマー向けアプリスタートアップ顧問
+
 2022/02-現在(週1~3日程度)
+
 #### Technologies
+
 - Flutter
 - Dart
 - Python 3
@@ -224,8 +229,11 @@ Jest
 - pytest
 
 ### 研究成果のSaaS化 技術検証兼プロジェクトマネジメント
+
 2021/12-2022/03
+
 #### Technologies
+
 - MATLAB
 - python
 - GitHub
@@ -249,8 +257,8 @@ Jest
 - ビジネスサイドメンバーがMVPを定義から正しく認識できていたため、正しくスモールスタート切ることができています。
 - firebase function に依存しないよう、express を抽象レイヤーとして噛ませる設計にし、同時にOpenAPIのジェネレートができる構成を取りました。
 
-
 #### Technologies
+
 Ubuntu,
 TypeScript,
 Dart,
@@ -284,8 +292,6 @@ Jest
 
 エンジニア初期 2 名
 
-
-
 ### 都市開発系スタートアップ開発支援
 
 2020/03-現在(週 2)
@@ -308,6 +314,7 @@ Jest
 - 日本人の平均的なエンジニアよりも優れた人の採用に 1 ヶ月程度で成功するようになったこと、コストが日本人採用時に比べ 1/3 程度で運用できていること、システムをビジネスの理念に合わせた設計にできていることを評価していただきました。
 
 #### Technologies
+
 Ubuntu,
 TypeScript,
 Dart,
@@ -339,7 +346,6 @@ Zapier,
 Slack,
 Jest,
 Jasmin
-
 
 #### 役割
 
@@ -378,7 +384,6 @@ BitBucket,
 JIRA,
 Slack,
 Bats,
-
 
 #### プロジェクト規模
 
@@ -438,7 +443,7 @@ GitHub projects,
 #### Technologies
 
 Linux,
-Ubuntu, 
+Ubuntu,
 AMI,
 HCL,
 MongoDB,
@@ -496,6 +501,7 @@ AWS SageMaker
 - Ansible で Ubuntu, Mac のローカルの開発環境構築自動化を行いました。
 
 #### Technologies
+
 Linux,
 Ubuntu,
 Python2,
@@ -804,7 +810,6 @@ Java
 Gradle
 Fabric
 
-
 Android
 CircleCI
 GiHub
@@ -907,7 +912,6 @@ Grunt
 
 mysql
 
-
 Sequelize
 CircleCI
 GiHub
@@ -954,7 +958,6 @@ html
 
 nodejs
 
-
 Swagger
 npm
 bower
@@ -998,6 +1001,7 @@ TwitterBootstrap
 調査、設計、開発、テスト
 
 #### Technologies
+
 Linux (Ubuntu)
 javascript
 nodejs
@@ -1088,13 +1092,11 @@ ChatWork
 
 Linux (Ubuntu)
 
-
 javascript
 html
 
 nodejs
 AngularJS
-
 
 mysql
 npm
@@ -1140,14 +1142,11 @@ Sequelize
 
 Linux (Ubuntu)
 
-
 Java
 Gradle
 
-
 Android annotations,
 Android Spring REST client,
-
 
 CircleCI
 Deploy Gate
@@ -1193,11 +1192,9 @@ Linux (Ubuntu)
 Java
 Gradle
 
-
 Android annotations,
 Android Spring REST client,
 Beacon
-
 
 CircleCI
 Git
@@ -1238,7 +1235,6 @@ Linux(Ubuntu12)
 arduino
 C++
 
-
 #### 役割
 
 メンバー
@@ -1273,8 +1269,6 @@ C++
 #### Technologies
 
 Linux(Ubuntu12, Ubuntu14)
-
-
 
 arduino
 Javascript
@@ -1336,7 +1330,6 @@ Scala
 Java
 Javascript
 Gradle
-
 
 Skinny (Scala)
 Flyway,
@@ -1438,7 +1431,6 @@ Groovy(少し)
 
 SQLite
 
-
 Git
 Jenkins
 
@@ -1533,7 +1525,6 @@ CSS
 JavaScript
 shell
 
-
 Seaser
 
 MySQL
@@ -1570,7 +1561,6 @@ Tomcat
 #### Technologies
 
 Linux
-
 
 Java
 JSP
@@ -1626,6 +1616,7 @@ Java 側の詳細設計、開発、テスト
 - リリースも近く、スケジュールもぎりぎりだったため、いつも以上に体調管理に気をつけました。お蔭様で 1 度も病欠せず、業務に専念することが出来ました。
 
 #### Technologies
+
 Windows
 
 Java
@@ -1685,12 +1676,9 @@ Linux(RH)
 Java
 JSP
 
-
 Struts2
 
-
 MySQL
-
 
 Apache
 
@@ -1746,9 +1734,7 @@ HTML
 JavaScript
 CSS
 
-
 Struts2
-
 
 MySQL
 
@@ -1793,7 +1779,6 @@ Struts
 
 MySQL
 
-
 Apache
 
 #### 役割
@@ -1835,16 +1820,13 @@ Apache
 
 Linux
 
-
 Java
 JSP
 HTML
 JavaScript
 CSS
 
-
 Struts
-
 
 MySQL
 
@@ -1959,7 +1941,6 @@ SAP 導入・アドオン開発。
 SAP
 
 ABAP
-
 
 Oracle
 
