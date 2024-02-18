@@ -72,7 +72,8 @@ LiT
                         <dd>Repository横断での github actions 管理、issue label 管理、branch protection 管理を一元的に行う仕組みを整えました。これによりリポジトリの管理コストが大幅に下がりました。 / GitHub Actions, GitHub API v4, (2023/11/16) </dd>
                         <dt>技術情報更新のお知らせ</dt>
                         <dd>AWS CDKを使って k8sで動くバッチを AWS lambda と AWS batchに移行しコストを削減しました。 / AWS CDK, k8s, AWS lambda, python,
-  
+
+
 -->
 
 ### 製造業向けSaaSスタートアップ顧問
