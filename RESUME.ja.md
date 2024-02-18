@@ -73,7 +73,6 @@ LiT
                         <dt>技術情報更新のお知らせ</dt>
                         <dd>AWS CDKを使って k8sで動くバッチを AWS lambda と AWS batchに移行しコストを削減しました。 / AWS CDK, k8s, AWS lambda, python,
 
-
 -->
 
 ### 製造業向けSaaSスタートアップ顧問
