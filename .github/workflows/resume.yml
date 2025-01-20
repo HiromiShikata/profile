@@ -1,0 +1,43 @@
+name: Resume
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "17"
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+          liboss4-salsa-asound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
+          libexpat1 libfontconfig1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
+          libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
+          libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
+          fonts-liberation libayatana-appindicator3-1 libnss3 lsb-release xdg-utils wget pdftk chromium-browser
+      - run: npm install
+      - run: |
+          mkdir -p generated/resume
+          npm run generate-from-json --output_dir=generated/resume --file=resume.short
+          npm run generate-from-json --output_dir=generated/resume --file=resume.full
+          npm run generate-from-json --output_dir=generated/resume --file=resume.ja.full
+          sed 's@"志方 裕美"@"********"@g' RESUME.ja.md > generated/RESUME.masked-name.ja.md
+      - run: |
+          if [ $(pdftk generated/resume/HiromiShikata.resume.short.pdf dump_data | grep NumberOfPages | awk '{print $2}') -ne 1 ]; then
+            echo "Resume must be exactly 1 page"
+            exit 1
+          fi
+      - if: github.ref == 'refs/heads/main'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: update generated resume files"
+          file_pattern: 'generated/**/*'
