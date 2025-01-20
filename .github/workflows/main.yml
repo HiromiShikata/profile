@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "17"
-      - run: npm ci
+      - run: npm install
       - name: Cache dependencies
         uses: actions/cache@v3
         with:
@@ -36,7 +36,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "17"
-      - run: npm ci
+      - run: npm install
       - run: npx commitlint --from ${{ github.event.pull_request.base.sha || 'origin/main' }} --to ${{ github.event.pull_request.head.sha || 'HEAD' }}
 
   lint-src:
@@ -48,7 +48,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "17"
-      - run: npm ci
+      - run: npm install
       - run: npm run format
       - name: Check for changes
         run: |
@@ -76,7 +76,7 @@ jobs:
           libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
           libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
           fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget pdftk
-      - run: npm ci
+      - run: npm install
       - run: |
           mkdir -p resume
           npm run generate-from-json --output_dir=resume --file=resume.short
@@ -113,7 +113,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "17"
-      - run: npm ci
+      - run: npm install
       - name: Configure Git
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
