@@ -14,7 +14,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "17"
+          node-version: '17'
       - run: npm install
       - name: Cache dependencies
         uses: actions/cache@v3
@@ -35,7 +35,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "17"
+          node-version: '17'
       - run: npm install
       - run: npx commitlint --from ${{ github.event.pull_request.base.sha || 'origin/main' }} --to ${{ github.event.pull_request.head.sha || 'HEAD' }}
 
@@ -47,7 +47,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "17"
+          node-version: '17'
       - run: npm install
       - run: npm run format
       - name: Check for changes
@@ -66,7 +66,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "17"
+          node-version: '17'
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -112,7 +112,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "17"
+          node-version: '17'
       - run: npm install
       - name: Configure Git
         run: |
