@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v3
         with:
-          node-version: "17"
+          node-version: '17'
       - run: |
           sudo apt-get update
           sudo apt-get install -y \
@@ -39,5 +39,5 @@ jobs:
       - if: github.ref == 'refs/heads/main'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: update generated resume files"
-          file_pattern: "generated/**/*"
+          commit_message: 'docs: update generated resume files'
+          file_pattern: 'generated/**/*'
