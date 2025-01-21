@@ -1,16 +1,16 @@
 version: 2
 updates:
   - package-ecosystem: npm
-    directory: "/"
+    directory: '/'
     schedule:
       interval: daily
-      time: "20:00"
+      time: '20:00'
     open-pull-requests-limit: 10
     ignore:
-      - dependency-name: "@commitlint/config-conventional"
+      - dependency-name: '@commitlint/config-conventional'
         versions:
           - 12.0.0
-      - dependency-name: "@commitlint/cli"
+      - dependency-name: '@commitlint/cli'
         versions:
           - 12.0.0
       - dependency-name: marked
