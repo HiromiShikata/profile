@@ -27,9 +27,20 @@ jobs:
       - run: npm install
       - run: |
           mkdir -p generated/resume
+          check_pdf_generation() {
+            local pdf_file="$1"
+            if [ ! -f "$pdf_file" ] || ! pdftk "$pdf_file" dump_data > /dev/null 2>&1; then
+              echo "Error: PDF generation failed or produced invalid PDF: $pdf_file"
+              return 1
+            fi
+          }
           npm run generate-from-json --output_dir=generated/resume --file=resume.short
+          check_pdf_generation "generated/resume/HiromiShikata.resume.short.pdf"
           npm run generate-from-json --output_dir=generated/resume --file=resume.full
+          check_pdf_generation "generated/resume/HiromiShikata.resume.full.pdf"
           npm run generate-from-json --output_dir=generated/resume --file=resume.ja.full
+          check_pdf_generation "generated/resume/HiromiShikata.resume.ja.full.pdf"
+
           sed 's@"志方 裕美"@"********"@g' RESUME.ja.md > generated/RESUME.masked-name.ja.md
       - run: |
           if [ $(pdftk generated/resume/HiromiShikata.resume.short.pdf dump_data | grep NumberOfPages | awk '{print $2}') -ne 1 ]; then
