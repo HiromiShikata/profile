@@ -34,7 +34,9 @@ jobs:
               return 1
             fi
           }
-          export PUPPETEER_LAUNCH_ARGS="--no-sandbox"
+          export PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox"
+          export PUPPETEER_LAUNCH_ARGS="--no-sandbox --disable-setuid-sandbox"
+          export PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
           npm run generate-from-json --output_dir=generated/resume --file=resume.short
           check_pdf_generation "generated/resume/HiromiShikata.resume.short.pdf"
           npm run generate-from-json --output_dir=generated/resume --file=resume.full

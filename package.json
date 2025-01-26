@@ -11,7 +11,7 @@
     "format": "npm run format:json && npm run format:yml && npm run format:md && npm run format:js",
     "generate:pdf": "npm run generate:file --output_dir=${npm_config_output_dir} --file=${npm_config_file} --output_format=pdf",
     "generate:html": "npm run generate:file --output_dir=${npm_config_output_dir} --file=${npm_config_file} --output_format=html",
-    "generate:file": "mkdir -p ${npm_config_output_dir} && PUPPETEER_ARGS='--no-sandbox' ./node_modules/resume-cli/build/main.js export -r ${npm_config_file}.json ${npm_config_output_dir}/HiromiShikata.${npm_config_file}.${npm_config_output_format} --format ${npm_config_output_format} --theme paper",
+    "generate:file": "mkdir -p ${npm_config_output_dir} && ./node_modules/resume-cli/build/main.js export -r ${npm_config_file}.json ${npm_config_output_dir}/HiromiShikata.${npm_config_file}.${npm_config_output_format} --format ${npm_config_output_format} --theme paper",
     "generate": "npm run generate:pdf --output_dir=${npm_config_output_dir} --file=${npm_config_file} && npm run generate:html --output_dir=${npm_config_output_dir} --file=${npm_config_file}",
     "generate-from-json": "yaml2json ${npm_config_file}.yaml > ${npm_config_file}.json && npm run generate:html --output_dir=${npm_config_output_dir} --file=${npm_config_file} && npm run generate:pdf --output_dir=${npm_config_output_dir} --file=${npm_config_file}",
     "test": "echo \"Error: no test specified\" && exit 1"
