@@ -19,7 +19,7 @@ jobs:
       - run: |
           sudo apt-get update
           sudo apt-get install -y \
-          liboss4-salsa-asound2 libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
+          libasound2t64 libasound2-dev libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libcups2 libdbus-1-3 \
           libexpat1 libfontconfig1 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 \
           libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 \
           libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates \
@@ -27,9 +27,22 @@ jobs:
       - run: npm install
       - run: |
           mkdir -p generated/resume
+          check_pdf_generation() {
+            local pdf_file="$1"
+            if [ ! -f "$pdf_file" ] || ! pdftk "$pdf_file" dump_data > /dev/null 2>&1; then
+              echo "Error: PDF generation failed or produced invalid PDF: $pdf_file"
+              return 1
+            fi
+          }
+          export PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox"
+          export PUPPETEER_LAUNCH_ARGS="--no-sandbox --disable-setuid-sandbox"
+          export PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
           npm run generate-from-json --output_dir=generated/resume --file=resume.short
+          check_pdf_generation "generated/resume/HiromiShikata.resume.short.pdf"
           npm run generate-from-json --output_dir=generated/resume --file=resume.full
+          check_pdf_generation "generated/resume/HiromiShikata.resume.full.pdf"
           npm run generate-from-json --output_dir=generated/resume --file=resume.ja.full
+          check_pdf_generation "generated/resume/HiromiShikata.resume.ja.full.pdf"
           sed 's@"志方 裕美"@"********"@g' RESUME.ja.md > generated/RESUME.masked-name.ja.md
       - run: |
           if [ $(pdftk generated/resume/HiromiShikata.resume.short.pdf dump_data | grep NumberOfPages | awk '{print $2}') -ne 1 ]; then
