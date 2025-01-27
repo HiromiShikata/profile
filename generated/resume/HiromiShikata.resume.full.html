@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>Hiromi Shikata</title>
+  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <style>body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-family: "Open Sans";
+  font-size: 0.6em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+ 
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin: 0 auto;
+  margin-top:-2.5em;
+  
+  border-radius:10em;
+  height:4em;
+  width:4em;
+  
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+  
+}
+
+@-webkit-keyframes wiggle {
+  0%   {
+    transform: rotate(0deg);
+  }
+  25%  {
+    transform: rotate(-30deg);
+  }
+  50%  {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pic:hover {
+  /*Webkit fix*/
+  -webkit-transform: translateZ(0);
+  
+  cursor:pointer;
+  
+  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.header-text {
+  margin-top:0.5em;
+  margin-left:1em;
+}
+
+header p {
+  text-align:center;
+  font-family: "Merriweather";
+  
+  margin:0;
+  
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  padding-top:.3em;
+  font-size:0.55em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+  
+  background-color:white;
+  width:60%;
+  
+  padding:0.5em 0 0.5em 0;
+  
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius:3px;
+}
+
+@media(max-width:992px) {
+  .paper {
+    width:80%;
+  }
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right:7.25%;
+}
+
+.content {
+  display:table;
+  width:100%;
+  
+  padding-top:1.5em;
+  
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  font-family: "Merriweather";
+  font-variant:small-caps;
+  font-weight:300;
+  letter-spacing: 1px;
+  
+  color: #212121;
+  
+  font-size:0.975em;
+  
+  text-align:center;
+  vertical-align:middle;
+
+  padding-left:6.66%;
+  width:30%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+  
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #e0e0e0;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+  
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  display:inline-block;
+  
+}
+
+.content-text ul li:first-child {
+  width:35%;
+  
+  color: #424242;
+  
+  font-weight:600;
+}
+
+.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  color: #424242;
+  
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  color: #424242;
+  
+  margin-left:3.25em;
+  
+  list-style-type: disc;
+  list-style-position: inside;
+  display: list-item;
+  
+}
+
+.education-listing > .heading {
+  font-weight:600;
+  
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:32%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+  page-break-inside: avoid;
+}
+
+section.content.education-content > div > div.content-cat {
+  vertical-align: top;
+}
+
+div.content-text.skills-listing > p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.skills-listing > p > {
+  color:#212121;
+}
+
+@media screen and (max-width: 600px) {
+  body, html {
+    padding-top: 30px;
+  }
+
+  .paper {
+    width:95%;
+  }
+
+  .row div {
+    display: block;
+  }
+
+  .content-cat {
+    width: 100%;
+  }
+
+  .content-text ul li {
+    width: 100%;
+  }
+
+  .content-text ul li:first-child {
+    width: 100%;
+  }
+  
+  .education-listing > .highlight {
+    margin-left: 30px;
+  }
+}
+</style>
+  <style media="print">
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+  font-size: 104%;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.profiles {
+  display:none;
+}
+
+.content {
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:33%;
+  color:black;
+  text-align: left;
+}
+
+.content-cat p {
+  font-size:0.6em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+</style>
+</head>
+<body>
+  <div class="resume-wrapper">
+    <article class="paper">
+        <header>
+          <div class="header-content">
+            <div class="header-text">
+              <p>
+                Hiromi Shikata
+              </p>
+              <p class="subtitle">Full Stack Developer</p>
+            </div>
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <!-- CONTACT -->
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                Contact
+              </div>
+              <div class="content-text">
+                  <ul>
+                    <li>Website</li>
+                    <li>https://hiromishikata.github.io/profile/</li>
+                  </ul>
+                  <ul>
+                    <li>Email</li>
+                    <li><a href="mailto:shikata@uminoseisaku.com">shikata@uminoseisaku.com</a></li>
+                  </ul>
+                  <ul>
+                    <li>Phone</li>
+                    <li>+81-50-5354-8192</li>
+                  </ul>
+              </div>
+            </div>
+          </section>
+
+              <section class="content">
+                <div class="row">
+                  <div class="content-cat">
+                    Location
+                  </div>
+                  <div class="content-text">
+                      <ul>
+                        <li>Region</li>
+                        <li>Tokyo, Japan</li>
+                      </ul>
+                  </div>
+                </div>
+              </section>
+
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                Professional Skills Summary
+              </div>
+              <div class="content-text skills-listing">
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Backend Development
+                        </strong>
+                    </span>
+                      <span>(Expert):</span>
+                      RESTful API, Clean Architecture, DDD, Swagger, Serverless, AWS, Docker, docker-compose, MySQL, Postgres, DynamoDB, MongoDB, Redis, TypeScript, Go, Python, Rust
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          DevOps
+                        </strong>
+                    </span>
+                      <span>(Expert):</span>
+                      CI/CD, CircleCI, Testing Automation, Documentation Automation, SchemaSpy, CloudMapper, e2e Testing
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Infrastructure
+                        </strong>
+                    </span>
+                      <span>(Senior):</span>
+                      AWS ECS Fargate, AWS Lambda, Terraform, Ansible
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Frontend Development
+                        </strong>
+                    </span>
+                      <span>(Intermediate):</span>
+                      React, Fargate, Storybook, BroserStack, Vue, Angular
+                  </p>
+              </div>
+            </div>
+          </section>
+
+
+        
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        Work  Experience
+                          <p>2020-03-01 to current</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Back-end development &amp; Management (2days/week)</strong>
+                            at <strong>Urban development startup company</strong>
+                        </p>
+                        <p>Clean Architecture, Micro Service Architecture, Monolithic Repository, Ubuntu, TypeScript, Dart, Open API Generator, Express, Flutter, firestore, Postgres, Feature Flags, firebase, fireauth, firebase functions, firebase config, Prisma 2, OpenAPI, Docker, Docker Compose, GCP CloudSQL, GCP App Engine, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Zapier, Slack, </p>
+                          <p class="highlight">They didn&#x27;t have a CI / CD environment for a mobile app that was already in operation, so it was a project to help build.</p>
+                          <p class="highlight">I have set up from automatic deployment and have set up integration tests.</p>
+                          <p class="highlight">I put off unit testing because the application was already in production and quality assurance was an urgent need, and I needed to change the testable code.</p>
+                          <p class="highlight">Since I was talking about tasks in slack because the working hours and places were different, information was scattered, and I could not move forward due to useless communication without prioritizing work, so I created an environment to organize information with task management tools. I have put in place a system that can maintain permeation and discipline. </p>
+                          <p class="highlight">At that time, the most type-safe ORM in the TypeScript family seemed to be Prisma, so I introduced Prisma.</p>
+                          <p class="highlight">I have moved to a monorepo configuration to get the benefits of monorepo. Since the cost of CI has become critical, I have changed to execute jobs only where there are differences.</p>
+                          <p class="highlight">In order to make it easier for the company to expand rapidly and the implementation with only part-time members could not keep up with the business demands and troubles erupted and to incorporate new technology, I hired overseas engineers and built a team centered on overseas members. </p>
+                          <p class="highlight">Since there are a wide variety of nationalities and physical locations where I operate, I have prepared rules such as real-time meeting times and timezones, and created an environment that facilitates development such as 1on1 and scrum events.</p>
+                          <p class="highlight">Since work other than development was also stuck in large numbers due to labor shortage, I introduced an online assistant service to create a system to reduce the workload in the company and also get involved in development work, manual testing, onboarding, various tools and procedures, communication I have built a system to become a hub of. </p>
+                          <p class="highlight">As the number of people increased and the awareness of everyone&#x27;s eyes and commitment to delivery began to diminish, I changed the system and changed to a system that employs Scrum&#x27;s experienced PM to form a small team.</p>
+                          <p class="highlight">Business side member couldn&#x27;t decide the specifications and only the deadline was approaching, there was no one who could sort out the business issues, and the person who entered in the PM roll worked better. Since the size of the whole movement became invisible, I increased the number of PM roles and eliminated it from the ambiguity of the business layer, and I are building a system to go around without me. </p>
+                          <p class="highlight">Since I couldn&#x27;t grasp the situation of each engineer, I changed 1on1 to work with PM and both of me, and now I talk to PM about the project and the engineer&#x27;s own task, longer term, interest. I tried to keep the value of working at this company high by grasping the direction and where I want to improve my skills. </p>
+                          <p class="highlight">My success in hiring people who are better than the average Japanese engineer in about a month, the cost is about one-third that of hiring Japanese people, and my cliant appreciate that it is designed according to the business philosophy. </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2020-02-08 to 2020-12-23</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Back-end development (4days/week)</strong>
+                            at <strong>Hardware maker</strong>
+                        </p>
+                        <p>Ubuntu, AWS CloudFormation, AWS Redshift, AWS CloudFormation, AWS Batch, AWS CodePipeline, AWS CodeBuild, AWS CodeCommit, ShellSpec, Bazel, Docker, BitBucket, JIRA, Slack,</p>
+                          <p class="highlight">It was an improvement project for a data lake that is already in operation.</p>
+                          <p class="highlight">Deployment and testing were done manually, so I automated it.</p>
+                          <p class="highlight">I did the automation with AWS CodeBuild, CodePipeline, CodeCommit because I didn&#x27;t want to reach the AWS environment and Atlassian.</p>
+                          <p class="highlight">Deploying and testing on a data lake was an interesting project with many considerations that differed from normal application development.</p>
+                          <p class="highlight">Since the amount of data used in the integration test is large, I placed the data for each version in s3 and built it to specify the version of the data in the test code.</p>
+                          <p class="highlight">Since it was a team that did a lot of mob programming and had a relatively constant conversation, I proposed and experimented with the development of a trunk base.</p>
+                          <p class="highlight">Since there was a lot of Shell as part of the process, I adopted ShellSpec as the test framework and I created a sample to build and test with Bazel.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2019-08-26 to 2020-02-29</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Back-end development (3days/week)</strong>
+                            at <strong>Web service company</strong>
+                        </p>
+                        <p>Node, TypeScript, koa, Swagger, CleanArchitecture, DDD, TDD, Jest, Docker, ECS(Fargate), RDS, MySQL, ElastiCashe, Redis, GitHub, CircleCI, Linux, Ubuntu, Alpine, Slack, Trello, Scrum, 1on1, KPT, </p>
+                          <p class="highlight">Designed system architecture, decided FW, tools.</p>
+                          <p class="highlight">Developed APIs, wrote e2e and unit tests.</p>
+                          <p class="highlight">Controlled developers, tasks, meetings.</p>
+                          <p class="highlight">Built CI/CD environment</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-11-01 to 2019-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Infrastructure, Back-end development (3days/week)</strong>
+                            at <strong>AI startup company</strong>
+                        </p>
+                        <p>Docker, Terraform, Ansible, MongoDB, Redis pub/sub, Artillery, TypeScript, Serverless, DynamoDB, GitHub, CircleCI, Linux, Ubuntu, AMI, Slack</p>
+                          <p class="highlight">Migrated to Atlas from MongoDB on EC2.</p>
+                          <p class="highlight">Built pub/sub system with ElastiCache.</p>
+                          <p class="highlight">Replaced the application built on ECS with Docker on AWS ECS(Fagate).</p>
+                          <p class="highlight">Built all in Terraform, and prohibited manual work.</p>
+                          <p class="highlight">Done Load testing &amp; Stress testing with Artilley.</p>
+                          <p class="highlight">Automatic checking of container and infrastructure codes is perfomed in CircleCI.</p>
+                          <p class="highlight">Developed a new Slack bot by TypeScript on Lambda for our shuffle lunch.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-11-01 to 2019-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong> (1days/week)</strong>
+                            at <strong>HR startup company</strong>
+                        </p>
+                        <p>nginx, Ansible, Jupyter Notebook, Terraform, Docker, AWS SageMaker, Python3, Linux, Ubuntu, AMI, GitHub, CircleCI, Slack,</p>
+                          <p class="highlight">Built A/B test environment for Machine learning models on AWS SageMaker by Terraform &amp; AWS cli.</p>
+                          <p class="highlight">Provisioned Docker container by ansible.</p>
+                          <p class="highlight">Checking terraform, shells code at CircleCI.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-03-01 to 2019-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Backend development (3days/week)</strong>
+                            at <strong>IoT startup company</strong>
+                        </p>
+                        <p>Python2, Python3, Flask, Flasgger, TypeScript, koa, Swagger, Serverless, Docker, DynamoDB, API Gateway, Lambda, Terraform, Ansible, CircleCI, Linux, Ubuntu, CleanArchitecture, TDD, DDD, GitHub, Slack, JIRA, Confluence</p>
+                          <p class="highlight">Redeveloped the server used AWS Lambda &amp; API Gateway to use Serverless FW.</p>
+                          <p class="highlight">The design was simple but redesigned to Clean Architecture because of its high reliance on external service.</p>
+                          <p class="highlight">Introduced type hint of Python, CI/CD, Swagger, Document on CircleCI.</p>
+                          <p class="highlight">Provisioned development machine by Ansible.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-03-01 to 2018-10-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Backend development (4days/week)</strong>
+                            at <strong>Ads tech startup company</strong>
+                        </p>
+                        <p>Go, Echo, Goswagger, Swagger, MySQL, Aerospike, Redis, Linux, Ubuntu, SchemaSpy, Docker, Ansible, docker-compose, GitHub, CircleCI, Slack, </p>
+                          <p class="highlight">Developed back-end server, batch.</p>
+                          <p class="highlight">Redesigned API of admin console with a Clean Architecture.</p>
+                          <p class="highlight">Introduced Swagger, Docker, Ansible.</p>
+                          <p class="highlight">Made ERD from real schema, built automatically in CircleCI job</p>
+                          <p class="highlight">Organized a study session on design, how to use tools, and development flow.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-02-01 to 2018-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Backend Developer (1days/week)</strong>
+                            at <strong>Fintech company</strong>
+                        </p>
+                        <p>Kotlin, spark, Linux, Ubuntu, SchemaSpy, Swagger, API Blueprint, Gradle, Docker, AWS ECS Fargate, CircleCI, MySQL, GitHub, Backlog, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2017-03-01 to 2017-09-30</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Backend Developer (5days/week, includes remote work: 3days)</strong>
+                            at <strong>Ads creative company</strong>
+                        </p>
+                        <p>TypeScript, Elixer, Node, Express, phoenix, postgress, Linux, Ubuntu, CentOS, GitHub, ZenHub, CircleCI, Swagger, Ansible, mix, Codebeat, Codacy, Docker, AWS, Slack</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-11-01 to 2017-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Full Stack Developer (3days/week)</strong>
+                            at <strong>Ads creative company</strong>
+                        </p>
+                        <p>JavaScript, Node, loopback, Angular, MongoDB, CSS, Linux, Ubuntu, CentOS, GitHub, CircleCI, Swagger, GitHub projects, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-08-01 to 2017-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Back End Developer (5days/week)</strong>
+                            at <strong>IoT startup company</strong>
+                        </p>
+                        <p>Scala, sbt, play2, MySQL, Linux, Ubuntu, Ansible, GitHub, CircleCI, Asana, Swagger, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-06-01 to 2017-09-30</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Android Developer (2days/week, includes remote work a day)</strong>
+                            at <strong>IoT startup company</strong>
+                        </p>
+                        <p>Scala, sbt, Android, Linux, Ubuntu, Bluetooth, BLE, Beacon, CircleCI, GitHub, DaployGate, GitHub issues, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-04-01 to 2016-05-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Android Developer (3days/week, full remote)</strong>
+                            at <strong>IoT startup</strong>
+                        </p>
+                        <p>Java, Gradle, Fabric, Android, Linux, Ubuntu, CircleCI, GitHub, Pivotal Tarcker, Bluetooth, Beacon, BLE, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-04-01 to 2016-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Back End &amp; Electronic Prototype Developer (4days/week)</strong>
+                            at <strong>IoT startup</strong>
+                        </p>
+                        <p>Javascript, Arduino, 3D CAD, OnShape, Node, Angular, Twitter Bootstrap, MySQL, Linux, Ubuntu, GitHub, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-03-01 to 2016-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Back End Developer (3days/week, full remote)</strong>
+                            at <strong>IoT startup</strong>
+                        </p>
+                        <p>JavaScript, HTML, Node, npm, bower, Grunt, MySQL, Linux, Ubuntu, Sequelize, CircleCI, GitHub, Swagger, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-01-16 to 2016-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Back End Developer (3days/week, full remote)</strong>
+                            at <strong>IoT startup</strong>
+                        </p>
+                        <p>JavaScript, HTML, Node, experss, Swagger, npm, bower, Grunt, pm2, SendGrid, KiiCloud, GCP, sinon, jasmine, mocha, CiecleCI, GitHub, GitHub issues, Twitter Bootstrap, Linux, Ubuntu, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-12-01 to 2016-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Back End Developer &amp; Electronic Prototype Developer (1days/week)</strong>
+                            at <strong>IoT startup</strong>
+                        </p>
+                        <p>JavaScript, Node, Angular, Twitter Bootstrap, SQLite, npm, bower, grunt, sequelize, Swagger, Ansible, GitHub, Slack, </p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        Education
+                          <p>2004-04-01 to 2007-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p style="margin-top:0;" class="heading">Collage</p>
+                        <p class="highlight">
+                          <i>Qualified　Bornsetter </i>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+
+
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  Languages
+                </div>
+                <div class="content-text">
+                    <ul>
+                        <li>Japanese</li>
+                        <li>Native speaker</li>
+                    </ul>
+                    <ul>
+                        <li>English</li>
+                        <li>Limited Working</li>
+                    </ul>
+                </div>
+              </div>
+            </section>
+
+
+
+
+            <!-- PROFILES -->
+              <section class="content profiles">
+                <div class="row">
+                  <div class="content-cat">
+                    Profiles
+                  </div>
+                  <div class="content-text profiles-listing">
+                    <ul>
+                          <li>
+                            <a href="https://github.com/hiromishikata" target="_blank">
+                              GitHub
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://hiromi.appointlet.com/s/30-umino/hiromi" target="_blank">
+                              Meeting (30min)
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://www.linkedin.com/in/hiromishikata" target="_blank">
+                              LinkedIn
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com/hiromishikata" target="_blank">
+                              Twitter
+                            </a>
+                          </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  Personal
+                </div>
+                <div class="content-text skills-listing">
+                    <p>
+                      <span class="name">
+                      </span>
+                        IoT, Zapier, IFTTT, Universal Remote Control
+                    </p>
+                    <p>
+                      <span class="name">
+                      </span>
+                        Film, Buffing Compounds, Nail
+                    </p>
+                </div>
+              </div>
+            </section>
+
+        </div>
+    </article>
+  </div>
+</body>
+</html>

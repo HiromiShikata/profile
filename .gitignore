@@ -203,5 +203,7 @@ typings/
 
 .idea
 dist
-resume
-resume.short.json
+# ignore intermediate JSON files but allow generated resume directory
+resume.*.json
+!generated/resume/
+!generated/resume/**/*
