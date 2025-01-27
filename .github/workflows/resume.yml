@@ -38,34 +38,34 @@ jobs:
           export PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox"
           export PUPPETEER_LAUNCH_ARGS="--no-sandbox --disable-setuid-sandbox"
           export PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
-          
+
           echo "Current directory contents before generation:"
           ls -la generated/resume/
-          
+
           npm run generate-from-json --output_dir=generated/resume --file=resume.short
           check_pdf_generation "generated/resume/HiromiShikata.resume.short.pdf"
           npm run generate-from-json --output_dir=generated/resume --file=resume.full
           check_pdf_generation "generated/resume/HiromiShikata.resume.full.pdf"
           npm run generate-from-json --output_dir=generated/resume --file=resume.ja.full
           check_pdf_generation "generated/resume/HiromiShikata.resume.ja.full.pdf"
-          
+
           echo "Current directory contents after generation:"
           ls -la generated/resume/
-          
+
           echo "Git status:"
           git status
-          
+
           sed 's@"志方 裕美"@"********"@g' RESUME.ja.md > generated/RESUME.masked-name.ja.md
-          
+
           echo "Adding generated files to git:"
           git add generated/
           git status
-          
+
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: update generated resume files"
           file_pattern: "generated/**/*"
-          
+
       - run: |
           if [ $(pdftk generated/resume/HiromiShikata.resume.short.pdf dump_data | grep NumberOfPages | awk '{print $2}') -ne 1 ]; then
             echo "Resume must be exactly 1 page"
