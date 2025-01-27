@@ -17,9 +17,5 @@
     "start": "resume serve"
   },
   "devDependencies": {},
-  "keywords": [
-    "jsonresume",
-    "json",
-    "resume"
-  ]
+  "keywords": ["jsonresume", "json", "resume"]
 }
