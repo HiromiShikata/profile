@@ -40,7 +40,7 @@ env:
 
 jobs:
   umino-job:
-    name: opened_or_reopened
+    if: github.event_name != 'issue_comment' || github.event.comment.user.login != 'umino-bot'
     runs-on: ubuntu-latest
     steps:
       - name: Move issue to ${{ env.unread }}
@@ -174,7 +174,7 @@ jobs:
       - uses: nearform-actions/github-action-check-linked-issues@v1
         id: check-linked-issues
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**, renovate/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**, renovate/**'
           github-token: ${{ secrets.GH_TOKEN }}
           loose-matching: true
       - name: Get the output
