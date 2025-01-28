@@ -52,7 +52,6 @@ jobs:
           echo "Current directory contents after generation:"
           ls -la generated/resume/
 
-          # Inject GA4 script into all generated HTML files
           for html_file in generated/resume/*.html; do
             sed -i '/<head>/a \  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ES8HLN40E3"></script>\n  <script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('\''js'\'', new Date());\n  gtag('\''config'\'', '\''G-ES8HLN40E3'\'');\n  </script>' "$html_file"
           done
