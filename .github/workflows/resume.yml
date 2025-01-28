@@ -9,6 +9,9 @@ on:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -65,11 +68,23 @@ jobs:
           git add generated/
           git status
 
-      - if: github.ref == 'refs/heads/main'
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Create Pull Request
+        if: github.ref == 'refs/heads/main'
+        uses: peter-evans/create-pull-request@v5
         with:
-          commit_message: "docs: update generated resume files"
-          file_pattern: "generated"
+          token: ${{ secrets.GH_TOKEN }}
+          commit-message: "docs: update generated resume files"
+          title: "docs: update generated resume files"
+          body: |
+            Auto-generated resume changes
+            
+            This PR was automatically created by the Resume workflow to update generated resume files.
+          branch: auto-gen-resume
+          base: main
+          delete-branch: true
+          labels: |
+            automated
+            resume
 
       - run: |
           if [ $(pdftk generated/resume/HiromiShikata.resume.short.pdf dump_data | grep NumberOfPages | awk '{print $2}') -ne 1 ]; then
