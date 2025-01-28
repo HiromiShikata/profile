@@ -65,8 +65,7 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "docs: update generated resume files"
-          file_pattern: "generated/**/*"
-          skip_checkout: false
+          file_pattern: "generated"
 
       - run: |
           if [ $(pdftk generated/resume/HiromiShikata.resume.short.pdf dump_data | grep NumberOfPages | awk '{print $2}') -ne 1 ]; then
