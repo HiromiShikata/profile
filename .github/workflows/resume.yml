@@ -77,7 +77,7 @@ jobs:
           title: "docs: update generated resume files"
           body: |
             Auto-generated resume changes
-            
+
             This PR was automatically created by the Resume workflow to update generated resume files.
           branch: auto-gen-resume
           base: main
