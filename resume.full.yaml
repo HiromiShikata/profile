@@ -59,639 +59,634 @@ skills:
       - Angular
       - Aurelia
 work:
-  - company: スタートアップのAIプロダクトR&D
-    position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
+  - company: AI Product R&D Startup
+    position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2024-04-01'
-    endDate: 現在
+    endDate: Present
     summary: Python3, OpenAI API, Anthropic API, Llama, ChromeExtension, Selenium, PyAutoGUI, AutoGen
     highlights:
-      - LLM（Large Language Models）の精度が向上したことを背景に、社内向けツールのアイデアを実装しました。新人社員が行うようなタスクの遂行を目指し、自律的に動作するよう構築しました。現在のLLMの精度では、タスクが3-4ステップ以上になるとLLMが途中で必要な操作を忘れたり、依頼していないことを実行してしまう問題が発生していましたがこの問題を解決するために、LLMのスペックやタスクの構造を見直し、最適な構造に作り変えました。現在は、テスト段階で使用したタスクに関しては、体感として90%以上の確率でこなせるようになっています。
-      - また、タスクの性質により起きがちな間違いが見えてくるようになったため、作業を細かく分けたり、サンプルを示したりすることでLLMのタスクの実行が安定するようになりました。
-      - OpenAIのAPIだけでなく、他の大手2社のAIも並行して使えるようにシステムを修正しました。一部のタスクに関しては、より安いLLMやより早いLLMを使得るような構造で構築しました。複雑なタスクを複数のエージェントで遂行し、自律的に修正しながら進めるためマルチエージェントのフレームワークを調査し、採用しました。マルチAIエージェントで構築できる状態にしておくと、ある程度複雑な箇所やAI同士でのレビューなど自律的な行動が取れるようになり、汎用的かつ成功確率の高いものにできるようになりました。
-      - このプロジェクトは4人のチームで取り組みましたが、最初は作業の切り分け方に非常に悩みました。当初はどのような構造になるか全く想像がつかないどころか全員でAI周りは明るくなかったので調査から始めなければならないにもかかわらず、急いで成果を出したいという状況でした。リモートチームであり、メンバーが住んでいる国やタイムゾーンもバラバラでしたのでチーム内で使う仕組みを自立的な動作を期待してより機動的に動ける仕組みにしました。
-      - 実装直後のツールの動作はアルシュの気色悪さが有りましたので見込み客や投資家向けのデモンストレーションのため、AIが何を考えているかの表示や何をAIが操作しているのかが直感的にわかるような表示を追加しました。説明のためのアニメーションや表示には時間がかかるため、設定によりそれらの動作をオフできるように構築しました。
-      - プロジェクトでは、ユーザーの使用しているパソコンをOS丸ごとコントロールする機能も検討しました。この機能は、画像情報から現在のタスクに必要な操作を指示できるかどうかを調査することを含んでいました。様々な方法を試しましたが、現在のところはLLM一つでは視覚情報からの指示を出せるまでには至らず、一番成績が良かったのはマルチモーダルのアプローチでした。それでも、ピクセル単位でクリックすべき場所の回答が常に間違っていて使い物にならないことが分かりました。各種の既存の調査の結果も合わせて、20%しか精度が出ないことが分かり、異なるアプローチを試すことにしました。
-      - 現在は5〜6年前に見かけた、商品をレジに並べている商品の種類や産地などを認識できるような方法を調査しています。この調査は詳しい専門家に手伝ってもらいながら進めています。また、ブラウザをコントロールすることがほとんどのタスクでしたが、画像情報からの指示が現在安定的にできないため、Webの画面を操作することに集中してプロダクトの開発を進めています。
-      - OSSのChrome拡張機能に、3ステップぐらいのタスクであればうまくいくタイプのツールがあったので、拡張機能を使用して機能の一部を作ってみましたが、既に構築しうまくいっているアイデアとのインテグレートのコストが高かったため、途中で開発を停止しました。
-      - 単純にすべての情報をpromptに入れるとすぐにtoken数上限を超えてしまう為、各種の今回必要な情報を落とさずtoken数を下げる取り組みを複数行いました。
-      - 自動操作の指示はソースコードの生成で実現させていましたが、当時の成功率は約60%から70%程度でした。成功率が上がらないため、意図的にAIにとって分かりやすいWrapper関数を用意し、Wrapper内部の処理はプログラマティックに行うよう改善しました。その結果、操作の成功確率は体感でほぼ100%に近い数値となりました。
-      - 日々新しいLLMやフレームワーク、プロダクトが出てくる状況でしたので、ひたすら使ってみる期間を設け、現在の最新の状態がどうなっているかを理解する期間を意図的に作りました。全員で開発していくうちに、チーム全体で1時間あたり、コストが一番多かったタイミングで1万円になってしまいました。そのため、オープンソースのLLMやGrokなどより新しくコストやスピードを下げる可能性のあるLLMの調査を行いました。
-      - 現在作業中ではありますが、料金が高く遅いLLMでしかこなせなかったタスクも多く、早くて安いLLMへの単純なリプレイスは失敗しまし。しかしタスクをさらに小さくしたものであれば成功するということがわかりましたので次のフェーズではより小さなタスクに分割できるよう構造の修正をする予定です。
+      - Implemented internal tools leveraging improved LLM (Large Language Models) accuracy. Built autonomous systems aimed at executing tasks typically performed by new employees. Initially, when tasks exceeded 3-4 steps, LLMs would forget necessary operations or perform unintended actions. Resolved this by optimizing LLM specifications and task structures. Currently achieving over 90% success rate for tested tasks.
+      - Improved LLM task execution stability by breaking down tasks into smaller components and providing examples, after identifying common error patterns based on task characteristics.
+      - Modified the system to work with APIs from OpenAI and two other major AI companies simultaneously. Structured certain tasks to utilize more cost-effective or faster LLMs. Investigated and implemented multi-agent frameworks to handle complex tasks with autonomous correction capabilities. The multi-AI agent architecture enables autonomous behavior for complex scenarios and inter-AI reviews, resulting in more versatile and reliable solutions.
+      - Led a 4-person team, initially struggling with task distribution. The project started with limited AI expertise across the team, requiring extensive research while under pressure to deliver quick results. Implemented agile systems for the remote team, accommodating members across different countries and time zones.
+      - Enhanced tool demonstrations for potential clients and investors by adding intuitive displays showing AI thought processes and actions, addressing initial uncanny behavior. Implemented configurable settings to toggle explanatory animations and displays to optimize performance.
+      - Explored OS-level computer control functionality, including investigating the ability to interpret visual information for task operations. Various approaches were tested, but single LLM solutions proved inadequate for visual instruction interpretation. Multimodal approaches showed better results but still struggled with pixel-precise click location accuracy. Combined with existing research, showing only 20% accuracy, led to exploring alternative approaches.
+      - Currently investigating methods similar to retail product and origin recognition systems observed 5-6 years ago, collaborating with domain experts. While browser control constitutes most tasks, development focus remains on web interface manipulation due to current instability in image-based instruction.
+      - Experimented with an OSS Chrome extension capable of handling 3-step tasks, but discontinued development due to high integration costs with existing successful implementations.
+      - Implemented multiple strategies to reduce token count while preserving essential information, addressing prompt token limits.
+      - Initially achieved 60-70% success rate with source code generation for automated operations. Improved to nearly 100% by implementing AI-friendly wrapper functions with programmatic internal processing.
+      - Dedicated time to testing new LLMs, frameworks, and products in a rapidly evolving landscape. Team development led to peak costs of ¥10,000 per hour, prompting investigation into open-source LLMs and newer options like Grok for cost and speed optimization.
+      - Currently working on restructuring tasks for smaller LLMs, as simple replacement of expensive/slow LLMs failed. Found success with further task decomposition, planning structural modifications for the next phase to enable finer task granularity.
 
-  - company: 製造業向けSaaSスタートアップ
-    position: 技術顧問
+  - company: Manufacturing Industry SaaS Startup
+    position: Technical Advisor
     startDate: '2022-01-01'
     endDate: '2023-08-31'
-    summary: チーム開発マネジメント、採用活動支援、技術的負債解消支援、組織構造改善
+    summary: Team Development Management, Recruitment Support, Technical Debt Resolution, Organizational Structure Improvement
     highlights:
-      - 前任の責任者が辞め入社したばかりのリーダーに負荷がかかっていてどのように進めていけばよいかの迷いが大きかった箇所に関してサポートを行いました。
-      - 10分程度話しただけでも体制的、技術的な大小さまざまな課題が五月雨に出てくる状態で負荷の高さがうかがえるところからのスタートでした。
-      - まずは思考中唐突に課題を思いついてしまい思考が発散して何も進まなくなってしまっていることを解決するため、頭の中にある課題を粒度、ジャンル問わずすべて洗い出し重要度と緊急度の評価を行いました。洗い出し後、今考えるべきことの絞り込みを行い大事な事から集中して進む状態を作りました。
-      - 定期的にオンライン会議を行い、進めていることの状態評価と次に進めることの計画を決めました。私の作業としてはどの工程も質問のみで全ての洗い出しや評価、決定はリーダー自身にしていただいていましたので3回程度の会議で容量を得ていただき流れに乗りましたのでこの取り組みは不要となりました。
-      - 目下の課題が順番に消えていくようになると長期的にどうしたらいいかわからない不安が出てきていたようですので会社として何を目指しているかを理解するため、どのような情報があれば次に自分たちがやるべきことが見えるかを洗い出す取り組みを始めました。また、もし社長にも見えていない状態であればどのような情報があると社長が考えやすいかも考えてから年単位の未来を理解する取り組みも行いました。リーダーと社長のコミュニケーションを変えてから2ヶ月程度で見えてくるようになり年単位のイメージがクリアになりリーダーの迷いが減っていることが観察できました。
-      - 長期的な方向性が見え、次に発生した問題はタスクの増え方のスピードがキャパシティを超えていることでした。採用活動は進めてはいるものの応募が少なく、想定したチーム拡張スピードより1ヶ月程度遅れ始めていたので面を広げる取り組み、社内の採用のためのリソース確保などの計画を立てました。今までは無料の媒体に出すだけだった採用活動をもっと能動的に進めるアイデアを相談、実行ていただき複数の良いメンバーの入社が確定しました。
-      - 次にリーダー自身が本来進めたいと考えている作業の為の時間が取れず、眼の前の作業に追われていて長期的な課題に特に手がつけられていない問題の対応を行いました。
-      - 今のリーダーの作業の時間配分を洗い出すとメンバーのマネジメントや開発の他に障害対応や本来自動で対応できるものの自動化の時間がなく手作業でリーダーご自身で引き受けてしまったり入ったメンバーの作業が簡単になるように準備してから作業依頼している事が多い事がわかりました。採用したメンバーも育って来ていたのでコミュニケーションのパスやメンバーにお願いする作業の範囲を増やし、稼働時間の50%を未来の取り組みに当てる時間として確保できるようになりました。
-      - メンバーが増え、チームの自走が課題になり始めていたのでチームのマネジメントメンバーにも会議に入っていただき、体制改善のディスカッションと実行を行いました。マネージャーによるチーム内のコントロールはうまく安定して回るようになりました。
-      - リーダーが入社した当初からの技術的な負債の解消をリーダーが一人で抱えていた課題の解消のため、技術志向のメンバーが入るよう会議体を変更してディスカッションと実行を行いました。
-      - 理想はリーダーのトップダウンな指示なしにメンバーが自発的に動くこととしたので課題の洗い出しと認識、評価などの一番最初にリーダーにやっていただいたようなことから始めました。ディスカッションの中でメンバーとリーダーとの価値観や課題認識等の差が埋まり最初の課題は3週間程度で解消し、メンバーの視野が広がる効果がありました。現在次の改善を進めるため同じメンバーでディスカッションを継続しています。
+      - Provided support to a newly appointed leader who was struggling with direction after the previous manager's departure.
+      - Started from a challenging position where even brief 10-minute conversations revealed numerous organizational and technical issues cascading continuously, indicating high stress levels.
+      - Addressed the leader's scattered thinking by helping systematically identify and evaluate all challenges regardless of size or category, prioritizing them by importance and urgency. After this exercise, we focused on the most critical issues to create a clear path forward.
+      - Conducted regular online meetings to assess progress and plan next steps. My role was primarily asking questions, allowing the leader to do all the analysis and decision-making. After about three meetings, the leader gained confidence and momentum, making this support structure unnecessary.
+      - As immediate issues were being resolved, we noticed emerging anxiety about long-term direction. Started an initiative to identify what information would help clarify future actions. Also considered what information would help the CEO's decision-making if needed. After adjusting communication between the leader and CEO, within about 2 months, the annual planning became clearer and the leader's uncertainty noticeably decreased.
+      - Once long-term direction was established, the next challenge was task volume exceeding capacity. Recruitment was ongoing but applications were low, causing about a month's delay in planned team expansion. Developed plans to broaden recruitment efforts and secure internal resources. Implemented more proactive recruitment strategies beyond just free job boards, successfully securing multiple quality team members.
+      - Addressed the issue of the leader lacking time for strategic work due to being overwhelmed with immediate tasks and unable to address long-term challenges.
+      - Analysis of the leader's time allocation revealed excessive manual work on tasks that could be automated, and time spent preparing work to make it easier for team members. As team members developed, we expanded their responsibilities and communication channels, enabling the leader to dedicate 50% of time to future initiatives.
+      - As the team grew, self-management became a challenge. Included management team members in meetings to discuss and implement structural improvements. This resulted in stable team control under managers.
+      - Modified meeting structure to include technically-oriented members to help address technical debt that the leader had been handling alone since joining.
+      - Aimed for team self-direction without top-down leadership by starting with the same process of issue identification and evaluation we initially did with the leader. Through discussions, team members and leader aligned on values and problem recognition, resolving initial challenges within 3 weeks while broadening team perspective. Currently continuing discussions with the same members for further improvements.
 
-  - company: 教育系スタートアップのアメリカ子会社にて幼児向けプログラミング教育製品の新規開発
-    position: 週3リモート稼働フルスタックエンジニア (開発チームエンジニア 2名)
+  - company: Early Childhood Programming Education Product Development at US Subsidiary of Educational Startup
+    position: Remote Full-stack Engineer (3 days/week, 2-person development team)
     startDate: '2023-02-01'
     endDate: '2023-08-31'
     summary: AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator, DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu, TypeScript, Express, DDD, Clean Architecture, GitHub Actions, GitHub, GitHub Issues, JIRA, confulence, GitHub Projects, Ttunk-based Development, Mermaid, Docker, docker-compose, Slack, Jest
     highlights:
-      - ダッシュボード開発時期に立ち上がった、販売を促すための製品でした。
-      - 短期間でのリリースが必要だったため、更に人数を減らし2人での開発を行いました。
-      - 機能要件が膨大だったため、DDDを厳密に適用し正規化に時間をかけ、ほぼ全てのコードを厳密な定義より生成することでリリースに間に合わせました。自動生成コードにはテストも含まれ、不具合発生を抑制できました。
-      - Graphqlの定義を手書きから、モデルからの自動生成に切り替え、生成ツールはオープンソースとして公開しました。
-      - チーム規模を最小限に抑えることでコミュニケーションコストを削減し、コーディングに80%以上の時間を確保できました。
-      - エンティティモデル数45個、ライブラリ化して公開したコードやコメント行を除き、開発開始からリリースまでの4ヶ月間に2人で対応したソースコードは11万行となり、うち4.5万行は作成したGeneratorで自動生成しました。
-      - 製品は日本の親会社でも販売されることとなり事業の拡大に貢献しました。
+      - Developed a product to promote sales during the dashboard development phase.
+      - Reduced team size to just 2 people to meet tight release deadlines.
+      - Applied DDD strictly and invested time in normalization due to extensive functional requirements. Generated almost all code from strict definitions to meet release deadlines. Auto-generated code included tests, helping prevent defects.
+      - Switched GraphQL definitions from manual writing to model-based auto-generation, and released the generation tool as open source.
+      - Minimized team size to reduce communication overhead, securing over 80% of time for coding.
+      - Managed 45 entity models and produced 110,000 lines of code (excluding published libraries and comments) in 4 months with just 2 people, of which 45,000 lines were auto-generated using our custom Generator.
+      - Contributed to business expansion as the product was later also sold by the Japanese parent company.
 
-  - company: 教育系スタートアップのアメリカ子会社にて製品の中学校教師向けダッシュボード開発
-    position: 週3リモート稼働フルスタックエンジニア (開発チームエンジニア 3名)
+  - company: Middle School Teacher Dashboard Development at US Subsidiary of Educational Startup
+    position: Remote Full-stack Engineer (3 days/week, 3-person development team)
     startDate: '2022-11-01'
     endDate: '2023-01-31'
     summary: AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator, DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu, TypeScript, Express, DDD, Clean Architecture, GitHub Actions, GitHub, GitHub Issues, JIRA, confulence, GitHub Projects, Ttunk-based Development, Mermaid, Docker, docker-compose, Slack, Jest
     highlights:
-      - 日本のスタートアップが立ち上げたアメリカ法人の事業で、オフショア開発チーム8名程度の解散後の少人数で機動的な開発を目的としたチームに参画しました。
-      - 機能要件が膨大だったため、DDDを厳密に適用し正規化に時間をかけ、ほぼ全てのコードを厳密な定義より生成することでリリースに間に合わせました。自動生成コードにはテストも含まれ、不具合発生を抑制できました。
-      - Graphqlの定義を手書きから、モデルからの自動生成に切り替え、生成ツールはオープンソースとして公開しました。
-      - チーム規模を最小限に抑えることでコミュニケーションコストを削減し、コーディングに80%以上の時間を確保できました。
-      - US時間帯の運用に対応するため、メキシコに滞在してタイムゾーンを合わせ、迅速な障害対応体制を構築しました。
-      - カリキュラム作成チームのアシスタントメンバーが、進捗管理やCS部門からの不具合報告に自律的に対応できるよう、コミュニケーション体制を整備しました。
-      - 英語ネイティブメンバーとの初めての協働で生じたコミュニケーション課題に対し、図示や事前テキスト共有など、会議進行方法を継続的に改善しました。
+      - Joined an agile development team at a US subsidiary of a Japanese startup, formed after dissolving an 8-person offshore development team.
+      - Applied DDD strictly and invested time in normalization due to extensive functional requirements. Generated almost all code from strict definitions to meet release deadlines. Auto-generated code included tests, helping prevent defects.
+      - Switched GraphQL definitions from manual writing to model-based auto-generation, and released the generation tool as open source.
+      - Minimized team size to reduce communication overhead, securing over 80% of time for coding.
+      - Relocated to Mexico to align with US time zones, establishing rapid incident response capabilities.
+      - Established communication protocols enabling curriculum team assistants to autonomously handle progress tracking and CS department issue reports.
+      - Continuously improved meeting processes through visualization and advance text sharing to address communication challenges in first-time collaboration with native English speakers.
 
 
-  - company: コンシューマ向けフードテックスタートアップ
-    position: 週3リモート稼働フルスタックエンジニア (初期開発チームエンジニア 6名)
+  - company: Consumer Foodtech Startup
+    position: Remote Full-stack Engineer (3 days/week, Initial development team of 6 engineers)
     startDate: '2022-06-01'
-    endDate: 現在
+    endDate: Present
     summary: Scrapy, Spider, Playwright, kubenetes, AWS lambda, AWS Batch, Ubuntu, TypeScript, Dart, Express, OpenAPI, Flutter, Mermeid, Puppetier, gRPC, Golang, Python 3, RedShift, firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic Repository, firebase, GitHub Actions CircleCI, GitHub, GitHub Issues, GitHub Pages, GitHub Projects, Ttunk-based Development, Mermaid, OpenSeatch, OpenSeatch Dashboard, Docker, docker-compose, Slack, Jest
     highlights:
-      - 既存のメンバーですでに構築されたシステムを持っているスタートアップでした。
-      - 外注していたチームの品質が悪く、チームの入れ替えを検討してご依頼いただきました。
-      - 同時期に入ったメンバー中心でリプレイスを行いつつ、私の方で新機能の開発を行いました。
-      - 検索機能の追加のためOpenSearch環境を構築しデータの投入からクエリの最適化、チューニングまで行いました。
-      - 外部サービス連携のためのRPA開発を行い、手動オペレーションの自動化を行いました。
-      - 連携先が大量に増えていくことが予想されましたので分割統治できるアーキテクチャを採用しスケールしてもスピードを落とさないコードベースを作成しました。
-      - フロントエンドはflutterで一人しかいなかった為私でコードレビューを行いました。
-      - 若いメンバーが多く、体制の変化途中で安定しなかったのと完全リモートチームで情報共有や問題の拾い上げに課題があったので会議体の設計やコミュニケーションフローの改善を行い、リモートでコミュニケーション頻度が高くなくても必要なことが明確になるようにしました。
-      - 自動テストが全くなかったので私で手を入れたところからユニットテストを追加しベースを作成したので他のメンバーもテストを作成してくれるようになりました。
-      - クレデンシャルが当時いたエンジニアの個人に紐づいているものが多く、チームを離れたあと様々なものが突然動かなくなったので取り急ぎクレデンシャルを更新してまずは動かしつつ、タスクとして創業者のクレデンシャルを使用するよう積んでおき、チームの変化時に同じことが起きないようにしました。
-      - ci/cdが全くなかったのでCircleCI, GitHubActionsを導入し手作業の大部分を自動化しました。メンバーも内容を理解し使いこなせるようになったのと、自ら他のCIなども探して試したりしてくれるようになりました。
-      - モノレポの恩恵を受けるため混乱しがちなCIのファイルを分割統治できるorbを作成しました。他のプロジェクトでも同じ課題を抱えていたのでプロジェクト外で作成しオープンソースとして公開しました。
-      - トランクベース開発に移行しデイリーで数回のデプロイが継続的にできるよう体制とコードベースを構築しました。
-      - ドキュメントにOpenAPI, Mermaid, などテキストベースで管理できエコシステムの充実したフォーマットを採用し、ドキュメントとソースコードとの乖離を防ぐよう構築しました。ドキュメントはCircleCIでホストし、生成と同時に適切なメンバーのみが見れるよう権限管理をCircleCIの機能で行いました。
-      - ドキュメントへのコードベースからのリンクが必要ですがCircleCIでホストしている成果物のURLが毎回変わってしまうのでGitHub Pages の機能でリダイレクトを設定し、リダイレクトの先を自動コミットしてドキュメントが自動で最新に保たれる仕組みを構築しました。
-      - 若いメンバーが実装で止まってしまうことが多く、ケアを行いました。
-      - 資金調達に難航する時期がありましたのでコスト、稼働調整、体制などについての提案を行いました。
-      - チーム拡張タイミングには優秀でコミュニケーション能力の高いグローバル人材を採用し、複数のタイムゾーンのリモートチームにも関わらず効率の良いチーム構築を行いました。
-      - 高額になり始めていたプロキシ代を節約するため、インフラの再構築を行いました。
-      - メンバーの行動範囲を徐々に広げるため、ロールの違うメンバーと少しだけやり取りが必要なタスクを徐々に増やしスムーズに自走する体制を構築しました。
-      - リモートチームなのでリアルタイムなコミュニケーションを前提とせずとも現在自分たちがフォーカスするべきこと、タスクの優先順位、何が起きているかのお互いへの共有ができるだけ少ないコストでできるよう正規化した情報のやり取りをするよう仕組みを作り、浸透するようデイリーのルーチンを組んで実行しました。
-      - １つの大きなモノリスのサービスとして構築されている部分が明らかに機動力を抑えていたので分割のロードマップを作成しユーザーへの価値提供を強化しつつ、ビジネスサイドの新たな取り組みを実現させながら合わせてリファクタを実行する手順を整えました。こちらは現在実行中です。スタートアップであるため頻繁にビジネスプランや緊急度が変わりますが、週単位での変化では少しの組み換えだけで同時に対応できる状態を維持しています。
+      - Joined a startup with an existing system and team structure.
+      - Brought in to help replace an underperforming outsourced team.
+      - Led new feature development while coordinating system replacement with newly joined team members.
+      - Built OpenSearch environment from data ingestion to query optimization and tuning for search functionality.
+      - Developed RPA solutions for external service integration, automating manual operations.
+      - Implemented a divide-and-conquer architecture anticipating numerous integration points, creating a scalable codebase that maintains speed.
+      - Performed code reviews for Flutter frontend development as the only experienced Flutter developer.
+      - Improved meeting structure and communication flows to address challenges in information sharing and problem identification within a fully remote team with many junior members during organizational changes.
+      - Established unit testing practices from scratch, creating a foundation that encouraged other team members to write tests.
+      - Addressed credential management issues by updating credentials tied to departed engineers and implementing founder-level credentials to prevent future disruptions during team changes.
+      - Implemented CI/CD with CircleCI and GitHub Actions, automating most manual processes. Team members became proficient and began exploring additional CI tools independently.
+      - Created a CircleCI orb for managing monorepo CI files using divide-and-conquer approach. Released as open source after seeing similar needs in other projects.
+      - Established trunk-based development with multiple daily deployments through appropriate team structure and codebase organization.
+      - Adopted text-based documentation formats (OpenAPI, Mermaid) with rich ecosystems to prevent documentation-code divergence. Hosted on CircleCI with proper access control for relevant team members.
+      - Built an auto-updating documentation system using GitHub Pages redirects to handle changing CircleCI artifact URLs, ensuring documentation links remain valid.
+      - Provided guidance and support to junior members struggling with implementation.
+      - Made proposals regarding cost, operations, and structure during fundraising challenges.
+      - Built an efficient multi-timezone remote team by hiring skilled global talent with strong communication abilities.
+      - Restructured infrastructure to reduce increasing proxy costs.
+      - Gradually expanded team member responsibilities through incremental cross-role interactions, building toward self-sufficiency.
+      - Established normalized information sharing routines for asynchronous remote work, ensuring clear focus areas, task priorities, and status updates without requiring constant real-time communication.
+      - Created a roadmap for breaking down a monolithic service that was limiting agility, balancing user value delivery with business initiatives and refactoring. Currently in progress, maintaining flexibility for weekly changes common in startup environments.
 
-  - company: ECサイトフルスクラッチ構築案件
-    position: プロジェクトマネージャー (開発チーム 5名)
+  - company: E-commerce Site Full-scratch Development
+    position: Project Manager (5-person development team)
     startDate: '2022-03-01'
     endDate: '2022-07-31'
     summary: FlutterFlow, Firebase, GitHub, Lark, CircleCI, GitHub Actions
     highlights:
-  - company: 実店舗向け広告プロダクト
-    position: 週1-3リモート稼働Androidアプリエンジニア
+  - company: Retail Store Advertising Product
+    position: Remote Android App Engineer (1-3 days/week)
     startDate: '2021-02-01'
     endDate: '2021-08-31'
     summary: Android, Kotlin, GitHub, GitHub Actions, Testing Automation, GitHub Projects, Confluence, Slack, Mockito
     highlights:
-      - Androidアプリケーションの設計から実装までの技術支援を担当しました。
-      - テストが一切なかったため、Mockitoを使用した単体テストの整備とGitHub Actionsを活用したCI/CD環境の構築を行いました。
+      - Provided technical support from Android application design through implementation.
+      - Established unit testing using Mockito and built CI/CD environment using GitHub Actions, as no tests existed previously.
 
-  - company: コンシューマー向けアプリスタートアップ
-    position: 技術顧問
+  - company: Consumer App Startup
+    position: Technical Advisor
     startDate: '2022-02-01'
-    endDate: 現在
+    endDate: Present
     summary: Flutter, Dart, AWS, MySQL, Docker, docker-compose, GitHub, Slack, Terraform Cloud, JIRA, Confluence
     highlights:
 
-  - company: 研究成果のSaaS化
-    position: 技術検証兼プロジェクトマネジメント
+  - company: Research Results SaaS Conversion
+    position: Technical Verification and Project Management
     startDate: '2021-12-01'
     endDate: '2022-03-31'
     summary: MATLAB, Python, GitHub, CircleCI
     highlights:
-  - company: ハードウエアから取得した画像をクラウドで分析するMVP開発
-    position: 週0.5リモート稼働フルスタックエンジニア兼プロジェクトマネージャ (エンジニア2-3名, アシスタント兼QA1名)
+  - company: Cloud-based Hardware Image Analysis MVP Development
+    position: Remote Full-stack Engineer & Project Manager (0.5 days/week, 2-3 Engineers, 1 Assistant/QA)
     startDate: '2020-12-01'
     endDate: '2021-03-31'
     summary: Ubuntu, TypeScript, Dart, Express, FlutterFlow, Flutter, Mermaid, no-code, firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic Repository, firebase, fireauth, firebase functions, GitHub Actions, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Slack, Jest
     highlights:
-      - 分析システムをブラウザから使えるようにするプロジェクトでした。
-      - イテレーションをできるだけ早く、できるだけたくさん回すため、できるだけ労力とコストをかけない体制を構築しました。
-      - フロントにFlutterのコードを出力できるノーコードを選択し、ビジネスサイドメンバーやアシスタント、デザイナーが直接画面を更新できる体制を目指しました。
-      - エンジニアリング観点無しで画面の変更ができるため、CIでの自動的なチェックで安全性を担保するようにしています。
-      - 技術者が私だけだと工数が取れないことと取れたとしても継続性に問題があるためアーキテクチャ設計とバックエンドに強みのあるエンジニアを採用しました。
-      - 確実に優秀な人を採用するため、アシスタントサービスを導入して大量の候補者の中から選ぶ体制を整えました。
-      - 海外在住のエンジニアのため、スキル比で換算し40%程度にランニングコストを抑えることができました。
-      - フルリモートのグローバルチームになるため各種ルールと翻訳環境の整備を行いました。
-      - ドメインの議論と設計をビジネスサイドメンバーと実施し、会社の拡張方向に合わせた抽象化を行いましたので会話の混乱を少なく抑えることができました。
-      - FlutterFlowと相性の良いfirebase前提で構成し、FlutterFlowのポテンシャルをフルに活かし最速で完成させる方向を目指しました。
-      - ビジネスサイドメンバーがMVPを定義から正しく認識できていたため、正しくスモールスタート切ることができています。
-      - firebase function に依存しないよう、express を抽象レイヤーとして噛ませる設計にし、同時にOpenAPIのジェネレートができる構成を取りました。
+      - Project focused on making an analysis system accessible through a browser.
+      - Built a structure to minimize effort and cost while maximizing iteration speed and frequency.
+      - Chose no-code solution capable of outputting Flutter code, enabling business side members, assistants, and designers to directly update screens.
+      - Implemented automated CI checks to ensure safety for screen changes made without engineering oversight.
+      - Hired an engineer strong in architecture design and backend development, as being the sole technical resource would limit capacity and pose continuity risks.
+      - Implemented assistant service for recruitment to ensure high-quality hires from a large candidate pool.
+      - Achieved 40% reduction in running costs by hiring overseas engineers with equivalent skills.
+      - Established rules and translation environment to support fully remote global team.
+      - Conducted domain discussions and design with business side members, creating abstractions aligned with company expansion direction, minimizing communication confusion.
+      - Built on Firebase to leverage FlutterFlow compatibility, aiming for fastest possible completion.
+      - Successfully implemented small start approach as business side members correctly understood MVP definition.
+      - Designed express as abstraction layer to avoid Firebase function dependency, while enabling OpenAPI generation.
 
-  - company: 都市開発系スタートアップ開発支援
-    position: 週2リモート稼働フルスタックエンジニア (初期エンジニア3名から最大35名規模)
+  - company: Urban Development Startup Support
+    position: Remote Full-stack Engineer (2 days/week, Team growth from 3 to 35 engineers)
     startDate: '2020-03-01'
     endDate: '2022-02-28'
     summary: Ubuntu, TypeScript, Dart, Express, Flutter, firestore, Postgres, Google CloudSQL, Clean Architecture, Microservice Architecture, Monolithic Repository, Feature Flags, firebase, fireauth, firebase functions, firebase config, Prisma 2, OpenAPI, Docker, Docker Compose, CloudSQL, Google App Engine, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Zapier, Slack, Jest, Jasmin
     highlights:
-      - 既に運用されているモバイルアプリに CI/CD 環境がなかったので構築をお手伝いする案件でした。
-      - 自動でのデプロイから整備し、インテグレーションテストを整備しました。
-      - 既に運用されていて品質担保が急務だったこと、テスタブルなコードに変更の必要があったため単体テストをあとまわしました。
-      - 働く時間も場所もバラバラでタスクの話を slack で行っていたので情報が散らばり、作業の優先順位もつかず無駄なコミュニケーションで前に進めなくなっていましたのでタスク管理ツールで情報を整理する環境を整備し浸透・規律が維持できる体制を整えました。
-      - 当時 TypeScript 系で一番型安全な ORM が Prisma に見えたので Prisma を導入しました。
-      - モノレポのメリットを得るためモノレボ構成に移行しました。CI にかかるコストがクリティカルになってきたため差分のある箇所のみ job を実行するよう変更しました。
-      - 会社が急拡大しパートタイムメンバのみでの実装がビジネス要求に追いつかずトラブルが噴出していた為、海外のエンジニアを採用し海外メンバーを中心としたチームビルドを行いました。
-      - 優秀な技術者と出会うため、大量の候補者と面談しテストをする必要があったことと、開発以外の作業も人手不足で大量にスタックしていたためオンラインアシスタントサービスを導入し、採用のための作業にレバレッジをかけ、社内の作業負荷を減らす体制を構築しました。
-      - 会社の方針として広い方向に拡張していく予定があることと、積極的に新しい技術を取り入れやすくするため、ドメインの設計を行いマイクロサービスアーキテクチャに移行しました。
-      - マイクロサービスアーキテクチャでの開発を早くするため、新規サービス用のテンプレートを用意しました。運用中のサービスと同じくテンプレートサービスも自動テスト実行や自動デプロイで品質を担保していたため、立ち上がりはかなり早くできていましたが新しい技術を採用する余地を奪ってしまう結果になってしまいました。
-      - 国籍や稼働している物理的な場所が多岐にわたるため、リアルタイムのミーティングの時間や timezone などのルールの整備を行い、1on1 やスクラムイベントの整備など開発をスムーズに進める環境の整備を行いました。
-      - 採用に成功したあとはアシスタントチームに開発業務にも関わっていただきマニュアルテストやオンボード、各種ツールや手続き、コミュニケーションのハブになってもらう体制を構築しました。
-      - 人数が増え全員の目線合わせやデリバリーにコミットする意識が薄れ始めていたので体制を変更しスクラムの経験豊富な PM を採用して少人数のチームを作っていく体制に変更しました。
-      - 仕様を決めきらずにデッドラインだけが迫る状態が続いていたこと、ビジネス課題の整理をできる人が居なかったこと、PM ロールで入ってくれた方がうまくワークしていたこと、私一人で全体の動きが見えないサイズになっていたことをふまえ、 PM ロールの人数を増やしビジネスレイヤの曖昧さから排除し私が居なくても回る体制を構築しています。
-      - 各エンジニアの状況を私が把握できなくなってきていたので 1on1 は PM と私の 2 人とも全員と行うよう変更し、目下プロジェクトとエンジニア自身の課題は PM と話し、より長期的な事、興味の方向性やスキルを磨きたいところなどの把握は私で行ってこの会社で働く価値を高く保つよう努めました。
-      - 日本人の平均的なエンジニアよりも優れた人の採用に 1 ヶ月程度で成功するようになったこと、コストが日本人採用時に比べ 1/3 程度で運用できていること、システムをビジネスの理念に合わせた設計にできていることを評価していただきました。
+      - Helped establish CI/CD environment for an existing mobile application that lacked one.
+      - Set up automated deployment and integration testing infrastructure.
+      - Prioritized integration testing over unit testing due to urgent quality assurance needs and requirement for testable code changes.
+      - Implemented task management tools to organize scattered information and streamline communication, as team members worked across different times and locations using Slack.
+      - Introduced Prisma as it was the most type-safe ORM available for TypeScript at the time.
+      - Migrated to monorepo structure for its benefits. Optimized CI costs by implementing differential job execution.
+      - Built international team focused on overseas engineers to address implementation challenges when part-time members couldn't keep up with business requirements.
+      - Implemented online assistant service for recruitment to efficiently screen large candidate pools and reduce internal workload, while also handling non-development tasks.
+      - Transitioned to microservices architecture to support company's expansion plans and facilitate adoption of new technologies.
+      - Created templates for new services to accelerate microservices development. While this enabled rapid launches with quality assurance through automated testing and deployment, it somewhat limited adoption of new technologies.
+      - Established rules for real-time meetings and timezone management, along with 1on1s and scrum events, to accommodate team members across multiple nationalities and locations.
+      - Integrated assistant team into development operations as communication hub, handling manual testing, onboarding, tools, and procedures.
+      - Hired experienced Scrum PMs to lead smaller teams when alignment and delivery commitment began declining with team growth.
+      - Increased PM roles to address issues with unclear specifications, business challenges, and project visibility, creating a self-sustaining structure.
+      - Modified 1on1 structure to include both PM and myself, with PMs handling immediate project/engineer concerns while I focused on long-term growth, interests, and skill development.
+      - Received recognition for successfully hiring engineers superior to average Japanese engineers within one month, reducing operational costs to 1/3 compared to local hiring, and aligning system design with business philosophy.
 
-  - company: 大手家電メーカーデータレイク基盤構築
-    position: 週4リモート稼働フルスタックエンジニア (開発チーム8名)
+  - company: Major Electronics Manufacturer Data Lake Platform Construction
+    position: Remote Full-stack Engineer (4 days/week, 8-person development team)
     startDate: '2020-02-01'
     endDate: '2020-12-31'
     summary: AWS CloudFormation, AWS Redshift, AWS Batch, AWS CodePipeline, AWS CodeBuild, AWS CodeCommit, ShellSpec, Bazel, Docker, BitBucket, JIRA, Slack, Bats, Ubuntu, SQL
     highlights:
-      - 既に運用されているデータレイクの改善案件でした。
-      - デプロイやテストを手動で運用されていたので自動化を行いました。
-      - AWS 環境かつ Atlassian に寄せたくなかったので AWS CodeBuild, CodePipeline, CodeCommit で自動化を行いました。
-      - データレイクでのデプロイやテストは普段のアプリケーション開発と違う考慮事項が多くあり面白い案件でした。
-      - インテグレーションテストでは使うデータが大量なので s3 にバージョンごとのデータを配置しテストコード内でデータのバージョンを指定するよう構築しました。
-      - 扱うデータは、製品センサーデータ、会計システム、在庫管理システムなど複数の基幹システムからの大規模データを統合的に収集・分析するものでした。
-      - モブプログラミングをよくするチームで比較的会話が常にあるチームでしたのでトランクベースの開発を提案して実験させていただきました。
-      - 処理の一部として Shell が大量にあったのでテストフレームワークに ShellSpec を採用し Bazel でビルド・テスト実行するサンプルを作成しました。
-      - 技術選定では、チームの既存の技術スタックとの親和性を重視し、現在の技術からスムーズに移行できる選択を心がけました。
+      - Worked on improving an existing data lake platform.
+      - Automated previously manual deployment and testing processes.
+      - Implemented automation using AWS CodeBuild, CodePipeline, and CodeCommit, avoiding Atlassian tools in the AWS environment.
+      - Found the project interesting due to unique deployment and testing considerations specific to data lake environments.
+      - Built integration testing infrastructure with versioned data in S3, allowing test code to specify data versions due to large data volumes.
+      - Handled large-scale data integration and analysis from multiple core systems including product sensor data, accounting systems, and inventory management systems.
+      - Proposed and experimented with trunk-based development in a team that frequently practiced mob programming and maintained constant communication.
+      - Created sample build and test execution using ShellSpec framework and Bazel for extensive shell script processing.
+      - Prioritized compatibility with team's existing technology stack when making technical decisions, ensuring smooth transitions from current technologies.
 
 
 
 
-  - company: 新規サービス開発・構築
-    position: 週3稼働フルスタックエンジニア (開発チーム4-6名)
+  - company: New Service Development and Construction
+    position: Remote Full-stack Engineer (3 days/week, 4-6 person development team)
     startDate: '2019-09-01'
     endDate: '2020-01-31'
     summary: Linux, Ubuntu, Alpine, TypeScript, Node.js, koa, TypeORM, MySQL5.6, Redis, GitHub, CircleCI, Slack, Docker, docker-compose, OpenAPI, AWS ECS Fargate, AWS ElastiCashe, AWS RDS, GitHub projects
     highlights:
-      - 技術選定から対応させていただきました(言語, FW, middleware, ライブラリ, ツール等)
-      - バックエンドの設計・実装・テスト・コードレビュー・DevOps を行いました
-      - I/F 設計は RESTful, アプリケーション内は CleanArchitecture, 開発フローは GitLab flow, DDD, TDD で進めました
-      - チームビルド・改善を進めました(1on1, KPT, 勉強会開催など)
-      - オフショアチームの対応を行いました(daily check-in mtg, 設計の共有, タスクのコントロールなど)
-      - ビジネスレイヤの取りまとめの作業もありましたがこちらはうまく行きませんでした
+      - Led technology selection process (languages, frameworks, middleware, libraries, tools, etc.)
+      - Handled backend design, implementation, testing, code review, and DevOps
+      - Implemented RESTful interface design, Clean Architecture for application structure, and followed GitLab flow, DDD, TDD for development processes
+      - Advanced team building and improvement initiatives (1on1s, KPT retrospectives, study sessions)
+      - Managed offshore team coordination (daily check-in meetings, design sharing, task control)
+      - Also attempted business layer coordination, though this aspect was less successful
 
 
 
-  - company: AIスタートアップ企業のアプリケーションインフラ環境構築
-    position: 週3稼働インフラエンジニア (アプリケーションエンジニア3名, 社員 20 名程度)
+  - company: AI Startup Infrastructure Environment Construction
+    position: Remote Infrastructure Engineer (3 days/week, 3 Application Engineers, ~20 Employees)
     startDate: '2018-11-01'
     endDate: '2019-07-31'
     summary: Linux, Ubuntu, AMI, HCL, MongoDB, Redis, GitHub, CircleCI, Slack, Docker, Docker Compose, Ansible, Terraform
     highlights:
-      - 急成長のため、アプリケーションエンジニアが一人で組んでいたシステムのインフラ環境の整備を行っています。
-      - データベース冗長化のため MongoDB の Atlas への移行を行いました。
-      - キャッシュサーバーを ElasticCache にて新規に構築しました。
-      - アプリケーションのサーバーをスケーラブルになるよう設計しました。
-      - 具体的には AWS の EC2 に構築されていたアプリケーションを Docker に置き換え、 AWS ECS (Fargate) に載せ替えています。
-      - また、新しい環境はすべて Terraform にて構築を行い手作業を禁止し、いつでも消せる・いつでも作れることができる安全な環境になるよう構築しています。
-      - 今回は Serverless で開発できる環境ではありませんでしたので使用感のみ Serverless フレームワークと同じになることを目指しています。
-      - 今回はインフラ専用リポジトリを作成いただき、インフラのためのコード化が自由にできる状況を用意していただいたので、CirlceCI 上で各コンテナの自動チェックやインフラコードの自動テストを行い手間の削減と再現性、変更時の安全性を担保しています。
-      - コーポレートサイドから要望のあった slack bot を探していたのですがマッチするものがなかなか見つからなかったので 新しく開発し、喜ばれました。
+      - Improved infrastructure environment for a rapidly growing system initially built by a single application engineer.
+      - Migrated MongoDB to Atlas for database redundancy.
+      - Built new cache server using ElasticCache.
+      - Designed application servers for scalability.
+      - Specifically, replaced EC2-based applications with Docker and migrated to AWS ECS (Fargate).
+      - Built all new environments using Terraform, prohibiting manual operations to ensure environments could be safely destroyed and recreated at any time.
+      - While Serverless development wasn't possible in this environment, aimed to match Serverless framework user experience.
+      - Given dedicated infrastructure repository, implemented automated container checks and infrastructure code testing in CircleCI to reduce manual effort while ensuring reproducibility and safety during changes.
+      - Developed new Slack bot when unable to find suitable existing solution for corporate needs, which was well-received.
 
-  - company: スタートアップ企業の AI 組み込み環境構築
-    position: 週1稼働インフラエンジニア (開発チーム 3 名)
+  - company: AI Startup Embedded Environment Construction
+    position: Remote Infrastructure Engineer (1 day/week, 3-person development team)
     startDate: '2018-09-01'
     endDate: '2018-12-31'
     summary: Linux, Ubuntu, Python3, GitHub, CircleCI, Slack, Docker, Ansible, AWS SageMaker, Jupyter Notebook, Terraform
     highlights:
-      - 機械学習を用いたエンジンを作れる企業に手伝っていただき、エンジンの組み込み部分とエンジン自体の精度を上げるため A/B テストの環境をつくりたいとのことでご依頼いただきました。
-      - AWS SageMaker を使いたいとの要望があったのと今後の可用性面で適していそうでしたので SageMaker での構築を行っています。
-      - インフラ環境の全体は terraform で構築し、まだ terraform が対応できていない SageMaker 部分は AWS client を用いて構築しました。
-      - 開発の環境を Ansible と docker 双方でできるよう、docker image を Ansible で構築するようにしました。
-      - 今回はアプリケーション構築ではなくインフラでしたが CI/CD を導入し AI エンジンのコードが git に push され次第学習が進むよう構築を進めています。
-  - company: IoT 企業のバックエンド開発
-    position: 週3稼働サーバーサイドエンジニア (開発チーム 6 名, うちサーバーサイド 1 名)
+      - Requested to create A/B testing environment to improve accuracy of machine learning engine and its integration components.
+      - Implemented AWS SageMaker based on client request and its suitability for future availability requirements.
+      - Built overall infrastructure using Terraform, with AWS client handling SageMaker components not yet supported by Terraform.
+      - Created development environment supporting both Ansible and Docker by building Docker images with Ansible.
+      - While focused on infrastructure rather than application development, implemented CI/CD to automatically trigger model training upon Git push of AI engine code.
+  - company: IoT Company Backend Development
+    position: Remote Server-side Engineer (3 days/week, 6-person team with 1 server-side engineer)
     startDate: '2018-03-01'
     endDate: '2019-07-31'
     summary: Linux, Ubuntu, Python2, Python3, Flask, Flasgger, DynamoDB, GitHub, CircleCI, Slack, Docker, Serverless, Ansible, Swagger
     highlights:
-      - python で AWS Lambda を使用した API サーバーを管理しやすい形に再構築する案件でした。
-      - FW を使わず Lambda, API Gateway のバックエンドが構築されており、API を使用した自動化をしている状態でしたがメンテナンスがしづらいので Serverless FW を導入したいとのことでした。
-      - 設計はシンプルではあったのですが外部サービスへの依存が大きくテストしにくい構成になってしまっていて、現に全くテストがない状態でしたので再設計と自動テスト、自動デプロイなどの CI/CD 導入を行いました。
-      - 新しい設計にクリーンアーキテクチャを採用したことで、ドメインレイヤでのユニットテストではカバレッジ 100 を達成しました。
-      - ドキュメントがあまりない状態でしたので FW と Swagger を連携し CI にホストさせてドキュメントとしたのと、シーケンス図などのマークダウンで表現しづらい資料は保守性のため html と js でレンダリングできるよう作成し誰でも閲覧できかつ変更しやすい状態になるよう努めました。
-      - python2 から python3 へ移行し、type hint を導入したのと mypy での解析で不具合を防ぐよう取り組みました。
-      - Ansible で Ubuntu, Mac のローカルの開発環境構築自動化を行いました。
+      - Restructured Python-based AWS Lambda API server for improved manageability.
+      - Introduced Serverless Framework to improve maintainability of existing backend built with Lambda and API Gateway without framework, which was using APIs for automation.
+      - Implemented CI/CD with automated testing and deployment, as the simple design had become difficult to test due to heavy external service dependencies and complete lack of tests.
+      - Achieved 100% coverage in domain layer unit tests after adopting Clean Architecture for new design.
+      - Enhanced documentation by integrating framework with Swagger and hosting in CI. Created HTML/JS renderings of sequence diagrams and other materials difficult to express in markdown, ensuring easy access and updates for all team members.
+      - Migrated from Python 2 to Python 3, introducing type hints and mypy analysis to prevent bugs.
+      - Automated local development environment setup for Ubuntu and Mac using Ansible.
 
-  - company: 広告配信サービスの新規開発
-    position: 週4稼働バックエンドエンジニア (開発チーム 25 名)
+  - company: Advertising Delivery Service Development
+    position: Remote Backend Engineer (4 days/week, 25-person development team)
     startDate: '2018-03-01'
     endDate: '2018-10-31'
     summary: Linux, Ubuntu, Golang, Echo, Goswagger, MySQL, Aerospike, Redis, GitHub, CircleCI, Slack, Docker, SchemaSpy, Ansible, DockrCompose
     highlights:
-      - golang で広告の配信サービスと配信内容を管理する管理画面を構築する案件でした。
-      - すでにベースが出来上がっている状態からの join でした。
-      - 後半は管理画面の API サービスを再設計するタイミングができたのでクリーンアーキテクチャを採用しテスタブルかつ仕様変更しやすい設計で構築し直しました。
-      - swagger や docker での開発環境がなかったため構築して導入しました。
-      - 若いメンバーも多くチームの設計、開発ツールの使い方、開発フロー関連の知識の底上げが必要と感じていたためランチ帯や業務後でのスキルアップを図るイベントをいくつか行いました。
-      - 開発環境構築の資料やスクリプトなどが一切なかったため、Ansible で Ubuntu と Mac 用の playbook を作成し、メンバーに共有しました。
+      - Built advertising delivery service and management interface using Golang.
+      - Joined project with existing codebase foundation.
+      - Redesigned management interface API service using Clean Architecture in later phase, making it more testable and easier to modify.
+      - Set up and introduced Swagger and Docker development environments which were previously lacking.
+      - Organized skill improvement events during lunch breaks and after work hours, as team had many young members needing knowledge enhancement in design, development tools, and workflow processes.
+      - Created and shared Ansible playbooks for Ubuntu and Mac development environment setup, as no documentation or scripts existed previously.
 
-  - company: 新規サービスのユーザー向け Web 画面開発
-    position: 週4稼働バックエンドエンジニア (開発チーム 2 名)
+  - company: New Service User Web Interface Development
+    position: Remote Backend Engineer (4 days/week, 2-person development team)
     startDate: '2018-02-01'
     endDate: '2018-02-28'
     summary: Linux, Ubuntu, Alpine, Kotlin, spark, exporsed, MySQL, GitHub, Backlog, CircleCI, Slack, Swagger, API Blueprint, Gradle, Docker, AWS, SchemaSpy
     highlights:
-      - Kotlin で API サーバーを構築する案件でした。
-      - 途中まで開発したものがある状態でしたが CI や自動デプロイの仕組みがなく、API 設計や DB 設計が不確定な段階でしたので開発の続きも含め、CI の導入や環境の整備からお手伝いしました。
-      - データベース設計書もなく別チームのコミュニケーションに問題が発生し始めていたのでリバースエンジニアリングで設計書を作成し、CI で継続的に最新のドキュメントがチーム内の誰でも参照できる環境を作りました。
-      - フロントエンドのメンバーが足りていなかったため js 周りの調査やエラー解消を行いました。
-      - 内製ではリスクが高いとの判断から開発は外注することになり内製チームは解散になりました。
-  - company: 広告クリエイティブ制作ベンチャー企業のシステム刷新
-    position: 週5稼働, うち週3リモートフルスタックエンジニア (開発チーム 6 名, うちサーバーサイド 2 名)
+      - Built API server using Kotlin.
+      - Assisted with ongoing development by implementing CI and setting up environments, as project lacked CI/CD infrastructure and had uncertain API/DB designs.
+      - Created database documentation through reverse engineering and established CI-based system for continuous documentation updates, addressing communication issues between teams.
+      - Conducted JavaScript-related investigation and troubleshooting due to shortage of frontend developers.
+      - Internal development team was dissolved as project was outsourced due to risk assessment.
+  - company: Advertising Creative Production Venture Company System Renewal
+    position: Full-stack Engineer (5 days/week, 3 days remote, 6-person development team with 2 server-side engineers)
     startDate: '2017-03-01'
     endDate: '2017-09-30'
     summary: Linux, Ubuntu, CentOS, TypeScript, Elixir, nodejs, express, phoenix, Postgres, GitHub, ZenHub, CircleCI, Slack, Swagger, ansible, mix, TravisCI, Codebeat, Codacy, Docker, Docker Compose, AWS EC2
     highlights:
-      - 要件定義から言語選定、設計、開発、テストまで
-      - 既存のシステムからの刷新
-      - 既存システムの一部を機能を見なおして別システムとして構築
-      - 途中から既存システムの本体も新しく作りなおす事になり、片方のシステムは言語選定から行い、もう 1 つのシステムは開発要因としてお手伝いをしています。
-  - company: 広告クリエイティブ制作ベンチャー企業のシステム開発運用支援
-    position: 週3稼働フルスタックエンジニア (開発チーム 4 名, 開発担当 3 名)
+      - Handled entire process from requirements definition through language selection, design, development, and testing.
+      - Renewed existing system.
+      - Rebuilt part of existing system as separate system with revised functionality.
+      - Later tasked with rebuilding main system as well, handling language selection for one system while assisting with development of the other.
+  - company: Advertising Creative Production Venture Company System Development and Operation Support
+    position: Remote Full-stack Engineer (3 days/week, 4-person development team with 3 developers)
     startDate: '2016-11-01'
     endDate: '2017-02-28'
     summary: Linux, Ubuntu, CentOS, JavaScript, CSS, Node.js, LoopBack, AngularJS, MongoDB, GitHub, CircleCI, Slack, Swagger, GitHubProject
     highlights:
-      - 担当フェーズは開発、テストまで
-      - 広告の制作支援システムの追加機能開発・運用支援
-  - company: IoT スタートアップサーバーサイドアプリケーション開発
-    position: 週2-5稼働サーバーサイドエンジニア (開発チーム 4 名, 開発担当 1 名)
+      - Handled development and testing phases.
+      - Developed additional features and provided operational support for advertising production support system.
+  - company: IoT Startup Server-side Application Development
+    position: Remote Server-side Engineer (2-5 days/week, 4-person development team with 1 developer)
     startDate: '2016-08-01'
     endDate: '2017-02-28'
     summary: Linux (Ubuntu), Scala, sbt, play2, MySQL, Ansible, GitHub, CircleCI, Slack, Asana, Swagger
     highlights:
-      - 4 月から手伝っているプロジェクトでハードウェアの量産経験がある方のジョインと、量産が見えてきたタイミングでサーバーサイドの開発が取り掛かれるようになりましたので、今までのデモ用システムとは別に新しくシステムの構築を開始しました。
-      - 今後の展開を考え、構成を大きく分離し最終的な目的に多くの手段を取れるよう機能的に分離し、粗結合のわかりやすいシステムになるよう構築しました。
-      - 意識してはいませんでしたがマイクロサービスアーキテクチャのような構成になりました。
-      - 担当フェーズは要件定義、言語選定、設計、開発、テストです。
-  - company: IoT デバイス連携 Android アプリ運用
-    position: 週2稼働, うち週1リモート Android アプリエンジニア (要員 20 名程度, Android アプリ開発担当3 名)
+      - Started building new system separate from existing demo system when mass production became feasible, following the joining of a member with hardware mass production experience in April.
+      - Built highly decoupled, clearly structured system with functional separation to support multiple approaches toward final goals and future expansion.
+      - Achieved microservices-like architecture, though not initially planned as such.
+      - Handled requirements definition, language selection, design, development, and testing phases.
+  - company: IoT Device Integration Android App Operation
+    position: Remote Android App Engineer (2 days/week, 1 day remote, ~20 team members with 3 Android developers)
     startDate: '2016-06-01'
     endDate: '2017-09-30'
     summary: Linux (Ubuntu), Scala, sbt, Android, CircleCI, GiHub, DeployGate, GitHubIssue, Slack, Beacon, Bluetooth, BLE
     highlights:
-      - Bluetooth Classic, BLE を使用した通話デバイスと連携するアプリのデザイン更新、機能追加、　不具合修正を行いました。
-      - Bluetooth, Scala, 音声を扱うプロジェクトで面白い課題が多いプロジェクトでした。
-      - Scala での Android 開発は初めてですので多くのことを学ばせていただきました。
-      - 外国人メンバーが多く、自然に英語でのやり取りが発生していましたので、コメントや資料、slack での会話は認識の齟齬が発生しないよういつも以上に注意しました。
-      - 担当フェーズは調査、開発、テストです。
+      - Updated design, added features, and fixed bugs for app integrating with voice communication devices using Bluetooth Classic and BLE.
+      - Found project interesting with many challenging aspects involving Bluetooth, Scala, and audio processing.
+      - First experience with Scala Android development, providing many learning opportunities.
+      - Took extra care with documentation, comments, and Slack communication to avoid misunderstandings, as team included many non-Japanese members requiring natural English communication.
+      - Handled investigation, development, and testing phases.
 
-  - company: IoT ビーコンデバイス連携 Android アプリ基盤変更対応
-    position: 週3リモート稼働 Android アプリエンジニア (要員 3 名程度, Android アプリ開発担当 1 名)
+  - company: IoT Beacon Device Integration Android App Platform Change
+    position: Remote Android App Engineer (3 days/week, 3-person team with 1 Android developer)
     startDate: '2016-04-02'
     endDate: '2016-05-31'
     summary: Linux (Ubuntu), Java, Gradle, Fabric, Android, CircleCI, GiHub, PivotalTracker, Slack, Beacon
     highlights:
-      - ビーコンデバイスの基盤変更に伴い開発済みの既存の Android アプリの修正
-      - BLE の Service, Characteristic などを新基板に合わせて変更しました。
+      - Modified existing Android app to accommodate beacon device platform changes.
+      - Updated BLE Service, Characteristic, and other components to match new hardware specifications.
 
-  - company: IoT スタートアップデモ用サーバーサイドアプリケーション開発、ハードウェア開発
-    position: 週4-5稼働エンジニア (要員 3 名程度)
+  - company: IoT Startup Demo Server-side Application and Hardware Development
+    position: Engineer (4-5 days/week, 3-person team)
     startDate: '2016-4-01'
     endDate: '2016-07-31'
     summary: Linux (Ubuntu), javascript, Arduino, 3DCAD, nodejs, AngularJS, TwitterBootstrap, SQLite, MySQL, npm, bower, Grunt, Sequelize, Ansible, GitHub, Slack, Asana, Swagger
     highlights:
-      - IoT スタートアップの製品の Web サーバーアプリケーション開発、ハードウェア試作品開発
-      - 2015 年 12 月から隙間の時間で手伝っていたサービスが本格的に進むことになり、オファーをいただいたので社員になりました。
-      - ハードウェア側は 3D プリンタや切削、金属加工でのプロトタイプ開発を担当させていただいています。
-      - ソフトウェア側はデモ用システム設計、データベース&API サーバー、管理画面の開発を行っています。
-      - サービス、仕様のまとめと量産に向けて技術的な調査、仕様の優先順位の検討、検証用ハードウェアの設計開発などを担当させていただいています。
-      - プロジェクト管理や資料管理など、開発体制の構築も進めています。
-      - 担当フェーズは調査、設計、開発、テストです。
-  - company: センサーガジェットのログ収集・可視化サービス
-    position: 週3リモート稼働サーバーサイドエンジニア (開発チーム 5 名, サーバーサイド 1 名)
+      - Developed web server application and hardware prototypes for IoT startup product.
+      - Joined as full-time employee after helping with the service part-time since December 2015.
+      - Led hardware prototype development using 3D printing, machining, and metal fabrication.
+      - Handled software side including demo system design, database & API server, and management interface development.
+      - Conducted technical research for service and specification consolidation, prioritized requirements, and developed verification hardware for mass production.
+      - Established project management and documentation processes while building development framework.
+      - Handled investigation, design, development, and testing phases.
+  - company: Sensor Gadget Log Collection and Visualization Service
+    position: Remote Server-side Engineer (3 days/week, 5-person development team with 1 server-side engineer)
     startDate: '2016-03-04'
     endDate: '2016-03-31'
     summary: Linux (Ubuntu), javascript, html, nodejs, npm, bower, Grunt, MySQL, Sequelize, CircleCI, GiHub, Swagger, Slack
     highlights:
-      - クライアントのガジェットを使用してセンサーデータを集めて保持し、可視化するサービスの開発
-      - クライアントの新しいサービスとして、営業してみるために使用したいとのことだったので、通常の流れで開発するよりは認証などサービス特有でない部分を飛ばし、機能をデモできるようにするところを急ぎで作る必要がありました。
-      - データベース設計 & API サーバーの実装と、ガジェットの SDK が公開されているのでサーバーにデータを送るようカスタマイズするところを担当しました。
-      - 時間がなく、デザイナーやフロントエンドエンジニアもチームに居ましたのでクライアントとサーバーサイドは API のみの粗結合になるよう努めました。
-      - 集計データを表示するニーズもありましたのでサマリの方法やタイミングについて、運用負荷がかからないよう工夫しました。
-      - API 仕様は最初の段階で Swagger で提供し、クライアントサイドの開発が早く進むよう努めました。
-      - 担当フェーズは調査、設計、開発、テストです。
+      - Developed a service to collect, store, and visualize sensor data using client's gadgets.
+      - As this was intended for sales demonstrations of a new client service, prioritized building demo-ready features quickly, skipping non-essential components like authentication.
+      - Responsible for database design, API server implementation, and customizing the gadget SDK to send data to our server.
+      - Given time constraints and team composition including designers and frontend engineers, focused on loose coupling between client and server sides through API-only integration.
+      - Implemented efficient data aggregation methods and timing to meet summary display requirements while minimizing operational overhead.
+      - Provided Swagger API specifications from the early stages to accelerate client-side development.
+      - Responsible phases included research, design, development, and testing.
 
-  - company: データ可視化系スマートガジェットの認証サービス開発
-    position: 週3リモート稼働サーバーサイドエンジニア (要員 3 名程度, サーバーサイド 1 名)
+  - company: Authentication Service Development for Data Visualization Smart Gadget
+    position: Remote Server-side Engineer (3 days/week, ~3 team members, 1 server-side engineer)
     startDate: '2016-01-16'
     endDate: '2016-02-28'
     summary: Linux (Ubuntu), javascript, html, nodejs, npm, bower, Grunt, mp2, SendGrid, KiiCloud, GoogleCloudPlatform, CircleCI, sinon, Jasmine, Mocha, CircleCI, GiHub, GitHub Issues, Slack, TwitterBootstrap
     highlights:
-      - サービスのユーザー登録機能と画面、アプリのログイン機能用 API、ユーザー情報更新や有効性確認部分の構築
-      - 数社で 1 つのシステムを作る、大規模なクライアントの案件でした。
-      - システム全体の一部の機能のみを複数社で作り、各社のやり取りは元請けを通して連絡をとっていたため担当範囲外の細かいところまでは把握しづらく、開発に使える期間が短かったので、手戻りがないよう慎重にすすめました。
-      - 先にこちらから API 仕様を提案したり動く環境を早めに用意して連携先に使っていただくなど、もし認識の違いがあった場合は早い段階で気付けるよう努めました。
-      - API 仕様ドキュメントは、Swagger を使って実行できるドキュメントを提供し、API を試しやすく動かし方が厳密にわかるよう、開発時に詰まらないよう工夫しました。また、Swagger は開発中スピードや検証検証サイドでの実行も簡単になり、全体の工数削減に協力しました。
-      - ストレージや環境、構成は指定されており、指定された BaaS が未経験だったため、調査や動きの確認、その BaaS を使用する場合には適する設計を考えるなどで工数がかかり、作る機能に対し普段よりも大きく時間がかかりました。
-      - 厳しいスケジュールだったのですが納期には間に合い、先方に喜んでいただけました。
-      - 担当フェーズは調査、設計、開発、テストです。
-  - company: IoT スタートアップサーバーサイドアプリケーション開発、ハードウェア開発
-    position: 週1-3 フルスタックエンジニア (要員 3 名程度)
+      - Built user registration functionality and interface, login API for apps, and user information update/validation components.
+      - Large-scale client project involving multiple companies collaborating on a single system.
+      - Multiple companies worked on specific parts of the overall system, with communication routed through the prime contractor. Given limited development time and difficulty understanding details outside our scope, proceeded cautiously to avoid rework.
+      - Proactively proposed API specifications and provided early working environments to partners to identify any misalignments early.
+      - Created executable API documentation using Swagger to make APIs easily testable and clearly understood, preventing development bottlenecks. Swagger also improved development speed and simplified verification, helping reduce overall work hours.
+      - Storage, environment, and architecture were pre-specified. The designated BaaS was new to me, requiring extra time for research, behavior verification, and appropriate design considerations, making development take longer than usual.
+      - Despite tight scheduling, met deadlines and received positive client feedback.
+      - Responsible phases included research, design, development, and testing.
+  - company: IoT Startup Server-side Application and Hardware Development
+    position: Full-stack Engineer (1-3 days/week, ~3 team members)
     startDate: '2015-12-01'
     endDate: '2016-03-31'
     summary: Linux (Ubuntu), javascript, javascript, nodejs, AngularJS, TwitterBootstrap, SQLite, npm, bower, Grunt, Sequelize, Ansible, GitHub, Slack, Swagger
     highlights:
-      - IoT スタートアップの製品の Web サーバーアプリケーション開発、ハードウェア試作品開発
-      - 初期の頃はサービスのデモ用プロトタイプで使用する API、サイト(or アプリ) の相談や設計、開発を手伝いました。
-      - 担当フェーズは調査、設計、開発、テストです。
-  - company: ソーシャルイベントサービスの Android アプリ開発
-    position: 週 3 日リモート勤務 Android アプリエンジニア (要員 4 名程度, Android アプリ開発担当 1 名)
+      - Developed web server application and hardware prototypes for IoT startup product.
+      - In early stages, assisted with consultation, design, and development of APIs and sites/apps for service demonstration prototypes.
+      - Responsible phases included research, design, development, and testing.
+  - company: Social Event Service Android App Development
+    position: Remote Android App Engineer (3 days/week, ~4 team members, 1 Android developer)
     startDate: '2015-12-02'
     endDate: '2016-01-29'
     summary: Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST client, CircleCI, Git, DeployGate, ChatWork
     highlights:
-      - イベントを企画し、メンバーを募って実行する新サービスの Android アプリ開発
-      - 企画、デザインは終わっており、データベース、API サーバー、iOS アプリは Android アプリと並行して開発だったため、できた API から随時アプリに組み込む流れで開発しました。
-      - Android アプリ自体はほとんどがデータの表示のみのため、シンプルな構成のアプリになりました。
-      - リモートでの開発だったことと、先方に Android の技術者がいないとの事だったので毎日作業進捗はソースコードの push 以外にも Chatwork への文章での報告や作業予定、見込みを報告しました。
-      - CI や作業途中のアプリを見る仕組みは考えていなかったとのことでしたので CircleCI を導入し DeployGate へアプリを自動で更新させるようにし、常に先方が状態を把握できる環境を作るよう努めました。
-      - 担当フェーズは設計、開発、テストです。
+      - Developed Android app for a new service focused on planning events and recruiting participants.
+      - Planning and design were completed, with database, API server, and iOS app being developed in parallel. Integrated APIs into the Android app as they became available.
+      - App structure remained simple as it primarily focused on data display.
+      - As this was a remote project and the client lacked Android expertise, provided daily progress updates through Chatwork including written reports and work forecasts, beyond just source code pushes.
+      - Implemented CircleCI and automated DeployGate updates as continuous integration wasn't initially planned, ensuring client could always monitor app status.
+      - Responsible phases included design, development, and testing.
 
-  - company: サービス連携サイトプロトタイプ開発
-    position: 週 3 日リモート勤務 フルスタックエンドエンジニア (要員 3 名程度, 開発担当 1 名)
+  - company: Service Integration Site Prototype Development
+    position: Remote Full-stack Engineer (3 days/week, ~3 team members, 1 developer)
     startDate: '2015-11-06'
     endDate: '2016-01-15'
     summary: Linux (Ubuntu), javascript, html, nodejs, AngularJS, mysql, npm, bower, Grunt, CircleCI, GiHub, GitHub Issues, Slack, Sequelize
     highlights:
-      - ユーザ指定の条件で既存サービスを連携するプロトタイプ開発
-      - クライアントの自社サービス予定で、本実装の前の、機能のみ試すプロトタイプ開発でした。
-      - どんな機能があると良いかや、どんな画面が必要かなどを考えるところからかかわらせていただきました。
-      - まずは機能を試したいとの事だったので、本番では採用しないが早く作れる方法を採用して構築しました。
-      - 担当フェーズは調査、設計、開発、テストです。
-  - company: データ収集 IoT ガジェット連携 Android アプリ開発
-    position: 週 3 日リモート勤務 Android アプリエンジニア (要員 3 名程度, Android アプリ開発担当 1 名)
+      - Developed prototype for integrating existing services based on user-specified conditions.
+      - Built as a prototype to test functionality before full implementation of client's planned in-house service.
+      - Involved from early stages in conceptualizing features and necessary screens.
+      - Prioritized rapid development methods for quick functionality testing, though these methods weren't intended for production use.
+      - Responsible phases included research, design, development, and testing.
+  - company: Data Collection IoT Gadget Integration Android App Development
+    position: Remote Android App Engineer (3 days/week, ~3 team members, 1 Android developer)
     startDate: '2015-10-26'
     endDate: '2015-11-05'
     summary: Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST client, CircleCI, GitHub, Deploy Gate, GitHub Issues, Slack
     highlights:
-      - 遠隔でガジェット周辺のデータを取得し、表示する Android アプリの開発
-      - 途中までアルバイトのエンジニアの方が作ってくれていたのですが、出勤可能な時間的に先方が予定していたデモに間に合わない可能性がありましたので私が引き継ぐことになりました。
-      - iOS アプリの開発はすでに進んでいて、仕様は「iOS アプリと同じ」と明確で分かりやすかったので仕様確認のための時間消費や認識違いなどのトラブルは起きませんでした。
-      - 10 日程度しかなくライブラリやフレームワークなどの開発を早くする環境が整っていませんでしたので、新しくプロジェクトを作成しすでにある機能を移植する形で引き継ぎました。
-      - 時間がない中での開発でしたが期限に間に合い、クライアント様に喜んで頂きました。
-      - iOS アプリの方ではガジェットととの連携に問題が生じていたので Android 開発中に得られた情報を使って調査に協力しました。
-      - 担当フェーズは調査、設計、開発、テストです。
-  - company: IoT 製品連携 Android アプリ BLE 技術検証開発
-    position: 週 3 日リモート勤務 Android アプリエンジニア (要員 4 名程度, Android アプリ開発担当 1 名)
+      - Developed Android app for remotely collecting and displaying data from IoT gadgets.
+      - Took over project from part-time engineer who couldn't meet planned demo deadline due to time constraints.
+      - iOS app development was already in progress with clear specifications to match, preventing time loss and misunderstandings during requirement confirmation.
+      - With only about 10 days available and lacking environment for rapid development with libraries and frameworks, created new project and migrated existing functionality.
+      - Despite tight timeline, met deadline and received positive client feedback.
+      - Assisted with investigation of iOS app gadget integration issues using information gathered during Android development.
+      - Responsible phases included research, design, development, and testing.
+  - company: IoT Product Integration Android App BLE Technical Verification Development
+    position: Remote Android App Engineer (3 days/week, ~4 team members, 1 Android developer)
     startDate: '2015-09-14'
     endDate: '2015-10-25'
     summary: Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST client, Beacon, CircleCI, Git, PivotalTracker, Slack
     highlights:
-      - Beacon デバイス Farmware 確定のための Android アプリ側技術検証
-      - 対応 OS が Android4.0 以上だったため 4 と 5 の両方検証し、プロトタイプのアプリを作成しました。
-      - Beacon のアプリを作るのは初めてだったため、調査からさせて頂きました。信号の内容や読み取り、書き込み、通知についてとても勉強になりました。
-      - ガジェット側の場所を特定するためのアプリだったため常に信号受信する必要があったので、バックグラウンドでの動作確認や OS にプロセスを止められた時の再起などの検証も行いました。
-      - 時間がない中での開発でしたが期限に間に合い、クライアント様に喜んで頂きました。
-      - iOS アプリの方ではガジェットととの連携に問題が生じていたので Android 開発中に得られた情報を使って調査に協力しました。
-      - 担当フェーズは調査、設計、開発、テストです。
-  - company: ハードウェアスタートアップ製品開発支援
-    position: 週 3 日 フルスタックエンジニア (要員 1 名)
+      - Conducted technical verification of Android app for Beacon device firmware determination.
+      - Created prototype app testing both Android 4 and 5 as OS requirement was Android 4.0+.
+      - Being my first Beacon app development, started with thorough research. Learned extensively about signal content, reading/writing operations, and notification systems.
+      - As app needed to locate gadget position, required constant signal reception. Verified background operation and process restart scenarios when OS terminated the process.
+      - Despite time constraints, met deadline and received positive client feedback.
+      - Assisted with investigation of iOS app gadget integration issues using information gathered during Android development.
+      - Responsible phases included research, design, development, and testing.
+  - company: Hardware Startup Product Development Support
+    position: Full-stack Engineer (3 days/week, 1-person team)
     startDate: '2015-05-01'
     endDate: '2015-08-31'
     summary: Linux (Ubuntu12), arduino, C++,
     highlights:
-      - マイコン、タッチパネル、bluetooth を用いた製品のプロトタイプ開発
-      - ハードウェア開発の技術が未熟な中で関わらせていただき、とてもありがたい環境でした。
-      - 技術的に未経験のことが多く、基本的なところから調べながら進めるプロジェクトでした。
-      - 直接は使いませんでしたが CAD, 3D プリンタ、切削等工作機械の勉強もさせていただき、製品開発時の技術の選択肢が広がりました。
-      - 担当フェーズはマイコンのプログラム設計、開発、回路設計、開発です。
-  - company: ハードウェアスタートアップ企業開発支援
-    position: 週 2-4 日 フルスタックエンジニア (要員 13 名程度, 開発担当 7 名, うちサーバーサイド 1 名)
+      - Developed product prototype using microcontroller, touch panel, and Bluetooth.
+      - Grateful for opportunity to work on hardware development despite limited experience in the field.
+      - Project involved many unfamiliar technologies, requiring research from fundamentals.
+      - Though not directly used, learned about CAD, 3D printing, and machining tools, expanding technical options for product development.
+      - Responsible phases included microcontroller program design/development and circuit design/development.
+  - company: Hardware Startup Company Development Support
+    position: Full-stack Engineer (2-4 days/week, ~13 team members, 7 developers, 1 server-side)
     startDate: '2015-01'
     endDate: '2015-10'
     summary: Linux (Ubuntu12, Ubuntu14), arduino, C++, javascript, nodejs, AngularJS, TwitterBootstrap3, MongoDB, Jenkins, Git, Ansible, Yeoman, Apache2, Julius, OpenCV, Slack, Redmine, Swagger, elasticsearch, fluentd, kibana
     highlights:
-      - IoT の新製品開発
-      - ハードウェア、電子回路未経験の中で関わらせていただき、とても勉強になりました。
-      - 開発プロジェクトの経験がある中で時間的に一番長く出勤していることもあり、基本の設計とエンジニアのタスク管理やスケジュール調整などの管理面も関わらせて頂きました。
-      - 各種センサー、音声認識、画像認識等の未経験の技術を使用していること、エンジニアほぼ全員がフルタイムではない働きだったこと、学生さんも多くチーム開発のノウハウやツールに慣れていないチームでしたので、スケジュールの調整やタスクの割り振り、情報共有、開発体制・フロー構築、運用自体に苦労しました。
-      - 変更が多く、フルコミットでないメンバーで回す必要があるため、わかりやすく分離しやすい設計と柔軟な開発体制を保つこと、メンバーのスキル向上を意識しました。
-      - 担当フェーズはサーバーサイド設計、開発、ハードウェア回路設計、開発、筐体内ソフトウェア設計、開発です。
-  - company: 業務システム開発
-    position: 開発フルスタックエンジニア (要員 4 名程度, 開発担当 1 名)
+      - Developed new IoT product.
+      - Valuable learning experience working with hardware and electronic circuits despite no prior experience.
+      - As the team member with longest attendance hours and development project experience, involved in basic design, engineer task management, and schedule coordination.
+      - Faced challenges in schedule management, task allocation, information sharing, and development process establishment due to team composition: using unfamiliar technologies (various sensors, voice recognition, image recognition), mostly part-time engineers including many students unfamiliar with team development tools and practices.
+      - Focused on creating easily separable designs and maintaining flexible development structure to handle frequent changes with part-time members, while emphasizing team skill improvement.
+      - Responsible phases included server-side design/development, hardware circuit design/development, and enclosure software design/development.
+  - company: Business System Development
+    position: Full-stack Engineer (4-person team, 1 developer)
     startDate: '2014-09-01'
     endDate: '2015-04-30'
     summary: Windows, Linux, Scala, Java, Javascript, Gradle, Skinny (Scala), Flyway, Jetty, Tomcat, Android annotations, Android Spring REST client, TwitterBootstrap3, AngularJS, jQuery, Robolectric, Postgres9.4, Jenkins, Git, Redmine
     highlights:
-      - Android とブラウザで使用する業務システムのプロトタイプをサーバーサイドからクライアント、Android アプリまで一貫して開発しました。
-      - サーバーサイドで Scala、Android アプリで AndroidAnnotations、Javascript の FW に AngularJS と、私にとって初めての言語・FW ばかりを選ぶことができ、とてもありがたい環境でした。
-      - ユーザー様との打ち合わせや仕様の検討に参加させていただき、仕様や機能、意図がくみとりやすかったので私の思いつく範囲で機能のご提案をしました。
-      - コンパクトな体制でしたしまだ仕様が固まっていない状態での開発でしたので、早く利用イメージができるよう、できるだけスピード感を持って開発するよう心がけました。
-      - テーブル数 27
-      - 担当フェーズは設計、開発、テストです。
-  - company: SDK 運用チーム
-    position: ネイティブアプリエンジニア (開発チーム 5 名)
+      - Developed complete prototype business system from server-side through client and Android app for browser and Android use.
+      - Grateful for opportunity to work with all new technologies: Scala for server-side, AndroidAnnotations for Android app, and AngularJS for JavaScript framework.
+      - Participated in user meetings and specification discussions, proposing additional features based on clear understanding of requirements and intentions.
+      - With small team and fluid specifications, focused on rapid development to quickly demonstrate usage scenarios.
+      - Database contained 27 tables.
+      - Responsible phases included design, development, and testing.
+  - company: SDK Operations Team
+    position: Native App Engineer (5-person development team)
     startDate: '2014-04-01'
     endDate: '2014-08-31'
     summary: Windows, Linux, Java, Gradle, C++, Cocos2dx, SQLite, Jenkins, Nexus, Git, SVN
     highlights:
-      - この時期から社内の Android アプリが認証や課金時に使用する SDK の担当になりました。
-      - 複数の SDK がありましたのでリリース作業自動化や品質向上のための各静的分析自動化など、jenkins を使って更に安全に運用できるよう努めました。
-      - Gradle でビルドを行いたいと要望がありましたので SDK のビルド・リリース作業の Gradle 化を行いました。
-      - また、実現したい機能が既存のプラグインだけでは実現できなかったり無理して組み込んでもパフォーマンスが悪く使い物にならなかったりしたので独自の jenkins プラグインを作成し組み込みました。
-      - SDK の Cocos2dx プラグイン化作業(Android 側と共通部分)を行いました。
-      - 担当フェーズは設計、開発、単体テストです。
-  - company: アプリ運用チーム
-    position: ネイティブアプリエンジニア (開発チーム 5 名)
+      - Became responsible for SDKs used by internal Android apps for authentication and billing.
+      - With multiple SDKs to manage, used Jenkins to improve operational safety through automated releases and static analysis for quality assurance.
+      - Implemented Gradle build system for SDK build and release processes in response to team request.
+      - Created custom Jenkins plugins when existing plugins couldn't meet functionality requirements or had poor performance when forcibly integrated.
+      - Developed Cocos2dx plugin for SDK (Android-side and common components).
+      - Responsible phases included design, development, and unit testing.
+  - company: App Operations Team
+    position: Native App Engineer (5-person development team)
     startDate: '2013-09-27'
     endDate: '2014-03-31'
     summary: Windows, Java, Shell(少し), Groovy(少し), SQLite, Git, Jenkins
     highlights:
-      - 客先のメイン事業のサービス名を冠したアプリで長く運用されており、クローズできないアプリでした。
-      - 歴史があり、ソースが読みにくいので数ヶ月のリファクタリング期間が設けられていました。
-      - 画像選択を行う画面をライブラリとして開発しました。
-      - クライアントサイドをメインで開発したことがなかったため、リソースの節約やイベントの多さ、ケースの複雑さ、端末依存の現象や UI のためだけの制御など、サーバーサイドとの違いに戸惑いました。
-      - 品質を維持するための静的解析やビルド自動化の作業の時間ももらえたため、チームのサーバーに jenkins を構築しました。
-      - 担当フェーズは設計、開発、単体テストです。
-  - company: ゲーム部門コアシス
-    position: エンジニア (開発チーム 14 名)
+      - Worked on a long-running app branded with client's main business name that couldn't be discontinued.
+      - Due to app's history and code readability issues, several months were allocated for refactoring.
+      - Developed an image selection screen as a reusable library.
+      - Having primarily worked on server-side, faced challenges with client-side development including resource optimization, event handling complexity, case variations, device-dependent behaviors, and UI-specific controls.
+      - Given time for quality maintenance, implemented Jenkins on team server for static analysis and build automation.
+      - Responsible phases included design, development, and unit testing.
+  - company: Gaming Division Core System
+    position: Engineer (14-person development team)
     startDate: '2012-12-06'
     endDate: '2013-09-26'
     summary: Linux, Java, FTL, HTML, CSS, JavaScript, shell, Spring, MySQL, SVN, Git, Apache, Tomcat, Memcached, Jenkins, Android
     highlights:
-      - 複数ゲームで使用されるシステムの開発、運用。
-      - 認証などは大元のプラットフォーム側で運用していたことと、各ゲーム側にもこちらから使う API を用意してもらって構築したため普通のシステムより多くの API を使用するシステムになりました。
-      - パフォーマンスの問題や、大型ゲームのトラフィックがリリースしたての小さなゲームの API サーバーを圧迫するなど、使用 API が多いシステムならではのトラブルがありました。処理の頻度を緩めて各サーバーヘのアクセスを短時間に集中させないこと、キャッシュを許容するよう、数値の管理チームに相談に行くことで対応しました。
-      - 各ゲームとの連携がうまく行かないと動かず、立場上も反感を買いかねない場所ですのでできるだけ連絡を密にするよう気をつけ、調査などもこちらでできることは吸収するよう努めました。各ゲームでサーバーの構築方法や FW が違いましたので調査やソースの確認を通していろいろなケースの勉強になりました。
-      - アプリケーションの作りもアクセスの多いサイトならではの方法が多く、とても勉強になりました。
-      - AP サーバー 15 台程度(当時)
-      - DB サーバー 3 台(master1&slave2・当時)
-      - 画面数 20 程度
-      - テーブル数 50 程度
-      - 各ブラウザゲームの WebView アプリ化(Android)もさせて頂きました。対象ゲームは　 6 個、今後さらに増える見通しでしたので計測などゲーム個々の処理以外は全て FW として実装し、各ゲームの処理は数個程度の薄いクラスで収まるよう作成しました。
-      - 担当フェーズは設計、開発、テストです。
-  - company: モバイルブラウザゲーム運用
-    position: エンジニア (開発チーム 20 名)
+      - Developed and operated system used by multiple games.
+      - System required extensive API usage due to authentication being handled by core platform and each game providing APIs for our use.
+      - Encountered unique challenges with high API usage, such as performance issues and traffic from large games impacting API servers of newly released smaller games. Addressed by adjusting processing frequency to prevent concentrated server access and consulting with metrics team about caching allowances.
+      - Given critical integration role and potential for friction, maintained close communication with game teams and proactively investigated issues. Learned various approaches through studying different server architectures and frameworks used by each game.
+      - Gained valuable experience with high-traffic site architecture patterns.
+      - Infrastructure: ~15 application servers, 3 database servers (1 master, 2 slaves) at the time
+      - System scope: ~20 screens, ~50 tables
+      - Also handled WebView app conversion (Android) for browser games. With 6 target games and more expected, implemented all non-game-specific processing (like metrics) as framework components, keeping game-specific logic in minimal thin classes.
+      - Responsible phases included design, development, and testing.
+  - company: Mobile Browser Game Operations
+    position: Engineer (20-person development team)
     startDate: '2012-08-16'
     endDate: '2012-12-05'
     summary: Linux, Java, FTL, HTML, CSS, JavaScript, shell, Spring, Seaser, MySQL, Apache, Tomcat
     highlights:
-      - フィーチャーフォン、スマートフォン用ブラウザゲームの運用
-      - アクセス数が多いのでサーバー 40 台程度で運用していました。
-      - アプリケーションの作りもアクセスの多いサイトならではの方法が多く、とても勉強になりました。
-      - 担当フェーズは追加機能開発(機能ごとの DB 設計〜単体テストまで), CS 調査です。
-  - company: 独自サービス構築
-    position: エンジニア
+      - Operated browser games for feature phones and smartphones.
+      - Managed approximately 40 servers to handle high traffic volume.
+      - Gained valuable experience with architecture patterns specific to high-traffic websites.
+      - Responsible for feature development (from per-feature DB design through unit testing) and customer support investigation.
+  - company: Custom Service Development
+    position: Engineer
     startDate: '2012-05-01'
     endDate: '2012-08-15'
     summary: Linux, Java, JSP, HTML, CSS, JavaScript, shell, Struts, MySQL, Apache, Tomcat
     highlights:
-      - サイト構築システム
-      - 画面数 83
-      - テーブル数　 39
-      - 担当フェーズは全行程です。
-  - company: 大手家電メーカー事業部生産管理システム構築
-    position: エンジニア (開発チーム 13 名)
+      - Developed site construction system
+      - System scope: 83 screens
+      - Database: 39 tables
+      - Responsible for all project phases
+  - company: Major Electronics Manufacturer Division Production Management System Construction
+    position: Engineer (13-person development team)
     startDate: '2011-10-07'
     endDate: '2012-04'
     summary: Windows, Java, JSP, PL/SQL, Struts ベース独自 FW, Oracle, Apache
     highlights:
-      - 大手家電メーカー事業部生産管理システム
-      - Ui の処理は Java, JSP で行い、DB への更新は PL/SQL で行う
-      - 画面数 73
-      - テーブル数　 122
-      - 担当フェーズはJava 側の詳細設計、開発、テストです。
-      - 詳細設計から実装、テストまで
-      - リリース前プログラム修正、調査、チューニング等
-      - Java 開発者は当初私を含め 4 人アサインされており、私自身は 11 月末までの短期案件の予定でした。開発フェーズが落ち着きメンバーが減る段階では、技術力を評価していただき、チームの Java 担当技術者としては唯一、3 月末のリリース前後の要員として残ることになりました。保守要員としての長期の依頼も頂く等、評価していただきました。
-      - 開発スタイルは WF ですが全体的に時間と要員が足りず、設計書がないまま口頭で仕様を聞いて開発するなど、イレギュラーな状態での開発になりました。
-      - 設計書がなく、特に他の技術者の担当プログラムはソースしか情報が無い為、変更や修正の際にはソースからプログラム設計を理解し変更を行いました。
-      - Web アプリケーションについてはチームの中で私が一番詳しかった為、機能実現に向けた技術的な提案や Web 特有の制約事項の説明を行い、設計に協力しました。
-      - リリースも近く、スケジュールもぎりぎりだったため、いつも以上に体調管理に気をつけました。お蔭様で 1 度も病欠せず、業務に専念することが出来ました。
-  - company: 中堅ITコンサル社内ペンチャー
-    position: エンジニア
+      - Developed production management system for major electronics manufacturer division.
+      - Used Java/JSP for UI processing and PL/SQL for database updates.
+      - System scope: 73 screens, 122 tables.
+      - Responsible for Java-side detailed design, development, and testing.
+      - Handled process from detailed design through implementation and testing.
+      - Performed pre-release program modifications, investigations, and performance tuning.
+      - Initially one of 4 Java developers assigned through November. Due to recognized technical ability, became sole Java technical lead retained through March release and post-release period. Also received requests for long-term maintenance role.
+      - Despite waterfall development style, limited time and resources led to irregular development scenarios like implementing specifications provided verbally without design documents.
+      - With no design documents available and only source code for reference, analyzed and understood program design from source when making changes or modifications.
+      - As team's web application expert, provided technical proposals and explanations of web-specific constraints to support design process.
+      - With tight release schedule, maintained extra careful health management, achieving perfect attendance while focusing fully on work.
+  - company: Mid-sized IT Consulting Company Internal Venture
+    position: Engineer
     startDate: '2008-10'
     endDate: '2011-10'
     summary: Windows, Java, JSP, HTML, CSS, JavaScript, Struts2, MySQL, Apache
     highlights:
-      - 大手飲食チェーン店ポイントシステム、部品バッチ作成、選挙の後援者管理システム、ツイッター割引まとめサイト、パリーグ野球チームの分析システム機能追加、パリーグポータルサイト管理サイト、携帯サイト CMS、美容院予約システム、等構築。
-  - company: 大手飲食チェーン店依頼ポータルサイト
-    position: エンジニア (開発チーム 4 名, デザイン会社数名)
+      - Built various systems including point system for major restaurant chain, parts batch processing, election supporter management system, Twitter discount aggregation site, additional features for Pacific League baseball team analysis system, Pacific League portal site management system, mobile site CMS, beauty salon reservation system, and more.
+  - company: Major Restaurant Chain Portal Site
+    position: Engineer (4-person development team, plus design company staff)
     startDate: '2011-02-21'
     endDate: '2011-10-07'
     summary: Linux(RH), Java, JSP, Struts2, MySQL, Apache
     highlights:
-      - 大手飲食チェーン店より依頼の、飲食店ポータルサイト構築。
-      - 画面数 26
-      - テーブル数 85
-      - 基本設計から実装、テストまで
-      - デザインはデザイン担当会社から HTML でデザインを受け取り、JSP への変換を行う。
-      - JSP はデザイン会社の人が直接更新することもあるのでできるだけ HTML がわかれば理解できるソースにするよう心がけました。
-      - すでに構築されているモバイルサイトの派生プロジェクトですのでソースや設計はモバイルサイトに準じた方法をとりました。
-      - その他、別に製作してあるモバイルサイトの管理サイトに PC サイト用の機能追加を行いました。
-  - company: 小売店向け EC サイト構築・受注発送請求管理システム構築
-    position: エンジニア (開発チーム 3 名)
+      - Built restaurant chain portal site as per client request.
+      - System scope: 26 screens, 85 tables.
+      - Handled from basic design through implementation and testing.
+      - Received HTML designs from design company and converted to JSP.
+      - Made JSP code easily understandable from HTML perspective as design company staff sometimes needed to update directly.
+      - Followed mobile site's code and design patterns as this was a derivative project of an existing mobile site.
+      - Additionally implemented PC site functionality for the separate mobile site management system.
+  - company: Retail Store E-commerce Site and Order Management System Construction
+    position: Engineer (3-person development team)
     startDate: '2009-04-01'
     endDate: '2009-05-31'
     summary: Linux(RedHat), Java, JSP, HTML, JavaScript, CSS, Struts2, MySQL
     highlights:
-      - 当時エクセルで行っていたグループ会社向け通販の管理を Web システム化するプロジェクト。
-      - 顧客サイト画面数 25
-      - 管理サイト画面数 48
-      - テーブル数 33
-      - 担当フェーズは要件定義。基本設計、DB 設計、詳細設計、実装、デザインあて、テスト、納品、データ移行です。
-      - スケジュール管理
-      - 顧客向け EC サイトとクライアント向け管理サイト要件定義、各設計、実装、テスト、納品、データ移行
-      - ヤマト運輸発送伝票出力システム B2 との連携、佐川急便発送伝票出力システム e 飛伝との連携
-      - 要件定義から 2 ヶ月で納品し稼動させるスピード開発でしたが移行までスケジュールどおりに進めることができました。
-      - 管理サイト構築後の使用感の確認を行った際に担当者が IT リテラシーが低めだとわかり、業務マニュアルとヘルプを兼ねる「ガイド」を担当業務別に作成、ログイン後のトップページやメニューは担当者が使う機能数個のみに絞り、迷うことがないよう工夫したところ、大変喜んでもらうことができました。
-      - 個人情報を扱うため、厳密な権限管理ができるようにしました。
-      - 運用負担がかからないよう、クライアント側で各種設定ができるようにしておきましたので問い合わせは 2 年半たっても数件にとどまりました。
-  - company: 受託飲食店グループ向けポイントシステム開発
-    position: エンジニア (開発チーム 5 名)
+      - Project to convert Excel-based group company mail-order management to web system.
+      - Customer site: 25 screens
+      - Admin site: 48 screens
+      - Database: 33 tables
+      - Responsible for requirements definition, basic design, DB design, detailed design, implementation, design application, testing, delivery, and data migration.
+      - Managed project schedule.
+      - Handled customer-facing e-commerce site and client-side admin site from requirements through design, implementation, testing, delivery, and data migration.
+      - Integrated with Yamato Transport B2 and Sagawa Express e-Hikyaku shipping slip output systems.
+      - Successfully delivered and launched within 2 months from requirements definition, maintaining migration schedule.
+      - Upon discovering low IT literacy among admin site users during usability testing, created role-specific guides combining operation manual and help documentation. Streamlined post-login homepage and menus to show only few essential functions per user, greatly improving user satisfaction.
+      - Implemented strict permission management due to handling of personal information.
+      - Minimized operational burden by enabling client-side configuration options, resulting in only a few support inquiries even after 2.5 years.
+  - company: Restaurant Chain Group Point System Development
+    position: Engineer (5-person development team)
     startDate: '2009-02'
     endDate: '2009-04'
     summary: Linux(RedHat), Java, JSP, HTML, JavaScript, CSS, Struts, MySQL, Apache,
     highlights:
-      - 大手飲食店グループ向けポイント管理・CRM システム構築・運営。
-      - モバイルサイトへくじ機能追加
-      - 分析システムで使用する天気情報取得バッチ作成
-      - ポイント失効処理、失効前メール送信バッチ作成
-      - 上記機能設計、実装、テスト
-      - モバイルサイトの作成や実行可能 Jar の作成、メール送信機能は初めてでしたがインターネットで情報を集め自力で作成することができました。
-  - company: 顧客・会合管理システム(受託)
-    position: エンジニア (開発チーム 1 名)
+      - Built and operated point management/CRM system for major restaurant chain group.
+      - Added lottery feature to mobile site.
+      - Created batch process for retrieving weather information used in analytics system.
+      - Developed point expiration processing and pre-expiration email notification batch jobs.
+      - Handled design, implementation, and testing of above features.
+      - Successfully created mobile site, executable JAR files, and email functionality despite being first experience with these technologies, by researching and implementing independently.
+  - company: Customer and Event Management System Development
+    position: Engineer (1-person development team)
     startDate: '2008-10'
     endDate: '2009-01'
     summary: Linux, Java, JSP, HTML, JavaScript, CSS, Struts, MySQL, Apache
     highlights:
-      - クライアント主催の会合やワークショップに参加している顧客情報を管理し、アテンド担当社員情報と会合の連絡管理や出欠管理を行うシステムの構築。
-      - 画面数 46
-      - テーブル数 22
-      - 要件定義、基本設計、DB 設計、画面設計、実装、デザインあて、テスト、運用保守、データ移行サポート
-      - スケジュール管理、進捗管理(デザイナー、HTML コーディング担当との調整)
-      - 最初の 1 ヶ月はクライアント側の調整が終わっていなかったことと、私自身 Java での開発が初めてだったため練習用サンプルプログラムを作成する期間となり、実質 2 ヶ月間で要件定義から納品まで行うスピード開発でした。
-      - 初めてのプロジェクト全体スケジュール管理を行いましたが約束の納品日を守ることができました。
-      - クライアントは社内の人事異動や部署名変更が頻繁で、顧客アテンド担当者の管理が大変だったとの事なのでアテンド担当者の所属部署やアテンド担当者をすべて別の担当者に引き継ぐなど、一括操作ができるよう利便性に考慮しました。
-      - 個人情報を扱うため、機能画面ごとの厳密な権限管理をし、権限は役割に合わせて一括で管理、ユーザー側で自由に変更できるよう設計を
-  - company: ガラケー用お小遣い帳 Web アプリ, ガラケー用支出記録・割勘金額管理用のモバイルサイト (Web 勉強用)
-    position: エンジニア (開発チーム 1 名)
+      - Built system to manage customer information for client-hosted meetings and workshops, including staff attendance management and communication management.
+      - System scope: 46 screens, 22 tables
+      - Responsible for requirements definition, basic design, DB design, screen design, implementation, design application, testing, operations maintenance, and data migration support.
+      - Managed schedule and progress (coordinating with designers and HTML coding staff).
+      - First month spent creating practice programs as client coordination was incomplete and it was my first Java development experience. Successfully completed rapid development from requirements to delivery in effectively 2 months.
+      - Successfully managed overall project schedule for the first time, meeting promised delivery date.
+      - Due to frequent internal transfers and department name changes at client, made system user-friendly with bulk operations for transferring attendee staff departments and responsibilities to different staff members.
+      - Implemented strict per-feature permission management due to handling personal information. Designed permissions to be role-based with bulk management and user-configurable settings.
+  - company: Feature Phone Web Apps - Personal Finance Management and Group Expense Tracking (Web Development Study)
+    position: Engineer (1-person development team)
     startDate: '2008-03'
     endDate: '2008-09'
     summary: Windows, PHP, MySQL
     highlights:
-      - SAP プロジェクトからの帰宅後や休日を使用して PHP で構築しました。
-      - お小遣い帳 Web アプリはクレジットカード、電子マネー、現金を一括で管理するサイトが欲しかった為、構築しました。
-      - 支出記録・割勘用モバイルサイトは複数人の共通の支出を記録し、全員が平等の金額を負担する為、携帯サイトとして構築しました。
-      - 主にみんなで外出した際、代表者が支払う事が多かったので最終的に誰がどれだけ払っているのか分からなくなるため、使用しました。
-      - 担当フェーズは全行程です。
-  - company: 大手化学メーカー SAP アドオン開発
-    position: エンジニア (開発チーム 10 名程度, プロジェクト規模百数十名程度)
+      - Built using PHP during evenings after SAP project work and on holidays.
+      - Created personal finance web app to manage credit cards, electronic money, and cash in one place.
+      - Developed mobile site for group expense tracking and splitting to record shared expenses and ensure equal cost distribution among participants.
+      - Built to solve issue of tracking individual contributions when one person pays for group outings.
+      - Responsible for all project phases.
+  - company: Major Chemical Manufacturer SAP Addon Development
+    position: Engineer (Development team of ~10 people, Project scale of over 100 people)
     startDate: '2008-06'
     endDate: '2008-09'
     summary: SAP, ABAP, Oracle, Windows
     highlights:
-      - SAP 導入・アドオン開発。
-      - 新規プログラム詳細設計、詳細設計書作成、DFD 作成、実装、テスト仕様書作成、テスト
-      - 仕様変更対応
-      - パフォーマンスチューニング
-      - 調査
-      - 通常の新規モジュール開発の他に新人 4 名での画面プログラム開発、複数回にわたり開発停止になった画面プログラムを外国籍のメンバー数名と開発するなど、大きなプログラムを開発することもできるようになりました。
-      - 移行対象モジュールが使用しているモジュールを正確に知ることができずに設計チームが困っていることを知り、空き時間で同時移行するべきモジュールを一覧にするプログラムを作り、提供しました。
-      - 二次受けの企業と共同で行う ABAP 講習の講師を 1 日のみ依頼され汎用モジュール開発の講習を行いました。
-      - 担当フェーズは詳細設計、開発、単体テストです。
-  - company: 大手家電量販店 SAP アドオン開発
-    position: エンジニア (開発チーム 10 名程度, プロジェクト規模百数十名程度)
+      - SAP implementation and addon development.
+      - Handled detailed design of new programs, created detailed design documents, DFDs, implementation, test specifications, and testing.
+      - Managed specification changes.
+      - Performed performance tuning.
+      - Conducted investigations.
+      - Beyond regular new module development, gained experience with large-scale programming through screen program development with 4 new hires and collaborating with international team members on previously stalled screen programs.
+      - Upon learning design team was struggling to identify modules used by migration target modules, created and provided a program in spare time to list modules requiring simultaneous migration.
+      - Requested to serve as instructor for one day of ABAP training conducted jointly with subcontractor company, teaching general module development.
+      - Responsible phases included detailed design, development, and unit testing.
+  - company: Major Electronics Retailer SAP Addon Development
+    position: Engineer (Development team of ~10 people, Project scale of over 100 people)
     startDate: '2007-08'
     endDate: '2008-05'
     summary: SAP, ABAP, Oracle, Windows
     highlights:
-      - SAP 導入・アドオン開発。
-      - 新規プログラム詳細設計、詳細設計書作成、実装、テスト仕様書作成、単体テスト
-      - 仕様変更対応
-      - 調査
-      - OJT で先輩に助けられて経験を積みました。
-      - プログラムを始めて半年の頃に作った個人用の調査プログラムが好評で、設計チームでも使われることになり、割り当てられた仕事以外でも貢献することができました。また、このツールなしでは仕事ができないと今でもプロジェクトに残っている先輩に言っていただき、今でも使われていることを知りました。作ったものが便利だと思ってもらえることを非常に嬉しく思います。
-      - チームにはプロジェクトの初期メンバーとしてアサインされましたが、当初 6 名程度だったチームは評判が良く、要員追加されて十数名程度にまでなりました。開発フェーズが終盤になると当時の 1 次受けコンサルティング会社の別プロジェクトへチームまるごと移動するよう依頼される等チームの評価向上に微力ながら貢献しました。
-      - 担当フェーズは詳細設計、開発、単体テストです。
+      - SAP implementation and addon development.
+      - Handled detailed design of new programs, created detailed design documents, implementation, test specifications, and unit testing.
+      - Managed specification changes.
+      - Conducted investigations.
+      - Gained experience through OJT with support from senior team members.
+      - Created a personal investigation tool six months into programming that became popular and was adopted by the design team, contributing beyond assigned work. Received feedback from senior team members still with the project that the tool remains indispensable, which is very gratifying.
+      - Assigned as an initial team member when team was around 6 people. Team's good reputation led to expansion to over 10 members. Contributing to team's improved evaluation, which resulted in the primary consulting company requesting entire team transfer to another project during final development phase.
+      - Responsible phases included detailed design, development, and unit testing.
 volunteer: []
 education:
   - institution: Collage
@@ -702,10 +697,10 @@ education:
 awards: []
 publications: []
 languages:
-  - language: 日本語
-    fluency: ネイティブ
-  - language: 英語
-    fluency: チーム内コミュニケーション可能(対社外のビジネス英会話はできないと思います)
+  - language: Japanese
+    fluency: Native
+  - language: English
+    fluency: Capable of team communication (Business-level English conversation with external parties may be limited)
 interests:
   - name: Home Automation
     keywords:
@@ -723,17 +718,17 @@ references:
   - name:
     reference:
 basics:
-  name: 志方 裕美 (シカタ ヒロミ)
-  label: 19年目フルスタックエンジニア(兼エンジニアリングマネージャー)
+  name: Hiromi Shikata
+  label: Full-stack Engineer & Engineering Manager with 19 years of experience
   picture:
   email: shikata@uminoseisaku.com
   phone: +81-50-5354-8192
   website: https://hiromishikata.github.io/profile/
-  summary: "Im a full-stack engineer. Ive worked mostly at startups over than 20 projects."
+  summary: "I'm a full-stack engineer with extensive experience in startups, having contributed to over 20 projects."
   location:
     city: Minato-ku
     countryCode: JP
-    region: 東京都
+    region: Tokyo
   profiles:
     - network: GitHub
       username: HiromiShikata
