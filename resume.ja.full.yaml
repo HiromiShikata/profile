@@ -5,12 +5,17 @@ skills:
   - name: Backend Development
     level: Expert
     keywords:
-      - RESTful API
+      - TypeScript
+      - Go
+      - Python
+      - Rust
       - Clean Architecture
       - DDD
+      - RESTful API
       - Swagger
+      - OpenAPI
       - Serverless
-      - AWS
+      - GraphQL
       - Docker
       - docker-compose
       - MySQL
@@ -18,10 +23,6 @@ skills:
       - DynamoDB
       - MongoDB
       - Redis
-      - TypeScript
-      - Go
-      - Python
-      - Rust
   - name: DevOps
     level: Expert
     keywords:
@@ -33,6 +34,16 @@ skills:
       - CloudMapper
       - e2e Testing
       - CircleCI
+  - name: AI Integration
+    level: Expert
+    keywords:
+      - OpenAI
+      - Claude
+      - Gemini
+      - langchain
+      - AutoGen
+      - AutoGPT
+      - Autonomous AI
   - name: Infrastructure
     level: Senior
     keywords:
@@ -47,7 +58,7 @@ skills:
       - CloudFormation
       - Kubernetes
   - name: Frontend Development
-    level: Intermediate
+    level: Senior
     keywords:
       - React
       - TypeScript
@@ -58,13 +69,41 @@ skills:
       - Vue
       - Angular
       - Aurelia
+  - name: Management
+    lebel: intermediate
+    keywords:
+      - Agile
+      - Lean
+      - Trunk-Based Development
+      - Remote team working
+      - Flexible team working
+  - name: Dislike
+    keywords:
+      - Ruby
+      - PHP
+      - iOS
+      - Scrum
 work:
+  - company: スタートアップのAIプロダクト実装
+    position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
+    startDate: '2024-05-28'
+    endDate: 現在
+    summary: Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, Golang, AWS Lambda, DynamoDB, AWS SQS, Postgress, AWS RDS Aurora, 
+    highlights:
+      - R&Dでの成果からプロダクト化を進め、ビジネス要件を踏まえた本格的な実装に移りました。
+      - プロダクトの性質上同時に数千件以上の処理をこなす必要があったため、Serverless構成とし、AWS Lambdaを実行環境として構築しました
+      - Lambdaの上限は問題なかったもののSQSから実行できるLambdaの数の上限に達してしまいスケールできるサイズがクリップしたためQueueからの実行を独自に実装して回避しました
+      - 毎月にAIの性能が上がったりコストが下がったりと、使うLLMの選択肢が増える環境にあったため頻繁に各モデルの評価と、成績鍵良いものへのスイッチを行いました。
+      - 同時期に行っていた採用活動の成果が良くチームメンバーを2.5倍に増えたがマネジメントコストが増大したため、できるだけ自動的に、非同期ですべてが把握できるよう体制を構築しました。
+      - 今では完全リモート、稼働時間自由、定例会議無しで目座ずべきゴールの共有、優先順位の判断ルール、各エンジニアの稼働とスキルの評価の体制を構築しマネジメントにかかる時間をデイリーで2.5時間程度にまで下げられています。1時間以内を目指してまだ改善途中です。
+      - この時期に導入したデイリーの評価のシステムで今まで検知できていなかった問題が見えるようになりチーム全体のコスト削減に寄与しました。
   - company: スタートアップのAIプロダクトR&D
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
     startDate: '2024-04-01'
-    endDate: 現在
-    summary: Python3, OpenAI API, Anthropic API, Llama, ChromeExtension, Selenium, PyAutoGUI, AutoGen
+    endDate: '2024-05-27'
+    summary: Python3, OpenAI API, Anthropic API, Llama, Gemini, ChromeExtension, Selenium, PyAutoGUI, AutoGen, 
     highlights:
+      - 誰も何をどうできるかわからない中での開発になったため、ボードメンバーとできるだけ頻度高く情報共有を行い、チームでランダム探索を行いました。
       - LLM（Large Language Models）の精度が向上したことを背景に、社内向けツールのアイデアを実装しました。新人社員が行うようなタスクの遂行を目指し、自律的に動作するよう構築しました。現在のLLMの精度では、タスクが3-4ステップ以上になるとLLMが途中で必要な操作を忘れたり、依頼していないことを実行してしまう問題が発生していましたがこの問題を解決するために、LLMのスペックやタスクの構造を見直し、最適な構造に作り変えました。現在は、テスト段階で使用したタスクに関しては、体感として90%以上の確率でこなせるようになっています。
       - また、タスクの性質により起きがちな間違いが見えてくるようになったため、作業を細かく分けたり、サンプルを示したりすることでLLMのタスクの実行が安定するようになりました。
       - OpenAIのAPIだけでなく、他の大手2社のAIも並行して使えるようにシステムを修正しました。一部のタスクに関しては、より安いLLMやより早いLLMを使得るような構造で構築しました。複雑なタスクを複数のエージェントで遂行し、自律的に修正しながら進めるためマルチエージェントのフレームワークを調査し、採用しました。マルチAIエージェントで構築できる状態にしておくと、ある程度複雑な箇所やAI同士でのレビューなど自律的な行動が取れるようになり、汎用的かつ成功確率の高いものにできるようになりました。
@@ -76,7 +115,7 @@ work:
       - 単純にすべての情報をpromptに入れるとすぐにtoken数上限を超えてしまう為、各種の今回必要な情報を落とさずtoken数を下げる取り組みを複数行いました。
       - 自動操作の指示はソースコードの生成で実現させていましたが、当時の成功率は約60%から70%程度でした。成功率が上がらないため、意図的にAIにとって分かりやすいWrapper関数を用意し、Wrapper内部の処理はプログラマティックに行うよう改善しました。その結果、操作の成功確率は体感でほぼ100%に近い数値となりました。
       - 日々新しいLLMやフレームワーク、プロダクトが出てくる状況でしたので、ひたすら使ってみる期間を設け、現在の最新の状態がどうなっているかを理解する期間を意図的に作りました。全員で開発していくうちに、チーム全体で1時間あたり、コストが一番多かったタイミングで1万円になってしまいました。そのため、オープンソースのLLMやGrokなどより新しくコストやスピードを下げる可能性のあるLLMの調査を行いました。
-      - 現在作業中ではありますが、料金が高く遅いLLMでしかこなせなかったタスクも多く、早くて安いLLMへの単純なリプレイスは失敗しまし。しかしタスクをさらに小さくしたものであれば成功するということがわかりましたので次のフェーズではより小さなタスクに分割できるよう構造の修正をする予定です。
+      - 2024年5月頃の作業中、料金が高く遅いLLMでしかこなせなかったタスクも多く、早くて安いLLMへの単純なリプレイスは失敗しまし。しかしタスクをさらに小さくしたものであれば成功するということがわかりましたので次のフェーズではより小さなタスクに分割できるよう構造の修正をする予定です。
 
   - company: 製造業向けSaaSスタートアップ
     position: 技術顧問
