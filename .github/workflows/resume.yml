@@ -64,7 +64,7 @@ jobs:
           ls -la generated/resume/
 
           for html_file in generated/resume/*.html; do
-            sed -i '/<head>/a \  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ES8HLN40E3"></script>\n  <script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('\''js'\'', new Date());\n  gtag('\''config'\'', '\''G-ES8HLN40E3'\'');\n  </script>' "$html_file"
+            sed -i '/<head>/a \  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=${{ secrets.GTAG_ID }}"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('\''js'\'', new Date());\n    gtag('\''config'\'', '\''${{ secrets.GTAG_ID }}'\'');\n  </script>' "$html_file"
           done
 
           echo "Git status:"
