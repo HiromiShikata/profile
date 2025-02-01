@@ -773,7 +773,9 @@ languages:
   - language: 日本語
     fluency: ネイティブ
   - language: 英語
-    fluency: チーム内コミュニケーション可能(対社外のビジネス英会話はできないと思います)
+    fluency: チーム内コミュニケーション可能
+  - language: ' '
+    fluency: (対社外のビジネス英会話はできないと思います)
 interests:
   - name: Home Automation
     keywords:
