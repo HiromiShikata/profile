@@ -44,6 +44,7 @@ jobs:
           check_pdf_generation() {
             local pdf_file="$1"
             if [ ! -f "$pdf_file" ] || ! pdftk "$pdf_file" dump_data > /dev/null 2>&1; then
+              ls -la generated
               echo "Error: PDF generation failed or produced invalid PDF: $pdf_file"
               return 1
             fi
