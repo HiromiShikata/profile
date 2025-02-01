@@ -63,9 +63,8 @@ jobs:
           echo "Current directory contents after generation:"
           ls -la generated/resume/
 
-          for html_file in generated/resume/*.html; do
-            sed -i '/<head>/a \  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=${{ secrets.GTAG_ID }}"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('\''js'\'', new Date());\n    gtag('\''config'\'', '\''${{ secrets.GTAG_ID }}'\'');\n  </script>' "$html_file"
-          done
+          # Copy custom template with GTM code
+          cp templates/resume.template node_modules/jsonresume-theme-paper/resume.template
 
           echo "Git status:"
           git status
