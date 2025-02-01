@@ -19,11 +19,8 @@
 
 ### Japanese
 
-- [HTML](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.ja.html)
-- [PDF](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.ja.pdf)
-- [MD](https://hiromishikata.github.io/profile/RESUME.ja)
-- [MD Masked-Name](https://hiromishikata.github.io/profile/generated/RESUME.masked-name.ja.md)
+- [HTML](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.ja.full.html)
+- [PDF](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.ja.full.pdf)
 
 ## Meeting
-
 - [Meeting](https://hiromi.appointlet.com/s/30-umino/hiromi)
