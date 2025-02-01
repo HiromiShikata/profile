@@ -1,0 +1,137 @@
+---
+meta:
+  theme: paper
+skills:
+  - name: Backend Development
+    level: Expert
+    keywords:
+      - TypeScript
+      - Go
+      - Python
+      - Rust
+      - Clean Architecture
+      - DDD
+      - RESTful API
+      - Swagger
+      - OpenAPI
+      - Serverless
+      - GraphQL
+      - Docker
+      - docker-compose
+      - MySQL
+      - Postgres
+      - DynamoDB
+      - MongoDB
+      - Redis
+  - name: DevOps
+    level: Expert
+    keywords:
+      - CI/CD
+      - GitHub Actions
+      - Testing Automation
+      - Documentation Automation
+      - SchemaSpy
+      - CloudMapper
+      - e2e Testing
+      - CircleCI
+  - name: AI Integration
+    level: Expert
+    keywords:
+      - OpenAI
+      - Claude
+      - Gemini
+      - langchain
+      - AutoGen
+      - AutoGPT
+      - Autonomous AI
+  - name: Infrastructure
+    level: Senior
+    keywords:
+      - CDK
+      - SST
+      - Docker
+      - docker-compose
+      - AWS ECS Fargate
+      - AWS Lambda
+      - Terraform
+      - Ansible
+      - CloudFormation
+      - Kubernetes
+  - name: Frontend Development
+    level: Senior
+    keywords:
+      - React
+      - TypeScript
+      - shadcn
+      - Tailwind CSS
+      - Storybook
+      - BrowserStack
+      - Vue
+      - Angular
+      - Aurelia
+  - name: Management
+    lebel: intermediate
+    keywords:
+      - Agile
+      - Lean
+      - Trunk-Based Development
+      - Remote team working
+      - Flexible team working
+  - name: Dislike
+    keywords:
+      - Ruby
+      - PHP
+      - iOS
+      - Scrum
+work: []
+volunteer: []
+education:
+  - institution: Collage
+    area: Qualified　Bornsetter
+    studyType:
+    startDate: '2004-04-01'
+    endDate: '2007-03-31'
+awards: []
+publications: []
+interests:
+  - name: Home Automation
+    keywords:
+      - Home Automation
+      - IoT
+      - Zapier
+      - IFTTT
+      - Universal Remote Control
+  - name: Mirror Polish
+    keywords:
+      - Mirror Polish
+      - Film
+      - Buffing Compounds
+references:
+  - name:
+    reference:
+basics:
+  name: Hiromi Shikata
+  label: Full-stack Engineer & Engineering Manager with 19 years of experience
+  picture: https://github.com/HiromiShikata.png
+  email: shikata@uminoseisaku.com
+  phone: +81-50-5354-8192
+  website: https://hiromishikata.github.io/profile/
+  url: https://hiromishikata.github.io/profile/
+  summary: "I'm a full-stack engineer with extensive experience in startups, having contributed to over 46 projects."
+  location:
+    city: Minato-ku
+    countryCode: JP
+    region: Tokyo
+  profiles:
+    - network: GitHub
+      username: HiromiShikata
+      url: https://github.com/hiromishikata
+    - network: Meeting (30min)
+      username: hiromishikata
+      url: https://hiromi.appointlet.com/s/30-umino/hiromi
+    - network: LinkedIn
+      username: hiromishikata
+      url: https://www.linkedin.com/in/hiromishikata
+    - network: Twitter
+      username: hiromishikata
+      url: https://twitter.com/hiromishikata

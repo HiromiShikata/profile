@@ -1,88 +1,4 @@
 ---
-meta:
-  theme: paper
-skills:
-  - name: Backend Development
-    level: Expert
-    keywords:
-      - TypeScript
-      - Go
-      - Python
-      - Rust
-      - Clean Architecture
-      - DDD
-      - RESTful API
-      - Swagger
-      - OpenAPI
-      - Serverless
-      - GraphQL
-      - Docker
-      - docker-compose
-      - MySQL
-      - Postgres
-      - DynamoDB
-      - MongoDB
-      - Redis
-  - name: DevOps
-    level: Expert
-    keywords:
-      - CI/CD
-      - GitHub Actions
-      - Testing Automation
-      - Documentation Automation
-      - SchemaSpy
-      - CloudMapper
-      - e2e Testing
-      - CircleCI
-  - name: AI Integration
-    level: Expert
-    keywords:
-      - OpenAI
-      - Claude
-      - Gemini
-      - langchain
-      - AutoGen
-      - AutoGPT
-      - Autonomous AI
-  - name: Infrastructure
-    level: Senior
-    keywords:
-      - CDK
-      - SST
-      - Docker
-      - docker-compose
-      - AWS ECS Fargate
-      - AWS Lambda
-      - Terraform
-      - Ansible
-      - CloudFormation
-      - Kubernetes
-  - name: Frontend Development
-    level: Senior
-    keywords:
-      - React
-      - TypeScript
-      - shadcn
-      - Tailwind CSS
-      - Storybook
-      - BrowserStack
-      - Vue
-      - Angular
-      - Aurelia
-  - name: Management
-    lebel: intermediate
-    keywords:
-      - Agile
-      - Lean
-      - Trunk-Based Development
-      - Remote team working
-      - Flexible team working
-  - name: Dislike
-    keywords:
-      - Ruby
-      - PHP
-      - iOS
-      - Scrum
 work:
   - company: スタートアップのAIプロダクト実装
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
@@ -731,58 +647,54 @@ work:
       - プログラムを始めて半年の頃に作った個人用の調査プログラムが好評で、設計チームでも使われることになり、割り当てられた仕事以外でも貢献することができました。また、このツールなしでは仕事ができないと今でもプロジェクトに残っている先輩に言っていただき、今でも使われていることを知りました。作ったものが便利だと思ってもらえることを非常に嬉しく思います。
       - チームにはプロジェクトの初期メンバーとしてアサインされましたが、当初 6 名程度だったチームは評判が良く、要員追加されて十数名程度にまでなりました。開発フェーズが終盤になると当時の 1 次受けコンサルティング会社の別プロジェクトへチームまるごと移動するよう依頼される等チームの評価向上に微力ながら貢献しました。
       - 担当フェーズは詳細設計、開発、単体テストです。
-volunteer: []
-education:
-  - institution: Collage
-    area: Qualified　Bornsetter
-    studyType: 
-    startDate: '2004-04-01'
-    endDate: '2007-03-31'
+  - startDate: '自己PR'
+    endDate: ' '
+    position: クライアントの作業効率改善に向けた提案
+    highlights:
+      - 業務系の開発は顧客が気づかない作業効率改善箇所の指摘と改善の為の機能追加や、操作に迷わない画面設計と機能を追加する工夫をしてクライアントに喜ばれました。
+      - 例えば、配送担当者は主に 6 つの業務を行っているので、配送担当者が管理画面にログインするとその 6 つの業務のうちどれを行いたいかの選択肢のみを表示し、
+      - 発送伝票作成であれば、「○ 月 ○ 日の発送伝票を作成する」というボタンを表示することで迷わないよう設計しています。
+      - また、納期までの期間が短く、運用契約のされているプロジェクトでも各種設定画面と、それぞれの画面上に詳細な説明文を用意し、変更や操作がわからないなどの問い合わせを
+      - 減らす工夫をしています。運用開始から 2 年程度たちましたが問い合わせは2 ～ 3 件にとどまっています。
+  - startDate: ' '
+    endDate: ' '
+    position: 開発効率化に向けた取り組み
+    highlights:
+      - 文字列変換や入力チェック用部品、年齢や期間の算出など、プロジェクト特有でない処理は汎用部品として独立させ、次のプロジェクトでは部品を組み合わせるだけでできるよう、汎用部品を日々洗練させています。すでにテスト済みの部品なので、プロジェクト全体のバグの数を減らし、開発スピードを上げることができるようにしています。
+      - また、画面設計の変更やデータベースの変更に強い設計を目指して構築していくうちに、画面やデータを扱う箇所を分離して構築するようになっていましたが、後に MVC と呼ばれることを知りました。MVC に関してはすでに知られている設計手法でしたが常に開発効率と汎用性、堅牢性を意識して開発しています。
+      - また、各ツールの開発や Jenkins でのビルドやテスト、静的解析はもちろんのこと、ADT の更新通知やリリース時のドキュメント収集保存・apk 調査用 job 等、自動化で各所でのエンジニアのストレスを軽減しシステムの品質向上・開発スピードアップできるよう常に意識しています。
+  - startDate: ' '
+    endDate: ' '
+    position: 個人での勉強
+    highlights:
+      - 2 社目の会社に入社する時、クライアントサーバーモデルや HTTP について一切分からない状態でしたが独学で PHP のシステムをつくり、認められて入社しました。
+      - Web 業界に入った後、占有サーバーを借りて Xen で仮想化し、それぞれに Apache や DB などアプリケーションをインストールして AP サーバー・DB サーバーにし、個人で作ったサイトをそちらで運用しています。GNOME をインストールしたサーバーには VNC で接続して普段使うデスクトップサーバーとして構築、普段から仮想デスクトップ環境で開発やメール、スケジュール確認など PC で行う自分の作業をほぼ全てサーバーにて行っています。
+      - しばらく Xen にて運用していましたが現在は新しく Ansible, VirtualBox, Vagrant を使用して構築しなおし、デスクトップサーバー、AP,DB サーバーに加え個人用の Jenkins を インストールして使用できるようにしています。
+      - ローカルのマシンとデスクトップサーバーは毎月 OS クリーンを行い、案件ごとの開発環境の構築を Ansible で行っていましたが各ツールのインストールや設定に非常に時間がかかるため案件ごとにデスクトップ環境を Docker で作成し Docker 上での開発に移行しました。
+      - 常に OS クリーンをすることとステートの位置を把握することでローカルのみに重要なデータを保管してしまったり、ローカルだけで動くなどの問題が発生しないよう努めています。
+      - また、常に自分のローカル環境とデスクトップサーバーを作り直すことで新しく join したメンバー向けに配布している開発環境構築のスクリプト(最近はほとんど Ansible の playbook です)が正しく動作するかを検証しています。
+      - また、最近は趣味でも仕事でも電子工作をはじめ、 arduino を使用して 赤外線、各種センサー、サーボモーター等を使ったり、CAD でデータを作って 3D プリンタで出力できるようになりました。今は電気の回路設計を勉強しているのと、レーザーカッター、切削等の工作機械、塗装等のトレーニングも受け、自分の作りたいものの技術的な課題を消化しています。
+      - 今後、業務や個人の趣味で困難なことがあっても自力で調べて対処できると思っています。
+      - よろしくお願い致します。
 awards: []
 publications: []
 languages:
   - language: 日本語
     fluency: ネイティブ
   - language: 英語
-    fluency: チーム内コミュニケーション可能(対社外のビジネス英会話はできないと思います)
-interests:
-  - name: Home Automation
-    keywords:
-      - Home Automation
-      - IoT
-      - Zapier
-      - IFTTT
-      - Universal Remote Control
-  - name: Mirror Polish
-    keywords:
-      - Mirror Polish
-      - Film
-      - Buffing Compounds
-references:
-  - name: 
-    reference: 
+    fluency: チーム内コミュニケーション可能
+  - language: ' '
+    fluency: (対社外のビジネス英会話はできないと思います)
 basics:
   name: 志方 裕美 (シカタ ヒロミ)
   label: 19年目フルスタックエンジニア(兼エンジニアリングマネージャー)
-  picture:
+  picture: https://github.com/HiromiShikata.png
   email: shikata@uminoseisaku.com
   phone: +81-50-5354-8192
   website: https://hiromishikata.github.io/profile/
-  summary: "Im a full-stack engineer. Ive worked mostly at startups over than 20 projects."
+  url: https://hiromishikata.github.io/profile/
+  summary: "Im a full-stack engineer. Ive worked mostly at startups over than 46 projects."
   location:
     city: Minato-ku
     countryCode: JP
     region: 東京都
-  profiles:
-    - network: GitHub
-      username: HiromiShikata
-      url: https://github.com/hiromishikata
-    - network: Meeting (30min)
-      username: hiromishikata
-      url: https://hiromi.appointlet.com/s/30-umino/hiromi
-    - network: LinkedIn
-      username: hiromishikata
-      url: https://www.linkedin.com/in/hiromishikata
-    - network: Twitter
-      username: hiromishikata
-      url: https://twitter.com/hiromishikata
