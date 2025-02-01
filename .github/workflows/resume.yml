@@ -61,8 +61,10 @@ jobs:
           check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.en.pdf"
           npm run generate:ja
           check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.pdf"
-          sed 's@志方\|シカタ\|裕美\|ヒロミ@*****@g' generated/resume.full.ja.yaml > generated/resume.full.ja.masked.yaml
-          npm run generate:resume --file=resume.full.ja.masked",
+          cp generated/resume.full.ja.yaml generated/resume.full.ja.masked.yaml
+          sed 's/志方 裕美 (シカタ ヒロミ)\|shikata@uminoseisaku.com\|+81-50-5354-8192/"**********"/g' -i generated/resume.full.ja.masked.yaml
+          sed 's@hiromishikata.github.io@**********@g' -i generated/resume.full.ja.masked.yaml
+          npm run generate:resume --file=resume.full.ja.masked
           check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.masked.pdf"
 
           echo "Current directory contents after generation:"
