@@ -29,6 +29,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.0.0",
     "@commitlint/config-conventional": "^19.0.0",
+    "deepmerge-yaml": "^0.0.3",
     "i": "^0.3.7",
     "jsonresume-theme-paperalt": "^0.2.5",
     "lodash": "^4.17.15",
