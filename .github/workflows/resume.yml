@@ -64,22 +64,15 @@ jobs:
           ls -la generated
 
           for html_file in generated/*.html; do
-            sed -i '/<head>/a \  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=${{ secrets.GTAG_ID }}"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('\''js'\'', new Date());\n    gtag('\''config'\'', '\''${{ secrets.GTAG_ID }}'\'');\n  </script>' "$html_file"
+            sed -i '/<head>/a \  <!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":\nnew Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=\n"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,"script","dataLayer","GTM-NH7SBSVG");</script>\n<!-- End Google Tag Manager -->' "$html_file"
+            sed -i '/<body>/a \  <!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH7SBSVG"\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->' "$html_file"
           done
           npm run format
 
           echo "Git status:"
           git status
-
-
-
-          echo "Adding generated files to git:"
-          git add generated/
-          git status
-
       - run: git config --global user.email "gh-actions"
       - run: git config --global user.name "gh-actions"
-
       - if: github.ref == 'refs/heads/main'
         run: |
           if git diff --staged --quiet; then
