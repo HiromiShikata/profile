@@ -1,88 +1,4 @@
 ---
-meta:
-  theme: paper
-skills:
-  - name: Backend Development
-    level: Expert
-    keywords:
-      - TypeScript
-      - Go
-      - Python
-      - Rust
-      - Clean Architecture
-      - DDD
-      - RESTful API
-      - Swagger
-      - OpenAPI
-      - Serverless
-      - GraphQL
-      - Docker
-      - docker-compose
-      - MySQL
-      - Postgres
-      - DynamoDB
-      - MongoDB
-      - Redis
-  - name: DevOps
-    level: Expert
-    keywords:
-      - CI/CD
-      - GitHub Actions
-      - Testing Automation
-      - Documentation Automation
-      - SchemaSpy
-      - CloudMapper
-      - e2e Testing
-      - CircleCI
-  - name: AI Integration
-    level: Expert
-    keywords:
-      - OpenAI
-      - Claude
-      - Gemini
-      - langchain
-      - AutoGen
-      - AutoGPT
-      - Autonomous AI
-  - name: Infrastructure
-    level: Senior
-    keywords:
-      - CDK
-      - SST
-      - Docker
-      - docker-compose
-      - AWS ECS Fargate
-      - AWS Lambda
-      - Terraform
-      - Ansible
-      - CloudFormation
-      - Kubernetes
-  - name: Frontend Development
-    level: Senior
-    keywords:
-      - React
-      - TypeScript
-      - shadcn
-      - Tailwind CSS
-      - Storybook
-      - BrowserStack
-      - Vue
-      - Angular
-      - Aurelia
-  - name: Management
-    lebel: intermediate
-    keywords:
-      - Agile
-      - Lean
-      - Trunk-Based Development
-      - Remote team working
-      - Flexible team working
-  - name: Dislike
-    keywords:
-      - Ruby
-      - PHP
-      - iOS
-      - Scrum
 work:
   - company: スタートアップのAIプロダクト実装
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
@@ -760,13 +676,6 @@ work:
       - また、最近は趣味でも仕事でも電子工作をはじめ、 arduino を使用して 赤外線、各種センサー、サーボモーター等を使ったり、CAD でデータを作って 3D プリンタで出力できるようになりました。今は電気の回路設計を勉強しているのと、レーザーカッター、切削等の工作機械、塗装等のトレーニングも受け、自分の作りたいものの技術的な課題を消化しています。
       - 今後、業務や個人の趣味で困難なことがあっても自力で調べて対処できると思っています。
       - よろしくお願い致します。
-volunteer: []
-education:
-  - institution: Collage
-    area: Qualified　Bornsetter
-    studyType: 
-    startDate: '2004-04-01'
-    endDate: '2007-03-31'
 awards: []
 publications: []
 languages:
@@ -776,22 +685,6 @@ languages:
     fluency: チーム内コミュニケーション可能
   - language: ' '
     fluency: (対社外のビジネス英会話はできないと思います)
-interests:
-  - name: Home Automation
-    keywords:
-      - Home Automation
-      - IoT
-      - Zapier
-      - IFTTT
-      - Universal Remote Control
-  - name: Mirror Polish
-    keywords:
-      - Mirror Polish
-      - Film
-      - Buffing Compounds
-references:
-  - name: 
-    reference: 
 basics:
   name: 志方 裕美 (シカタ ヒロミ)
   label: 19年目フルスタックエンジニア(兼エンジニアリングマネージャー)
@@ -805,16 +698,3 @@ basics:
     city: Minato-ku
     countryCode: JP
     region: 東京都
-  profiles:
-    - network: GitHub
-      username: HiromiShikata
-      url: https://github.com/hiromishikata
-    - network: Meeting (30min)
-      username: hiromishikata
-      url: https://hiromi.appointlet.com/s/30-umino/hiromi
-    - network: LinkedIn
-      username: hiromishikata
-      url: https://www.linkedin.com/in/hiromishikata
-    - network: Twitter
-      username: hiromishikata
-      url: https://twitter.com/hiromishikata

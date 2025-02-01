@@ -11,9 +11,10 @@
     "format": "npm run format:json && npm run format:yml && npm run format:md && npm run format:js",
     "generate:pdf": "npm run generate:file --output_dir=${npm_config_output_dir} --file=${npm_config_file} --output_format=pdf",
     "generate:html": "npm run generate:file --output_dir=${npm_config_output_dir} --file=${npm_config_file} --output_format=html",
-    "generate:file": "mkdir -p ${npm_config_output_dir} && ./node_modules/resume-cli/build/main.js export -r generated/${npm_config_file}.json ${npm_config_output_dir}/HiromiShikata.${npm_config_file}.${npm_config_output_format} --format ${npm_config_output_format} --theme paperalt",
-    "generate": "npm run generate:pdf --output_dir=${npm_config_output_dir} --file=${npm_config_file} && npm run generate:html --output_dir=${npm_config_output_dir} --file=${npm_config_file}",
-    "generate-from-json": "yaml2json ${npm_config_file}.yaml > generated/${npm_config_file}.json && npm run generate:html --output_dir=${npm_config_output_dir} --file=${npm_config_file} && npm run generate:pdf --output_dir=${npm_config_output_dir} --file=${npm_config_file}",
+    "generate:file": "mkdir -p generated && ./node_modules/resume-cli/build/main.js export -r generated/${npm_config_file}.yaml generated/HiromiShikata-FullStack-Engineer-and-Manager.${npm_config_file}.${npm_config_output_format} --format ${npm_config_output_format} --theme paperalt",
+    "generate:resume": "npm run generate:pdf --output_dir=generated/resume --file=${npm_config_file} && npm run generate:html --output_dir=generated --file=${npm_config_file}",
+    "generate:en": "deepmerge-yaml resume.base.yaml resume.en.yaml > generated/resume.full.en.yaml && npm run generate:resume --file=resume.full.en",
+    "generate:ja": "deepmerge-yaml resume.base.yaml resume.ja.yaml > generated/resume.full.ja.yaml && npm run generate:resume --file=resume.full.ja",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

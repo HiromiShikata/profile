@@ -37,7 +37,7 @@ jobs:
           fonts-liberation libayatana-appindicator3-1 libnss3 lsb-release xdg-utils wget pdftk chromium-browser
       - run: npm install
       - run: |
-          mkdir -p generated/resume
+          mkdir -p generated
           check_pdf_generation() {
             local pdf_file="$1"
             if [ ! -f "$pdf_file" ] || ! pdftk "$pdf_file" dump_data > /dev/null 2>&1; then
@@ -53,24 +53,25 @@ jobs:
           echo "Current directory contents before generation:"
           ls -la generated/resume/
 
-          npm run generate-from-json --output_dir=generated/resume --file=resume.short
-          check_pdf_generation "generated/resume/HiromiShikata.resume.short.pdf"
-          npm run generate-from-json --output_dir=generated/resume --file=resume.full
-          check_pdf_generation "generated/resume/HiromiShikata.resume.full.pdf"
-          npm run generate-from-json --output_dir=generated/resume --file=resume.ja.full
-          check_pdf_generation "generated/resume/HiromiShikata.resume.ja.full.pdf"
+          npm run generate:en
+          check_pdf_generation "generated/resume/HiromiShikata-FullStack-Engineer-and-Manager.resume.en.pdf"
+          npm run generate:ja
+          check_pdf_generation "generated/resume/HiromiShikata-FullStack-Engineer-and-Manager.resume.ja.pdf"
+          sed 's@志方\|シカタ\|裕美\|ヒロミ@*****@g' generated/resume.full.ja.yaml > generated/resume.full.ja.masked.yaml
+          npm run generate:resume --file=resume.full.ja.masked",
 
           echo "Current directory contents after generation:"
-          ls -la generated/resume/
+          ls -la generated
 
-          for html_file in generated/resume/*.html; do
+          for html_file in generated/*.html; do
             sed -i '/<head>/a \  <!-- Google tag (gtag.js) -->\n  <script async src="https://www.googletagmanager.com/gtag/js?id=${{ secrets.GTAG_ID }}"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('\''js'\'', new Date());\n    gtag('\''config'\'', '\''${{ secrets.GTAG_ID }}'\'');\n  </script>' "$html_file"
           done
+          npm run format
 
           echo "Git status:"
           git status
 
-          sed 's@"志方 裕美"@"********"@g' RESUME.ja.md > generated/RESUME.masked-name.ja.md
+
 
           echo "Adding generated files to git:"
           git add generated/
