@@ -11,6 +11,9 @@ env:
   RELEASE_APP_PRIVATE_KEY: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
   PJ_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
+concurrency:
+  group: resume-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   generate:
     runs-on: ubuntu-latest
