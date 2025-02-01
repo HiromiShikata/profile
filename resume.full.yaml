@@ -492,7 +492,7 @@ work:
       - Developed new IoT product.
       - Valuable learning experience working with hardware and electronic circuits despite no prior experience.
       - As the team member with longest attendance hours and development project experience, involved in basic design, engineer task management, and schedule coordination.
-      - Faced challenges in schedule management, task allocation, information sharing, and development process establishment due to team composition: using unfamiliar technologies (various sensors, voice recognition, image recognition), mostly part-time engineers including many students unfamiliar with team development tools and practices.
+      - 'Faced challenges in schedule management, task allocation, information sharing, and development process establishment due to team composition: using unfamiliar technologies (various sensors, voice recognition, image recognition), mostly part-time engineers including many students unfamiliar with team development tools and practices.'
       - Focused on creating easily separable designs and maintaining flexible development structure to handle frequent changes with part-time members, while emphasizing team skill improvement.
       - Responsible phases included server-side design/development, hardware circuit design/development, and enclosure software design/development.
   - company: Business System Development
@@ -502,7 +502,7 @@ work:
     summary: Windows, Linux, Scala, Java, Javascript, Gradle, Skinny (Scala), Flyway, Jetty, Tomcat, Android annotations, Android Spring REST client, TwitterBootstrap3, AngularJS, jQuery, Robolectric, Postgres9.4, Jenkins, Git, Redmine
     highlights:
       - Developed complete prototype business system from server-side through client and Android app for browser and Android use.
-      - Grateful for opportunity to work with all new technologies: Scala for server-side, AndroidAnnotations for Android app, and AngularJS for JavaScript framework.
+      - 'Grateful for opportunity to work with all new technologies: Scala for server-side, AndroidAnnotations for Android app, and AngularJS for JavaScript framework.'
       - Participated in user meetings and specification discussions, proposing additional features based on clear understanding of requirements and intentions.
       - With small team and fluid specifications, focused on rapid development to quickly demonstrate usage scenarios.
       - Database contained 27 tables.
@@ -523,7 +523,7 @@ work:
     position: Native App Engineer (5-person development team)
     startDate: '2013-09-27'
     endDate: '2014-03-31'
-    summary: Windows, Java, Shell(少し), Groovy(少し), SQLite, Git, Jenkins
+    summary: Windows, Java, Shell(a little bit), Groovy(a little bit), SQLite, Git, Jenkins
     highlights:
       - Worked on a long-running app branded with client's main business name that couldn't be discontinued.
       - Due to app's history and code readability issues, several months were allocated for refactoring.
@@ -542,8 +542,8 @@ work:
       - Encountered unique challenges with high API usage, such as performance issues and traffic from large games impacting API servers of newly released smaller games. Addressed by adjusting processing frequency to prevent concentrated server access and consulting with metrics team about caching allowances.
       - Given critical integration role and potential for friction, maintained close communication with game teams and proactively investigated issues. Learned various approaches through studying different server architectures and frameworks used by each game.
       - Gained valuable experience with high-traffic site architecture patterns.
-      - Infrastructure: ~15 application servers, 3 database servers (1 master, 2 slaves) at the time
-      - System scope: ~20 screens, ~50 tables
+      - 'Infrastructure: ~15 application servers, 3 database servers (1 master, 2 slaves) at the time'
+      - 'System scope: ~20 screens, ~50 tables'
       - Also handled WebView app conversion (Android) for browser games. With 6 target games and more expected, implemented all non-game-specific processing (like metrics) as framework components, keeping game-specific logic in minimal thin classes.
       - Responsible phases included design, development, and testing.
   - company: Mobile Browser Game Operations
@@ -563,8 +563,8 @@ work:
     summary: Linux, Java, JSP, HTML, CSS, JavaScript, shell, Struts, MySQL, Apache, Tomcat
     highlights:
       - Developed site construction system
-      - System scope: 83 screens
-      - Database: 39 tables
+      - 'System scope: 83 screens'
+      - 'Database: 39 tables'
       - Responsible for all project phases
   - company: Major Electronics Manufacturer Division Production Management System Construction
     position: Engineer (13-person development team)
@@ -574,7 +574,7 @@ work:
     highlights:
       - Developed production management system for major electronics manufacturer division.
       - Used Java/JSP for UI processing and PL/SQL for database updates.
-      - System scope: 73 screens, 122 tables.
+      - 'System scope: 73 screens, 122 tables.'
       - Responsible for Java-side detailed design, development, and testing.
       - Handled process from detailed design through implementation and testing.
       - Performed pre-release program modifications, investigations, and performance tuning.
@@ -597,7 +597,7 @@ work:
     summary: Linux(RH), Java, JSP, Struts2, MySQL, Apache
     highlights:
       - Built restaurant chain portal site as per client request.
-      - System scope: 26 screens, 85 tables.
+      - 'System scope: 26 screens, 85 tables.'
       - Handled from basic design through implementation and testing.
       - Received HTML designs from design company and converted to JSP.
       - Made JSP code easily understandable from HTML perspective as design company staff sometimes needed to update directly.
@@ -610,9 +610,9 @@ work:
     summary: Linux(RedHat), Java, JSP, HTML, JavaScript, CSS, Struts2, MySQL
     highlights:
       - Project to convert Excel-based group company mail-order management to web system.
-      - Customer site: 25 screens
-      - Admin site: 48 screens
-      - Database: 33 tables
+      - 'Customer site: 25 screens'
+      - 'Admin site: 48 screens'
+      - 'Database: 33 tables'
       - Responsible for requirements definition, basic design, DB design, detailed design, implementation, design application, testing, delivery, and data migration.
       - Managed project schedule.
       - Handled customer-facing e-commerce site and client-side admin site from requirements through design, implementation, testing, delivery, and data migration.
@@ -640,7 +640,7 @@ work:
     summary: Linux, Java, JSP, HTML, JavaScript, CSS, Struts, MySQL, Apache
     highlights:
       - Built system to manage customer information for client-hosted meetings and workshops, including staff attendance management and communication management.
-      - System scope: 46 screens, 22 tables
+      - 'System scope: 46 screens, 22 tables'
       - Responsible for requirements definition, basic design, DB design, screen design, implementation, design application, testing, operations maintenance, and data migration support.
       - Managed schedule and progress (coordinating with designers and HTML coding staff).
       - First month spent creating practice programs as client coordination was incomplete and it was my first Java development experience. Successfully completed rapid development from requirements to delivery in effectively 2 months.
