@@ -58,11 +58,12 @@ jobs:
           ls -la generated/resume/
 
           npm run generate:en
-          check_pdf_generation "generated/resume/HiromiShikata-FullStack-Engineer-and-Manager.resume.en.pdf"
+          check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.en.pdf"
           npm run generate:ja
-          check_pdf_generation "generated/resume/HiromiShikata-FullStack-Engineer-and-Manager.resume.ja.pdf"
+          check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.pdf"
           sed 's@志方\|シカタ\|裕美\|ヒロミ@*****@g' generated/resume.full.ja.yaml > generated/resume.full.ja.masked.yaml
           npm run generate:resume --file=resume.full.ja.masked",
+          check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.masked.pdf"
 
           echo "Current directory contents after generation:"
           ls -la generated
