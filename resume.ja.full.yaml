@@ -799,7 +799,8 @@ basics:
   email: shikata@uminoseisaku.com
   phone: +81-50-5354-8192
   website: https://hiromishikata.github.io/profile/
-  summary: "Im a full-stack engineer. Ive worked mostly at startups over than 20 projects."
+  url: https://hiromishikata.github.io/profile/
+  summary: "Im a full-stack engineer. Ive worked mostly at startups over than 46 projects."
   location:
     city: Minato-ku
     countryCode: JP
