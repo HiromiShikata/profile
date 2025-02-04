@@ -82,6 +82,7 @@ jobs:
       - run: git config --global user.name "gh-actions"
       - if: github.ref == 'refs/heads/main'
         run: |
+          git add generated
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
