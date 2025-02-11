@@ -9,13 +9,13 @@
 
 #### Full
 
-- [HTML](https://hiromishikata.github.io/profile/generated/HiromiShika-FullStack-Engineer-and-Manager.resume.en.html)
-- [PDF](https://hiromishikata.github.io/profile/generated/HiromiShika-FullStack-Engineer-and-Manager.resume.en.pdf)
+- [HTML](https://hiromishikata.github.io/profile/generated/HiromiShika-FullStack-Engineer-and-Manager.resume.full.en.html)
+- [PDF](https://hiromishikata.github.io/profile/generated/HiromiShika-FullStack-Engineer-and-Manager.resume.full.en.pdf)
 
 ### Japanese
 
-- [HTML](https://hiromishikata.github.io/profile/generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.ja.html)
-- [PDF](https://hiromishikata.github.io/profile/generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.ja.pdf)
+- [HTML](https://hiromishikata.github.io/profile/generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.html)
+- [PDF](https://hiromishikata.github.io/profile/generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.pdf)
 
 ## Meeting
 
