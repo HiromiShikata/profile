@@ -3,7 +3,7 @@ meta:
   theme: paper
 skills:
   - name: Backend Development
-    level: Expert
+    level: 19+ years
     keywords:
       - TypeScript
       - Go
@@ -24,7 +24,7 @@ skills:
       - MongoDB
       - Redis
   - name: DevOps
-    level: Expert
+    level: 17+ years
     keywords:
       - CI/CD
       - GitHub Actions
@@ -32,10 +32,12 @@ skills:
       - Documentation Automation
       - SchemaSpy
       - CloudMapper
-      - e2e Testing
+      - E2E Testing
+      - Unit Testing
+      - Integration Testing
       - CircleCI
   - name: AI Integration
-    level: Expert
+    level: 2+ years
     keywords:
       - OpenAI
       - Claude
@@ -45,7 +47,7 @@ skills:
       - AutoGPT
       - Autonomous AI
   - name: Infrastructure
-    level: Senior
+    level: 12+ years
     keywords:
       - CDK
       - SST
@@ -58,7 +60,7 @@ skills:
       - CloudFormation
       - Kubernetes
   - name: Frontend Development
-    level: Senior
+    level: 15+ years
     keywords:
       - React
       - TypeScript
@@ -70,19 +72,27 @@ skills:
       - Angular
       - Aurelia
   - name: Management
-    lebel: intermediate
+    level: 4+ years
     keywords:
       - Agile
       - Lean
       - Trunk-Based Development
-      - Remote team working
-      - Flexible team working
+      - Full-Remote team leading
+      - Full-Flexible team leading
+      - git-flow
+      - GitHub Flow
+      - GitHub Issues
+      - GitHub Projects
   - name: Dislike
     keywords:
       - Ruby
       - PHP
       - iOS
       - Scrum
+      - JIRA
+      - GitLab
+      - Slack
+      - Old, legacy environments
 work: []
 volunteer: []
 education:
