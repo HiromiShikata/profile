@@ -2,7 +2,7 @@ meta:
   theme: paper
 skills:
   - name: Backend Development
-    level: Expert
+    level: 19+ years
     keywords:
       - TypeScript
       - Go
@@ -23,7 +23,7 @@ skills:
       - MongoDB
       - Redis
   - name: DevOps
-    level: Expert
+    level: 17+ years
     keywords:
       - CI/CD
       - GitHub Actions
@@ -31,10 +31,12 @@ skills:
       - Documentation Automation
       - SchemaSpy
       - CloudMapper
-      - e2e Testing
+      - E2E Testing
+      - Unit Testing
+      - Integration Testing
       - CircleCI
   - name: AI Integration
-    level: Expert
+    level: 2+ years
     keywords:
       - OpenAI
       - Claude
@@ -44,7 +46,7 @@ skills:
       - AutoGPT
       - Autonomous AI
   - name: Infrastructure
-    level: Senior
+    level: 12+ years
     keywords:
       - CDK
       - SST
@@ -57,7 +59,7 @@ skills:
       - CloudFormation
       - Kubernetes
   - name: Frontend Development
-    level: Senior
+    level: 15+ years
     keywords:
       - React
       - TypeScript
@@ -69,39 +71,77 @@ skills:
       - Angular
       - Aurelia
   - name: Management
-    lebel: intermediate
+    level: 4+ years
     keywords:
       - Agile
       - Lean
       - Trunk-Based Development
-      - Remote team working
-      - Flexible team working
+      - Full-Remote team leading
+      - Full-Flexible team leading
+      - git-flow
+      - GitHub Flow
+      - GitHub Issues
+      - GitHub Projects
   - name: Dislike
     keywords:
       - Ruby
       - PHP
       - iOS
       - Scrum
+      - JIRA
+      - GitLab
+      - Slack
+      - Old, legacy environments
 work:
+  - company: スタートアップの日本市場向け福利厚生プロダクトリプレース
+    position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
+    startDate: '2025-01-01'
+    endDate: 現在
+    summary: >-
+      Golang, OpenAPI, AWS Lambda, AWS RDS Aurora, MySQL, SST, React,
+      TypeScript, playwrite, Jest, shadcn, Clean Architecture, DDD, GitHub
+      Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose,
+      Slack, Swagger, kubernetes, Flutter, ReactNative
+    highlights:
+      - ピボットにて見つけたチャンスに振り切ることが決定したため、変更に弱く身重になってしまっていたシステムの構造が課題でした。
+      - バックエンド、フロントエンド、インフラすべてで以前のプロダクトに最適化され必要機能の8倍程度のサイズに膨らんでいた為作り直すことにしました。
+      - kubernetesを使用していたためメンテナンス労力的にも金銭的にも負荷が高くなっていたのでAWS Lambdaを使うようにしました。
+      - >-
+        既存のシステムではFlutterを使用しましたが、現在のチームメンバーのスキルセットと採用市場の調査結果からReactNativeを使用することにしました。
+      - 別案件で既存メンバーは忙しい為新たなメンバーを採用し自動化されたオンボーディングプロセスですぐ即戦力として新メンバーにも貢献してもらいました。
+      - >-
+        このチームでは私ではなくメンバーのリファラルで優秀なメンバーを採用、3年弱のこのチームで累計30人以上にお手伝いいただいた中で自らやめたメンバーは2人のみにとどまっていて、該当の2人のうち1人は起業もう1人はご家族の看病とのことで、メンバーは現在の開発チーム環境を気に入ってくれていると考えています。
+      - >-
+        一部のロールが既存の方法でなかなか採用できず、既存の方法では滞りが見え始めていたためまずアシスタントを採用しエンジニア採用体制を増強しました。この取り組みは成果があり、30人以上の候補者から4人の優秀な候補者との出会いがあり、メンバーの増強に成功しました。
+      - プロダクトの性質上技術的にはあまり課題はないもののスケジュールがタイトなため引き続き実装以外の時間を極限まで減らし対応しています。
   - company: スタートアップのAIプロダクト実装
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
     startDate: '2024-05-28'
     endDate: 現在
     summary: >-
-      Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, Golang, AWS
-      Lambda, DynamoDB, AWS SQS, Postgress, AWS RDS Aurora,
+      Golang, Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, AWS
+      Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST, React,
+      TypeScript, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub,
+      GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Jest,
+      Swagger, OpenAPI, playwrite, RESTful
     highlights:
       - R&Dでの成果からプロダクト化を進め、ビジネス要件を踏まえた本格的な実装に移りました。
+      - >-
+        プログラミングを安定させるためprogramatic
+        に制御すべき部分に型安全ではないPythonを使わなくてすむようデータやプロセス管理を担うシステムと主にAIにて作業するべき不確定要素の多いシステムを分ける構成としました。
       - プロダクトの性質上同時に数千件以上の処理をこなす必要があったため、Serverless構成とし、AWS Lambdaを実行環境として構築しました
       - >-
         Lambdaの上限は問題なかったもののSQSから実行できるLambdaの数の上限に達してしまいスケールできるサイズがクリップしたためQueueからの実行を独自に実装して回避しました
       - >-
         毎月にAIの性能が上がったりコストが下がったりと、使うLLMの選択肢が増える環境にあったため頻繁に各モデルの評価と、成績鍵良いものへのスイッチを行いました。
       - >-
-        同時期に行っていた採用活動の成果が良くチームメンバーを2.5倍に増えたがマネジメントコストが増大したため、できるだけ自動的に、非同期ですべてが把握できるよう体制を構築しました。
+        同時期に行っていた採用活動の成果が良くチームメンバーを16人程度に増えたがマネジメントコストが増大したため、できるだけ自動的に、非同期ですべてが把握できるよう体制を構築しました。
       - >-
         今では完全リモート、稼働時間自由、定例会議無しで目座ずべきゴールの共有、優先順位の判断ルール、各エンジニアの稼働とスキルの評価の体制を構築しマネジメントにかかる時間をデイリーで2.5時間程度にまで下げられています。1時間以内を目指してまだ改善途中です。
-      - この時期に導入したデイリーの評価のシステムで今まで検知できていなかった問題が見えるようになりチーム全体のコスト削減に寄与しました。
+      - >-
+        この時期に導入したデイリーの評価のシステムで今まで検知できていなかった問題が見えるようになりフルフレキシブルな環境でありながら翌日には問題の検知と解消ができるようになりました。
+      - >-
+        個々のエンジニアのパフォーマンスの評価が正確にできるようになったことで単価を上げるべき人、下げるべき人、やめてもらうべき人が定量的な評価時楽で可能となりチーム全体で使用していたコストの効率が体感ではありますが2倍程度になりました。
   - company: スタートアップのAIプロダクトR&D
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
     startDate: '2024-04-01'
@@ -547,7 +587,7 @@ work:
     endDate: '2017-09-30'
     summary: >-
       Linux (Ubuntu), Scala, sbt, Android, CircleCI, GiHub, DeployGate,
-      GitHubIssue, Slack, Beacon, Bluetooth, BLE
+      GitHubIssue, Slack, Beacon, Bluetooth, BLE, CleanArchitecture
     highlights:
       - Bluetooth Classic, BLE を使用した通話デバイスと連携するアプリのデザイン更新、機能追加、　不具合修正を行いました。
       - Bluetooth, Scala, 音声を扱うプロジェクトで面白い課題が多いプロジェクトでした。
