@@ -1,14 +1,43 @@
 ---
 work:
+  - company: Welfare Product Replacement for Japanese Market Startup
+    position: Remote Full-stack Engineer & Engineering Manager
+    startDate: '2025-01-01'
+    endDate: Present
+    summary: Golang, OpenAPI, AWS Lambda, AWS RDS Aurora, MySQL, SST, React, TypeScript, playwrite, Jest, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Swagger, kubernetes, Flutter, ReactNative
+    highlights:
+      - The system structure had become inflexible and cumbersome, which became a challenge when we decided to fully pursue an opportunity discovered during a pivot.
+      - The backend, frontend, and infrastructure were all optimized for the previous product, bloating to about 8 times the size needed for required functionality, so we decided to rebuild.
+      - We were using Kubernetes which had become burdensome both in terms of maintenance effort and cost, so we switched to AWS Lambda.
+      - The existing system used Flutter, but based on current team members' skill sets and recruitment market research, we decided to use ReactNative.
+      - As existing members were busy with other projects, we hired new members and got them contributing immediately as effective team members through an automated onboarding process.
+      - In this team, we recruited excellent members through team referrals rather than my own. Out of over 30 people who helped over nearly 3 years, only 2 members left voluntarily - one to start a business and another to care for family. This suggests team members are satisfied with the current development team environment.
+      - When some roles became difficult to fill using existing methods and traditional approaches showed signs of stagnation, we first hired assistants to strengthen our engineering recruitment system. This initiative was successful, leading to 4 excellent candidates among over 30 applicants, successfully strengthening the team.
+      - While there aren't many technical challenges due to the nature of the product, schedules are tight so we continue to minimize non-implementation time to manage this.
+  - company: AI Product Implementation at Startup
+    position: Remote Full-stack Engineer & Engineering Manager
+    startDate: '2024-05-28'
+    endDate: Present
+    summary: Golang, Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, AWS Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST, React, TypeScript, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Jest, Swagger, OpenAPI, RESTful, playwrite
+    highlights:
+      - Progressed from R&D results to product development, moving to full-scale implementation based on business requirements.
+      - Separated the system architecture into a data and process management system and an AI-focused system to avoid using type-unsafe Python in parts that should be programmatically controlled, ensuring more stable programming.
+      - Built a serverless architecture using AWS Lambda as the execution environment due to the product requiring simultaneous processing of thousands of requests.
+      - Implemented custom queue execution to overcome scaling limitations when the number of Lambda functions executable from SQS reached its limit, despite Lambda's individual limits not being an issue.
+      - Frequently evaluated various models and switched to better performing ones as LLM options increased with monthly improvements in AI performance and cost reductions.
+      - Built an automated, asynchronous management system to handle increased management overhead as successful recruitment grew the team to around 16 members.
+      - Established a fully remote, flexible work hours system without regular meetings, implementing goal sharing, priority decision rules, and engineer performance evaluation systems that reduced daily management time to about 2.5 hours. Still working on improvements targeting under 1 hour.
+      - Introduced a daily evaluation system that revealed previously undetectable issues, enabling problem detection and resolution by the next day despite the fully flexible environment.
+      - Accurate individual engineer performance evaluation enabled quantitative assessment for rate adjustments (increases or decreases) and team composition decisions. I feel resulting in an estimated doubling of team cost efficiency.
   - company: AI Product R&D Startup
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2024-04-01'
-    endDate: Present
+    endDate: '2024-05-27'
     summary: Python3, OpenAI API, Anthropic API, Llama, ChromeExtension, Selenium, PyAutoGUI, AutoGen
     highlights:
       - Implemented internal tools leveraging improved LLM (Large Language Models) accuracy. Built autonomous systems aimed at executing tasks typically performed by new employees. Initially, when tasks exceeded 3-4 steps, LLMs would forget necessary operations or perform unintended actions. Resolved this by optimizing LLM specifications and task structures. Currently achieving over 90% success rate for tested tasks.
       - Improved LLM task execution stability by breaking down tasks into smaller components and providing examples, after identifying common error patterns based on task characteristics.
-      - Modified the system to work with APIs from OpenAI and two other major AI companies simultaneously. Structured certain tasks to utilize more cost-effective or faster LLMs. Investigated and implemented multi-agent frameworks to handle complex tasks with autonomous correction capabilities. The multi-AI agent architecture enables autonomous behavior for complex scenarios and inter-AI reviews, resulting in more versatile and reliable solutions.
+      - Modified the system to work with APIs from OpenAI and two other major AI companies simultaneously. Structured certain tasks to utilize more cost-effective or faster LLMs. Investigated and implemented multi-agent frameworks to handle complex tasks with autonomous correction capabilities. The multi-AI agent architecture enables autonomous behavior for complex scenarios, resulting in more versatile and reliable solutions.
       - Led a 4-person team, initially struggling with task distribution. The project started with limited AI expertise across the team, requiring extensive research while under pressure to deliver quick results. Implemented agile systems for the remote team, accommodating members across different countries and time zones.
       - Enhanced tool demonstrations for potential clients and investors by adding intuitive displays showing AI thought processes and actions, addressing initial uncanny behavior. Implemented configurable settings to toggle explanatory animations and displays to optimize performance.
       - Explored OS-level computer control functionality, including investigating the ability to interpret visual information for task operations. Various approaches were tested, but single LLM solutions proved inadequate for visual instruction interpretation. Multimodal approaches showed better results but still struggled with pixel-precise click location accuracy. Combined with existing research, showing only 20% accuracy, led to exploring alternative approaches.
