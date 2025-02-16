@@ -17,11 +17,16 @@ skills:
       - GraphQL
       - Docker
       - docker-compose
+  - name: Database
+    level: 19+ years
+    keywords:
       - MySQL
       - Postgres
       - DynamoDB
       - MongoDB
       - Redis
+      - ElasticSearch
+      - OpenSearch
   - name: DevOps
     level: 17+ years
     keywords:
