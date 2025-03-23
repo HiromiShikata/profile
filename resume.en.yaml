@@ -1,9 +1,16 @@
 ---
 work:
+  - company: Division of a leading AI company
+    position: Full-remote work AI engineer
+    startDate: '2025-02-27'
+    endDate: Present
+    summary: Python3, AutoGen, OpenAI, GPT-4o, Gemini, ReactJs, Gatsby, AutoGenStudio, pytest GitHub Actions, GitHub Projects, GitHub Issues, Slack
+    highlights:
+      - Development project for AI Agent prototype designed for internal managers.
   - company: Welfare Product Replacement for Japanese Market Startup
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2025-01-01'
-    endDate: Present
+    endDate: '2025-02-28'
     summary: Golang, OpenAPI, AWS Lambda, AWS RDS Aurora, MySQL, SST, React, TypeScript, playwrite, Jest, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Swagger, kubernetes, Flutter, ReactNative
     highlights:
       - The system structure had become inflexible and cumbersome, which became a challenge when we decided to fully pursue an opportunity discovered during a pivot.
@@ -70,7 +77,7 @@ work:
     position: Remote Full-stack Engineer (3 days/week, 2-person development team)
     startDate: '2023-02-01'
     endDate: '2023-08-31'
-    summary: AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator, DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu, TypeScript, Express, DDD, Clean Architecture, GitHub Actions, GitHub, GitHub Issues, JIRA, confulence, GitHub Projects, Ttunk-based Development, Mermaid, Docker, docker-compose, Slack, Jest
+    summary: AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator, DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu, TypeScript, Express, DDD, Clean Architecture, GitHub Actions, GitHub, GitHub Issues, JIRA, confulence, GitHub Projects, Trunk-based Development, Mermaid, Docker, docker-compose, Slack, Jest
     highlights:
       - Developed a product to promote sales during the dashboard development phase.
       - Reduced team size to just 2 people to meet tight release deadlines.
@@ -84,7 +91,7 @@ work:
     position: Remote Full-stack Engineer (3 days/week, 3-person development team)
     startDate: '2022-11-01'
     endDate: '2023-01-31'
-    summary: AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator, DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu, TypeScript, Express, DDD, Clean Architecture, GitHub Actions, GitHub, GitHub Issues, JIRA, confulence, GitHub Projects, Ttunk-based Development, Mermaid, Docker, docker-compose, Slack, Jest
+    summary: AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator, DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu, TypeScript, Express, DDD, Clean Architecture, GitHub Actions, GitHub, GitHub Issues, JIRA, confulence, GitHub Projects, Trunk-based Development, Mermaid, Docker, docker-compose, Slack, Jest
     highlights:
       - Joined an agile development team at a US subsidiary of a Japanese startup, formed after dissolving an 8-person offshore development team.
       - Applied DDD strictly and invested time in normalization due to extensive functional requirements. Generated almost all code from strict definitions to meet release deadlines. Auto-generated code included tests, helping prevent defects.
@@ -99,7 +106,7 @@ work:
     position: Remote Full-stack Engineer (3 days/week, Initial development team of 6 engineers)
     startDate: '2022-06-01'
     endDate: Present
-    summary: Scrapy, Spider, Playwright, kubenetes, AWS lambda, AWS Batch, Ubuntu, TypeScript, Dart, Express, OpenAPI, Flutter, Mermeid, Puppetier, gRPC, Golang, Python 3, RedShift, firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic Repository, firebase, GitHub Actions CircleCI, GitHub, GitHub Issues, GitHub Pages, GitHub Projects, Ttunk-based Development, Mermaid, OpenSeatch, OpenSeatch Dashboard, Docker, docker-compose, Slack, Jest
+    summary: Scrapy, Spider, Playwright, kubenetes, AWS lambda, AWS Batch, Ubuntu, TypeScript, Dart, Express, OpenAPI, Flutter, Mermeid, Puppetier, gRPC, Golang, Python 3, RedShift, firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic Repository, firebase, GitHub Actions CircleCI, GitHub, GitHub Issues, GitHub Pages, GitHub Projects, Trunk-based Development, Mermaid, OpenSeatch, OpenSeatch Dashboard, Docker, docker-compose, Slack, Jest
     highlights:
       - Joined a startup with an existing system and team structure.
       - Brought in to help replace an underperforming outsourced team.
@@ -156,7 +163,7 @@ work:
     position: Remote Full-stack Engineer & Project Manager (0.5 days/week, 2-3 Engineers, 1 Assistant/QA)
     startDate: '2020-12-01'
     endDate: '2021-03-31'
-    summary: Ubuntu, TypeScript, Dart, Express, FlutterFlow, Flutter, Mermaid, no-code, firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic Repository, firebase, fireauth, firebase functions, GitHub Actions, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Slack, Jest
+    summary: Ubuntu, TypeScript, Dart, Express, FlutterFlow, Flutter, Mermaid, no-code, firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic Repository, firebase, fireauth, firebase functions, GitHub Actions, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Slack, Jest, Trunk-Based Development
     highlights:
       - Project focused on making an analysis system accessible through a browser.
       - Built a structure to minimize effort and cost while maximizing iteration speed and frequency.
@@ -175,7 +182,7 @@ work:
     position: Remote Full-stack Engineer (2 days/week, Team growth from 3 to 35 engineers)
     startDate: '2020-03-01'
     endDate: '2022-02-28'
-    summary: Ubuntu, TypeScript, Dart, Express, Flutter, firestore, Postgres, Google CloudSQL, Clean Architecture, Microservice Architecture, Monolithic Repository, Feature Flags, firebase, fireauth, firebase functions, firebase config, Prisma 2, OpenAPI, Docker, Docker Compose, CloudSQL, Google App Engine, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Zapier, Slack, Jest, Jasmin
+    summary: Ubuntu, TypeScript, Dart, Express, Flutter, firestore, Postgres, Google CloudSQL, Clean Architecture, Microservice Architecture, Monolithic Repository, Feature Flags, firebase, fireauth, firebase functions, firebase config, Prisma 2, OpenAPI, Docker, Docker Compose, CloudSQL, Google App Engine, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Zapier, Slack, Jest, Jasmin, Trunk-Based Development
     highlights:
       - Helped establish CI/CD environment for an existing mobile application that lacked one.
       - Set up automated deployment and integration testing infrastructure.
@@ -198,7 +205,7 @@ work:
     position: Remote Full-stack Engineer (4 days/week, 8-person development team)
     startDate: '2020-02-01'
     endDate: '2020-12-31'
-    summary: AWS CloudFormation, AWS Redshift, AWS Batch, AWS CodePipeline, AWS CodeBuild, AWS CodeCommit, ShellSpec, Bazel, Docker, BitBucket, JIRA, Slack, Bats, Ubuntu, SQL
+    summary: AWS CloudFormation, AWS Redshift, AWS Batch, AWS CodePipeline, AWS CodeBuild, AWS CodeCommit, ShellSpec, Bazel, Docker, BitBucket, JIRA, Slack, Bats, Ubuntu, SQL, Trunk-Based Development
     highlights:
       - Worked on improving an existing data lake platform.
       - Automated previously manual deployment and testing processes.
