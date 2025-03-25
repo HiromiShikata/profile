@@ -101,14 +101,51 @@ work:
   - company: Division of a leading AI company
     position: Full-remote work AI engineer
     startDate: '2025-02-27'
-    endDate: Present
+    endDate: '2025-03-31'
     summary: >-
       Python3, AutoGen, OpenAI, GPT-4o, Gemini, ReactJs, Gatsby, AutoGenStudio,
-      pytest GitHub Actions, GitHub Projects, GitHub Issues, Slack
+      pytest, GitHub Actions, GitHub Projects, GitHub Issues, Slack, Azure,
+      SQLite,
     highlights:
       - >-
-        Development project for AI Agent prototype designed for internal
-        managers.
+        This was a project to develop a prototype of AIAgent for a manager of a
+        client company.
+      - >-
+        Although it was a short-term project of one month, we were evaluated for
+        the speed of feature development, the preparation of a task management
+        environment for the team, the preparation of a CI/CD environment, task
+        assignment control for young members, and the fact that we considered
+        multiple methods to realize the project even if it was not definitively
+        possible.
+      - >-
+        Although the unit price was higher than other engineers, we received
+        feedback that the performance was sufficient and good.
+      - >-
+        Since it was a small and short-term project, we only implemented the
+        minimum management and automation in a compact manner. After it was
+        decided to continue the project, we made it clear that the necessary
+        work would be left as tasks and intentionally postponed.
+      - >-
+        We divided the test policy into parts that behave undeterminedly in LLM
+        and the tools used by LLM, and made it possible to automatically perform
+        unit tests and integration tests on the tools.
+      - >-
+        We built a CI environment with GitHubAction so that various basic
+        problems such as unit tests, API startup, and front-end builds could be
+        automatically detected.
+      - >-
+        The client's feedback was starting to become vague, and they seemed
+        unsure about what they should achieve with AIAgent, so we set out
+        specific use cases and scenarios and worked to contribute to the
+        client's workflow.
+      - >-
+        For the demo in the final report, we implemented both the AI's behavior
+        when initially using AIAgent, and behavior based on an understanding of
+        various user expectations.
+      - >-
+        We considered the scenario for the demo in the final report and how it
+        could be developed in the future based on possible changes for the
+        client, and submitted a draft document.
   - company: Welfare Product Replacement for Japanese Market Startup
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2025-01-01'
