@@ -1,10 +1,25 @@
 ---
 work:
+
+  - company: 大手メーカーソフトウェア開発プロジェクト向けプロダクトグローバルチーム
+    position: フルリモート バックエンドエンジニア
+    startDate: '2025-05-12'
+    endDate: 現在
+    summary: Golang, Python, Terraform, TypeScript, Jira, Artifactory, Docker, Cucumber, Gherkin, Gin, FastAPI, AWS, GCP, Azure, GitHub Actions, GitHub Projects, GitHub Issues, Slack, 
+    highlights:
+      - 
   - company: ロジスティクスSaaSスタートアップ シリーズC
-    position: フルリモート24h/weekフルスタックエンジニア
+    position: フルリモート インフラ,バックエンド,フロントエンドエンジニア
     startDate: '2025-04-22'
     endDate: 現在
-    summary: TypeScript, GitHub Actions, GitHub Projects, GitHub Issues, Slack, 
+    summary: TypeScript, hono, React, Vite, AWS, amplify, Devin, copilot, Claude Code, Claude Code Review, Trunk-based development, GitHub Actions, Backlog, GitHub Projects, GitHub Issues, Slack, 
+    highlights:
+      - 
+  - company: AI営業SaaSスタートアップ シリーズA
+    position: フルリモート 技術顧問
+    startDate: '2025-04-22'
+    endDate: 現在
+    summary: TypeScript, Golang, Python, BrowserUse, GitHub Actions, Devin, Cline, Copilot, GitHub Projects, Trunk based development,GitHub Issues, Slack, 
     highlights:
       - 
   - company: 老舗AI企業子会社
