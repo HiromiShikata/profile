@@ -109,6 +109,7 @@ work:
     highlights:
       - go とpythonで書かれた既存プロダクトの機能開発を行いました。
       - terraform provider のメンテナンスを行いました。
+      - ArtifactoryのAPIを使用して自動でのコントロール機能の拡張を行いました。
   - company: ロジスティクスSaaSスタートアップ シリーズC
     position: フルリモート インフラ,バックエンド,フロントエンドエンジニア
     startDate: '2025-04-22'
