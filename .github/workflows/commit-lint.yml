@@ -42,7 +42,7 @@ jobs:
         id: check-linked-issues
         if: false
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**'
           loose-matching: true
       - name: Install commitlint
         run: |
