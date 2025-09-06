@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0
 
       - name: Use Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
 
       - name: Check for DONTMERGE
         run: |
@@ -42,7 +42,7 @@ jobs:
         id: check-linked-issues
         if: false
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**'
           loose-matching: true
       - name: Install commitlint
         run: |
