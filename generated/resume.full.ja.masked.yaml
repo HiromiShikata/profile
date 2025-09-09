@@ -115,15 +115,16 @@ work:
     startDate: '2025-04-22'
     endDate: 現在
     summary: >-
-      TypeScript, hono, React, Vite, AWS, amplify, Devin, copilot, Claude Code,
-      Claude Code Review, Trunk-based development, GitHub Actions, Backlog,
-      GitHub Projects, GitHub Issues, Slack,
+      TypeScript, hono, React, Vite, AWS, amplify, GritQL, biome, Devin,
+      copilot, Claude Code, Claude Code Review, Trunk-based development, GitHub
+      Actions, Backlog, GitHub Projects, GitHub Issues, Slack,
     highlights:
       - Trunk-Based development の導入を行いました。
       - リリースサイクルが2週間に1回でしたが頻繁にできる体制を整えました。
       - >-
         e2eテストの導入、Typescript CDKのAWS stack
         の構成をstateの観点で3種類に整理、AIを使用した開発を組め込めるよう整えました。
+      - biome を1.9 から 2.0.0-beta に移行し、GritQLでプロジェクト固有のルールを記述して静的解析を充実させるよう努めました。
   - company: AI営業SaaSスタートアップ シリーズA
     position: フルリモート 技術顧問
     startDate: '2025-04-22'
