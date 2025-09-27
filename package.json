@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/HiromiShikata/profile#readme",
   "devDependencies": {
-    "@commitlint/cli": "^19.0.0",
+    "@commitlint/cli": "^20.0.0",
     "@commitlint/config-conventional": "^19.0.0",
     "deepmerge-yaml": "^0.0.3",
     "i": "^0.3.7",
