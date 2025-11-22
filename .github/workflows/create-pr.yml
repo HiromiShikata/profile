@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set branch name as output
         id: branch_name
@@ -21,9 +21,9 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          destination_branch: "main"
-          source_branch: ""
-          pr_title: "${{ steps.branch_name.outputs.branch }}"
+          destination_branch: 'main'
+          source_branch: ''
+          pr_title: '${{ steps.branch_name.outputs.branch }}'
           pr_body: |
             :magic_wand: :sparkles:
 
