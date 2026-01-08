@@ -37,11 +37,11 @@ env:
   project_id: 48
   project_v2_id: PVT_kwHOAGJHa84AFWnr
   field_id: PVTF_lAHOAGJHa84AFWnrzgIk_H0
-  team_repo: "7sea.world, blog-tech, media-pinpoint-research, instagram-beauty-aesthetics-review, umino-corporait-operation, instagram-14LBaggageTraveler, hashigoya-project"
+  team_repo: '7sea.world, blog-tech, media-pinpoint-research, instagram-beauty-aesthetics-review, umino-corporait-operation, instagram-14LBaggageTraveler, hashigoya-project'
 
 jobs:
   umino-job:
-    if: github.event_name != 'issue_comment' || github.event.comment.user.login != 'umino-bot'
+    if: (github.event_name != 'issue_comment' || github.event.comment.user.login != 'umino-bot') && github.event.action != 'labeled'
     runs-on: ubuntu-latest
     steps:
       - name: Move issue to ${{ env.unread }}
@@ -184,7 +184,7 @@ jobs:
       - uses: nearform-actions/github-action-check-linked-issues@v1
         id: check-linked-issues
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**, renovate/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**, renovate/**'
           github-token: ${{ secrets.GH_TOKEN }}
           loose-matching: true
       - name: Get the output
