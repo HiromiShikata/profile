@@ -1,21 +1,28 @@
-name: Resume
+name: Resume Release
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 env:
-  PJ_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  RELEASE_APP_ID: 795363
+  RELEASE_APP_PRIVATE_KEY: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
 
 concurrency:
-  group: resume-${{ github.ref }}
+  group: resume-release-${{ github.ref }}
   cancel-in-progress: true
 jobs:
-  generate:
+  publish:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/create-github-app-token@v2
+        id: app-token
+        with:
+          app-id: ${{ env.RELEASE_APP_ID }}
+          private-key: ${{ env.RELEASE_APP_PRIVATE_KEY }}
       - uses: actions/checkout@v6
         with:
+          token: ${{ steps.app-token.outputs.token }}
           fetch-depth: 0
       - uses: actions/setup-node@v6
         with:
@@ -68,8 +75,13 @@ jobs:
 
           echo "Git status:"
           git status
+      - run: git config --global user.email "gh-actions"
+      - run: git config --global user.name "gh-actions"
       - run: |
-          if [ $(pdftk generated/resume/HiromiShikata.resume.short.pdf dump_data | grep NumberOfPages | awk '{print $2}') -ne 1 ]; then
-            echo "Resume must be exactly 1 page"
-            exit 1
+          git add generated
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "autogen: release [ci skip]"
+            git push --force origin main
           fi
