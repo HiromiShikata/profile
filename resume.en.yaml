@@ -15,7 +15,7 @@ work:
       - The client's feedback was starting to become vague, and they seemed unsure about what they should achieve with AIAgent, so we set out specific use cases and scenarios and worked to contribute to the client's workflow.
       - For the demo in the final report, we implemented both the AI's behavior when initially using AIAgent, and behavior based on an understanding of various user expectations.
       - We considered the scenario for the demo in the final report and how it could be developed in the future based on possible changes for the client, and submitted a draft document.
-  - company: Welfare Product Replacement for Japanese Market Startup
+  - company: SaaS Startup Welfare Product Replacement for Japanese Market
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2025-01-01'
     endDate: '2025-02-28'
@@ -29,7 +29,7 @@ work:
       - In this team, we recruited excellent members through team referrals rather than my own. Out of over 30 people who helped over nearly 3 years, only 2 members left voluntarily - one to start a business and another to care for family. This suggests team members are satisfied with the current development team environment.
       - When some roles became difficult to fill using existing methods and traditional approaches showed signs of stagnation, we first hired assistants to strengthen our engineering recruitment system. This initiative was successful, leading to 4 excellent candidates among over 30 applicants, successfully strengthening the team.
       - While there aren't many technical challenges due to the nature of the product, schedules are tight so we continue to minimize non-implementation time to manage this.
-  - company: AI Product Implementation at Startup
+  - company: AI SaaS Product Implementation at Startup
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2024-05-28'
     endDate: Present
@@ -44,7 +44,7 @@ work:
       - Established a fully remote, flexible work hours system without regular meetings, implementing goal sharing, priority decision rules, and engineer performance evaluation systems that reduced daily management time to about 2.5 hours. Still working on improvements targeting under 1 hour.
       - Introduced a daily evaluation system that revealed previously undetectable issues, enabling problem detection and resolution by the next day despite the fully flexible environment.
       - Accurate individual engineer performance evaluation enabled quantitative assessment for rate adjustments (increases or decreases) and team composition decisions. I feel resulting in an estimated doubling of team cost efficiency.
-  - company: AI Product R&D Startup
+  - company: AI SaaS Product R&D Startup
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2024-04-01'
     endDate: '2024-05-27'
@@ -81,7 +81,7 @@ work:
       - Modified meeting structure to include technically-oriented members to help address technical debt that the leader had been handling alone since joining.
       - Aimed for team self-direction without top-down leadership by starting with the same process of issue identification and evaluation we initially did with the leader. Through discussions, team members and leader aligned on values and problem recognition, resolving initial challenges within 3 weeks while broadening team perspective. Currently continuing discussions with the same members for further improvements.
 
-  - company: Early Childhood Programming Education Product Development at US Subsidiary of Educational Startup
+  - company: Early Childhood Programming Education Product Development at US Subsidiary of Educational SaaS Startup
     position: Remote Full-stack Engineer (3 days/week, 2-person development team)
     startDate: '2023-02-01'
     endDate: '2023-08-31'
@@ -95,7 +95,7 @@ work:
       - Managed 45 entity models and produced 110,000 lines of code (excluding published libraries and comments) in 4 months with just 2 people, of which 45,000 lines were auto-generated using our custom Generator.
       - Contributed to business expansion as the product was later also sold by the Japanese parent company.
 
-  - company: Middle School Teacher Dashboard Development at US Subsidiary of Educational Startup
+  - company: Middle School Teacher Dashboard Development at US Subsidiary of Educational SaaS Startup
     position: Remote Full-stack Engineer (3 days/week, 3-person development team)
     startDate: '2022-11-01'
     endDate: '2023-01-31'
@@ -145,7 +145,7 @@ work:
     endDate: '2022-07-31'
     summary: FlutterFlow, Firebase, GitHub, Lark, CircleCI, GitHub Actions
     highlights:
-  - company: Retail Store Advertising Product
+  - company: Retail Store Advertising SaaS Product
     position: Remote Android App Engineer (1-3 days/week)
     startDate: '2021-02-01'
     endDate: '2021-08-31'
@@ -186,7 +186,7 @@ work:
       - Successfully implemented small start approach as business side members correctly understood MVP definition.
       - Designed express as abstraction layer to avoid Firebase function dependency, while enabling OpenAPI generation.
 
-  - company: Urban Development Startup Support
+  - company: Urban Development SaaS Startup Support
     position: Remote Full-stack Engineer (2 days/week, Team growth from 3 to 35 engineers)
     startDate: '2020-03-01'
     endDate: '2022-02-28'
@@ -243,7 +243,7 @@ work:
 
 
 
-  - company: AI Startup Infrastructure Environment Construction
+  - company: AI SaaS Startup Infrastructure Environment Construction
     position: Remote Infrastructure Engineer (3 days/week, 3 Application Engineers, ~20 Employees)
     startDate: '2018-11-01'
     endDate: '2019-07-31'
