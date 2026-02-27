@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>**********</title>
+  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <style>body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-family: "Open Sans";
+  font-size: 0.6em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+ 
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin: 0 auto;
+  margin-top:-2.5em;
+  
+  border-radius:10em;
+  height:4em;
+  width:4em;
+  
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+  
+}
+
+@-webkit-keyframes wiggle {
+  0%   {
+    transform: rotate(0deg);
+  }
+  25%  {
+    transform: rotate(-30deg);
+  }
+  50%  {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pic:hover {
+  /*Webkit fix*/
+  -webkit-transform: translateZ(0);
+  
+  cursor:pointer;
+  
+  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.header-text {
+  margin-top:0.5em;
+  margin-left:1em;
+}
+
+header p {
+  text-align:center;
+  font-family: "Merriweather";
+  
+  margin:0;
+  
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  padding-top:.3em;
+  font-size:0.55em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+  
+  background-color:white;
+  width:60%;
+  
+  padding:0.5em 0 0.5em 0;
+  
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius:3px;
+}
+
+@media(max-width:992px) {
+  .paper {
+    width:80%;
+  }
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right:7.25%;
+}
+
+.content {
+  display:table;
+  width:100%;
+  
+  padding-top:1.5em;
+  
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  font-family: "Merriweather";
+  font-variant:small-caps;
+  font-weight:300;
+  letter-spacing: 1px;
+  
+  color: #212121;
+  
+  font-size:0.975em;
+  
+  text-align:center;
+  vertical-align:middle;
+
+  padding-left:6.66%;
+  width:30%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+  
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #e0e0e0;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+  
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  display:inline-block;
+  
+}
+
+.content-text ul li:first-child {
+  width:35%;
+  
+  color: #424242;
+  
+  font-weight:600;
+}
+
+.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p, .summary-text {
+  font-family: "Open Sans";
+  font-size:0.8em;
+  
+  color: #424242;
+  
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  color: #424242;
+  
+  margin-left:3.25em;
+  
+  list-style-type: disc;
+  list-style-position: inside;
+  display: list-item;
+  
+}
+
+.education-listing > .heading {
+  font-weight:600;
+  
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:32%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+  page-break-inside: avoid;
+}
+
+section.content.education-content > div > div.content-cat {
+  vertical-align: top;
+}
+
+div.content-text.skills-listing > p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.skills-listing > p > {
+  color:#212121;
+}
+
+@media screen and (max-width: 600px) {
+  body, html {
+    padding-top: 30px;
+  }
+
+  .paper {
+    width:95%;
+  }
+
+  .row div {
+    display: block;
+  }
+
+  .content-cat {
+    width: 100%;
+  }
+
+  .content-text ul li {
+    width: 100%;
+  }
+
+  .content-text ul li:first-child {
+    width: 100%;
+  }
+  
+  .education-listing > .highlight {
+    margin-left: 30px;
+  }
+}
+</style>
+  <style media="print">
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+  font-size: 104%;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.profiles {
+  display:none;
+}
+
+.content {
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:33%;
+  color:black;
+  text-align: left;
+}
+
+.content-cat p {
+  font-size:0.6em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+</style>
+</head>
+<body>
+  <div class="resume-wrapper">
+    <article class="paper">
+        <header>
+          <div class="header-content">
+              <div class="header-pic">
+                <img src="https://github.com/HiromiShikata.png" class="pic" />
+              </div>
+            <div class="header-text">
+              <p>
+                **********
+              </p>
+              <p class="subtitle">Full-stack Engineer &amp; Engineering Manager with 19 years of experience</p>
+            </div>
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <!-- CONTACT -->
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                Contact
+              </div>
+              <div class="content-text">
+                  <ul>
+                    <li>Website</li>
+                    <li><a href=https://**********/profile/>https://**********/profile/</a></li>
+                  </ul>
+                  <ul>
+                    <li>Email</li>
+                    <li><a href="mailto:**********">**********</a></li>
+                  </ul>
+                  <ul>
+                    <li>Phone</li>
+                    <li>**********</li>
+                  </ul>
+              </div>
+            </div>
+          </section>
+
+              <section class="content">
+                <div class="row">
+                  <div class="content-cat">
+                    Location
+                  </div>
+                  <div class="content-text">
+                    <ul>
+                      <li>City</li>
+                      <li>Minato-ku</li>
+                    </ul>
+                    <ul>
+                    </ul>
+                      <ul>
+                        <li>Region</li>
+                        <li>Tokyo</li>
+                      </ul>
+                  </div>
+                </div>
+              </section>
+        <!-- SUMMARY -->
+        <section class="content">
+          <div class="row">
+            <div class="content-cat">
+              About
+            </div>
+            <div class="content-text">
+                <p class='summary-text'>I&#x27;m a full-stack engineer with extensive experience in startups, having contributed to over 46 projects.</p>
+            </div>
+          </div>
+        </section>
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                Professional Skills Summary
+              </div>
+              <div class="content-text skills-listing">
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Backend Development
+                        </strong>
+                    </span>
+                      <span>(19+ years):</span>
+                      TypeScript, Go, Python, Rust, Clean Architecture, DDD, RESTful API, Swagger, OpenAPI, Serverless, GraphQL, Docker, docker-compose
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Database
+                        </strong>
+                    </span>
+                      <span>(19+ years):</span>
+                      MySQL, Postgres, DynamoDB, MongoDB, Redis, ElasticSearch, OpenSearch
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          DevOps
+                        </strong>
+                    </span>
+                      <span>(17+ years):</span>
+                      CI/CD, GitHub Actions, Testing Automation, Documentation Automation, SchemaSpy, CloudMapper, E2E Testing, Unit Testing, Integration Testing, CircleCI
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          AI Integration
+                        </strong>
+                    </span>
+                      <span>(2+ years):</span>
+                      OpenAI, Claude, Gemini, langchain, AutoGen, AutoGPT, Autonomous AI
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Infrastructure
+                        </strong>
+                    </span>
+                      <span>(12+ years):</span>
+                      CDK, SST, Docker, docker-compose, AWS ECS Fargate, AWS Lambda, Terraform, Ansible, CloudFormation, Kubernetes
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Frontend Development
+                        </strong>
+                    </span>
+                      <span>(15+ years):</span>
+                      React, TypeScript, shadcn, Tailwind CSS, Storybook, BrowserStack, Vue, Angular, Aurelia
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Management
+                        </strong>
+                    </span>
+                      <span>(4+ years):</span>
+                      Agile, Lean, Trunk-Based Development, Full-Remote team leading, Full-Flexible team leading, git-flow, GitHub Flow, GitHub Issues, GitHub Projects
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Dislike:
+                        </strong>
+                    </span>
+                      Ruby, PHP, iOS, Scrum, JIRA, GitLab, Slack, Old, legacy environments
+                  </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- PROJECTS -->
+          
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        Work Experience
+                          <p>2025-02-27 to 2025-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Full-remote work AI engineer</strong>
+                            at <strong>Division of a leading AI company</strong>
+                        </p>
+                        <p>Python3, AutoGen, OpenAI, GPT-4o, Gemini, ReactJs, Gatsby, AutoGenStudio, pytest, GitHub Actions, GitHub Projects, GitHub Issues, Slack, Azure, SQLite,</p>
+                          <p class="highlight">This was a project to develop a prototype of AIAgent for a manager of a client company.</p>
+                          <p class="highlight">Although it was a short-term project of one month, we were evaluated for the speed of feature development, the preparation of a task management environment for the team, the preparation of a CI/CD environment, task assignment control for young members, and the fact that we considered multiple methods to realize the project even if it was not definitively possible.</p>
+                          <p class="highlight">Although the unit price was higher than other engineers, we received feedback that the performance was sufficient and good.</p>
+                          <p class="highlight">Since it was a small and short-term project, we only implemented the minimum management and automation in a compact manner. After it was decided to continue the project, we made it clear that the necessary work would be left as tasks and intentionally postponed.</p>
+                          <p class="highlight">We divided the test policy into parts that behave undeterminedly in LLM and the tools used by LLM, and made it possible to automatically perform unit tests and integration tests on the tools.</p>
+                          <p class="highlight">We built a CI environment with GitHubAction so that various basic problems such as unit tests, API startup, and front-end builds could be automatically detected.</p>
+                          <p class="highlight">The client&#x27;s feedback was starting to become vague, and they seemed unsure about what they should achieve with AIAgent, so we set out specific use cases and scenarios and worked to contribute to the client&#x27;s workflow.</p>
+                          <p class="highlight">For the demo in the final report, we implemented both the AI&#x27;s behavior when initially using AIAgent, and behavior based on an understanding of various user expectations.</p>
+                          <p class="highlight">We considered the scenario for the demo in the final report and how it could be developed in the future based on possible changes for the client, and submitted a draft document.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2025-01-01 to 2025-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer &amp; Engineering Manager</strong>
+                            at <strong>Welfare Product Replacement for Japanese Market Startup</strong>
+                        </p>
+                        <p>Golang, OpenAPI, AWS Lambda, AWS RDS Aurora, MySQL, SST, React, TypeScript, playwrite, Jest, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Swagger, kubernetes, Flutter, ReactNative</p>
+                          <p class="highlight">The system structure had become inflexible and cumbersome, which became a challenge when we decided to fully pursue an opportunity discovered during a pivot.</p>
+                          <p class="highlight">The backend, frontend, and infrastructure were all optimized for the previous product, bloating to about 8 times the size needed for required functionality, so we decided to rebuild.</p>
+                          <p class="highlight">We were using Kubernetes which had become burdensome both in terms of maintenance effort and cost, so we switched to AWS Lambda.</p>
+                          <p class="highlight">The existing system used Flutter, but based on current team members&#x27; skill sets and recruitment market research, we decided to use ReactNative.</p>
+                          <p class="highlight">As existing members were busy with other projects, we hired new members and got them contributing immediately as effective team members through an automated onboarding process.</p>
+                          <p class="highlight">In this team, we recruited excellent members through team referrals rather than my own. Out of over 30 people who helped over nearly 3 years, only 2 members left voluntarily - one to start a business and another to care for family. This suggests team members are satisfied with the current development team environment.</p>
+                          <p class="highlight">When some roles became difficult to fill using existing methods and traditional approaches showed signs of stagnation, we first hired assistants to strengthen our engineering recruitment system. This initiative was successful, leading to 4 excellent candidates among over 30 applicants, successfully strengthening the team.</p>
+                          <p class="highlight">While there aren&#x27;t many technical challenges due to the nature of the product, schedules are tight so we continue to minimize non-implementation time to manage this.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2024-05-28 to Present</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer &amp; Engineering Manager</strong>
+                            at <strong>AI Product Implementation at Startup</strong>
+                        </p>
+                        <p>Golang, Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, AWS Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST, React, TypeScript, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Jest, Swagger, OpenAPI, RESTful, playwrite</p>
+                          <p class="highlight">Progressed from R&amp;D results to product development, moving to full-scale implementation based on business requirements.</p>
+                          <p class="highlight">Separated the system architecture into a data and process management system and an AI-focused system to avoid using type-unsafe Python in parts that should be programmatically controlled, ensuring more stable programming.</p>
+                          <p class="highlight">Built a serverless architecture using AWS Lambda as the execution environment due to the product requiring simultaneous processing of thousands of requests.</p>
+                          <p class="highlight">Implemented custom queue execution to overcome scaling limitations when the number of Lambda functions executable from SQS reached its limit, despite Lambda&#x27;s individual limits not being an issue.</p>
+                          <p class="highlight">Frequently evaluated various models and switched to better performing ones as LLM options increased with monthly improvements in AI performance and cost reductions.</p>
+                          <p class="highlight">Built an automated, asynchronous management system to handle increased management overhead as successful recruitment grew the team to around 16 members.</p>
+                          <p class="highlight">Established a fully remote, flexible work hours system without regular meetings, implementing goal sharing, priority decision rules, and engineer performance evaluation systems that reduced daily management time to about 2.5 hours. Still working on improvements targeting under 1 hour.</p>
+                          <p class="highlight">Introduced a daily evaluation system that revealed previously undetectable issues, enabling problem detection and resolution by the next day despite the fully flexible environment.</p>
+                          <p class="highlight">Accurate individual engineer performance evaluation enabled quantitative assessment for rate adjustments (increases or decreases) and team composition decisions. I feel resulting in an estimated doubling of team cost efficiency.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2024-04-01 to 2024-05-27</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer &amp; Engineering Manager</strong>
+                            at <strong>AI Product R&amp;D Startup</strong>
+                        </p>
+                        <p>Python3, OpenAI API, Anthropic API, Llama, ChromeExtension, Selenium, PyAutoGUI, AutoGen</p>
+                          <p class="highlight">Implemented internal tools leveraging improved LLM (Large Language Models) accuracy. Built autonomous systems aimed at executing tasks typically performed by new employees. Initially, when tasks exceeded 3-4 steps, LLMs would forget necessary operations or perform unintended actions. Resolved this by optimizing LLM specifications and task structures. Currently achieving over 90% success rate for tested tasks.</p>
+                          <p class="highlight">Improved LLM task execution stability by breaking down tasks into smaller components and providing examples, after identifying common error patterns based on task characteristics.</p>
+                          <p class="highlight">Modified the system to work with APIs from OpenAI and two other major AI companies simultaneously. Structured certain tasks to utilize more cost-effective or faster LLMs. Investigated and implemented multi-agent frameworks to handle complex tasks with autonomous correction capabilities. The multi-AI agent architecture enables autonomous behavior for complex scenarios, resulting in more versatile and reliable solutions.</p>
+                          <p class="highlight">Led a 4-person team, initially struggling with task distribution. The project started with limited AI expertise across the team, requiring extensive research while under pressure to deliver quick results. Implemented agile systems for the remote team, accommodating members across different countries and time zones.</p>
+                          <p class="highlight">Enhanced tool demonstrations for potential clients and investors by adding intuitive displays showing AI thought processes and actions, addressing initial uncanny behavior. Implemented configurable settings to toggle explanatory animations and displays to optimize performance.</p>
+                          <p class="highlight">Explored OS-level computer control functionality, including investigating the ability to interpret visual information for task operations. Various approaches were tested, but single LLM solutions proved inadequate for visual instruction interpretation. Multimodal approaches showed better results but still struggled with pixel-precise click location accuracy. Combined with existing research, showing only 20% accuracy, led to exploring alternative approaches.</p>
+                          <p class="highlight">Currently investigating methods similar to retail product and origin recognition systems observed 5-6 years ago, collaborating with domain experts. While browser control constitutes most tasks, development focus remains on web interface manipulation due to current instability in image-based instruction.</p>
+                          <p class="highlight">Experimented with an OSS Chrome extension capable of handling 3-step tasks, but discontinued development due to high integration costs with existing successful implementations.</p>
+                          <p class="highlight">Implemented multiple strategies to reduce token count while preserving essential information, addressing prompt token limits.</p>
+                          <p class="highlight">Initially achieved 60-70% success rate with source code generation for automated operations. Improved to nearly 100% by implementing AI-friendly wrapper functions with programmatic internal processing.</p>
+                          <p class="highlight">Dedicated time to testing new LLMs, frameworks, and products in a rapidly evolving landscape. Team development led to peak costs of ¥10,000 per hour, prompting investigation into open-source LLMs and newer options like Grok for cost and speed optimization.</p>
+                          <p class="highlight">Currently working on restructuring tasks for smaller LLMs, as simple replacement of expensive/slow LLMs failed. Found success with further task decomposition, planning structural modifications for the next phase to enable finer task granularity.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2022-01-01 to 2023-08-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Technical Advisor</strong>
+                            at <strong>Manufacturing Industry SaaS Startup</strong>
+                        </p>
+                        <p>Team Development Management, Recruitment Support, Technical Debt Resolution, Organizational Structure Improvement</p>
+                          <p class="highlight">Provided support to a newly appointed leader who was struggling with direction after the previous manager&#x27;s departure.</p>
+                          <p class="highlight">Started from a challenging position where even brief 10-minute conversations revealed numerous organizational and technical issues cascading continuously, indicating high stress levels.</p>
+                          <p class="highlight">Addressed the leader&#x27;s scattered thinking by helping systematically identify and evaluate all challenges regardless of size or category, prioritizing them by importance and urgency. After this exercise, we focused on the most critical issues to create a clear path forward.</p>
+                          <p class="highlight">Conducted regular online meetings to assess progress and plan next steps. My role was primarily asking questions, allowing the leader to do all the analysis and decision-making. After about three meetings, the leader gained confidence and momentum, making this support structure unnecessary.</p>
+                          <p class="highlight">As immediate issues were being resolved, we noticed emerging anxiety about long-term direction. Started an initiative to identify what information would help clarify future actions. Also considered what information would help the CEO&#x27;s decision-making if needed. After adjusting communication between the leader and CEO, within about 2 months, the annual planning became clearer and the leader&#x27;s uncertainty noticeably decreased.</p>
+                          <p class="highlight">Once long-term direction was established, the next challenge was task volume exceeding capacity. Recruitment was ongoing but applications were low, causing about a month&#x27;s delay in planned team expansion. Developed plans to broaden recruitment efforts and secure internal resources. Implemented more proactive recruitment strategies beyond just free job boards, successfully securing multiple quality team members.</p>
+                          <p class="highlight">Addressed the issue of the leader lacking time for strategic work due to being overwhelmed with immediate tasks and unable to address long-term challenges.</p>
+                          <p class="highlight">Analysis of the leader&#x27;s time allocation revealed excessive manual work on tasks that could be automated, and time spent preparing work to make it easier for team members. As team members developed, we expanded their responsibilities and communication channels, enabling the leader to dedicate 50% of time to future initiatives.</p>
+                          <p class="highlight">As the team grew, self-management became a challenge. Included management team members in meetings to discuss and implement structural improvements. This resulted in stable team control under managers.</p>
+                          <p class="highlight">Modified meeting structure to include technically-oriented members to help address technical debt that the leader had been handling alone since joining.</p>
+                          <p class="highlight">Aimed for team self-direction without top-down leadership by starting with the same process of issue identification and evaluation we initially did with the leader. Through discussions, team members and leader aligned on values and problem recognition, resolving initial challenges within 3 weeks while broadening team perspective. Currently continuing discussions with the same members for further improvements.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2023-02-01 to 2023-08-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer (3 days/week, 2-person development team)</strong>
+                            at <strong>Early Childhood Programming Education Product Development at US Subsidiary of Educational Startup</strong>
+                        </p>
+                        <p>AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator, DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu, TypeScript, Express, DDD, Clean Architecture, GitHub Actions, GitHub, GitHub Issues, JIRA, confulence, GitHub Projects, Trunk-based Development, Mermaid, Docker, docker-compose, Slack, Jest</p>
+                          <p class="highlight">Developed a product to promote sales during the dashboard development phase.</p>
+                          <p class="highlight">Reduced team size to just 2 people to meet tight release deadlines.</p>
+                          <p class="highlight">Applied DDD strictly and invested time in normalization due to extensive functional requirements. Generated almost all code from strict definitions to meet release deadlines. Auto-generated code included tests, helping prevent defects.</p>
+                          <p class="highlight">Switched GraphQL definitions from manual writing to model-based auto-generation, and released the generation tool as open source.</p>
+                          <p class="highlight">Minimized team size to reduce communication overhead, securing over 80% of time for coding.</p>
+                          <p class="highlight">Managed 45 entity models and produced 110,000 lines of code (excluding published libraries and comments) in 4 months with just 2 people, of which 45,000 lines were auto-generated using our custom Generator.</p>
+                          <p class="highlight">Contributed to business expansion as the product was later also sold by the Japanese parent company.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2022-11-01 to 2023-01-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer (3 days/week, 3-person development team)</strong>
+                            at <strong>Middle School Teacher Dashboard Development at US Subsidiary of Educational Startup</strong>
+                        </p>
+                        <p>AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator, DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu, TypeScript, Express, DDD, Clean Architecture, GitHub Actions, GitHub, GitHub Issues, JIRA, confulence, GitHub Projects, Trunk-based Development, Mermaid, Docker, docker-compose, Slack, Jest</p>
+                          <p class="highlight">Joined an agile development team at a US subsidiary of a Japanese startup, formed after dissolving an 8-person offshore development team.</p>
+                          <p class="highlight">Applied DDD strictly and invested time in normalization due to extensive functional requirements. Generated almost all code from strict definitions to meet release deadlines. Auto-generated code included tests, helping prevent defects.</p>
+                          <p class="highlight">Switched GraphQL definitions from manual writing to model-based auto-generation, and released the generation tool as open source.</p>
+                          <p class="highlight">Minimized team size to reduce communication overhead, securing over 80% of time for coding.</p>
+                          <p class="highlight">Relocated to Mexico to align with US time zones, establishing rapid incident response capabilities.</p>
+                          <p class="highlight">Established communication protocols enabling curriculum team assistants to autonomously handle progress tracking and CS department issue reports.</p>
+                          <p class="highlight">Continuously improved meeting processes through visualization and advance text sharing to address communication challenges in first-time collaboration with native English speakers.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2022-06-01 to Present</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer (3 days/week, Initial development team of 6 engineers)</strong>
+                            at <strong>Consumer Foodtech Startup</strong>
+                        </p>
+                        <p>Scrapy, Spider, Playwright, kubenetes, AWS lambda, AWS Batch, Ubuntu, TypeScript, Dart, Express, OpenAPI, Flutter, Mermeid, Puppetier, gRPC, Golang, Python 3, RedShift, firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic Repository, firebase, GitHub Actions CircleCI, GitHub, GitHub Issues, GitHub Pages, GitHub Projects, Trunk-based Development, Mermaid, OpenSeatch, OpenSeatch Dashboard, Docker, docker-compose, Slack, Jest</p>
+                          <p class="highlight">Joined a startup with an existing system and team structure.</p>
+                          <p class="highlight">Brought in to help replace an underperforming outsourced team.</p>
+                          <p class="highlight">Led new feature development while coordinating system replacement with newly joined team members.</p>
+                          <p class="highlight">Built OpenSearch environment from data ingestion to query optimization and tuning for search functionality.</p>
+                          <p class="highlight">Developed RPA solutions for external service integration, automating manual operations.</p>
+                          <p class="highlight">Implemented a divide-and-conquer architecture anticipating numerous integration points, creating a scalable codebase that maintains speed.</p>
+                          <p class="highlight">Performed code reviews for Flutter frontend development as the only experienced Flutter developer.</p>
+                          <p class="highlight">Improved meeting structure and communication flows to address challenges in information sharing and problem identification within a fully remote team with many junior members during organizational changes.</p>
+                          <p class="highlight">Established unit testing practices from scratch, creating a foundation that encouraged other team members to write tests.</p>
+                          <p class="highlight">Addressed credential management issues by updating credentials tied to departed engineers and implementing founder-level credentials to prevent future disruptions during team changes.</p>
+                          <p class="highlight">Implemented CI/CD with CircleCI and GitHub Actions, automating most manual processes. Team members became proficient and began exploring additional CI tools independently.</p>
+                          <p class="highlight">Created a CircleCI orb for managing monorepo CI files using divide-and-conquer approach. Released as open source after seeing similar needs in other projects.</p>
+                          <p class="highlight">Established trunk-based development with multiple daily deployments through appropriate team structure and codebase organization.</p>
+                          <p class="highlight">Adopted text-based documentation formats (OpenAPI, Mermaid) with rich ecosystems to prevent documentation-code divergence. Hosted on CircleCI with proper access control for relevant team members.</p>
+                          <p class="highlight">Built an auto-updating documentation system using GitHub Pages redirects to handle changing CircleCI artifact URLs, ensuring documentation links remain valid.</p>
+                          <p class="highlight">Provided guidance and support to junior members struggling with implementation.</p>
+                          <p class="highlight">Made proposals regarding cost, operations, and structure during fundraising challenges.</p>
+                          <p class="highlight">Built an efficient multi-timezone remote team by hiring skilled global talent with strong communication abilities.</p>
+                          <p class="highlight">Restructured infrastructure to reduce increasing proxy costs.</p>
+                          <p class="highlight">Gradually expanded team member responsibilities through incremental cross-role interactions, building toward self-sufficiency.</p>
+                          <p class="highlight">Established normalized information sharing routines for asynchronous remote work, ensuring clear focus areas, task priorities, and status updates without requiring constant real-time communication.</p>
+                          <p class="highlight">Created a roadmap for breaking down a monolithic service that was limiting agility, balancing user value delivery with business initiatives and refactoring. Currently in progress, maintaining flexibility for weekly changes common in startup environments.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2022-03-01 to 2022-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Project Manager (5-person development team)</strong>
+                            at <strong>E-commerce Site Full-scratch Development</strong>
+                        </p>
+                        <p>FlutterFlow, Firebase, GitHub, Lark, CircleCI, GitHub Actions</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2021-02-01 to 2021-08-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Android App Engineer (1-3 days/week)</strong>
+                            at <strong>Retail Store Advertising Product</strong>
+                        </p>
+                        <p>Android, Kotlin, GitHub, GitHub Actions, Testing Automation, GitHub Projects, Confluence, Slack, Mockito</p>
+                          <p class="highlight">Provided technical support from Android application design through implementation.</p>
+                          <p class="highlight">Established unit testing using Mockito and built CI/CD environment using GitHub Actions, as no tests existed previously.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2022-02-01 to Present</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Technical Advisor</strong>
+                            at <strong>Consumer App Startup</strong>
+                        </p>
+                        <p>Flutter, Dart, AWS, MySQL, Docker, docker-compose, GitHub, Slack, Terraform Cloud, JIRA, Confluence</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2021-12-01 to 2022-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Technical Verification and Project Management</strong>
+                            at <strong>Research Results SaaS Conversion</strong>
+                        </p>
+                        <p>MATLAB, Python, GitHub, CircleCI</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2020-12-01 to 2021-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer &amp; Project Manager (0.5 days/week, 2-3 Engineers, 1 Assistant/QA)</strong>
+                            at <strong>Cloud-based Hardware Image Analysis MVP Development</strong>
+                        </p>
+                        <p>Ubuntu, TypeScript, Dart, Express, FlutterFlow, Flutter, Mermaid, no-code, firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic Repository, firebase, fireauth, firebase functions, GitHub Actions, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Slack, Jest, Trunk-Based Development</p>
+                          <p class="highlight">Project focused on making an analysis system accessible through a browser.</p>
+                          <p class="highlight">Built a structure to minimize effort and cost while maximizing iteration speed and frequency.</p>
+                          <p class="highlight">Chose no-code solution capable of outputting Flutter code, enabling business side members, assistants, and designers to directly update screens.</p>
+                          <p class="highlight">Implemented automated CI checks to ensure safety for screen changes made without engineering oversight.</p>
+                          <p class="highlight">Hired an engineer strong in architecture design and backend development, as being the sole technical resource would limit capacity and pose continuity risks.</p>
+                          <p class="highlight">Implemented assistant service for recruitment to ensure high-quality hires from a large candidate pool.</p>
+                          <p class="highlight">Achieved 40% reduction in running costs by hiring overseas engineers with equivalent skills.</p>
+                          <p class="highlight">Established rules and translation environment to support fully remote global team.</p>
+                          <p class="highlight">Conducted domain discussions and design with business side members, creating abstractions aligned with company expansion direction, minimizing communication confusion.</p>
+                          <p class="highlight">Built on Firebase to leverage FlutterFlow compatibility, aiming for fastest possible completion.</p>
+                          <p class="highlight">Successfully implemented small start approach as business side members correctly understood MVP definition.</p>
+                          <p class="highlight">Designed express as abstraction layer to avoid Firebase function dependency, while enabling OpenAPI generation.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2020-03-01 to 2022-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer (2 days/week, Team growth from 3 to 35 engineers)</strong>
+                            at <strong>Urban Development Startup Support</strong>
+                        </p>
+                        <p>Ubuntu, TypeScript, Dart, Express, Flutter, firestore, Postgres, Google CloudSQL, Clean Architecture, Microservice Architecture, Monolithic Repository, Feature Flags, firebase, fireauth, firebase functions, firebase config, Prisma 2, OpenAPI, Docker, Docker Compose, CloudSQL, Google App Engine, CircleCI, GitHub, GitHub Issues, GitHub Projects, github-flow, Zapier, Slack, Jest, Jasmin, Trunk-Based Development</p>
+                          <p class="highlight">Helped establish CI/CD environment for an existing mobile application that lacked one.</p>
+                          <p class="highlight">Set up automated deployment and integration testing infrastructure.</p>
+                          <p class="highlight">Prioritized integration testing over unit testing due to urgent quality assurance needs and requirement for testable code changes.</p>
+                          <p class="highlight">Implemented task management tools to organize scattered information and streamline communication, as team members worked across different times and locations using Slack.</p>
+                          <p class="highlight">Introduced Prisma as it was the most type-safe ORM available for TypeScript at the time.</p>
+                          <p class="highlight">Migrated to monorepo structure for its benefits. Optimized CI costs by implementing differential job execution.</p>
+                          <p class="highlight">Built international team focused on overseas engineers to address implementation challenges when part-time members couldn&#x27;t keep up with business requirements.</p>
+                          <p class="highlight">Implemented online assistant service for recruitment to efficiently screen large candidate pools and reduce internal workload, while also handling non-development tasks.</p>
+                          <p class="highlight">Transitioned to microservices architecture to support company&#x27;s expansion plans and facilitate adoption of new technologies.</p>
+                          <p class="highlight">Created templates for new services to accelerate microservices development. While this enabled rapid launches with quality assurance through automated testing and deployment, it somewhat limited adoption of new technologies.</p>
+                          <p class="highlight">Established rules for real-time meetings and timezone management, along with 1on1s and scrum events, to accommodate team members across multiple nationalities and locations.</p>
+                          <p class="highlight">Integrated assistant team into development operations as communication hub, handling manual testing, onboarding, tools, and procedures.</p>
+                          <p class="highlight">Hired experienced Scrum PMs to lead smaller teams when alignment and delivery commitment began declining with team growth.</p>
+                          <p class="highlight">Increased PM roles to address issues with unclear specifications, business challenges, and project visibility, creating a self-sustaining structure.</p>
+                          <p class="highlight">Modified 1on1 structure to include both PM and myself, with PMs handling immediate project/engineer concerns while I focused on long-term growth, interests, and skill development.</p>
+                          <p class="highlight">Received recognition for successfully hiring engineers superior to average Japanese engineers within one month, reducing operational costs to 1/3 compared to local hiring, and aligning system design with business philosophy.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2020-02-01 to 2020-12-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer (4 days/week, 8-person development team)</strong>
+                            at <strong>Major Electronics Manufacturer Data Lake Platform Construction</strong>
+                        </p>
+                        <p>AWS CloudFormation, AWS Redshift, AWS Batch, AWS CodePipeline, AWS CodeBuild, AWS CodeCommit, ShellSpec, Bazel, Docker, BitBucket, JIRA, Slack, Bats, Ubuntu, SQL, Trunk-Based Development</p>
+                          <p class="highlight">Worked on improving an existing data lake platform.</p>
+                          <p class="highlight">Automated previously manual deployment and testing processes.</p>
+                          <p class="highlight">Implemented automation using AWS CodeBuild, CodePipeline, and CodeCommit, avoiding Atlassian tools in the AWS environment.</p>
+                          <p class="highlight">Found the project interesting due to unique deployment and testing considerations specific to data lake environments.</p>
+                          <p class="highlight">Built integration testing infrastructure with versioned data in S3, allowing test code to specify data versions due to large data volumes.</p>
+                          <p class="highlight">Handled large-scale data integration and analysis from multiple core systems including product sensor data, accounting systems, and inventory management systems.</p>
+                          <p class="highlight">Proposed and experimented with trunk-based development in a team that frequently practiced mob programming and maintained constant communication.</p>
+                          <p class="highlight">Created sample build and test execution using ShellSpec framework and Bazel for extensive shell script processing.</p>
+                          <p class="highlight">Prioritized compatibility with team&#x27;s existing technology stack when making technical decisions, ensuring smooth transitions from current technologies.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2019-09-01 to 2020-01-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer (3 days/week, 4-6 person development team)</strong>
+                            at <strong>New Service Development and Construction</strong>
+                        </p>
+                        <p>Linux, Ubuntu, Alpine, TypeScript, Node.js, koa, TypeORM, MySQL5.6, Redis, GitHub, CircleCI, Slack, Docker, docker-compose, OpenAPI, AWS ECS Fargate, AWS ElastiCashe, AWS RDS, GitHub projects</p>
+                          <p class="highlight">Led technology selection process (languages, frameworks, middleware, libraries, tools, etc.)</p>
+                          <p class="highlight">Handled backend design, implementation, testing, code review, and DevOps</p>
+                          <p class="highlight">Implemented RESTful interface design, Clean Architecture for application structure, and followed GitLab flow, DDD, TDD for development processes</p>
+                          <p class="highlight">Advanced team building and improvement initiatives (1on1s, KPT retrospectives, study sessions)</p>
+                          <p class="highlight">Managed offshore team coordination (daily check-in meetings, design sharing, task control)</p>
+                          <p class="highlight">Also attempted business layer coordination, though this aspect was less successful</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-11-01 to 2019-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Infrastructure Engineer (3 days/week, 3 Application Engineers, ~20 Employees)</strong>
+                            at <strong>AI Startup Infrastructure Environment Construction</strong>
+                        </p>
+                        <p>Linux, Ubuntu, AMI, HCL, MongoDB, Redis, GitHub, CircleCI, Slack, Docker, Docker Compose, Ansible, Terraform</p>
+                          <p class="highlight">Improved infrastructure environment for a rapidly growing system initially built by a single application engineer.</p>
+                          <p class="highlight">Migrated MongoDB to Atlas for database redundancy.</p>
+                          <p class="highlight">Built new cache server using ElasticCache.</p>
+                          <p class="highlight">Designed application servers for scalability.</p>
+                          <p class="highlight">Specifically, replaced EC2-based applications with Docker and migrated to AWS ECS (Fargate).</p>
+                          <p class="highlight">Built all new environments using Terraform, prohibiting manual operations to ensure environments could be safely destroyed and recreated at any time.</p>
+                          <p class="highlight">While Serverless development wasn&#x27;t possible in this environment, aimed to match Serverless framework user experience.</p>
+                          <p class="highlight">Given dedicated infrastructure repository, implemented automated container checks and infrastructure code testing in CircleCI to reduce manual effort while ensuring reproducibility and safety during changes.</p>
+                          <p class="highlight">Developed new Slack bot when unable to find suitable existing solution for corporate needs, which was well-received.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-09-01 to 2018-12-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Infrastructure Engineer (1 day/week, 3-person development team)</strong>
+                            at <strong>AI Startup Embedded Environment Construction</strong>
+                        </p>
+                        <p>Linux, Ubuntu, Python3, GitHub, CircleCI, Slack, Docker, Ansible, AWS SageMaker, Jupyter Notebook, Terraform</p>
+                          <p class="highlight">Requested to create A/B testing environment to improve accuracy of machine learning engine and its integration components.</p>
+                          <p class="highlight">Implemented AWS SageMaker based on client request and its suitability for future availability requirements.</p>
+                          <p class="highlight">Built overall infrastructure using Terraform, with AWS client handling SageMaker components not yet supported by Terraform.</p>
+                          <p class="highlight">Created development environment supporting both Ansible and Docker by building Docker images with Ansible.</p>
+                          <p class="highlight">While focused on infrastructure rather than application development, implemented CI/CD to automatically trigger model training upon Git push of AI engine code.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-03-01 to 2019-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Server-side Engineer (3 days/week, 6-person team with 1 server-side engineer)</strong>
+                            at <strong>IoT Company Backend Development</strong>
+                        </p>
+                        <p>Linux, Ubuntu, Python2, Python3, Flask, Flasgger, DynamoDB, GitHub, CircleCI, Slack, Docker, Serverless, Ansible, Swagger</p>
+                          <p class="highlight">Restructured Python-based AWS Lambda API server for improved manageability.</p>
+                          <p class="highlight">Introduced Serverless Framework to improve maintainability of existing backend built with Lambda and API Gateway without framework, which was using APIs for automation.</p>
+                          <p class="highlight">Implemented CI/CD with automated testing and deployment, as the simple design had become difficult to test due to heavy external service dependencies and complete lack of tests.</p>
+                          <p class="highlight">Achieved 100% coverage in domain layer unit tests after adopting Clean Architecture for new design.</p>
+                          <p class="highlight">Enhanced documentation by integrating framework with Swagger and hosting in CI. Created HTML/JS renderings of sequence diagrams and other materials difficult to express in markdown, ensuring easy access and updates for all team members.</p>
+                          <p class="highlight">Migrated from Python 2 to Python 3, introducing type hints and mypy analysis to prevent bugs.</p>
+                          <p class="highlight">Automated local development environment setup for Ubuntu and Mac using Ansible.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-03-01 to 2018-10-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Backend Engineer (4 days/week, 25-person development team)</strong>
+                            at <strong>Advertising Delivery Service Development</strong>
+                        </p>
+                        <p>Linux, Ubuntu, Golang, Echo, Goswagger, MySQL, Aerospike, Redis, GitHub, CircleCI, Slack, Docker, SchemaSpy, Ansible, DockrCompose</p>
+                          <p class="highlight">Built advertising delivery service and management interface using Golang.</p>
+                          <p class="highlight">Joined project with existing codebase foundation.</p>
+                          <p class="highlight">Redesigned management interface API service using Clean Architecture in later phase, making it more testable and easier to modify.</p>
+                          <p class="highlight">Set up and introduced Swagger and Docker development environments which were previously lacking.</p>
+                          <p class="highlight">Organized skill improvement events during lunch breaks and after work hours, as team had many young members needing knowledge enhancement in design, development tools, and workflow processes.</p>
+                          <p class="highlight">Created and shared Ansible playbooks for Ubuntu and Mac development environment setup, as no documentation or scripts existed previously.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-02-01 to 2018-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Backend Engineer (4 days/week, 2-person development team)</strong>
+                            at <strong>New Service User Web Interface Development</strong>
+                        </p>
+                        <p>Linux, Ubuntu, Alpine, Kotlin, spark, exporsed, MySQL, GitHub, Backlog, CircleCI, Slack, Swagger, API Blueprint, Gradle, Docker, AWS, SchemaSpy</p>
+                          <p class="highlight">Built API server using Kotlin.</p>
+                          <p class="highlight">Assisted with ongoing development by implementing CI and setting up environments, as project lacked CI/CD infrastructure and had uncertain API/DB designs.</p>
+                          <p class="highlight">Created database documentation through reverse engineering and established CI-based system for continuous documentation updates, addressing communication issues between teams.</p>
+                          <p class="highlight">Conducted JavaScript-related investigation and troubleshooting due to shortage of frontend developers.</p>
+                          <p class="highlight">Internal development team was dissolved as project was outsourced due to risk assessment.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2017-03-01 to 2017-09-30</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Full-stack Engineer (5 days/week, 3 days remote, 6-person development team with 2 server-side engineers)</strong>
+                            at <strong>Advertising Creative Production Venture Company System Renewal</strong>
+                        </p>
+                        <p>Linux, Ubuntu, CentOS, TypeScript, Elixir, nodejs, express, phoenix, Postgres, GitHub, ZenHub, CircleCI, Slack, Swagger, ansible, mix, TravisCI, Codebeat, Codacy, Docker, Docker Compose, AWS EC2</p>
+                          <p class="highlight">Handled entire process from requirements definition through language selection, design, development, and testing.</p>
+                          <p class="highlight">Renewed existing system.</p>
+                          <p class="highlight">Rebuilt part of existing system as separate system with revised functionality.</p>
+                          <p class="highlight">Later tasked with rebuilding main system as well, handling language selection for one system while assisting with development of the other.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-11-01 to 2017-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer (3 days/week, 4-person development team with 3 developers)</strong>
+                            at <strong>Advertising Creative Production Venture Company System Development and Operation Support</strong>
+                        </p>
+                        <p>Linux, Ubuntu, CentOS, JavaScript, CSS, Node.js, LoopBack, AngularJS, MongoDB, GitHub, CircleCI, Slack, Swagger, GitHubProject</p>
+                          <p class="highlight">Handled development and testing phases.</p>
+                          <p class="highlight">Developed additional features and provided operational support for advertising production support system.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-08-01 to 2017-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Server-side Engineer (2-5 days/week, 4-person development team with 1 developer)</strong>
+                            at <strong>IoT Startup Server-side Application Development</strong>
+                        </p>
+                        <p>Linux (Ubuntu), Scala, sbt, play2, MySQL, Ansible, GitHub, CircleCI, Slack, Asana, Swagger</p>
+                          <p class="highlight">Started building new system separate from existing demo system when mass production became feasible, following the joining of a member with hardware mass production experience in April.</p>
+                          <p class="highlight">Built highly decoupled, clearly structured system with functional separation to support multiple approaches toward final goals and future expansion.</p>
+                          <p class="highlight">Achieved microservices-like architecture, though not initially planned as such.</p>
+                          <p class="highlight">Handled requirements definition, language selection, design, development, and testing phases.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-06-01 to 2017-09-30</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Android App Engineer (2 days/week, 1 day remote, ~20 team members with 3 Android developers)</strong>
+                            at <strong>IoT Device Integration Android App Operation</strong>
+                        </p>
+                        <p>Linux (Ubuntu), Scala, sbt, Android, CircleCI, GiHub, DeployGate, GitHubIssue, Slack, Beacon, Bluetooth, BLE</p>
+                          <p class="highlight">Updated design, added features, and fixed bugs for app integrating with voice communication devices using Bluetooth Classic and BLE.</p>
+                          <p class="highlight">Found project interesting with many challenging aspects involving Bluetooth, Scala, and audio processing.</p>
+                          <p class="highlight">First experience with Scala Android development, providing many learning opportunities.</p>
+                          <p class="highlight">Took extra care with documentation, comments, and Slack communication to avoid misunderstandings, as team included many non-Japanese members requiring natural English communication.</p>
+                          <p class="highlight">Handled investigation, development, and testing phases.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-04-02 to 2016-05-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Android App Engineer (3 days/week, 3-person team with 1 Android developer)</strong>
+                            at <strong>IoT Beacon Device Integration Android App Platform Change</strong>
+                        </p>
+                        <p>Linux (Ubuntu), Java, Gradle, Fabric, Android, CircleCI, GiHub, PivotalTracker, Slack, Beacon</p>
+                          <p class="highlight">Modified existing Android app to accommodate beacon device platform changes.</p>
+                          <p class="highlight">Updated BLE Service, Characteristic, and other components to match new hardware specifications.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-4-01 to 2016-07-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (4-5 days/week, 3-person team)</strong>
+                            at <strong>IoT Startup Demo Server-side Application and Hardware Development</strong>
+                        </p>
+                        <p>Linux (Ubuntu), javascript, Arduino, 3DCAD, nodejs, AngularJS, TwitterBootstrap, SQLite, MySQL, npm, bower, Grunt, Sequelize, Ansible, GitHub, Slack, Asana, Swagger</p>
+                          <p class="highlight">Developed web server application and hardware prototypes for IoT startup product.</p>
+                          <p class="highlight">Joined as full-time employee after helping with the service part-time since December 2015.</p>
+                          <p class="highlight">Led hardware prototype development using 3D printing, machining, and metal fabrication.</p>
+                          <p class="highlight">Handled software side including demo system design, database &amp; API server, and management interface development.</p>
+                          <p class="highlight">Conducted technical research for service and specification consolidation, prioritized requirements, and developed verification hardware for mass production.</p>
+                          <p class="highlight">Established project management and documentation processes while building development framework.</p>
+                          <p class="highlight">Handled investigation, design, development, and testing phases.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-03-04 to 2016-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Server-side Engineer (3 days/week, 5-person development team with 1 server-side engineer)</strong>
+                            at <strong>Sensor Gadget Log Collection and Visualization Service</strong>
+                        </p>
+                        <p>Linux (Ubuntu), javascript, html, nodejs, npm, bower, Grunt, MySQL, Sequelize, CircleCI, GiHub, Swagger, Slack</p>
+                          <p class="highlight">Developed a service to collect, store, and visualize sensor data using client&#x27;s gadgets.</p>
+                          <p class="highlight">As this was intended for sales demonstrations of a new client service, prioritized building demo-ready features quickly, skipping non-essential components like authentication.</p>
+                          <p class="highlight">Responsible for database design, API server implementation, and customizing the gadget SDK to send data to our server.</p>
+                          <p class="highlight">Given time constraints and team composition including designers and frontend engineers, focused on loose coupling between client and server sides through API-only integration.</p>
+                          <p class="highlight">Implemented efficient data aggregation methods and timing to meet summary display requirements while minimizing operational overhead.</p>
+                          <p class="highlight">Provided Swagger API specifications from the early stages to accelerate client-side development.</p>
+                          <p class="highlight">Responsible phases included research, design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2016-01-16 to 2016-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Server-side Engineer (3 days/week, ~3 team members, 1 server-side engineer)</strong>
+                            at <strong>Authentication Service Development for Data Visualization Smart Gadget</strong>
+                        </p>
+                        <p>Linux (Ubuntu), javascript, html, nodejs, npm, bower, Grunt, mp2, SendGrid, KiiCloud, GoogleCloudPlatform, CircleCI, sinon, Jasmine, Mocha, CircleCI, GiHub, GitHub Issues, Slack, TwitterBootstrap</p>
+                          <p class="highlight">Built user registration functionality and interface, login API for apps, and user information update/validation components.</p>
+                          <p class="highlight">Large-scale client project involving multiple companies collaborating on a single system.</p>
+                          <p class="highlight">Multiple companies worked on specific parts of the overall system, with communication routed through the prime contractor. Given limited development time and difficulty understanding details outside our scope, proceeded cautiously to avoid rework.</p>
+                          <p class="highlight">Proactively proposed API specifications and provided early working environments to partners to identify any misalignments early.</p>
+                          <p class="highlight">Created executable API documentation using Swagger to make APIs easily testable and clearly understood, preventing development bottlenecks. Swagger also improved development speed and simplified verification, helping reduce overall work hours.</p>
+                          <p class="highlight">Storage, environment, and architecture were pre-specified. The designated BaaS was new to me, requiring extra time for research, behavior verification, and appropriate design considerations, making development take longer than usual.</p>
+                          <p class="highlight">Despite tight scheduling, met deadlines and received positive client feedback.</p>
+                          <p class="highlight">Responsible phases included research, design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-12-01 to 2016-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Full-stack Engineer (1-3 days/week, ~3 team members)</strong>
+                            at <strong>IoT Startup Server-side Application and Hardware Development</strong>
+                        </p>
+                        <p>Linux (Ubuntu), javascript, javascript, nodejs, AngularJS, TwitterBootstrap, SQLite, npm, bower, Grunt, Sequelize, Ansible, GitHub, Slack, Swagger</p>
+                          <p class="highlight">Developed web server application and hardware prototypes for IoT startup product.</p>
+                          <p class="highlight">In early stages, assisted with consultation, design, and development of APIs and sites/apps for service demonstration prototypes.</p>
+                          <p class="highlight">Responsible phases included research, design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-12-02 to 2016-01-29</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Android App Engineer (3 days/week, ~4 team members, 1 Android developer)</strong>
+                            at <strong>Social Event Service Android App Development</strong>
+                        </p>
+                        <p>Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST client, CircleCI, Git, DeployGate, ChatWork</p>
+                          <p class="highlight">Developed Android app for a new service focused on planning events and recruiting participants.</p>
+                          <p class="highlight">Planning and design were completed, with database, API server, and iOS app being developed in parallel. Integrated APIs into the Android app as they became available.</p>
+                          <p class="highlight">App structure remained simple as it primarily focused on data display.</p>
+                          <p class="highlight">As this was a remote project and the client lacked Android expertise, provided daily progress updates through Chatwork including written reports and work forecasts, beyond just source code pushes.</p>
+                          <p class="highlight">Implemented CircleCI and automated DeployGate updates as continuous integration wasn&#x27;t initially planned, ensuring client could always monitor app status.</p>
+                          <p class="highlight">Responsible phases included design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-11-06 to 2016-01-15</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Full-stack Engineer (3 days/week, ~3 team members, 1 developer)</strong>
+                            at <strong>Service Integration Site Prototype Development</strong>
+                        </p>
+                        <p>Linux (Ubuntu), javascript, html, nodejs, AngularJS, mysql, npm, bower, Grunt, CircleCI, GiHub, GitHub Issues, Slack, Sequelize</p>
+                          <p class="highlight">Developed prototype for integrating existing services based on user-specified conditions.</p>
+                          <p class="highlight">Built as a prototype to test functionality before full implementation of client&#x27;s planned in-house service.</p>
+                          <p class="highlight">Involved from early stages in conceptualizing features and necessary screens.</p>
+                          <p class="highlight">Prioritized rapid development methods for quick functionality testing, though these methods weren&#x27;t intended for production use.</p>
+                          <p class="highlight">Responsible phases included research, design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-10-26 to 2015-11-05</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Android App Engineer (3 days/week, ~3 team members, 1 Android developer)</strong>
+                            at <strong>Data Collection IoT Gadget Integration Android App Development</strong>
+                        </p>
+                        <p>Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST client, CircleCI, GitHub, Deploy Gate, GitHub Issues, Slack</p>
+                          <p class="highlight">Developed Android app for remotely collecting and displaying data from IoT gadgets.</p>
+                          <p class="highlight">Took over project from part-time engineer who couldn&#x27;t meet planned demo deadline due to time constraints.</p>
+                          <p class="highlight">iOS app development was already in progress with clear specifications to match, preventing time loss and misunderstandings during requirement confirmation.</p>
+                          <p class="highlight">With only about 10 days available and lacking environment for rapid development with libraries and frameworks, created new project and migrated existing functionality.</p>
+                          <p class="highlight">Despite tight timeline, met deadline and received positive client feedback.</p>
+                          <p class="highlight">Assisted with investigation of iOS app gadget integration issues using information gathered during Android development.</p>
+                          <p class="highlight">Responsible phases included research, design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-09-14 to 2015-10-25</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Remote Android App Engineer (3 days/week, ~4 team members, 1 Android developer)</strong>
+                            at <strong>IoT Product Integration Android App BLE Technical Verification Development</strong>
+                        </p>
+                        <p>Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST client, Beacon, CircleCI, Git, PivotalTracker, Slack</p>
+                          <p class="highlight">Conducted technical verification of Android app for Beacon device firmware determination.</p>
+                          <p class="highlight">Created prototype app testing both Android 4 and 5 as OS requirement was Android 4.0+.</p>
+                          <p class="highlight">Being my first Beacon app development, started with thorough research. Learned extensively about signal content, reading/writing operations, and notification systems.</p>
+                          <p class="highlight">As app needed to locate gadget position, required constant signal reception. Verified background operation and process restart scenarios when OS terminated the process.</p>
+                          <p class="highlight">Despite time constraints, met deadline and received positive client feedback.</p>
+                          <p class="highlight">Assisted with investigation of iOS app gadget integration issues using information gathered during Android development.</p>
+                          <p class="highlight">Responsible phases included research, design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-05-01 to 2015-08-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Full-stack Engineer (3 days/week, 1-person team)</strong>
+                            at <strong>Hardware Startup Product Development Support</strong>
+                        </p>
+                        <p>Linux (Ubuntu12), arduino, C++,</p>
+                          <p class="highlight">Developed product prototype using microcontroller, touch panel, and Bluetooth.</p>
+                          <p class="highlight">Grateful for opportunity to work on hardware development despite limited experience in the field.</p>
+                          <p class="highlight">Project involved many unfamiliar technologies, requiring research from fundamentals.</p>
+                          <p class="highlight">Though not directly used, learned about CAD, 3D printing, and machining tools, expanding technical options for product development.</p>
+                          <p class="highlight">Responsible phases included microcontroller program design/development and circuit design/development.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-01 to 2015-10</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Full-stack Engineer (2-4 days/week, ~13 team members, 7 developers, 1 server-side)</strong>
+                            at <strong>Hardware Startup Company Development Support</strong>
+                        </p>
+                        <p>Linux (Ubuntu12, Ubuntu14), arduino, C++, javascript, nodejs, AngularJS, TwitterBootstrap3, MongoDB, Jenkins, Git, Ansible, Yeoman, Apache2, Julius, OpenCV, Slack, Redmine, Swagger, elasticsearch, fluentd, kibana</p>
+                          <p class="highlight">Developed new IoT product.</p>
+                          <p class="highlight">Valuable learning experience working with hardware and electronic circuits despite no prior experience.</p>
+                          <p class="highlight">As the team member with longest attendance hours and development project experience, involved in basic design, engineer task management, and schedule coordination.</p>
+                          <p class="highlight">Faced challenges in schedule management, task allocation, information sharing, and development process establishment due to team composition: using unfamiliar technologies (various sensors, voice recognition, image recognition), mostly part-time engineers including many students unfamiliar with team development tools and practices.</p>
+                          <p class="highlight">Focused on creating easily separable designs and maintaining flexible development structure to handle frequent changes with part-time members, while emphasizing team skill improvement.</p>
+                          <p class="highlight">Responsible phases included server-side design/development, hardware circuit design/development, and enclosure software design/development.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2014-09-01 to 2015-04-30</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Full-stack Engineer (4-person team, 1 developer)</strong>
+                            at <strong>Business System Development</strong>
+                        </p>
+                        <p>Windows, Linux, Scala, Java, Javascript, Gradle, Skinny (Scala), Flyway, Jetty, Tomcat, Android annotations, Android Spring REST client, TwitterBootstrap3, AngularJS, jQuery, Robolectric, Postgres9.4, Jenkins, Git, Redmine</p>
+                          <p class="highlight">Developed complete prototype business system from server-side through client and Android app for browser and Android use.</p>
+                          <p class="highlight">Grateful for opportunity to work with all new technologies: Scala for server-side, AndroidAnnotations for Android app, and AngularJS for JavaScript framework.</p>
+                          <p class="highlight">Participated in user meetings and specification discussions, proposing additional features based on clear understanding of requirements and intentions.</p>
+                          <p class="highlight">With small team and fluid specifications, focused on rapid development to quickly demonstrate usage scenarios.</p>
+                          <p class="highlight">Database contained 27 tables.</p>
+                          <p class="highlight">Responsible phases included design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2014-04-01 to 2014-08-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Native App Engineer (5-person development team)</strong>
+                            at <strong>SDK Operations Team</strong>
+                        </p>
+                        <p>Windows, Linux, Java, Gradle, C++, Cocos2dx, SQLite, Jenkins, Nexus, Git, SVN</p>
+                          <p class="highlight">Became responsible for SDKs used by internal Android apps for authentication and billing.</p>
+                          <p class="highlight">With multiple SDKs to manage, used Jenkins to improve operational safety through automated releases and static analysis for quality assurance.</p>
+                          <p class="highlight">Implemented Gradle build system for SDK build and release processes in response to team request.</p>
+                          <p class="highlight">Created custom Jenkins plugins when existing plugins couldn&#x27;t meet functionality requirements or had poor performance when forcibly integrated.</p>
+                          <p class="highlight">Developed Cocos2dx plugin for SDK (Android-side and common components).</p>
+                          <p class="highlight">Responsible phases included design, development, and unit testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2013-09-27 to 2014-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Native App Engineer (5-person development team)</strong>
+                            at <strong>App Operations Team</strong>
+                        </p>
+                        <p>Windows, Java, Shell(a little bit), Groovy(a little bit), SQLite, Git, Jenkins</p>
+                          <p class="highlight">Worked on a long-running app branded with client&#x27;s main business name that couldn&#x27;t be discontinued.</p>
+                          <p class="highlight">Due to app&#x27;s history and code readability issues, several months were allocated for refactoring.</p>
+                          <p class="highlight">Developed an image selection screen as a reusable library.</p>
+                          <p class="highlight">Having primarily worked on server-side, faced challenges with client-side development including resource optimization, event handling complexity, case variations, device-dependent behaviors, and UI-specific controls.</p>
+                          <p class="highlight">Given time for quality maintenance, implemented Jenkins on team server for static analysis and build automation.</p>
+                          <p class="highlight">Responsible phases included design, development, and unit testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2012-12-06 to 2013-09-26</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (14-person development team)</strong>
+                            at <strong>Gaming Division Core System</strong>
+                        </p>
+                        <p>Linux, Java, FTL, HTML, CSS, JavaScript, shell, Spring, MySQL, SVN, Git, Apache, Tomcat, Memcached, Jenkins, Android</p>
+                          <p class="highlight">Developed and operated system used by multiple games.</p>
+                          <p class="highlight">System required extensive API usage due to authentication being handled by core platform and each game providing APIs for our use.</p>
+                          <p class="highlight">Encountered unique challenges with high API usage, such as performance issues and traffic from large games impacting API servers of newly released smaller games. Addressed by adjusting processing frequency to prevent concentrated server access and consulting with metrics team about caching allowances.</p>
+                          <p class="highlight">Given critical integration role and potential for friction, maintained close communication with game teams and proactively investigated issues. Learned various approaches through studying different server architectures and frameworks used by each game.</p>
+                          <p class="highlight">Gained valuable experience with high-traffic site architecture patterns.</p>
+                          <p class="highlight">Infrastructure: ~15 application servers, 3 database servers (1 master, 2 slaves) at the time</p>
+                          <p class="highlight">System scope: ~20 screens, ~50 tables</p>
+                          <p class="highlight">Also handled WebView app conversion (Android) for browser games. With 6 target games and more expected, implemented all non-game-specific processing (like metrics) as framework components, keeping game-specific logic in minimal thin classes.</p>
+                          <p class="highlight">Responsible phases included design, development, and testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2012-08-16 to 2012-12-05</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (20-person development team)</strong>
+                            at <strong>Mobile Browser Game Operations</strong>
+                        </p>
+                        <p>Linux, Java, FTL, HTML, CSS, JavaScript, shell, Spring, Seaser, MySQL, Apache, Tomcat</p>
+                          <p class="highlight">Operated browser games for feature phones and smartphones.</p>
+                          <p class="highlight">Managed approximately 40 servers to handle high traffic volume.</p>
+                          <p class="highlight">Gained valuable experience with architecture patterns specific to high-traffic websites.</p>
+                          <p class="highlight">Responsible for feature development (from per-feature DB design through unit testing) and customer support investigation.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2012-05-01 to 2012-08-15</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer</strong>
+                            at <strong>Custom Service Development</strong>
+                        </p>
+                        <p>Linux, Java, JSP, HTML, CSS, JavaScript, shell, Struts, MySQL, Apache, Tomcat</p>
+                          <p class="highlight">Developed site construction system</p>
+                          <p class="highlight">System scope: 83 screens</p>
+                          <p class="highlight">Database: 39 tables</p>
+                          <p class="highlight">Responsible for all project phases</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2011-10-07 to 2012-04</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (13-person development team)</strong>
+                            at <strong>Major Electronics Manufacturer Division Production Management System Construction</strong>
+                        </p>
+                        <p>Windows, Java, JSP, PL/SQL, Struts ベース独自 FW, Oracle, Apache</p>
+                          <p class="highlight">Developed production management system for major electronics manufacturer division.</p>
+                          <p class="highlight">Used Java/JSP for UI processing and PL/SQL for database updates.</p>
+                          <p class="highlight">System scope: 73 screens, 122 tables.</p>
+                          <p class="highlight">Responsible for Java-side detailed design, development, and testing.</p>
+                          <p class="highlight">Handled process from detailed design through implementation and testing.</p>
+                          <p class="highlight">Performed pre-release program modifications, investigations, and performance tuning.</p>
+                          <p class="highlight">Initially one of 4 Java developers assigned through November. Due to recognized technical ability, became sole Java technical lead retained through March release and post-release period. Also received requests for long-term maintenance role.</p>
+                          <p class="highlight">Despite waterfall development style, limited time and resources led to irregular development scenarios like implementing specifications provided verbally without design documents.</p>
+                          <p class="highlight">With no design documents available and only source code for reference, analyzed and understood program design from source when making changes or modifications.</p>
+                          <p class="highlight">As team&#x27;s web application expert, provided technical proposals and explanations of web-specific constraints to support design process.</p>
+                          <p class="highlight">With tight release schedule, maintained extra careful health management, achieving perfect attendance while focusing fully on work.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2008-10 to 2011-10</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer</strong>
+                            at <strong>Mid-sized IT Consulting Company Internal Venture</strong>
+                        </p>
+                        <p>Windows, Java, JSP, HTML, CSS, JavaScript, Struts2, MySQL, Apache</p>
+                          <p class="highlight">Built various systems including point system for major restaurant chain, parts batch processing, election supporter management system, Twitter discount aggregation site, additional features for Pacific League baseball team analysis system, Pacific League portal site management system, mobile site CMS, beauty salon reservation system, and more.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2011-02-21 to 2011-10-07</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (4-person development team, plus design company staff)</strong>
+                            at <strong>Major Restaurant Chain Portal Site</strong>
+                        </p>
+                        <p>Linux(RH), Java, JSP, Struts2, MySQL, Apache</p>
+                          <p class="highlight">Built restaurant chain portal site as per client request.</p>
+                          <p class="highlight">System scope: 26 screens, 85 tables.</p>
+                          <p class="highlight">Handled from basic design through implementation and testing.</p>
+                          <p class="highlight">Received HTML designs from design company and converted to JSP.</p>
+                          <p class="highlight">Made JSP code easily understandable from HTML perspective as design company staff sometimes needed to update directly.</p>
+                          <p class="highlight">Followed mobile site&#x27;s code and design patterns as this was a derivative project of an existing mobile site.</p>
+                          <p class="highlight">Additionally implemented PC site functionality for the separate mobile site management system.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2009-04-01 to 2009-05-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (3-person development team)</strong>
+                            at <strong>Retail Store E-commerce Site and Order Management System Construction</strong>
+                        </p>
+                        <p>Linux(RedHat), Java, JSP, HTML, JavaScript, CSS, Struts2, MySQL</p>
+                          <p class="highlight">Project to convert Excel-based group company mail-order management to web system.</p>
+                          <p class="highlight">Customer site: 25 screens</p>
+                          <p class="highlight">Admin site: 48 screens</p>
+                          <p class="highlight">Database: 33 tables</p>
+                          <p class="highlight">Responsible for requirements definition, basic design, DB design, detailed design, implementation, design application, testing, delivery, and data migration.</p>
+                          <p class="highlight">Managed project schedule.</p>
+                          <p class="highlight">Handled customer-facing e-commerce site and client-side admin site from requirements through design, implementation, testing, delivery, and data migration.</p>
+                          <p class="highlight">Integrated with Yamato Transport B2 and Sagawa Express e-Hikyaku shipping slip output systems.</p>
+                          <p class="highlight">Successfully delivered and launched within 2 months from requirements definition, maintaining migration schedule.</p>
+                          <p class="highlight">Upon discovering low IT literacy among admin site users during usability testing, created role-specific guides combining operation manual and help documentation. Streamlined post-login homepage and menus to show only few essential functions per user, greatly improving user satisfaction.</p>
+                          <p class="highlight">Implemented strict permission management due to handling of personal information.</p>
+                          <p class="highlight">Minimized operational burden by enabling client-side configuration options, resulting in only a few support inquiries even after 2.5 years.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2009-02 to 2009-04</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (5-person development team)</strong>
+                            at <strong>Restaurant Chain Group Point System Development</strong>
+                        </p>
+                        <p>Linux(RedHat), Java, JSP, HTML, JavaScript, CSS, Struts, MySQL, Apache,</p>
+                          <p class="highlight">Built and operated point management/CRM system for major restaurant chain group.</p>
+                          <p class="highlight">Added lottery feature to mobile site.</p>
+                          <p class="highlight">Created batch process for retrieving weather information used in analytics system.</p>
+                          <p class="highlight">Developed point expiration processing and pre-expiration email notification batch jobs.</p>
+                          <p class="highlight">Handled design, implementation, and testing of above features.</p>
+                          <p class="highlight">Successfully created mobile site, executable JAR files, and email functionality despite being first experience with these technologies, by researching and implementing independently.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2008-10 to 2009-01</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (1-person development team)</strong>
+                            at <strong>Customer and Event Management System Development</strong>
+                        </p>
+                        <p>Linux, Java, JSP, HTML, JavaScript, CSS, Struts, MySQL, Apache</p>
+                          <p class="highlight">Built system to manage customer information for client-hosted meetings and workshops, including staff attendance management and communication management.</p>
+                          <p class="highlight">System scope: 46 screens, 22 tables</p>
+                          <p class="highlight">Responsible for requirements definition, basic design, DB design, screen design, implementation, design application, testing, operations maintenance, and data migration support.</p>
+                          <p class="highlight">Managed schedule and progress (coordinating with designers and HTML coding staff).</p>
+                          <p class="highlight">First month spent creating practice programs as client coordination was incomplete and it was my first Java development experience. Successfully completed rapid development from requirements to delivery in effectively 2 months.</p>
+                          <p class="highlight">Successfully managed overall project schedule for the first time, meeting promised delivery date.</p>
+                          <p class="highlight">Due to frequent internal transfers and department name changes at client, made system user-friendly with bulk operations for transferring attendee staff departments and responsibilities to different staff members.</p>
+                          <p class="highlight">Implemented strict per-feature permission management due to handling personal information. Designed permissions to be role-based with bulk management and user-configurable settings.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2008-03 to 2008-09</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (1-person development team)</strong>
+                            at <strong>Feature Phone Web Apps - Personal Finance Management and Group Expense Tracking (Web Development Study)</strong>
+                        </p>
+                        <p>Windows, PHP, MySQL</p>
+                          <p class="highlight">Built using PHP during evenings after SAP project work and on holidays.</p>
+                          <p class="highlight">Created personal finance web app to manage credit cards, electronic money, and cash in one place.</p>
+                          <p class="highlight">Developed mobile site for group expense tracking and splitting to record shared expenses and ensure equal cost distribution among participants.</p>
+                          <p class="highlight">Built to solve issue of tracking individual contributions when one person pays for group outings.</p>
+                          <p class="highlight">Responsible for all project phases.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2008-06 to 2008-09</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (Development team of ~10 people, Project scale of over 100 people)</strong>
+                            at <strong>Major Chemical Manufacturer SAP Addon Development</strong>
+                        </p>
+                        <p>SAP, ABAP, Oracle, Windows</p>
+                          <p class="highlight">SAP implementation and addon development.</p>
+                          <p class="highlight">Handled detailed design of new programs, created detailed design documents, DFDs, implementation, test specifications, and testing.</p>
+                          <p class="highlight">Managed specification changes.</p>
+                          <p class="highlight">Performed performance tuning.</p>
+                          <p class="highlight">Conducted investigations.</p>
+                          <p class="highlight">Beyond regular new module development, gained experience with large-scale programming through screen program development with 4 new hires and collaborating with international team members on previously stalled screen programs.</p>
+                          <p class="highlight">Upon learning design team was struggling to identify modules used by migration target modules, created and provided a program in spare time to list modules requiring simultaneous migration.</p>
+                          <p class="highlight">Requested to serve as instructor for one day of ABAP training conducted jointly with subcontractor company, teaching general module development.</p>
+                          <p class="highlight">Responsible phases included detailed design, development, and unit testing.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2007-08 to 2008-05</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Engineer (Development team of ~10 people, Project scale of over 100 people)</strong>
+                            at <strong>Major Electronics Retailer SAP Addon Development</strong>
+                        </p>
+                        <p>SAP, ABAP, Oracle, Windows</p>
+                          <p class="highlight">SAP implementation and addon development.</p>
+                          <p class="highlight">Handled detailed design of new programs, created detailed design documents, implementation, test specifications, and unit testing.</p>
+                          <p class="highlight">Managed specification changes.</p>
+                          <p class="highlight">Conducted investigations.</p>
+                          <p class="highlight">Gained experience through OJT with support from senior team members.</p>
+                          <p class="highlight">Created a personal investigation tool six months into programming that became popular and was adopted by the design team, contributing beyond assigned work. Received feedback from senior team members still with the project that the tool remains indispensable, which is very gratifying.</p>
+                          <p class="highlight">Assigned as an initial team member when team was around 6 people. Team&#x27;s good reputation led to expansion to over 10 members. Contributing to team&#x27;s improved evaluation, which resulted in the primary consulting company requesting entire team transfer to another project during final development phase.</p>
+                          <p class="highlight">Responsible phases included detailed design, development, and unit testing.</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        Education
+                          <p>2004-04-01 to 2007-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p style="margin-top:0;" class="heading">Collage</p>
+                        <p class="highlight">
+                          <i>Qualified　Bornsetter </i>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+
+
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  Languages
+                </div>
+                <div class="content-text">
+                    <ul>
+                        <li>Japanese</li>
+                        <li>Native</li>
+                    </ul>
+                    <ul>
+                        <li>English</li>
+                        <li>Capable of team communication</li>
+                    </ul>
+                    <ul>
+                        <li> </li>
+                        <li>(Not Business-level English)</li>
+                    </ul>
+                </div>
+              </div>
+            </section>
+
+
+
+
+            <!-- PROFILES -->
+              <section class="content profiles">
+                <div class="row">
+                  <div class="content-cat">
+                    Profiles
+                  </div>
+                  <div class="content-text profiles-listing">
+                    <ul>
+                          <li>
+                            <a href="https://github.com/hiromishikata" target="_blank">
+                              GitHub
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://hiromi.appointlet.com/s/30-umino/hiromi" target="_blank">
+                              Meeting (30min)
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://www.linkedin.com/in/hiromishikata" target="_blank">
+                              LinkedIn
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com/hiromishikata" target="_blank">
+                              Twitter
+                            </a>
+                          </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  Personal
+                </div>
+                <div class="content-text skills-listing">
+                    <p>
+                      <span class="name">
+                      </span>
+                        Home Automation, IoT, Zapier, IFTTT, Universal Remote Control
+                    </p>
+                    <p>
+                      <span class="name">
+                      </span>
+                        Mirror Polish, Film, Buffing Compounds
+                    </p>
+                </div>
+              </div>
+            </section>
+
+        </div>
+    </article>
+  </div>
+</body>
+</html>
