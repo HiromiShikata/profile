@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <title>志方 裕美 (シカタ ヒロミ)</title>
+  <link href='//fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <style>body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-family: "Open Sans";
+  font-size: 0.6em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin: 0 auto;
+  margin-top:-2.5em;
+
+  border-radius:10em;
+  height:4em;
+  width:4em;
+
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+
+}
+
+@-webkit-keyframes wiggle {
+  0%   {
+    transform: rotate(0deg);
+  }
+  25%  {
+    transform: rotate(-30deg);
+  }
+  50%  {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pic:hover {
+  /*Webkit fix*/
+  -webkit-transform: translateZ(0);
+
+  cursor:pointer;
+
+  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.header-text {
+  margin-top:0.5em;
+  margin-left:1em;
+}
+
+header p {
+  text-align:center;
+  font-family: "Merriweather";
+
+  margin:0;
+
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  padding-top:.3em;
+  font-size:0.55em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+
+  background-color:white;
+  width:60%;
+
+  padding:0.5em 0 0.5em 0;
+
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius:3px;
+}
+
+@media(max-width:992px) {
+  .paper {
+    width:80%;
+  }
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right:7.25%;
+}
+
+.content {
+  display:table;
+  width:100%;
+
+  padding-top:1.5em;
+
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  font-family: "Merriweather";
+  font-variant:small-caps;
+  font-weight:300;
+  letter-spacing: 1px;
+
+  color: #212121;
+
+  font-size:0.975em;
+
+  text-align:center;
+  vertical-align:middle;
+
+  padding-left:6.66%;
+  width:30%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #e0e0e0;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-family: "Open Sans";
+  font-size:0.7em;
+
+  display:inline-block;
+
+}
+
+.content-text ul li:first-child {
+  width:35%;
+
+  color: #424242;
+
+  font-weight:600;
+}
+
+.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+
+  color: #424242;
+
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  color: #424242;
+
+  margin-left:3.25em;
+
+  list-style-type: disc;
+  list-style-position: inside;
+  display: list-item;
+
+}
+
+.education-listing > .heading {
+  font-weight:600;
+
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:32%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+  page-break-inside: avoid;
+}
+
+section.content.education-content > div > div.content-cat {
+  vertical-align: top;
+}
+
+div.content-text.skills-listing > p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.skills-listing > p > {
+  color:#212121;
+}
+
+@media screen and (max-width: 600px) {
+  body, html {
+    padding-top: 30px;
+  }
+
+  .paper {
+    width:95%;
+  }
+
+  .row div {
+    display: block;
+  }
+
+  .content-cat {
+    width: 100%;
+  }
+
+  .content-text ul li {
+    width: 100%;
+  }
+
+  .content-text ul li:first-child {
+    width: 100%;
+  }
+
+  .education-listing > .highlight {
+    margin-left: 30px;
+  }
+}
+</style>
+  <style media="print">
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+  font-size: 104%;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.profiles {
+  display:none;
+}
+
+.content {
+  page-break-inside:avoid;
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:33%;
+  color:black;
+  text-align: left;
+}
+
+.content-cat p {
+  font-size:0.6em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+</style>
+</head>
+<body>
+  <div class="resume-wrapper">
+    <article class="paper">
+        <header>
+          <div class="header-content">
+            <div class="header-text">
+              <p>
+                志方 裕美 (シカタ ヒロミ)
+              </p>
+              <p class="subtitle">エンジニアリングマネージャー / フルスタックエンジニア — 組織スケーリング×AI基盤構築×コスト最適化</p>
+            </div>
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <!-- CONTACT -->
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                連絡先
+              </div>
+              <div class="content-text">
+                  <ul>
+                    <li>ウェブサイト</li>
+                    <li>https://hiromishikata.github.io/profile/</li>
+                  </ul>
+                  <ul>
+                    <li>メール</li>
+                    <li><a href="mailto:shikata@uminoseisaku.com">shikata@uminoseisaku.com</a></li>
+                  </ul>
+                  <ul>
+                    <li>電話</li>
+                    <li>+81-50-5354-8192</li>
+                  </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- SUMMARY -->
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                概要
+              </div>
+              <div class="content-text work-listing">
+                  <p>エンジニアリング組織を3名から35名に拡大しながらランニングコストを日本人採用比1/3に抑制。16名のフルリモートチームを定例会議なし・稼働時間自由の環境で運営し、定量的評価制度によりチームコスト効率を2倍に改善。フードテックプラットフォームの内製化・スケール基盤構築、AI/LLMプロダクトのR&amp;Dからプロダクト化までを一貫して推進。46以上のプロジェクト・19年の経験。</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- WORK EXPERIENCE -->
+
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        職歴
+                          <p>2025-04-22 ~ 現在</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>インフラ・バックエンド・フロントエンドエンジニア</strong>
+                            — <strong>ロジスティクスSaaSスタートアップ（シリーズC）</strong>
+                        </p>
+                        <p>TypeScript, hono, React, Vite, AWS, Amplify, GritQL, biome, Claude Code, Trunk-based development, GitHub Actions</p>
+                          <p class="highlight">2週間に1回だったリリースサイクルをTrunk-Based Development導入で高頻度化, 2日に1回からデイリー程度まで高速化</p>
+                          <p class="highlight">Amplify Gen2で作業ブランチ別に20環境を自動構築し、動作確認・e2eの確実性を担保、開発の高速化に寄与</p>
+                          <p class="highlight">消化チケットのベースを月あたり10から半年で最大65まで高速化</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2025-05-12 ~ 現在</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>バックエンドエンジニア</strong>
+                            — <strong>大手メーカーソフトウェア開発プロダクト グローバルチーム</strong>
+                        </p>
+                        <p>Golang, Python, Terraform, Docker, Gin, FastAPI, AWS, GCP, Azure, GitHub Actions</p>
+                          <p class="highlight">Go/Python既存プロダクトの機能開発、Terraform Providerメンテナンス、Artifactory API自動コントロール機能拡張</p>
+                          <p class="highlight">GritQLによるプロジェクト固有の静的解析ルール導入で品質管理を強化</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2025-04-22 ~ 現在</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>技術顧問</strong>
+                            — <strong>AI営業SaaSスタートアップ（シリーズA）</strong>
+                        </p>
+                        <p>TypeScript, Golang, Python, BrowserUse, GitHub Actions, Devin, Cline, Copilot, Trunk based development</p>
+                          <p class="highlight">開発チームにもクライアント対応を行う体制を整え、顧客価値を中心とした課題に気づける体制を構築</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2025-02-27 ~ 2025-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>AIエンジニア（週3稼働）</strong>
+                            — <strong>老舗AI企業子会社</strong>
+                        </p>
+                        <p>Python3, AutoGen, OpenAI, GPT-4o, Gemini, ReactJs, pytest, GitHub Actions, Azure, SQLite</p>
+                          <p class="highlight">クライアント企業マネージャー向けAIAgentプロトタイプを1ヶ月で開発。機能開発の速さ、CI/CD整備、若手アサインコントロールを評価された</p>
+                          <p class="highlight">LLMの不確定な振る舞いとTool群でテストポリシーを分離し、Tool群に単体・統合テストを自動化</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2025-01-01 ~ 2025-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>エンジニアリングマネージャー兼リードエンジニア</strong>
+                            — <strong>福利厚生プロダクト リプレース</strong>
+                        </p>
+                        <p>Golang, AWS Lambda, RDS Aurora, React, TypeScript, ReactNative, Clean Architecture, DDD, Kubernetes</p>
+                          <p class="highlight">ピボットに伴い必要機能の8倍に膨らんだシステムの全面リプレースを決断・実行。Kubernetes→AWS Lambdaへ移行しインフラコストと運用負荷を大幅削減</p>
+                          <p class="highlight">チームスキルセットと採用市場の分析に基づきFlutter→ReactNativeへの技術選定変更を判断</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2024-04-01 ~ 現在</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>エンジニアリングマネージャー兼リードエンジニア — チーム16名</strong>
+                            — <strong>営業支援系AIスタートアップ</strong>
+                        </p>
+                        <p>Go, Python, TypeScript, React, OpenAI API, Anthropic API, AWS Lambda, SQS, RDS Aurora, DynamoDB, Clean Architecture, DDD</p>
+                          <p class="highlight">ゼロからAIプロダクトを立ち上げ、R&amp;Dフェーズからプロダクト化・PMF追求まで技術戦略を一貫して推進</p>
+                          <p class="highlight">数千件同時処理のサーバーレス基盤を設計。SQS-Lambda実行上限を独自キューイング機構で突破しスケーラビリティを確保</p>
+                          <p class="highlight">採用活動を主導しチームを16名に拡大。完全リモート・定例なし・フルフレックスの環境下でデイリー評価制度を構築し、マネジメント工数を1日2.5時間に圧縮</p>
+                          <p class="highlight">LLM自律エージェントのタスク成功率を60-70%からほぼ100%に改善</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2022-06-01 ~ 現在</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>リードエンジニア — 開発チーム6名</strong>
+                            — <strong>コンシューマ向けフードテックスタートアップ</strong>
+                        </p>
+                        <p>TypeScript, Go, Python, Flutter, gRPC, OpenSearch, AWS Lambda, Kubernetes, RedShift, Firestore, Clean Architecture, DDD, Microservice Architecture</p>
+                          <p class="highlight">外注チームの品質問題を受けてチーム全面入替を主導。内製体制への移行を完遂し開発品質を安定化</p>
+                          <p class="highlight">OpenSearch検索基盤を新規構築。CI/CDゼロの状態からトランクベース開発へ移行しデイリー複数回デプロイ体制を確立</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2020-03-01 ~ 2022-02-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>エンジニアリングマネージャー — 3名→35名の組織拡大を主導</strong>
+                            — <strong>都市開発系スタートアップ</strong>
+                        </p>
+                        <p>TypeScript, Dart, Flutter, Express, Firestore, PostgreSQL, Prisma, Clean Architecture, Microservice Architecture, Firebase, GAE, CircleCI</p>
+                          <p class="highlight">パートタイムメンバー中心の3名体制から35名規模への組織スケーリングを主導</p>
+                          <p class="highlight">海外エンジニアの積極採用とオンラインアシスタントによるスクリーニング効率化で、日本人採用比ランニングコスト約1/3を実現</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2022-11-01 ~ 2023-08-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>リードエンジニア — 2名体制での高速開発</strong>
+                            — <strong>教育系スタートアップ 米国子会社</strong>
+                        </p>
+                        <p>AWS Lambda, CDK, React, AWS AppSync, DynamoDB, GraphQL, TypeScript, DDD, Clean Architecture</p>
+                          <p class="highlight">DDDの厳密適用とコード自動生成により、2名で4ヶ月間にソースコード11万行（うち4.5万行自動生成）を完遂</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2007-08 ~ 2019-07</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>エンジニア（フルスタック / バックエンド / Android / インフラ）</strong>
+                            — <strong>2018年以前 — 広告配信・IoT・ゲーム・SIer等</strong>
+                        </p>
+                        <p>Golang, Python, TypeScript, Scala, Java, Kotlin, SAP/ABAP, AWS, Docker, Ansible, Jenkins</p>
+                          <p class="highlight">広告配信サービス（チーム25名）のAPIをクリーンアーキテクチャで再設計</p>
+                          <p class="highlight">IoT企業のLambda APIをクリーンアーキテクチャで再設計しドメインレイヤのテストカバレッジ100%達成</p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        学歴
+                          <p>2004-04-01 ~ 2007-03-31</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p style="margin-top:0;" class="heading">専門学校</p>
+                        <p class="highlight">
+                          <i>柔道整復師</i>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+
+
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  言語
+                </div>
+                <div class="content-text">
+                    <ul>
+                        <li>日本語</li>
+                        <li>ネイティブ</li>
+                    </ul>
+                    <ul>
+                        <li>英語</li>
+                        <li>グローバルチーム運営レベル（複数国籍・タイムゾーンのリモートチーム運営実績）</li>
+                    </ul>
+                </div>
+              </div>
+            </section>
+
+
+
+            <!-- PROFILES -->
+              <section class="content profiles">
+                <div class="row">
+                  <div class="content-cat">
+                    プロフィール
+                  </div>
+                  <div class="content-text profiles-listing">
+                    <ul>
+                          <li>
+                            <a href="https://github.com/hiromishikata" target="_blank">
+                              GitHub
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://hiromi.appointlet.com/s/30-umino/hiromi" target="_blank">
+                              Meeting (30min)
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://www.linkedin.com/in/hiromishikata" target="_blank">
+                              LinkedIn
+                            </a>
+                          </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+        </div>
+    </article>
+  </div>
+</body>
+</html>
