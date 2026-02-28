@@ -1,0 +1,184 @@
+---
+meta:
+  theme: paper
+basics:
+  name: 志方 裕美 (シカタ ヒロミ)
+  label: エンジニアリングマネージャー / フルスタックエンジニア — 組織スケーリング×AI基盤構築×コスト最適化
+  picture: https://github.com/HiromiShikata.png
+  email: shikata@uminoseisaku.com
+  phone: +81-50-5354-8192
+  website: https://hiromishikata.github.io/profile/
+  url: https://hiromishikata.github.io/profile/
+  summary: "エンジニアリング組織を3名から35名に拡大しながらランニングコストを日本人採用比1/3に抑制。16名のフルリモートチームを定例会議なし・稼働時間自由の環境で運営し、定量的評価制度によりチームコスト効率を2倍に改善。フードテックプラットフォームの内製化・スケール基盤構築、AI/LLMプロダクトのR&Dからプロダクト化までを一貫して推進。46以上のプロジェクト・19年の経験。"
+  location:
+    city: Minato-ku
+    countryCode: JP
+    region: 東京都、沖縄
+  profiles:
+    - network: GitHub
+      username: HiromiShikata
+      url: https://github.com/hiromishikata
+    - network: Meeting (30min)
+      username: hiromishikata
+      url: https://hiromi.appointlet.com/s/30-umino/hiromi
+    - network: LinkedIn
+      username: hiromishikata
+      url: https://www.linkedin.com/in/hiromishikata
+
+work:
+  - company: ロジスティクスSaaSスタートアップ（シリーズC）
+    position: インフラ・バックエンド・フロントエンドエンジニア
+    startDate: "2025-04-22"
+    endDate: 現在
+    summary: TypeScript, hono, React, Vite, AWS, Amplify, GritQL, biome, Claude Code, Trunk-based development, GitHub Actions
+    highlights:
+      - 2週間に1回だったリリースサイクルをTrunk-Based Development導入で高頻度化, 2日に1回からデイリー程度まで高速化
+      - Amplify Gen2で作業ブランチ別に20環境を自動構築し、動作確認・e2eの確実性を担保、開発の高速化に寄与
+      - 消化チケットのベースを月あたり10から半年で最大65まで高速化
+
+  - company: 大手メーカーソフトウェア開発プロダクト グローバルチーム
+    position: バックエンドエンジニア
+    startDate: "2025-05-12"
+    endDate: 現在
+    summary: Golang, Python, Terraform, Docker, Gin, FastAPI, AWS, GCP, Azure, GitHub Actions
+    highlights:
+      - Go/Python既存プロダクトの機能開発、Terraform Providerメンテナンス、Artifactory API自動コントロール機能拡張
+      - GritQLによるプロジェクト固有の静的解析ルール導入で品質管理を強化
+
+  - company: AI営業SaaSスタートアップ（シリーズA）
+    position: 技術顧問
+    startDate: "2025-04-22"
+    endDate: 現在
+    summary: TypeScript, Golang, Python, BrowserUse, GitHub Actions, Devin, Cline, Copilot, Trunk based development
+    highlights:
+      - 開発チームにもクライアント対応を行う体制を整え、顧客価値を中心とした課題に気づける体制を構築
+
+  - company: 老舗AI企業子会社
+    position: AIエンジニア（週3稼働）
+    startDate: "2025-02-27"
+    endDate: "2025-03-31"
+    summary: Python3, AutoGen, OpenAI, GPT-4o, Gemini, ReactJs, pytest, GitHub Actions, Azure, SQLite
+    highlights:
+      - クライアント企業マネージャー向けAIAgentプロトタイプを1ヶ月で開発。機能開発の速さ、CI/CD整備、若手アサインコントロールを評価された
+      - LLMの不確定な振る舞いとTool群でテストポリシーを分離し、Tool群に単体・統合テストを自動化
+
+  - company: 福利厚生プロダクト リプレース
+    position: エンジニアリングマネージャー兼リードエンジニア
+    startDate: "2025-01-01"
+    endDate: "2025-02-28"
+    summary: Golang, AWS Lambda, RDS Aurora, React, TypeScript, ReactNative, Clean Architecture, DDD, Kubernetes
+    highlights:
+      - ピボットに伴い必要機能の8倍に膨らんだシステムの全面リプレースを決断・実行。Kubernetes→AWS Lambdaへ移行しインフラコストと運用負荷を大幅削減
+      - チームスキルセットと採用市場の分析に基づきFlutter→ReactNativeへの技術選定変更を判断
+      - 3年弱のチーム運営で累計30名以上が参画。自主退職2名のみ（起業・家庭事情）
+      - アシスタント活用の採用体制で30名超の候補者から4名の優秀人材を獲得
+
+  - company: 営業支援系AIスタートアップ
+    position: エンジニアリングマネージャー兼リードエンジニア — チーム16名
+    startDate: "2024-04-01"
+    endDate: 現在
+    summary: Go, Python, TypeScript, React, OpenAI API, Anthropic API, AWS Lambda, SQS, RDS Aurora, DynamoDB, Clean Architecture, DDD
+    highlights:
+      - ゼロからAIプロダクトを立ち上げ、R&Dフェーズからプロダクト化・PMF追求まで技術戦略を一貫して推進
+      - 数千件同時処理のサーバーレス基盤を設計。SQS-Lambda実行上限を独自キューイング機構で突破しスケーラビリティを確保
+      - 型安全なGoによるデータ管理層とPythonによるAI処理層を分離した二層アーキテクチャを設計し、安定性と柔軟性を両立
+      - 採用活動を主導しチームを16名に拡大。完全リモート・定例なし・フルフレックスの環境下でデイリー評価制度を構築し、マネジメント工数を1日2.5時間に圧縮
+      - 定量的パフォーマンス評価によりチーム全体のコスト効率を推定2倍に向上。単価交渉・契約終了の判断を数値に基づいて実行
+      - エンジニアリングチーム自身がプロダクトを業務利用するオペレーション設計を導入。売上発生イベント回数をチーム目標に設定し、営業部門からも高評価
+      - LLM自律エージェントのタスク成功率を60-70%からほぼ100%に改善。月次でのモデル評価・切替により性能とコストを継続最適化
+
+  - company: コンシューマ向けフードテックスタートアップ
+    position: リードエンジニア — 開発チーム6名
+    startDate: "2022-06-01"
+    endDate: 現在
+    summary: TypeScript, Go, Python, Flutter, gRPC, OpenSearch, AWS Lambda, Kubernetes, RedShift, Firestore, Clean Architecture, DDD, Microservice Architecture
+    highlights:
+      - 外注チームの品質問題を受けてチーム全面入替を主導。内製体制への移行を完遂し開発品質を安定化
+      - OpenSearch検索基盤を新規構築（設計・データ投入・クエリ最適化）。プラットフォームの商品発見性を向上
+      - 外部サービス連携のRPAにより手動オペレーションを自動化。連携先の大量増加に対応可能な分割統治アーキテクチャを設計
+      - CI/CDゼロの状態からCircleCI・GitHub Actionsを導入しトランクベース開発へ移行。デイリー複数回デプロイ体制を確立
+      - グローバル人材を採用し複数タイムゾーンのフルリモートチームを構築。非同期コミュニケーション前提の情報共有・優先順位判断の仕組みを設計
+      - 資金調達難航期にコスト・体制の最適化提案を実施し事業継続に貢献
+      - モノリスからマイクロサービスへの段階的移行ロードマップを策定し実行中。週単位のビジネス変化に対応可能な柔軟性を維持
+
+  - company: 都市開発系スタートアップ
+    position: エンジニアリングマネージャー — 3名→35名の組織拡大を主導
+    startDate: "2020-03-01"
+    endDate: "2022-02-28"
+    summary: TypeScript, Dart, Flutter, Express, Firestore, PostgreSQL, Prisma, Clean Architecture, Microservice Architecture, Firebase, GAE, CircleCI
+    highlights:
+      - パートタイムメンバー中心の3名体制から35名規模への組織スケーリングを主導
+      - 海外エンジニアの積極採用とオンラインアシスタントによるスクリーニング効率化で、日本人採用比ランニングコスト約1/3を実現。1ヶ月以内での優秀人材獲得を継続
+      - マイクロサービスアーキテクチャへの移行を設計・実行。新規サービステンプレートで立ち上げを高速化
+      - PMロールを増員しビジネスレイヤの曖昧さを排除。PMと1on1を分担し（短期課題はPM、長期キャリアは自身）、自走可能なチーム体制を確立
+      - CI/CD構築・モノレポ移行・差分ビルドによるCIコスト最適化を実施
+
+  - company: 製造業向けSaaSスタートアップ
+    position: 技術顧問
+    startDate: "2022-01-01"
+    endDate: "2023-08-31"
+    summary: 組織構造改善、採用戦略、技術的負債解消
+    highlights:
+      - 前任責任者退任後に混乱していた開発組織を再建。課題の構造化→経営ビジョンの明確化→採用体制の強化→自走組織への変革を段階的に実行
+      - リーダーの稼働時間の50%を将来投資に充てられる体制を構築。受動的だった採用活動を能動化し複数の優秀メンバー入社を実現
+      - 技術的負債解消をリーダー一人からチーム体制へ移行し、3週間で初期課題を解消
+
+  - company: 教育系スタートアップ 米国子会社
+    position: リードエンジニア — 2名体制での高速開発
+    startDate: "2022-11-01"
+    endDate: "2023-08-31"
+    summary: AWS Lambda, CDK, React, AWS AppSync, DynamoDB, GraphQL, TypeScript, DDD, Clean Architecture
+    highlights:
+      - DDDの厳密適用とコード自動生成により、2名で4ヶ月間にソースコード11万行（うち4.5万行自動生成）を完遂。製品は日本の親会社でも販売され事業拡大に貢献
+      - GraphQL定義の自動生成ツールをOSSとして公開
+
+  - company: 大手家電メーカー データレイク基盤構築
+    position: エンジニア — 開発チーム8名
+    startDate: "2020-02-01"
+    endDate: "2020-12-31"
+    summary: AWS CloudFormation, Redshift, Batch, CodePipeline, CodeBuild, CodeCommit, Bazel, Docker
+    highlights:
+      - 製品センサーデータ・会計システム・在庫管理システム等、複数基幹システムからの大規模データ統合基盤を改善
+      - 手動運用のデプロイ・テストプロセスをAWS CodePipelineで完全自動化
+
+  - company: AIスタートアップ インフラ基盤構築
+    position: インフラエンジニア
+    startDate: "2018-11-01"
+    endDate: "2019-07-31"
+    summary: MongoDB, Redis, Docker, AWS ECS Fargate, Terraform, Ansible, CircleCI
+    highlights:
+      - 急成長企業のインフラをEC2→Docker→ECS Fargateへ全面移行しスケーラブルな基盤を実現
+      - 全インフラ環境をTerraformでコード管理（手作業禁止）。いつでも再現・破棄可能な環境を構築
+
+  - company: 2018年以前 — 広告配信・IoT・ゲーム・SIer等
+    position: エンジニア（フルスタック / バックエンド / Android / インフラ）
+    startDate: "2007-08"
+    endDate: "2019-07"
+    summary: Golang, Python, TypeScript, Scala, Java, Kotlin, SAP/ABAP, AWS, Docker, Ansible, Jenkins
+    highlights:
+      - 広告配信サービス（チーム25名）のAPIをクリーンアーキテクチャで再設計
+      - IoT企業のLambda APIをクリーンアーキテクチャで再設計しドメインレイヤのテストカバレッジ100%達成
+      - ゲーム部門コアシステム開発・運用（APサーバー15台・DBサーバー3台規模）
+      - 大手家電メーカー生産管理システム構築（画面73・テーブル122）
+      - 小売EC構築を要件定義から2ヶ月で納品、運用2年半で問い合わせ数件
+      - IoTスタートアップ社員としてハードウェア試作品開発（3Dプリンタ・切削・金属加工）
+      - 大手家電量販店・化学メーカーSAPアドオン開発（プロジェクト規模百数十名）
+
+volunteer: []
+education:
+  - institution: Collage
+    area: Qualified　Bornsetter
+    studyType:
+    startDate: "2004-04-01"
+    endDate: "2007-03-31"
+awards: []
+publications: []
+languages:
+  - language: 日本語
+    fluency: ネイティブ
+  - language: 英語
+    fluency: グローバルチーム運営レベル（複数国籍・タイムゾーンのリモートチーム運営実績）
+interests: []
+references:
+  - name:
+    reference:
