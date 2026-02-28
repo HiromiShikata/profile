@@ -66,11 +66,13 @@ jobs:
           sed 's@hiromishikata.github.io@**********@g' -i generated/resume.full.ja.masked.yaml
           npm run generate:resume --file=resume.full.ja.masked
           check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.masked.pdf"
+          npm run generate:short:ja
+          check_pdf_generation "generated/resume/HiromiShikata.resume.short.ja.pdf"
 
           echo "Current directory contents after generation:"
           ls -la generated
 
-          for html_file in generated/*.html; do
+          for html_file in generated/*.html generated/resume/*.html; do
             sed -i '/<head>/a \  <!-- Google Tag Manager -->\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":\nnew Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],\nj=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=\n"https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);\n})(window,document,"script","dataLayer","GTM-NH7SBSVG");</script>\n<!-- End Google Tag Manager -->' "$html_file"
             sed -i '/<body>/a \  <!-- Google Tag Manager (noscript) -->\n<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH7SBSVG"\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\n<!-- End Google Tag Manager (noscript) -->' "$html_file"
           done

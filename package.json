@@ -15,6 +15,8 @@
     "generate:resume": "npm run generate:pdf --output_dir=generated/resume --file=${npm_config_file} && npm run generate:html --output_dir=generated --file=${npm_config_file}",
     "generate:en": "deepmerge-yaml resume.base.yaml resume.en.yaml > generated/resume.full.en.yaml && npm run generate:resume --file=resume.full.en",
     "generate:ja": "deepmerge-yaml resume.base.yaml resume.ja.yaml > generated/resume.full.ja.yaml && npm run generate:resume --file=resume.full.ja",
+    "generate:short:file": "mkdir -p generated/resume && ./node_modules/resume-cli/build/main.js export -r ${npm_config_file}.yaml generated/resume/HiromiShikata.${npm_config_file}.${npm_config_output_format} --format ${npm_config_output_format} --theme paperalt",
+    "generate:short:ja": "npm run generate:short:file --file=resume.short.ja --output_format=html && npm run generate:short:file --file=resume.short.ja --output_format=pdf",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
