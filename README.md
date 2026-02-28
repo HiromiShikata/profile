@@ -14,8 +14,15 @@
 
 ### Japanese
 
+#### Full
+
 - [HTML](https://hiromishikata.github.io/profile/generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.html)
 - [PDF](https://hiromishikata.github.io/profile/generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.pdf)
+
+#### Short
+
+- [HTML](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.short.ja.html)
+- [PDF](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.short.ja.pdf)
 
 ## Meeting
 
