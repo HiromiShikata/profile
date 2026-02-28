@@ -66,6 +66,11 @@ jobs:
           sed 's@hiromishikata.github.io@**********@g' -i generated/resume.full.ja.masked.yaml
           npm run generate:resume --file=resume.full.ja.masked
           check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.ja.masked.pdf"
+          cp generated/resume.full.en.yaml generated/resume.full.en.masked.yaml
+          sed 's/Hiromi Shikata\|shikata@uminoseisaku.com\|+81-50-5354-8192/"**********"/g' -i generated/resume.full.en.masked.yaml
+          sed 's@hiromishikata.github.io@**********@g' -i generated/resume.full.en.masked.yaml
+          npm run generate:resume --file=resume.full.en.masked
+          check_pdf_generation "generated/HiromiShikata-FullStack-Engineer-and-Manager.resume.full.en.masked.pdf"
           npm run generate:short:ja
           check_pdf_generation "generated/resume/HiromiShikata.resume.short.ja.pdf"
 
