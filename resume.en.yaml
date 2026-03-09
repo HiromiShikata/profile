@@ -33,7 +33,7 @@ work:
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2024-05-28'
     endDate: Present
-    summary: Golang, Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, AWS Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST, React, TypeScript, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Jest, Swagger, OpenAPI, RESTful, playwrite
+    summary: Golang, Python3, OpenAI API, Anthropic API, Gemini, Claude Code, Selenium, AutoGen, AWS Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST, React, TypeScript, Next.js, Prisma, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Jest, Swagger, OpenAPI, RESTful, Playwright, AWS Amplify, AWS ECS
     highlights:
       - Progressed from R&D results to product development, moving to full-scale implementation based on business requirements.
       - Separated the system architecture into a data and process management system and an AI-focused system to avoid using type-unsafe Python in parts that should be programmatically controlled, ensuring more stable programming.
@@ -44,6 +44,7 @@ work:
       - Established a fully remote, flexible work hours system without regular meetings, implementing goal sharing, priority decision rules, and engineer performance evaluation systems that reduced daily management time to about 2.5 hours. Still working on improvements targeting under 1 hour.
       - Introduced a daily evaluation system that revealed previously undetectable issues, enabling problem detection and resolution by the next day despite the fully flexible environment.
       - Accurate individual engineer performance evaluation enabled quantitative assessment for rate adjustments (increases or decreases) and team composition decisions. I feel resulting in an estimated doubling of team cost efficiency.
+      - Introduced up to 20 AI agents working in parallel 24/7 on the same codebase, orchestrated by a single tech lead through skill-based instructions, CI/CD enforcement, and self-documenting code structure. Achieved a 4x throughput increase from approximately 3 PRs/day (Aug-Nov 2025 average during manual development) to approximately 13 PRs/day (Jan-Mar 2026 average after AI agent introduction), with a peak of 50 PRs merged in a single day. Total of 1,284 PRs merged over 8 months (Aug 2025 - Mar 2026). All PRs went through automated CI (lint, type check, e2e tests) and code review before merge. Quality was maintained through strict architectural enforcement via linting rules, CI checks, and self-documenting directory/file naming conventions rather than documentation.
   - company: AI SaaS Product R&D Startup
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2024-04-01'

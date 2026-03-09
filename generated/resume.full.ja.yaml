@@ -100,7 +100,7 @@ skills:
 work:
   - company: 大手メーカーソフトウェア開発プロジェクト向けプロダクトグローバルチーム
     position: フルリモート バックエンドエンジニア
-    startDate: '2025-05-12'
+    startDate: "2025-05-12"
     endDate: 現在
     summary: >-
       Golang, Python, Terraform, TypeScript, Jira, Artifactory, Docker,
@@ -112,7 +112,7 @@ work:
       - ArtifactoryのAPIを使用して自動でのコントロール機能の拡張を行いました。
   - company: ロジスティクスSaaSスタートアップ シリーズC
     position: フルリモート インフラ,バックエンド,フロントエンドエンジニア
-    startDate: '2025-04-22'
+    startDate: "2025-04-22"
     endDate: 現在
     summary: >-
       TypeScript, hono, React, Vite, AWS, amplify, GritQL, biome, Devin,
@@ -128,7 +128,7 @@ work:
       - amplify gen2にて各作業ブランチの環境を個別に作成し20程度の環境を維持できるよう整えて動作確認とe2eを確実にする環境を構築しました
   - company: AI営業SaaSスタートアップ シリーズA
     position: フルリモート 技術顧問
-    startDate: '2025-04-22'
+    startDate: "2025-04-22"
     endDate: 現在
     summary: >-
       TypeScript, Golang, Python, BrowserUse, GitHub Actions, Devin, Cline,
@@ -137,8 +137,8 @@ work:
       - 開発チームにもクライアントの対応を行う体制を整え、顧客価値を中心とした課題にきづける体制を構築しました。
   - company: 老舗AI企業子会社
     position: フルリモート週3稼働AIエンジニア
-    startDate: '2025-02-27'
-    endDate: '2025-03-31'
+    startDate: "2025-02-27"
+    endDate: "2025-03-31"
     summary: >-
       Python3, AutoGen, OpenAI, GPT-4o, Gemini, ReactJs, Gatsby, AutoGenStudio,
       pytest, GitHub Actions, GitHub Projects, GitHub Issues, Slack, Azure,
@@ -159,8 +159,8 @@ work:
       - 最終報告時のデモのシナリオや、今後どのように発展させることが可能かなどをクライアントに起きうる変化をベースに考え、資料案を提出しました。
   - company: SaaSスタートアップの日本市場向け福利厚生プロダクトリプレース
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
-    startDate: '2025-01-01'
-    endDate: '2025-02-28'
+    startDate: "2025-01-01"
+    endDate: "2025-02-28"
     summary: >-
       Golang, OpenAPI, AWS Lambda, AWS RDS Aurora, MySQL, SST, React,
       TypeScript, playwrite, Jest, shadcn, Clean Architecture, DDD, GitHub
@@ -180,7 +180,7 @@ work:
       - プロダクトの性質上技術的にはあまり課題はないもののスケジュールがタイトなため引き続き実装以外の時間を極限まで減らし対応しています。
   - company: SaaSスタートアップ営業支援系AIプロダクト実装
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
-    startDate: '2024-05-28'
+    startDate: "2024-05-28"
     endDate: 現在
     summary: >-
       Golang, Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, AWS
@@ -212,8 +212,8 @@ work:
         会社の売上発生イベント回数をエンジニアリングチームの目標として設定し、自発的なプロダクト強化体制により営業チームからも良いフィードバックをいただきました。
   - company: SaaSスタートアップのAIプロダクトR&D
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
-    startDate: '2024-04-01'
-    endDate: '2024-05-27'
+    startDate: "2024-04-01"
+    endDate: "2024-05-27"
     summary: >-
       Python3, OpenAI API, Anthropic API, Llama, Gemini, ChromeExtension,
       Selenium, PyAutoGUI, AutoGen,
@@ -246,8 +246,8 @@ work:
         2024年5月頃の作業中、料金が高く遅いLLMでしかこなせなかったタスクも多く、早くて安いLLMへの単純なリプレイスは失敗しまし。しかしタスクをさらに小さくしたものであれば成功するということがわかりましたので次のフェーズではより小さなタスクに分割できるよう構造の修正をする予定です。
   - company: 製造業向けSaaSスタートアップ
     position: 技術顧問
-    startDate: '2022-01-01'
-    endDate: '2023-08-31'
+    startDate: "2022-01-01"
+    endDate: "2023-08-31"
     summary: チーム開発マネジメント、採用活動支援、技術的負債解消支援、組織構造改善
     highlights:
       - 前任の責任者が辞め入社したばかりのリーダーに負荷がかかっていてどのように進めていけばよいかの迷いが大きかった箇所に関してサポートを行いました。
@@ -272,8 +272,8 @@ work:
         理想はリーダーのトップダウンな指示なしにメンバーが自発的に動くこととしたので課題の洗い出しと認識、評価などの一番最初にリーダーにやっていただいたようなことから始めました。ディスカッションの中でメンバーとリーダーとの価値観や課題認識等の差が埋まり最初の課題は3週間程度で解消し、メンバーの視野が広がる効果がありました。
   - company: 教育系SaaSスタートアップのアメリカ子会社にて幼児向けプログラミング教育製品の新規開発
     position: 週3リモート稼働フルスタックエンジニア (開発チームエンジニア 2名)
-    startDate: '2023-02-01'
-    endDate: '2023-08-31'
+    startDate: "2023-02-01"
+    endDate: "2023-08-31"
     summary: >-
       AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator,
       DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu,
@@ -292,8 +292,8 @@ work:
       - 製品は日本の親会社でも販売されることとなり事業の拡大に貢献しました。
   - company: 教育系SaaSスタートアップのアメリカ子会社にて製品の中学校教師向けダッシュボード開発
     position: 週3リモート稼働フルスタックエンジニア (開発チームエンジニア 3名)
-    startDate: '2022-11-01'
-    endDate: '2023-01-31'
+    startDate: "2022-11-01"
+    endDate: "2023-01-31"
     summary: >-
       AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator,
       DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu,
@@ -313,7 +313,7 @@ work:
       - 英語ネイティブメンバーとの初めての協働で生じたコミュニケーション課題に対し、図示や事前テキスト共有など、会議進行方法を継続的に改善しました。
   - company: コンシューマ向けフードテックスタートアップ
     position: 週3リモート稼働フルスタックエンジニア (初期開発チームエンジニア 6名)
-    startDate: '2022-06-01'
+    startDate: "2022-06-01"
     endDate: 現在
     summary: >-
       Scrapy, Spider, Playwright, kubenetes, AWS lambda, AWS Batch, Ubuntu,
@@ -362,14 +362,14 @@ work:
         １つの大きなモノリスのサービスとして構築されている部分が明らかに機動力を抑えていたので分割のロードマップを作成しユーザーへの価値提供を強化しつつ、ビジネスサイドの新たな取り組みを実現させながら合わせてリファクタを実行する手順を整えました。こちらは現在実行中です。スタートアップであるため頻繁にビジネスプランや緊急度が変わりますが、週単位での変化では少しの組み換えだけで同時に対応できる状態を維持しています。
   - company: ECサイトフルスクラッチ構築案件
     position: プロジェクトマネージャー (開発チーム 5名)
-    startDate: '2022-03-01'
-    endDate: '2022-07-31'
+    startDate: "2022-03-01"
+    endDate: "2022-07-31"
     summary: FlutterFlow, Firebase, GitHub, Lark, CircleCI, GitHub Actions
     highlights: null
   - company: 実店舗向け広告SaaSプロダクト
     position: 週1-3リモート稼働Androidアプリエンジニア
-    startDate: '2021-02-01'
-    endDate: '2021-08-31'
+    startDate: "2021-02-01"
+    endDate: "2021-08-31"
     summary: >-
       Android, Kotlin, GitHub, GitHub Actions, Testing Automation, GitHub
       Projects, Confluence, Slack, Mockito
@@ -378,7 +378,7 @@ work:
       - テストが一切なかったため、Mockitoを使用した単体テストの整備とGitHub Actionsを活用したCI/CD環境の構築を行いました。
   - company: コンシューマー向けアプリスタートアップ
     position: 技術顧問
-    startDate: '2022-02-01'
+    startDate: "2022-02-01"
     endDate: 現在
     summary: >-
       Flutter, Dart, AWS, MySQL, Docker, docker-compose, GitHub, Slack,
@@ -386,14 +386,14 @@ work:
     highlights: null
   - company: 研究成果のSaaS化
     position: 技術検証兼プロジェクトマネジメント
-    startDate: '2021-12-01'
-    endDate: '2022-03-31'
+    startDate: "2021-12-01"
+    endDate: "2022-03-31"
     summary: MATLAB, Python, GitHub, CircleCI
     highlights: null
   - company: ハードウエアから取得した画像をクラウドで分析するMVP開発
     position: 週0.5リモート稼働フルスタックエンジニア兼プロジェクトマネージャ (エンジニア2-3名, アシスタント兼QA1名)
-    startDate: '2020-12-01'
-    endDate: '2021-03-31'
+    startDate: "2020-12-01"
+    endDate: "2021-03-31"
     summary: >-
       Ubuntu, TypeScript, Dart, Express, FlutterFlow, Flutter, Mermaid, no-code,
       firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic
@@ -419,8 +419,8 @@ work:
         を抽象レイヤーとして噛ませる設計にし、同時にOpenAPIのジェネレートができる構成を取りました。
   - company: 都市開発系SaaSスタートアップ開発支援
     position: 週2リモート稼働フルスタックエンジニア (初期エンジニア3名から最大35名規模)
-    startDate: '2020-03-01'
-    endDate: '2022-02-28'
+    startDate: "2020-03-01"
+    endDate: "2022-02-28"
     summary: >-
       Ubuntu, TypeScript, Dart, Express, Flutter, firestore, Postgres, Google
       CloudSQL, Clean Architecture, Microservice Architecture, Monolithic
@@ -468,8 +468,8 @@ work:
         程度で運用できていること、システムをビジネスの理念に合わせた設計にできていることを評価していただきました。
   - company: 大手家電メーカーデータレイク基盤構築
     position: 週4リモート稼働フルスタックエンジニア (開発チーム8名)
-    startDate: '2020-02-01'
-    endDate: '2020-12-31'
+    startDate: "2020-02-01"
+    endDate: "2020-12-31"
     summary: >-
       AWS CloudFormation, AWS Redshift, AWS Batch, AWS CodePipeline, AWS
       CodeBuild, AWS CodeCommit, ShellSpec, Bazel, Docker, BitBucket, JIRA,
@@ -492,8 +492,8 @@ work:
       - 技術選定では、チームの既存の技術スタックとの親和性を重視し、現在の技術からスムーズに移行できる選択を心がけました。
   - company: 新規サービス開発・構築
     position: 週3稼働フルスタックエンジニア (開発チーム4-6名)
-    startDate: '2019-09-01'
-    endDate: '2020-01-31'
+    startDate: "2019-09-01"
+    endDate: "2020-01-31"
     summary: >-
       Linux, Ubuntu, Alpine, TypeScript, Node.js, koa, TypeORM, MySQL5.6, Redis,
       GitHub, CircleCI, Slack, Docker, docker-compose, OpenAPI, AWS ECS Fargate,
@@ -509,8 +509,8 @@ work:
       - ビジネスレイヤの取りまとめの作業もありましたがこちらはうまく行きませんでした
   - company: AI SaaSスタートアップ企業のアプリケーションインフラ環境構築
     position: 週3稼働インフラエンジニア (アプリケーションエンジニア3名, 社員 20 名程度)
-    startDate: '2018-11-01'
-    endDate: '2019-07-31'
+    startDate: "2018-11-01"
+    endDate: "2019-07-31"
     summary: >-
       Linux, Ubuntu, AMI, HCL, MongoDB, Redis, GitHub, CircleCI, Slack, Docker,
       Docker Compose, Ansible, Terraform
@@ -536,8 +536,8 @@ work:
         新しく開発し、喜ばれました。
   - company: スタートアップ企業の AI 組み込み環境構築
     position: 週1稼働インフラエンジニア (開発チーム 3 名)
-    startDate: '2018-09-01'
-    endDate: '2018-12-31'
+    startDate: "2018-09-01"
+    endDate: "2018-12-31"
     summary: >-
       Linux, Ubuntu, Python3, GitHub, CircleCI, Slack, Docker, Ansible, AWS
       SageMaker, Jupyter Notebook, Terraform
@@ -555,8 +555,8 @@ work:
         され次第学習が進むよう構築を進めています。
   - company: IoT 企業のバックエンド開発
     position: 週3稼働サーバーサイドエンジニア (開発チーム 6 名, うちサーバーサイド 1 名)
-    startDate: '2018-03-01'
-    endDate: '2019-07-31'
+    startDate: "2018-03-01"
+    endDate: "2019-07-31"
     summary: >-
       Linux, Ubuntu, Python2, Python3, Flask, Flasgger, DynamoDB, GitHub,
       CircleCI, Slack, Docker, Serverless, Ansible, Swagger
@@ -577,8 +577,8 @@ work:
       - Ansible で Ubuntu, Mac のローカルの開発環境構築自動化を行いました。
   - company: 広告配信サービスの新規開発
     position: 週4稼働バックエンドエンジニア (開発チーム 25 名)
-    startDate: '2018-03-01'
-    endDate: '2018-10-31'
+    startDate: "2018-03-01"
+    endDate: "2018-10-31"
     summary: >-
       Linux, Ubuntu, Golang, Echo, Goswagger, MySQL, Aerospike, Redis, GitHub,
       CircleCI, Slack, Docker, SchemaSpy, Ansible, DockrCompose
@@ -596,8 +596,8 @@ work:
         を作成し、メンバーに共有しました。
   - company: 新規サービスのユーザー向け Web 画面開発
     position: 週4稼働バックエンドエンジニア (開発チーム 2 名)
-    startDate: '2018-02-01'
-    endDate: '2018-02-28'
+    startDate: "2018-02-01"
+    endDate: "2018-02-28"
     summary: >-
       Linux, Ubuntu, Alpine, Kotlin, spark, exporsed, MySQL, GitHub, Backlog,
       CircleCI, Slack, Swagger, API Blueprint, Gradle, Docker, AWS, SchemaSpy
@@ -613,8 +613,8 @@ work:
       - 内製ではリスクが高いとの判断から開発は外注することになり内製チームは解散になりました。
   - company: 広告クリエイティブ制作SaaSベンチャー企業のシステム刷新
     position: 週5稼働, うち週3リモートフルスタックエンジニア (開発チーム 6 名, うちサーバーサイド 2 名)
-    startDate: '2017-03-01'
-    endDate: '2017-09-30'
+    startDate: "2017-03-01"
+    endDate: "2017-09-30"
     summary: >-
       Linux, Ubuntu, CentOS, TypeScript, Elixir, nodejs, express, phoenix,
       Postgres, GitHub, ZenHub, CircleCI, Slack, Swagger, ansible, mix,
@@ -628,8 +628,8 @@ work:
         つのシステムは開発要因としてお手伝いをしています。
   - company: 広告クリエイティブ制作SaaSベンチャー企業のシステム開発運用支援
     position: 週3稼働フルスタックエンジニア (開発チーム 4 名, 開発担当 3 名)
-    startDate: '2016-11-01'
-    endDate: '2017-02-28'
+    startDate: "2016-11-01"
+    endDate: "2017-02-28"
     summary: >-
       Linux, Ubuntu, CentOS, JavaScript, CSS, Node.js, LoopBack, AngularJS,
       MongoDB, GitHub, CircleCI, Slack, Swagger, GitHubProject
@@ -638,8 +638,8 @@ work:
       - 広告の制作支援システムの追加機能開発・運用支援
   - company: IoT SaaSスタートアップサーバーサイドアプリケーション開発
     position: 週2-5稼働サーバーサイドエンジニア (開発チーム 4 名, 開発担当 1 名)
-    startDate: '2016-08-01'
-    endDate: '2017-02-28'
+    startDate: "2016-08-01"
+    endDate: "2017-02-28"
     summary: >-
       Linux (Ubuntu), Scala, sbt, play2, MySQL, Ansible, GitHub, CircleCI,
       Slack, Asana, Swagger
@@ -652,8 +652,8 @@ work:
       - 担当フェーズは要件定義、言語選定、設計、開発、テストです。
   - company: IoT デバイス連携 Android アプリ運用
     position: 週2稼働, うち週1リモート Android アプリエンジニア (要員 20 名程度, Android アプリ開発担当3 名)
-    startDate: '2016-06-01'
-    endDate: '2017-09-30'
+    startDate: "2016-06-01"
+    endDate: "2017-09-30"
     summary: >-
       Linux (Ubuntu), Scala, sbt, Android, CircleCI, GiHub, DeployGate,
       GitHubIssue, Slack, Beacon, Bluetooth, BLE, CleanArchitecture
@@ -667,8 +667,8 @@ work:
       - 担当フェーズは調査、開発、テストです。
   - company: IoT ビーコンデバイス連携 Android アプリ基盤変更対応
     position: 週3リモート稼働 Android アプリエンジニア (要員 3 名程度, Android アプリ開発担当 1 名)
-    startDate: '2016-04-02'
-    endDate: '2016-05-31'
+    startDate: "2016-04-02"
+    endDate: "2016-05-31"
     summary: >-
       Linux (Ubuntu), Java, Gradle, Fabric, Android, CircleCI, GiHub,
       PivotalTracker, Slack, Beacon
@@ -678,7 +678,7 @@ work:
   - company: IoT SaaSスタートアップデモ用サーバーサイドアプリケーション開発、ハードウェア開発
     position: 週4-5稼働エンジニア (要員 3 名程度)
     startDate: 2016-4-01
-    endDate: '2016-07-31'
+    endDate: "2016-07-31"
     summary: >-
       Linux (Ubuntu), javascript, Arduino, 3DCAD, nodejs, AngularJS,
       TwitterBootstrap, SQLite, MySQL, npm, bower, Grunt, Sequelize, Ansible,
@@ -693,8 +693,8 @@ work:
       - 担当フェーズは調査、設計、開発、テストです。
   - company: センサーガジェットのログ収集・可視化サービス
     position: 週3リモート稼働サーバーサイドエンジニア (開発チーム 5 名, サーバーサイド 1 名)
-    startDate: '2016-03-04'
-    endDate: '2016-03-31'
+    startDate: "2016-03-04"
+    endDate: "2016-03-31"
     summary: >-
       Linux (Ubuntu), javascript, html, nodejs, npm, bower, Grunt, MySQL,
       Sequelize, CircleCI, GiHub, Swagger, Slack
@@ -711,8 +711,8 @@ work:
       - 担当フェーズは調査、設計、開発、テストです。
   - company: データ可視化系スマートガジェットの認証サービス開発
     position: 週3リモート稼働サーバーサイドエンジニア (要員 3 名程度, サーバーサイド 1 名)
-    startDate: '2016-01-16'
-    endDate: '2016-02-28'
+    startDate: "2016-01-16"
+    endDate: "2016-02-28"
     summary: >-
       Linux (Ubuntu), javascript, html, nodejs, npm, bower, Grunt, mp2,
       SendGrid, KiiCloud, GoogleCloudPlatform, CircleCI, sinon, Jasmine, Mocha,
@@ -736,8 +736,8 @@ work:
       - 担当フェーズは調査、設計、開発、テストです。
   - company: IoT スタートアップサーバーサイドアプリケーション開発、ハードウェア開発
     position: 週1-3 フルスタックエンジニア (要員 3 名程度)
-    startDate: '2015-12-01'
-    endDate: '2016-03-31'
+    startDate: "2015-12-01"
+    endDate: "2016-03-31"
     summary: >-
       Linux (Ubuntu), javascript, javascript, nodejs, AngularJS,
       TwitterBootstrap, SQLite, npm, bower, Grunt, Sequelize, Ansible, GitHub,
@@ -748,8 +748,8 @@ work:
       - 担当フェーズは調査、設計、開発、テストです。
   - company: ソーシャルイベントサービスの Android アプリ開発
     position: 週 3 日リモート勤務 Android アプリエンジニア (要員 4 名程度, Android アプリ開発担当 1 名)
-    startDate: '2015-12-02'
-    endDate: '2016-01-29'
+    startDate: "2015-12-02"
+    endDate: "2016-01-29"
     summary: >-
       Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST
       client, CircleCI, Git, DeployGate, ChatWork
@@ -768,8 +768,8 @@ work:
       - 担当フェーズは設計、開発、テストです。
   - company: サービス連携サイトプロトタイプ開発
     position: 週 3 日リモート勤務 フルスタックエンドエンジニア (要員 3 名程度, 開発担当 1 名)
-    startDate: '2015-11-06'
-    endDate: '2016-01-15'
+    startDate: "2015-11-06"
+    endDate: "2016-01-15"
     summary: >-
       Linux (Ubuntu), javascript, html, nodejs, AngularJS, mysql, npm, bower,
       Grunt, CircleCI, GiHub, GitHub Issues, Slack, Sequelize
@@ -781,8 +781,8 @@ work:
       - 担当フェーズは調査、設計、開発、テストです。
   - company: データ収集 IoT ガジェット連携 Android アプリ開発
     position: 週 3 日リモート勤務 Android アプリエンジニア (要員 3 名程度, Android アプリ開発担当 1 名)
-    startDate: '2015-10-26'
-    endDate: '2015-11-05'
+    startDate: "2015-10-26"
+    endDate: "2015-11-05"
     summary: >-
       Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST
       client, CircleCI, GitHub, Deploy Gate, GitHub Issues, Slack
@@ -801,8 +801,8 @@ work:
       - 担当フェーズは調査、設計、開発、テストです。
   - company: IoT 製品連携 Android アプリ BLE 技術検証開発
     position: 週 3 日リモート勤務 Android アプリエンジニア (要員 4 名程度, Android アプリ開発担当 1 名)
-    startDate: '2015-09-14'
-    endDate: '2015-10-25'
+    startDate: "2015-09-14"
+    endDate: "2015-10-25"
     summary: >-
       Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST
       client, Beacon, CircleCI, Git, PivotalTracker, Slack
@@ -818,8 +818,8 @@ work:
       - 担当フェーズは調査、設計、開発、テストです。
   - company: ハードウェアスタートアップ製品開発支援
     position: 週 3 日 フルスタックエンジニア (要員 1 名)
-    startDate: '2015-05-01'
-    endDate: '2015-08-31'
+    startDate: "2015-05-01"
+    endDate: "2015-08-31"
     summary: Linux (Ubuntu12), arduino, C++,
     highlights:
       - マイコン、タッチパネル、bluetooth を用いた製品のプロトタイプ開発
@@ -847,8 +847,8 @@ work:
       - 担当フェーズはサーバーサイド設計、開発、ハードウェア回路設計、開発、筐体内ソフトウェア設計、開発です。
   - company: 業務システム開発
     position: 開発フルスタックエンジニア (要員 4 名程度, 開発担当 1 名)
-    startDate: '2014-09-01'
-    endDate: '2015-04-30'
+    startDate: "2014-09-01"
+    endDate: "2015-04-30"
     summary: >-
       Windows, Linux, Scala, Java, Javascript, Gradle, Skinny (Scala), Flyway,
       Jetty, Tomcat, Android annotations, Android Spring REST client,
@@ -866,8 +866,8 @@ work:
       - 担当フェーズは設計、開発、テストです。
   - company: SDK 運用チーム
     position: ネイティブアプリエンジニア (開発チーム 5 名)
-    startDate: '2014-04-01'
-    endDate: '2014-08-31'
+    startDate: "2014-04-01"
+    endDate: "2014-08-31"
     summary: >-
       Windows, Linux, Java, Gradle, C++, Cocos2dx, SQLite, Jenkins, Nexus, Git,
       SVN
@@ -884,8 +884,8 @@ work:
       - 担当フェーズは設計、開発、単体テストです。
   - company: アプリ運用チーム
     position: ネイティブアプリエンジニア (開発チーム 5 名)
-    startDate: '2013-09-27'
-    endDate: '2014-03-31'
+    startDate: "2013-09-27"
+    endDate: "2014-03-31"
     summary: Windows, Java, Shell(少し), Groovy(少し), SQLite, Git, Jenkins
     highlights:
       - 客先のメイン事業のサービス名を冠したアプリで長く運用されており、クローズできないアプリでした。
@@ -898,8 +898,8 @@ work:
       - 担当フェーズは設計、開発、単体テストです。
   - company: ゲーム部門コアシス
     position: エンジニア (開発チーム 14 名)
-    startDate: '2012-12-06'
-    endDate: '2013-09-26'
+    startDate: "2012-12-06"
+    endDate: "2013-09-26"
     summary: >-
       Linux, Java, FTL, HTML, CSS, JavaScript, shell, Spring, MySQL, SVN, Git,
       Apache, Tomcat, Memcached, Jenkins, Android
@@ -926,8 +926,8 @@ work:
       - 担当フェーズは設計、開発、テストです。
   - company: モバイルブラウザゲーム運用
     position: エンジニア (開発チーム 20 名)
-    startDate: '2012-08-16'
-    endDate: '2012-12-05'
+    startDate: "2012-08-16"
+    endDate: "2012-12-05"
     summary: >-
       Linux, Java, FTL, HTML, CSS, JavaScript, shell, Spring, Seaser, MySQL,
       Apache, Tomcat
@@ -938,8 +938,8 @@ work:
       - 担当フェーズは追加機能開発(機能ごとの DB 設計〜単体テストまで), CS 調査です。
   - company: 独自サービス構築
     position: エンジニア
-    startDate: '2012-05-01'
-    endDate: '2012-08-15'
+    startDate: "2012-05-01"
+    endDate: "2012-08-15"
     summary: >-
       Linux, Java, JSP, HTML, CSS, JavaScript, shell, Struts, MySQL, Apache,
       Tomcat
@@ -950,7 +950,7 @@ work:
       - 担当フェーズは全行程です。
   - company: 大手家電メーカー事業部生産管理システム構築
     position: エンジニア (開発チーム 13 名)
-    startDate: '2011-10-07'
+    startDate: "2011-10-07"
     endDate: 2012-04
     summary: Windows, Java, JSP, PL/SQL, Struts ベース独自 FW, Oracle, Apache
     highlights:
@@ -984,8 +984,8 @@ work:
         CMS、美容院予約システム、等構築。
   - company: 大手飲食チェーン店依頼ポータルサイト
     position: エンジニア (開発チーム 4 名, デザイン会社数名)
-    startDate: '2011-02-21'
-    endDate: '2011-10-07'
+    startDate: "2011-02-21"
+    endDate: "2011-10-07"
     summary: Linux(RH), Java, JSP, Struts2, MySQL, Apache
     highlights:
       - 大手飲食チェーン店より依頼の、飲食店ポータルサイト構築。
@@ -998,8 +998,8 @@ work:
       - その他、別に製作してあるモバイルサイトの管理サイトに PC サイト用の機能追加を行いました。
   - company: 小売店向け EC サイト構築・受注発送請求管理システム構築
     position: エンジニア (開発チーム 3 名)
-    startDate: '2009-04-01'
-    endDate: '2009-05-31'
+    startDate: "2009-04-01"
+    endDate: "2009-05-31"
     summary: Linux(RedHat), Java, JSP, HTML, JavaScript, CSS, Struts2, MySQL
     highlights:
       - 当時エクセルで行っていたグループ会社向け通販の管理を Web システム化するプロジェクト。
@@ -1094,7 +1094,7 @@ work:
         次受けコンサルティング会社の別プロジェクトへチームまるごと移動するよう依頼される等チームの評価向上に微力ながら貢献しました。
       - 担当フェーズは詳細設計、開発、単体テストです。
   - startDate: 自己PR
-    endDate: ' '
+    endDate: " "
     position: クライアントの作業効率改善に向けた提案
     highlights:
       - >-
@@ -1106,8 +1106,8 @@ work:
       - >-
         また、納期までの期間が短く、運用契約のされているプロジェクトでも各種設定画面と、それぞれの画面上に詳細な説明文を用意し、変更や操作がわからないなどの問い合わせを
       - 減らす工夫をしています。運用開始から 2 年程度たちましたが問い合わせは2 ～ 3 件にとどまっています。
-  - startDate: ' '
-    endDate: ' '
+  - startDate: " "
+    endDate: " "
     position: 開発効率化に向けた取り組み
     highlights:
       - >-
@@ -1119,8 +1119,8 @@ work:
         また、各ツールの開発や Jenkins でのビルドやテスト、静的解析はもちろんのこと、ADT
         の更新通知やリリース時のドキュメント収集保存・apk 調査用 job
         等、自動化で各所でのエンジニアのストレスを軽減しシステムの品質向上・開発スピードアップできるよう常に意識しています。
-  - startDate: ' '
-    endDate: ' '
+  - startDate: " "
+    endDate: " "
     position: 個人での勉強
     highlights:
       - >-
@@ -1157,8 +1157,8 @@ education:
   - institution: Collage
     area: Qualified　Bornsetter
     studyType: null
-    startDate: '2004-04-01'
-    endDate: '2007-03-31'
+    startDate: "2004-04-01"
+    endDate: "2007-03-31"
 awards: []
 publications: []
 interests:
@@ -1210,6 +1210,5 @@ languages:
     fluency: ネイティブ
   - language: 英語
     fluency: チーム内コミュニケーション可能
-  - language: ' '
+  - language: " "
     fluency: (対社外のビジネス英会話はできないと思います)
-
