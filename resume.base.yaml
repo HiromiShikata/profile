@@ -46,11 +46,13 @@ skills:
     keywords:
       - OpenAI
       - Claude
+      - Claude Code
       - Gemini
       - langchain
       - AutoGen
       - AutoGPT
       - Autonomous AI
+      - AI Agent Orchestration
   - name: Infrastructure
     level: 12+ years
     keywords:

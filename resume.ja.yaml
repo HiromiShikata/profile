@@ -63,7 +63,7 @@ work:
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
     startDate: '2024-05-28'
     endDate: 現在
-    summary: Golang, Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, AWS Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST, React, TypeScript, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Jest, Swagger, OpenAPI, playwrite, RESTful, Ubuntu
+    summary: Golang, Python3, OpenAI API, Anthropic API, Gemini, Claude Code, Selenium, AutoGen, AWS Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST, React, TypeScript, Next.js, Prisma, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Jest, Swagger, OpenAPI, Playwright, RESTful, Ubuntu, AWS Amplify, AWS ECS
     highlights:
       - R&Dでの成果からプロダクト化を進め、ビジネス要件を踏まえた本格的な実装に移りました。
       - プログラミングを安定させるためprogramatic に制御すべき部分に型安全ではないPythonを使わなくてすむようデータやプロセス管理を担うシステムと主にAIにて作業するべき不確定要素の多いシステムを分ける構成としました。
@@ -76,6 +76,7 @@ work:
       - 個々のエンジニアのパフォーマンスの評価が正確にできるようになったことで単価を上げるべき人、下げるべき人、やめてもらうべき人が定量的な評価時楽で可能となりチーム全体で使用していたコストの効率が体感ではありますが2倍程度になりました。
       - プロダクト強化のためエンジニアリングチーム自身でプロダクトを使用するようオペレーションの設計と継続的にプロダクト強化圧がかかる体制化を構築しました。
       - 会社の売上発生イベント回数をエンジニアリングチームの目標として設定し、自発的なプロダクト強化体制により営業チームからも良いフィードバックをいただきました。
+      - 最大20のAIエージェントを24時間365日同一コードベースで並行稼働させ、スキルベースの指示、CI/CD強制、自己文書化するコード構造を通じて1人のテックリードがオーケストレーションする体制を構築しました。手動開発期間(2025年8-11月平均約3PR/日)からAIエージェント導入後(2026年1-3月平均約13PR/日)へと約4倍のスループット向上を達成しました。ピーク時には1日50PRがマージされました。8ヶ月間(2025年8月-2026年3月)で合計1,284PRをマージしました。全PRは自動CI(lint、型チェック、e2eテスト)とコードレビューを経てマージされました。ドキュメントではなくlintルール、CIチェック、自己文書化するディレクトリ・ファイル命名規則による厳格なアーキテクチャ強制で品質を維持しました。
   - company: SaaSスタートアップのAIプロダクトR&D
     position: リモート稼働フルスタックエンジニア兼エンジニアリングマネージャー
     startDate: '2024-04-01'
