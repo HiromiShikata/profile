@@ -45,11 +45,13 @@ skills:
     keywords:
       - OpenAI
       - Claude
+      - Claude Code
       - Gemini
       - langchain
       - AutoGen
       - AutoGPT
       - Autonomous AI
+      - AI Agent Orchestration
   - name: Infrastructure
     level: 12+ years
     keywords:
@@ -100,8 +102,8 @@ skills:
 work:
   - company: Division of a leading AI company
     position: Full-remote work AI engineer
-    startDate: "2025-02-27"
-    endDate: "2025-03-31"
+    startDate: '2025-02-27'
+    endDate: '2025-03-31'
     summary: >-
       Python3, AutoGen, OpenAI, GPT-4o, Gemini, ReactJs, Gatsby, AutoGenStudio,
       pytest, GitHub Actions, GitHub Projects, GitHub Issues, Slack, Azure,
@@ -148,8 +150,8 @@ work:
         client, and submitted a draft document.
   - company: SaaS Startup Welfare Product Replacement for Japanese Market
     position: Remote Full-stack Engineer & Engineering Manager
-    startDate: "2025-01-01"
-    endDate: "2025-02-28"
+    startDate: '2025-01-01'
+    endDate: '2025-02-28'
     summary: >-
       Golang, OpenAPI, AWS Lambda, AWS RDS Aurora, MySQL, SST, React,
       TypeScript, playwrite, Jest, shadcn, Clean Architecture, DDD, GitHub
@@ -193,14 +195,15 @@ work:
         non-implementation time to manage this.
   - company: AI SaaS Product Implementation at Startup
     position: Remote Full-stack Engineer & Engineering Manager
-    startDate: "2024-05-28"
+    startDate: '2024-05-28'
     endDate: Present
     summary: >-
-      Golang, Python3, OpenAI API, Anthropic API, Gemini, Selenium, AutoGen, AWS
-      Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST, React,
-      TypeScript, shadcn, Clean Architecture, DDD, GitHub Actions, GitHub,
-      GitHub Issues, GitHub Projects, Docker, docker-compose, Slack, Jest,
-      Swagger, OpenAPI, RESTful, playwrite
+      Golang, Python3, OpenAI API, Anthropic API, Gemini, Claude Code, Selenium,
+      AutoGen, AWS Lambda, DynamoDB, AWS SQS, Postgres, AWS RDS Aurora, SST,
+      React, TypeScript, Next.js, Prisma, shadcn, Clean Architecture, DDD,
+      GitHub Actions, GitHub, GitHub Issues, GitHub Projects, Docker,
+      docker-compose, Slack, Jest, Swagger, OpenAPI, RESTful, Playwright, AWS
+      Amplify, AWS ECS
     highlights:
       - >-
         Progressed from R&D results to product development, moving to full-scale
@@ -241,10 +244,23 @@ work:
         assessment for rate adjustments (increases or decreases) and team
         composition decisions. I feel resulting in an estimated doubling of team
         cost efficiency.
+      - >-
+        Introduced up to 20 AI agents working in parallel 24/7 on the same
+        codebase, orchestrated by a single tech lead through skill-based
+        instructions, CI/CD enforcement, and self-documenting code structure.
+        Achieved a 4x throughput increase from approximately 3 PRs/day (Aug-Nov
+        2025 average during manual development) to approximately 13 PRs/day
+        (Jan-Mar 2026 average after AI agent introduction), with a peak of 50
+        PRs merged in a single day. Total of 1,284 PRs merged over 8 months (Aug
+        2025 - Mar 2026). All PRs went through automated CI (lint, type check,
+        e2e tests) and code review before merge. Quality was maintained through
+        strict architectural enforcement via linting rules, CI checks, and
+        self-documenting directory/file naming conventions rather than
+        documentation.
   - company: AI SaaS Product R&D Startup
     position: Remote Full-stack Engineer & Engineering Manager
-    startDate: "2024-04-01"
-    endDate: "2024-05-27"
+    startDate: '2024-04-01'
+    endDate: '2024-05-27'
     summary: >-
       Python3, OpenAI API, Anthropic API, Llama, ChromeExtension, Selenium,
       PyAutoGUI, AutoGen
@@ -316,8 +332,8 @@ work:
         to enable finer task granularity.
   - company: Manufacturing Industry SaaS Startup
     position: Technical Advisor
-    startDate: "2022-01-01"
-    endDate: "2023-08-31"
+    startDate: '2022-01-01'
+    endDate: '2023-08-31'
     summary: >-
       Team Development Management, Recruitment Support, Technical Debt
       Resolution, Organizational Structure Improvement
@@ -384,8 +400,8 @@ work:
       Early Childhood Programming Education Product Development at US Subsidiary
       of Educational SaaS Startup
     position: Remote Full-stack Engineer (3 days/week, 2-person development team)
-    startDate: "2023-02-01"
-    endDate: "2023-08-31"
+    startDate: '2023-02-01'
+    endDate: '2023-08-31'
     summary: >-
       AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator,
       DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu,
@@ -419,8 +435,8 @@ work:
       Middle School Teacher Dashboard Development at US Subsidiary of
       Educational SaaS Startup
     position: Remote Full-stack Engineer (3 days/week, 3-person development team)
-    startDate: "2022-11-01"
-    endDate: "2023-01-31"
+    startDate: '2022-11-01'
+    endDate: '2023-01-31'
     summary: >-
       AWS lambda, CDK, Node.js, React, AWS app sync, App sync simulator,
       DynamoDB, Dynamo local, Dynamo Admin, Postgress, Graphql, Ubuntu,
@@ -457,7 +473,7 @@ work:
     position: >-
       Remote Full-stack Engineer (3 days/week, Initial development team of 6
       engineers)
-    startDate: "2022-06-01"
+    startDate: '2022-06-01'
     endDate: Present
     summary: >-
       Scrapy, Spider, Playwright, kubenetes, AWS lambda, AWS Batch, Ubuntu,
@@ -539,14 +555,14 @@ work:
         flexibility for weekly changes common in startup environments.
   - company: E-commerce Site Full-scratch Development
     position: Project Manager (5-person development team)
-    startDate: "2022-03-01"
-    endDate: "2022-07-31"
+    startDate: '2022-03-01'
+    endDate: '2022-07-31'
     summary: FlutterFlow, Firebase, GitHub, Lark, CircleCI, GitHub Actions
     highlights: null
   - company: Retail Store Advertising SaaS Product
     position: Remote Android App Engineer (1-3 days/week)
-    startDate: "2021-02-01"
-    endDate: "2021-08-31"
+    startDate: '2021-02-01'
+    endDate: '2021-08-31'
     summary: >-
       Android, Kotlin, GitHub, GitHub Actions, Testing Automation, GitHub
       Projects, Confluence, Slack, Mockito
@@ -559,7 +575,7 @@ work:
         GitHub Actions, as no tests existed previously.
   - company: Consumer App Startup
     position: Technical Advisor
-    startDate: "2022-02-01"
+    startDate: '2022-02-01'
     endDate: Present
     summary: >-
       Flutter, Dart, AWS, MySQL, Docker, docker-compose, GitHub, Slack,
@@ -567,16 +583,16 @@ work:
     highlights: null
   - company: Research Results SaaS Conversion
     position: Technical Verification and Project Management
-    startDate: "2021-12-01"
-    endDate: "2022-03-31"
+    startDate: '2021-12-01'
+    endDate: '2022-03-31'
     summary: MATLAB, Python, GitHub, CircleCI
     highlights: null
   - company: Cloud-based Hardware Image Analysis MVP Development
     position: >-
       Remote Full-stack Engineer & Project Manager (0.5 days/week, 2-3
       Engineers, 1 Assistant/QA)
-    startDate: "2020-12-01"
-    endDate: "2021-03-31"
+    startDate: '2020-12-01'
+    endDate: '2021-03-31'
     summary: >-
       Ubuntu, TypeScript, Dart, Express, FlutterFlow, Flutter, Mermaid, no-code,
       firestore, DDD, Clean Architecture, Microservice Architecture, Monolithic
@@ -627,8 +643,8 @@ work:
     position: >-
       Remote Full-stack Engineer (2 days/week, Team growth from 3 to 35
       engineers)
-    startDate: "2020-03-01"
-    endDate: "2022-02-28"
+    startDate: '2020-03-01'
+    endDate: '2022-02-28'
     summary: >-
       Ubuntu, TypeScript, Dart, Express, Flutter, firestore, Postgres, Google
       CloudSQL, Clean Architecture, Microservice Architecture, Monolithic
@@ -695,8 +711,8 @@ work:
         business philosophy.
   - company: Major Electronics Manufacturer Data Lake Platform Construction
     position: Remote Full-stack Engineer (4 days/week, 8-person development team)
-    startDate: "2020-02-01"
-    endDate: "2020-12-31"
+    startDate: '2020-02-01'
+    endDate: '2020-12-31'
     summary: >-
       AWS CloudFormation, AWS Redshift, AWS Batch, AWS CodePipeline, AWS
       CodeBuild, AWS CodeCommit, ShellSpec, Bazel, Docker, BitBucket, JIRA,
@@ -730,8 +746,8 @@ work:
         technologies.
   - company: New Service Development and Construction
     position: Remote Full-stack Engineer (3 days/week, 4-6 person development team)
-    startDate: "2019-09-01"
-    endDate: "2020-01-31"
+    startDate: '2019-09-01'
+    endDate: '2020-01-31'
     summary: >-
       Linux, Ubuntu, Alpine, TypeScript, Node.js, koa, TypeORM, MySQL5.6, Redis,
       GitHub, CircleCI, Slack, Docker, docker-compose, OpenAPI, AWS ECS Fargate,
@@ -757,8 +773,8 @@ work:
     position: >-
       Remote Infrastructure Engineer (3 days/week, 3 Application Engineers, ~20
       Employees)
-    startDate: "2018-11-01"
-    endDate: "2019-07-31"
+    startDate: '2018-11-01'
+    endDate: '2019-07-31'
     summary: >-
       Linux, Ubuntu, AMI, HCL, MongoDB, Redis, GitHub, CircleCI, Slack, Docker,
       Docker Compose, Ansible, Terraform
@@ -788,8 +804,8 @@ work:
         for corporate needs, which was well-received.
   - company: AI Startup Embedded Environment Construction
     position: Remote Infrastructure Engineer (1 day/week, 3-person development team)
-    startDate: "2018-09-01"
-    endDate: "2018-12-31"
+    startDate: '2018-09-01'
+    endDate: '2018-12-31'
     summary: >-
       Linux, Ubuntu, Python3, GitHub, CircleCI, Slack, Docker, Ansible, AWS
       SageMaker, Jupyter Notebook, Terraform
@@ -814,8 +830,8 @@ work:
     position: >-
       Remote Server-side Engineer (3 days/week, 6-person team with 1 server-side
       engineer)
-    startDate: "2018-03-01"
-    endDate: "2019-07-31"
+    startDate: '2018-03-01'
+    endDate: '2019-07-31'
     summary: >-
       Linux, Ubuntu, Python2, Python3, Flask, Flasgger, DynamoDB, GitHub,
       CircleCI, Slack, Docker, Serverless, Ansible, Swagger
@@ -847,8 +863,8 @@ work:
         Ansible.
   - company: Advertising Delivery Service Development
     position: Remote Backend Engineer (4 days/week, 25-person development team)
-    startDate: "2018-03-01"
-    endDate: "2018-10-31"
+    startDate: '2018-03-01'
+    endDate: '2018-10-31'
     summary: >-
       Linux, Ubuntu, Golang, Echo, Goswagger, MySQL, Aerospike, Redis, GitHub,
       CircleCI, Slack, Docker, SchemaSpy, Ansible, DockrCompose
@@ -872,8 +888,8 @@ work:
         environment setup, as no documentation or scripts existed previously.
   - company: New Service User Web Interface Development
     position: Remote Backend Engineer (4 days/week, 2-person development team)
-    startDate: "2018-02-01"
-    endDate: "2018-02-28"
+    startDate: '2018-02-01'
+    endDate: '2018-02-28'
     summary: >-
       Linux, Ubuntu, Alpine, Kotlin, spark, exporsed, MySQL, GitHub, Backlog,
       CircleCI, Slack, Swagger, API Blueprint, Gradle, Docker, AWS, SchemaSpy
@@ -897,8 +913,8 @@ work:
     position: >-
       Full-stack Engineer (5 days/week, 3 days remote, 6-person development team
       with 2 server-side engineers)
-    startDate: "2017-03-01"
-    endDate: "2017-09-30"
+    startDate: '2017-03-01'
+    endDate: '2017-09-30'
     summary: >-
       Linux, Ubuntu, CentOS, TypeScript, Elixir, nodejs, express, phoenix,
       Postgres, GitHub, ZenHub, CircleCI, Slack, Swagger, ansible, mix,
@@ -920,8 +936,8 @@ work:
     position: >-
       Remote Full-stack Engineer (3 days/week, 4-person development team with 3
       developers)
-    startDate: "2016-11-01"
-    endDate: "2017-02-28"
+    startDate: '2016-11-01'
+    endDate: '2017-02-28'
     summary: >-
       Linux, Ubuntu, CentOS, JavaScript, CSS, Node.js, LoopBack, AngularJS,
       MongoDB, GitHub, CircleCI, Slack, Swagger, GitHubProject
@@ -934,8 +950,8 @@ work:
     position: >-
       Remote Server-side Engineer (2-5 days/week, 4-person development team with
       1 developer)
-    startDate: "2016-08-01"
-    endDate: "2017-02-28"
+    startDate: '2016-08-01'
+    endDate: '2017-02-28'
     summary: >-
       Linux (Ubuntu), Scala, sbt, play2, MySQL, Ansible, GitHub, CircleCI,
       Slack, Asana, Swagger
@@ -958,8 +974,8 @@ work:
     position: >-
       Remote Android App Engineer (2 days/week, 1 day remote, ~20 team members
       with 3 Android developers)
-    startDate: "2016-06-01"
-    endDate: "2017-09-30"
+    startDate: '2016-06-01'
+    endDate: '2017-09-30'
     summary: >-
       Linux (Ubuntu), Scala, sbt, Android, CircleCI, GiHub, DeployGate,
       GitHubIssue, Slack, Beacon, Bluetooth, BLE
@@ -982,8 +998,8 @@ work:
     position: >-
       Remote Android App Engineer (3 days/week, 3-person team with 1 Android
       developer)
-    startDate: "2016-04-02"
-    endDate: "2016-05-31"
+    startDate: '2016-04-02'
+    endDate: '2016-05-31'
     summary: >-
       Linux (Ubuntu), Java, Gradle, Fabric, Android, CircleCI, GiHub,
       PivotalTracker, Slack, Beacon
@@ -997,7 +1013,7 @@ work:
   - company: IoT Startup Demo Server-side Application and Hardware Development
     position: Engineer (4-5 days/week, 3-person team)
     startDate: 2016-4-01
-    endDate: "2016-07-31"
+    endDate: '2016-07-31'
     summary: >-
       Linux (Ubuntu), javascript, Arduino, 3DCAD, nodejs, AngularJS,
       TwitterBootstrap, SQLite, MySQL, npm, bower, Grunt, Sequelize, Ansible,
@@ -1027,8 +1043,8 @@ work:
     position: >-
       Remote Server-side Engineer (3 days/week, 5-person development team with 1
       server-side engineer)
-    startDate: "2016-03-04"
-    endDate: "2016-03-31"
+    startDate: '2016-03-04'
+    endDate: '2016-03-31'
     summary: >-
       Linux (Ubuntu), javascript, html, nodejs, npm, bower, Grunt, MySQL,
       Sequelize, CircleCI, GiHub, Swagger, Slack
@@ -1058,8 +1074,8 @@ work:
     position: >-
       Remote Server-side Engineer (3 days/week, ~3 team members, 1 server-side
       engineer)
-    startDate: "2016-01-16"
-    endDate: "2016-02-28"
+    startDate: '2016-01-16'
+    endDate: '2016-02-28'
     summary: >-
       Linux (Ubuntu), javascript, html, nodejs, npm, bower, Grunt, mp2,
       SendGrid, KiiCloud, GoogleCloudPlatform, CircleCI, sinon, Jasmine, Mocha,
@@ -1095,8 +1111,8 @@ work:
       - Responsible phases included research, design, development, and testing.
   - company: IoT Startup Server-side Application and Hardware Development
     position: Full-stack Engineer (1-3 days/week, ~3 team members)
-    startDate: "2015-12-01"
-    endDate: "2016-03-31"
+    startDate: '2015-12-01'
+    endDate: '2016-03-31'
     summary: >-
       Linux (Ubuntu), javascript, javascript, nodejs, AngularJS,
       TwitterBootstrap, SQLite, npm, bower, Grunt, Sequelize, Ansible, GitHub,
@@ -1113,8 +1129,8 @@ work:
     position: >-
       Remote Android App Engineer (3 days/week, ~4 team members, 1 Android
       developer)
-    startDate: "2015-12-02"
-    endDate: "2016-01-29"
+    startDate: '2015-12-02'
+    endDate: '2016-01-29'
     summary: >-
       Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST
       client, CircleCI, Git, DeployGate, ChatWork
@@ -1138,8 +1154,8 @@ work:
       - Responsible phases included design, development, and testing.
   - company: Service Integration Site Prototype Development
     position: Remote Full-stack Engineer (3 days/week, ~3 team members, 1 developer)
-    startDate: "2015-11-06"
-    endDate: "2016-01-15"
+    startDate: '2015-11-06'
+    endDate: '2016-01-15'
     summary: >-
       Linux (Ubuntu), javascript, html, nodejs, AngularJS, mysql, npm, bower,
       Grunt, CircleCI, GiHub, GitHub Issues, Slack, Sequelize
@@ -1161,8 +1177,8 @@ work:
     position: >-
       Remote Android App Engineer (3 days/week, ~3 team members, 1 Android
       developer)
-    startDate: "2015-10-26"
-    endDate: "2015-11-05"
+    startDate: '2015-10-26'
+    endDate: '2015-11-05'
     summary: >-
       Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST
       client, CircleCI, GitHub, Deploy Gate, GitHub Issues, Slack
@@ -1192,8 +1208,8 @@ work:
     position: >-
       Remote Android App Engineer (3 days/week, ~4 team members, 1 Android
       developer)
-    startDate: "2015-09-14"
-    endDate: "2015-10-25"
+    startDate: '2015-09-14'
+    endDate: '2015-10-25'
     summary: >-
       Linux (Ubuntu), Java, Gradle, Android annotations, Android Spring REST
       client, Beacon, CircleCI, Git, PivotalTracker, Slack
@@ -1221,8 +1237,8 @@ work:
       - Responsible phases included research, design, development, and testing.
   - company: Hardware Startup Product Development Support
     position: Full-stack Engineer (3 days/week, 1-person team)
-    startDate: "2015-05-01"
-    endDate: "2015-08-31"
+    startDate: '2015-05-01'
+    endDate: '2015-08-31'
     summary: Linux (Ubuntu12), arduino, C++,
     highlights:
       - >-
@@ -1274,8 +1290,8 @@ work:
         circuit design/development, and enclosure software design/development.
   - company: Business System Development
     position: Full-stack Engineer (4-person team, 1 developer)
-    startDate: "2014-09-01"
-    endDate: "2015-04-30"
+    startDate: '2014-09-01'
+    endDate: '2015-04-30'
     summary: >-
       Windows, Linux, Scala, Java, Javascript, Gradle, Skinny (Scala), Flyway,
       Jetty, Tomcat, Android annotations, Android Spring REST client,
@@ -1300,8 +1316,8 @@ work:
       - Responsible phases included design, development, and testing.
   - company: SDK Operations Team
     position: Native App Engineer (5-person development team)
-    startDate: "2014-04-01"
-    endDate: "2014-08-31"
+    startDate: '2014-04-01'
+    endDate: '2014-08-31'
     summary: >-
       Windows, Linux, Java, Gradle, C++, Cocos2dx, SQLite, Jenkins, Nexus, Git,
       SVN
@@ -1323,8 +1339,8 @@ work:
       - Responsible phases included design, development, and unit testing.
   - company: App Operations Team
     position: Native App Engineer (5-person development team)
-    startDate: "2013-09-27"
-    endDate: "2014-03-31"
+    startDate: '2013-09-27'
+    endDate: '2014-03-31'
     summary: >-
       Windows, Java, Shell(a little bit), Groovy(a little bit), SQLite, Git,
       Jenkins
@@ -1347,8 +1363,8 @@ work:
       - Responsible phases included design, development, and unit testing.
   - company: Gaming Division Core System
     position: Engineer (14-person development team)
-    startDate: "2012-12-06"
-    endDate: "2013-09-26"
+    startDate: '2012-12-06'
+    endDate: '2013-09-26'
     summary: >-
       Linux, Java, FTL, HTML, CSS, JavaScript, shell, Spring, MySQL, SVN, Git,
       Apache, Tomcat, Memcached, Jenkins, Android
@@ -1372,7 +1388,7 @@ work:
       - >-
         Infrastructure: ~15 application servers, 3 database servers (1 master, 2
         slaves) at the time
-      - "System scope: ~20 screens, ~50 tables"
+      - 'System scope: ~20 screens, ~50 tables'
       - >-
         Also handled WebView app conversion (Android) for browser games. With 6
         target games and more expected, implemented all non-game-specific
@@ -1381,8 +1397,8 @@ work:
       - Responsible phases included design, development, and testing.
   - company: Mobile Browser Game Operations
     position: Engineer (20-person development team)
-    startDate: "2012-08-16"
-    endDate: "2012-12-05"
+    startDate: '2012-08-16'
+    endDate: '2012-12-05'
     summary: >-
       Linux, Java, FTL, HTML, CSS, JavaScript, shell, Spring, Seaser, MySQL,
       Apache, Tomcat
@@ -1397,21 +1413,21 @@ work:
         unit testing) and customer support investigation.
   - company: Custom Service Development
     position: Engineer
-    startDate: "2012-05-01"
-    endDate: "2012-08-15"
+    startDate: '2012-05-01'
+    endDate: '2012-08-15'
     summary: >-
       Linux, Java, JSP, HTML, CSS, JavaScript, shell, Struts, MySQL, Apache,
       Tomcat
     highlights:
       - Developed site construction system
-      - "System scope: 83 screens"
-      - "Database: 39 tables"
+      - 'System scope: 83 screens'
+      - 'Database: 39 tables'
       - Responsible for all project phases
   - company: >-
       Major Electronics Manufacturer Division Production Management System
       Construction
     position: Engineer (13-person development team)
-    startDate: "2011-10-07"
+    startDate: '2011-10-07'
     endDate: 2012-04
     summary: Windows, Java, JSP, PL/SQL, Struts ベース独自 FW, Oracle, Apache
     highlights:
@@ -1419,7 +1435,7 @@ work:
         Developed production management system for major electronics
         manufacturer division.
       - Used Java/JSP for UI processing and PL/SQL for database updates.
-      - "System scope: 73 screens, 122 tables."
+      - 'System scope: 73 screens, 122 tables.'
       - Responsible for Java-side detailed design, development, and testing.
       - Handled process from detailed design through implementation and testing.
       - >-
@@ -1458,12 +1474,12 @@ work:
         system, mobile site CMS, beauty salon reservation system, and more.
   - company: Major Restaurant Chain Portal Site
     position: Engineer (4-person development team, plus design company staff)
-    startDate: "2011-02-21"
-    endDate: "2011-10-07"
+    startDate: '2011-02-21'
+    endDate: '2011-10-07'
     summary: Linux(RH), Java, JSP, Struts2, MySQL, Apache
     highlights:
       - Built restaurant chain portal site as per client request.
-      - "System scope: 26 screens, 85 tables."
+      - 'System scope: 26 screens, 85 tables.'
       - Handled from basic design through implementation and testing.
       - Received HTML designs from design company and converted to JSP.
       - >-
@@ -1477,16 +1493,16 @@ work:
         site management system.
   - company: Retail Store E-commerce Site and Order Management System Construction
     position: Engineer (3-person development team)
-    startDate: "2009-04-01"
-    endDate: "2009-05-31"
+    startDate: '2009-04-01'
+    endDate: '2009-05-31'
     summary: Linux(RedHat), Java, JSP, HTML, JavaScript, CSS, Struts2, MySQL
     highlights:
       - >-
         Project to convert Excel-based group company mail-order management to
         web system.
-      - "Customer site: 25 screens"
-      - "Admin site: 48 screens"
-      - "Database: 33 tables"
+      - 'Customer site: 25 screens'
+      - 'Admin site: 48 screens'
+      - 'Database: 33 tables'
       - >-
         Responsible for requirements definition, basic design, DB design,
         detailed design, implementation, design application, testing, delivery,
@@ -1545,7 +1561,7 @@ work:
         Built system to manage customer information for client-hosted meetings
         and workshops, including staff attendance management and communication
         management.
-      - "System scope: 46 screens, 22 tables"
+      - 'System scope: 46 screens, 22 tables'
       - >-
         Responsible for requirements definition, basic design, DB design, screen
         design, implementation, design application, testing, operations
@@ -1653,8 +1669,8 @@ education:
   - institution: Collage
     area: Qualified　Bornsetter
     studyType: null
-    startDate: "2004-04-01"
-    endDate: "2007-03-31"
+    startDate: '2004-04-01'
+    endDate: '2007-03-31'
 awards: []
 publications: []
 interests:
@@ -1706,5 +1722,6 @@ languages:
     fluency: Native
   - language: English
     fluency: Capable of team communication
-  - language: " "
+  - language: ' '
     fluency: (Not Business-level English)
+
