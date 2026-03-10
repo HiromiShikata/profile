@@ -74,6 +74,7 @@ jobs:
           npm run generate:short:ja
           check_pdf_generation "generated/resume/HiromiShikata.resume.short.ja.pdf"
 
+          curl -sL https://github.com/HiromiShikata.png -o .render-jpcv/photo.jpg
           npx render-jpcv build rirekisho.yaml
           mv rirekisho.pdf generated/resume/HiromiShikata.rirekisho.pdf
           check_pdf_generation "generated/resume/HiromiShikata.rirekisho.pdf"

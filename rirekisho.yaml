@@ -9,9 +9,10 @@ profile:
   gender: 女
   address: 東京都港区南青山
   address_kana: とうきょうとみなとくみなみあおやま
+  address_zip: 107-0062
   phone: 050-5354-8192
   email: shikata@uminoseisaku.com
-  photo: ""
+  face_image_path: photo.jpg
 education:
   - date: 2004-04
     event: 呉竹柔道整復鍼灸専門学校 入学
@@ -37,4 +38,4 @@ qualifications:
     name: 柔道整復師免許
 other:
   motivation: ""
-  conditions: ""
+  conditions: 貴社の規定に従います。
