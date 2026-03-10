@@ -15,9 +15,9 @@ profile:
   face_image_path: photo.jpg
 education:
   - date: 2004-04
-    event: 呉竹柔道整復鍼灸専門学校 入学
+    event: 呉竹柔道整復鍼灸専門学校 柔道整復学科 入学
   - date: 2007-03
-    event: 同校 卒業
+    event: 同校 同学科 卒業
 work:
   - date: 2007-04
     event: 株式会社エコーシステムズ 入社
