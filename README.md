@@ -24,7 +24,7 @@
 - [HTML](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.short.ja.html)
 - [PDF](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.short.ja.pdf)
 
-#### 履歴書
+#### Rirekisho (JIS Format)
 
 - [PDF](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.rirekisho.pdf)
 
