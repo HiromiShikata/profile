@@ -74,7 +74,7 @@ jobs:
           npm run generate:short:ja
           check_pdf_generation "generated/resume/HiromiShikata.resume.short.ja.pdf"
 
-          curl -sL https://github.com/HiromiShikata.png -o .render-jpcv/photo.jpg
+          curl -sL "https://uploads.toptal.io/profile_photo/image/user/2891861/default_60a7a04cf286e45ce38131d735eb4e98.jpg" -o .render-jpcv/photo.jpg
           npx render-jpcv build rirekisho.yaml
           mv rirekisho.pdf generated/resume/HiromiShikata.rirekisho.pdf
           check_pdf_generation "generated/resume/HiromiShikata.rirekisho.pdf"
