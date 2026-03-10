@@ -18,12 +18,18 @@ education:
   - date: 2007-03
     event: 専門学校 卒業
 work:
-  - date: 2007-08
-    event: SIer企業入社（SAP/ABAP開発）
-  - date: 2018-10
+  - date: 2007-04
+    event: 株式会社エコーシステムズ 入社
+  - date: 2008-09
     event: 同社退職
-  - date: 2018-11
+  - date: 2008-10
+    event: 株式会社ザクラ 入社
+  - date: 2011-10
+    event: 同社退職
+  - date: 2011-10
     event: フリーランスエンジニアとして独立
+  - date: 2018-02
+    event: 海野制作株式会社 設立
   - date: ""
     event: 現在に至る
 qualifications:
