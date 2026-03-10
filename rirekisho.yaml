@@ -1,0 +1,41 @@
+config:
+  font_size: 11pt
+  year_style: seireki
+  render_date: 2026-03-10
+profile:
+  name: 志方 裕美
+  name_kana: しかた ひろみ
+  birthday: 1985-05-07
+  gender: 女
+  address: 東京都港区南青山
+  address_kana: とうきょうとみなとくみなみあおやま
+  address_zip: 107-0062
+  phone: 050-5354-8192
+  email: shikata@uminoseisaku.com
+  face_image_path: photo.jpg
+education:
+  - date: 2004-04
+    event: 呉竹柔道整復鍼灸専門学校 柔道整復学科 入学
+  - date: 2007-03
+    event: 同校 同学科 卒業
+work:
+  - date: 2007-04
+    event: 株式会社エコーシステムズ 入社（開発部配属）
+  - date: 2008-09
+    event: 同社退職
+  - date: 2008-10
+    event: 株式会社ザクラ 入社
+  - date: 2011-10
+    event: 同社退職
+  - date: 2011-10
+    event: フリーランスエンジニアとして独立
+  - date: 2018-02
+    event: 海野制作株式会社 設立
+  - date: ""
+    event: 現在に至る
+qualifications:
+  - date: 2007-03
+    name: 柔道整復師免許
+other:
+  motivation: ""
+  hopes: 貴社の規定に従います。

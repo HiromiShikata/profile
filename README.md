@@ -24,6 +24,10 @@
 - [HTML](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.short.ja.html)
 - [PDF](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.resume.short.ja.pdf)
 
+#### Rirekisho (JIS Format)
+
+- [PDF](https://hiromishikata.github.io/profile/generated/resume/HiromiShikata.rirekisho.pdf)
+
 ## Meeting
 
 - [Meeting](https://hiromi.appointlet.com/s/30-umino/hiromi)
