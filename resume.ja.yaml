@@ -746,9 +746,7 @@ languages:
   - language: 日本語
     fluency: ネイティブ
   - language: 英語
-    fluency: チーム内コミュニケーション可能
-  - language: ' '
-    fluency: (対社外のビジネス英会話はできないと思います)
+    fluency: ビジネス会話
 basics:
   name: 志方 裕美 (シカタ ヒロミ)
   label: 19年目フルスタックエンジニア(兼エンジニアリングマネージャー)
