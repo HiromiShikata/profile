@@ -677,6 +677,4 @@ languages:
   - language: Japanese
     fluency: Native
   - language: English
-    fluency: Capable of team communication
-  - language: ' '
-    fluency: (Not Business-level English)
+    fluency: Business communication
