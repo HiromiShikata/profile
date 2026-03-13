@@ -257,6 +257,25 @@ work:
         strict architectural enforcement via linting rules, CI checks, and
         self-documenting directory/file naming conventions rather than
         documentation.
+      - >-
+        Enhanced the GitHub Issue automation CLI tool
+        (npm-cli-gh-issue-preparator) with 3-tier configuration resolution
+        (config YAML/CLI options/GitHub Project README), workflow blocker
+        detection with Webhook notification, distinction detection of CI jobs
+        that never started, and GraphQL API error handling fixes. Maintained 288
+        tests with 100% coverage while adding features in Clean
+        Architecture-based TypeScript development.
+      - >-
+        Fixed a URL encoding bug in the Google Apps Script smartphone
+        integration repository (gaccount-control-gas), ensuring special
+        characters (spaces, &, = etc.) in messages are properly encoded.
+      - >-
+        Added voicemail auto-classification patterns to the business automation
+        workflow (umino-corporait-operation), expanding automatic categorization
+        of incoming call issues.
+      - >-
+        Maintained AI agent operational environment (secretary) skill definition
+        files, adding Storybook URL information and issue creation rules.
   - company: AI SaaS Product R&D Startup
     position: Remote Full-stack Engineer & Engineering Manager
     startDate: '2024-04-01'
