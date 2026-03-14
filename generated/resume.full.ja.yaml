@@ -103,15 +103,19 @@ work:
   - company: 大手メーカーソフトウェア開発プロジェクト向けプロダクトグローバルチーム
     position: フルリモート バックエンドエンジニア
     startDate: '2025-05-12'
-    endDate: 現在
+    endDate: '2026-03-31'
     summary: >-
       Golang, Python, Terraform, TypeScript, Jira, Artifactory, Docker,
       Cucumber, Gherkin, Gin, FastAPI, AWS, GCP, Azure, GitHub Actions, GitHub
-      Projects, GitHub Issues, Slack,
+      Projects, GitHub Issues, Slack, Kubernetes,
     highlights:
-      - go とpythonで書かれた既存プロダクトの機能開発を行いました。
-      - terraform provider のメンテナンスを行いました。
+      - 日本人は自分だけのインターナショナルチームでの開発でした。
+      - スクラム体制での開発に沿いつつ、リントの強化やCIの調整、リファクタリング、コードベースの改善を推進しました。
+      - GoとPythonで書かれた既存プロダクトの機能開発を行いました。
+      - Terraform Providerのメンテナンスを行いました。
       - ArtifactoryのAPIを使用して自動でのコントロール機能の拡張を行いました。
+      - >-
+        外部チームとの協業が必要なリリースにおいて、スケジュールや日程の調整を担当しました。全チームが同じ認識を持てるよう、手順や予定の確認、残タスクの洗い出しを行い、スムーズなリリースに貢献しました。
   - company: ロジスティクスSaaSスタートアップ シリーズC
     position: フルリモート インフラ,バックエンド,フロントエンドエンジニア
     startDate: '2025-04-22'
@@ -121,13 +125,24 @@ work:
       copilot, Claude Code, Claude Code Review, Trunk-based development, GitHub
       Actions, Backlog, GitHub Projects, GitHub Issues, Slack,
     highlights:
-      - Trunk-Based development の導入を行いました。
-      - リリースサイクルが2週間に1回でしたが頻繁にできる体制を整えました。
+      - ナレッジ共有・人材育成・評価に使用するSaaSプロダクトの開発でした。週2〜3日程度の稼働でした。
+      - エンジニア常時1.5人程度、PdM1人のスモールチームでした。
+      - プロダクト公開から順調に顧客数を伸ばし、1年足らずでARR7,500万円程度に成長しました。
       - >-
-        e2eテストの導入、Typescript CDKのAWS stack
-        の構成をstateの観点で3種類に整理、AIを使用した開発を組め込めるよう整えました。
-      - biome を1.9 から 2.0.0-beta に移行し、GritQLでプロジェクト固有のルールを記述して静的解析を充実させるよう努めました。
-      - amplify gen2にて各作業ブランチの環境を個別に作成し20程度の環境を維持できるよう整えて動作確認とe2eを確実にする環境を構築しました
+        AIがソフトウェア開発でパワーを発揮できるよう環境を整備し、レビュー負荷を下げる自動的な仕組みを増強しました。最終的にエンジニア1人分のボリュームでありながら、PRの生産スピードは以前の平均1.5件/日から最大50件/日に到達し、開発スピードが約33倍に伸びました。
+      - >-
+        カスタマーサポートメンバーの運営上の課題を聞き次第、随時改善のための細かな機能を導入しました。新機能開発や改善スピードの速さについて、営業の方から「改善が追いきれないほど早い」と評価いただきました。
+      - >-
+        Trunk-Based
+        Developmentを導入し、参画開始時には2週間に1回程度だったリリース頻度を、長くとも2日に1回、理想的には1日1回を目指せる体制にしました。
+      - Feature Flagを導入し、大量のPRがマージされる環境でもコンフリクトを極限まで抑え、余計な調整コストを削減する体制を構築しました。
+      - >-
+        e2eテストの導入、TypeScript CDKのAWS
+        Stackの構成をstateの観点で3種類に整理、AIを使用した開発を組み込めるよう整えました。
+      - biomeを1.9から2.0.0-betaに移行し、GritQLでプロジェクト固有のルールを記述して静的解析を充実させました。
+      - >-
+        AWS Amplify
+        Gen2にて各作業ブランチの環境を個別に作成し、20程度の環境を維持できるよう整えて動作確認とe2eを確実にする環境を構築しました。
   - company: AI営業SaaSスタートアップ シリーズA
     position: フルリモート 技術顧問
     startDate: '2025-04-22'
