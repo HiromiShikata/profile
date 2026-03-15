@@ -1,5 +1,17 @@
 ---
 work:
+  - company: OSSプロジェクト npm-cli-gh-issue-preparator
+    position: 個人開発 TypeScript CLIツール開発
+    startDate: "2025-12-14"
+    endDate: 現在
+    summary: TypeScript, Clean Architecture, DDD, GitHub Actions, GitHub Issues, GitHub Projects, Jest, Node.js
+    highlights:
+      - GitHub Issueの準備・自動化を行うCLIツールをOSSとして開発しました。
+      - 設定値の3階層解決（config YAML/CLIオプション/GitHub Project README）を実装し、柔軟な設定管理を実現しました。
+      - ワークフローブロッカー検知とWebhook通知機能を追加しました。
+      - CI未実行ジョブと失敗ジョブの区別検知機能を実装しました。
+      - GraphQL APIのエラーハンドリングを修正し、組織/ユーザーコンテキストのクエリに対応しました。
+      - クリーンアーキテクチャに基づくTypeScript開発で、288テスト/100%カバレッジを維持しながら機能追加を実施しました。
   - company: 大手メーカーソフトウェア開発プロジェクト向けプロダクトグローバルチーム
     position: フルリモート バックエンドエンジニア
     startDate: "2025-05-12"
