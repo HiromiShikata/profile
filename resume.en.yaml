@@ -1,5 +1,17 @@
 ---
 work:
+  - company: OSS Project npm-cli-gh-issue-preparator
+    position: Personal TypeScript CLI Tool Development
+    startDate: '2025-12-14'
+    endDate: Present
+    summary: TypeScript, Clean Architecture, DDD, GitHub Actions, GitHub Issues, GitHub Projects, Jest, Node.js
+    highlights:
+      - Developed an OSS CLI tool for automating GitHub Issue preparation.
+      - Implemented 3-tier configuration resolution (config YAML / CLI options / GitHub Project README), enabling flexible configuration management.
+      - Added workflow blocker detection with Webhook notification functionality.
+      - Implemented detection to distinguish CI jobs that never started from failed CI jobs.
+      - Fixed GraphQL API error handling to properly handle organization/user context queries.
+      - Maintained 288 tests with 100% coverage while adding features in Clean Architecture-based TypeScript development.
   - company: Division of a leading AI company
     position: Full-remote work AI engineer
     startDate: '2025-02-27'
