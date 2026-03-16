@@ -281,6 +281,16 @@ work:
         strict architectural enforcement via linting rules, CI checks, and
         self-documenting directory/file naming conventions rather than
         documentation.
+      - >-
+        Implemented AWS infrastructure cost optimization through Lambda function
+        ARM64 (Graviton2) architecture migration and memory right-sizing.
+        Migrated all Node.js Lambda functions to ARM64, achieving approximately
+        20% cost reduction. Designed per-function architecture strategy
+        considering binary compatibility, added Prisma ARM64 binary targets, and
+        implemented CDK assertion tests for architecture configuration
+        verification. Investigated and identified a CloudFormation race
+        condition during initial ARM64 deployment and resolved it in a follow-up
+        PR.
   - company: OSS Development (Personal Projects)
     position: Developer & Maintainer
     startDate: '2024-05-28'
