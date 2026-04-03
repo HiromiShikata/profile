@@ -637,7 +637,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">ワークフローブロッカー検知とWebhook通知機能を追加しました。</p>
                           <p class="highlight">CI未実行ジョブと失敗ジョブの区別検知機能を実装しました。</p>
                           <p class="highlight">GraphQL APIのエラーハンドリングを修正し、組織/ユーザーコンテキストのクエリに対応しました。</p>
-                          <p class="highlight">クリーンアーキテクチャに基づくTypeScript開発で、288テスト/100%カバレッジを維持しながら機能追加を実施しました。</p>
+                          <p class="highlight">issueに紐づく既存PRのブランチ名をGraphQL APIで自動取得し、awコマンドに--branchオプションで渡すことで、再トリガー時に既存ブランチを正しく引き継ぐ機能を実装しました。</p>
+                          <p class="highlight">プロジェクトアイテムがPR URLの場合にfindRelatedOpenPRsが例外をスローする問題を修正しました。IssueRepositoryインターフェースにgetOpenPullRequest(prUrl)を追加し、collectRejections()でPR URLを検出して適切に処理するよう改修しました。</p>
+                          <p class="highlight">クリーンアーキテクチャに基づくTypeScript開発で、344テスト/100%カバレッジを維持しながら機能追加を実施しました。</p>
                     </div>
                   </div>
                 </section>
@@ -1224,7 +1226,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <p>Linux (Ubuntu), Scala, sbt, play2, MySQL, Ansible, GitHub, CircleCI, Slack, Asana, Swagger</p>
                           <p class="highlight">4 月から手伝っているプロジェクトでハードウェアの量産経験がある方のジョインと、量産が見えてきたタイミングでサーバーサイドの開発が取り掛かれるようになりましたので、今までのデモ用システムとは別に新しくシステムの構築を開始しました。</p>
                           <p class="highlight">今後の展開を考え、構成を大きく分離し最終的な目的に多くの手段を取れるよう機能的に分離し、粗結合のわかりやすいシステムになるよう構築しました。</p>
-                          <p class="highlight">意識してはいませんでしたがマイクロサービスアーキテクチャのような構成になりました。</p>
+                          <p class="highlight">意識してはいませんでしたがマイクロサービ��アーキテクチャのような構成になりました。</p>
                           <p class="highlight">担当フェーズは要件定義、言語選定、設計、開発、テストです。</p>
                     </div>
                   </div>
