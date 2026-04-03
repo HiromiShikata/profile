@@ -11,7 +11,9 @@ work:
       - Added workflow blocker detection with Webhook notification functionality.
       - Implemented detection to distinguish CI jobs that never started from failed CI jobs.
       - Fixed GraphQL API error handling to properly handle organization/user context queries.
-      - Maintained 288 tests with 100% coverage while adding features in Clean Architecture-based TypeScript development.
+      - Implemented automatic detection of existing PR branch names via GitHub GraphQL API and pass them to the aw command via a --branch option, enabling correct branch checkout on re-trigger instead of always creating a new branch.
+      - Fixed a crash in notifyFinishedIssuePreparation when a GitHub project item is a PR URL: added getOpenPullRequest(prUrl) to IssueRepository interface and updated collectRejections() to detect PR URLs and call getOpenPullRequest instead of the issue-only findRelatedOpenPRs.
+      - Maintained 344 tests with 100% coverage while adding features in Clean Architecture-based TypeScript development.
   - company: Division of a leading AI company
     position: Full-remote work AI engineer
     startDate: '2025-02-27'
