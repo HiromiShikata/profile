@@ -17,6 +17,7 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]'
     steps:
       - uses: actions/create-github-app-token@v3
         id: app-token
