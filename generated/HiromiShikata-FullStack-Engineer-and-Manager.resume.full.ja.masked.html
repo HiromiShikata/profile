@@ -639,6 +639,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">GraphQL APIのエラーハンドリングを修正し、組織/ユーザーコンテキストのクエリに対応しました。</p>
                           <p class="highlight">issueに紐づく既存PRのブランチ名をGraphQL APIで自動取得し、awコマンドに--branchオプションで渡すことで、再トリガー時に既存ブランチを正しく引き継ぐ機能を実装しました。</p>
                           <p class="highlight">プロジェクトアイテムがPR URLの場合にfindRelatedOpenPRsが例外をスローする問題を修正しました。IssueRepositoryインターフェースにgetOpenPullRequest(prUrl)を追加し、collectRejections()でPR URLを検出して適切に処理するよう改修しました。</p>
+                          <p class="highlight">issueにNextActionDateまたはNextActionHourが設定されている場合にAwaiting Quality CheckではなくAwaiting Workspaceへ自動移動するよう改善し、依存issueありの場合と動作を統一しました。</p>
+                          <p class="highlight">llm-agentラベル付きissueでNotifyFinishがPRの必須チェックを誤って要求する不具合を修正し、categoryラベルと同様のスキップ動作に統一しました。</p>
+                          <p class="highlight">CLIをprogram.parse()からparseAsync()に移行してasync処理が確実に完了するようにし、デフォルトClaudeモデルをclaude-sonnet-4.6に設定しました。</p>
+                          <p class="highlight">HiromiShikata配下の全管理対象リポジトリで廃止予定のcategory:*ラベルをgithub-label-syncのエイリアス機能を活用してダウンタイムなしでllm-agent:*ラベルへ一括移行しました。</p>
+                          <p class="highlight">issue処理時に使用するClaudeモデルをissueラベル（llm-model:claude-opus-4.6/claude-sonnet-4.6/claude-haiku）で指定できる仕組みをrepositories-managementに実装し、全管理対象リポジトリへ展開しました。</p>
                           <p class="highlight">クリーンアーキテクチャに基づくTypeScript開発で、344テスト/100%カバレッジを維持しながら機能追加を実施しました。</p>
                     </div>
                   </div>
@@ -1226,7 +1231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <p>Linux (Ubuntu), Scala, sbt, play2, MySQL, Ansible, GitHub, CircleCI, Slack, Asana, Swagger</p>
                           <p class="highlight">4 月から手伝っているプロジェクトでハードウェアの量産経験がある方のジョインと、量産が見えてきたタイミングでサーバーサイドの開発が取り掛かれるようになりましたので、今までのデモ用システムとは別に新しくシステムの構築を開始しました。</p>
                           <p class="highlight">今後の展開を考え、構成を大きく分離し最終的な目的に多くの手段を取れるよう機能的に分離し、粗結合のわかりやすいシステムになるよう構築しました。</p>
-                          <p class="highlight">意識してはいませんでしたがマイクロサービ��アーキテクチャのような構成になりました。</p>
+                          <p class="highlight">意識してはいませんでしたがマイクロサービスアーキテクチャのような構成になりました。</p>
                           <p class="highlight">担当フェーズは要件定義、言語選定、設計、開発、テストです。</p>
                     </div>
                   </div>

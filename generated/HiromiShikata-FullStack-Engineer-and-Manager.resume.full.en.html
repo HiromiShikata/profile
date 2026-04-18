@@ -639,6 +639,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">Fixed GraphQL API error handling to properly handle organization/user context queries.</p>
                           <p class="highlight">Implemented automatic detection of existing PR branch names via GitHub GraphQL API and pass them to the aw command via a --branch option, enabling correct branch checkout on re-trigger instead of always creating a new branch.</p>
                           <p class="highlight">[object Object]</p>
+                          <p class="highlight">Improved automatic issue status routing so issues with NextActionDate or NextActionHour are moved to Awaiting Workspace instead of Awaiting Quality Check, unifying behavior with dependency-blocked issues.</p>
+                          <p class="highlight">Fixed NotifyFinish to skip the required PR check for issues labeled llm-agent, matching the existing skip behavior for category-labeled issues.</p>
+                          <p class="highlight">Migrated CLI from program.parse() to parseAsync() to ensure async operations complete before process exit, and set claude-sonnet-4.6 as the default Claude model.</p>
+                          <p class="highlight">Migrated deprecated category:* labels to llm-agent:* labels across all HiromiShikata-managed repositories using github-label-sync alias feature for a seamless zero-downtime transition.</p>
+                          <p class="highlight">Implemented llm-model:* label support (claude-opus-4.6/claude-sonnet-4.6/claude-haiku) in repositories-management to allow specifying the Claude model used for issue processing per-issue via labels, rolled out to all managed repositories.</p>
                           <p class="highlight">Maintained 344 tests with 100% coverage while adding features in Clean Architecture-based TypeScript development.</p>
                     </div>
                   </div>

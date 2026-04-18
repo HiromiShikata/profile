@@ -131,6 +131,28 @@ work:
           updated collectRejections() to detect PR URLs and call
           getOpenPullRequest instead of the issue-only findRelatedOpenPRs.
       - >-
+        Improved automatic issue status routing so issues with NextActionDate or
+        NextActionHour are moved to Awaiting Workspace instead of Awaiting
+        Quality Check, unifying behavior with dependency-blocked issues.
+      - >-
+        Fixed NotifyFinish to skip the required PR check for issues labeled
+        llm-agent, matching the existing skip behavior for category-labeled
+        issues.
+      - >-
+        Migrated CLI from program.parse() to parseAsync() to ensure async
+        operations complete before process exit, and set claude-sonnet-4.6 as
+        the default Claude model.
+      - >-
+        Migrated deprecated category:* labels to llm-agent:* labels across all
+        HiromiShikata-managed repositories using github-label-sync alias feature
+        for a seamless zero-downtime transition.
+      - >-
+        Implemented llm-model:* label support
+        (claude-opus-4.6/claude-sonnet-4.6/claude-haiku) in
+        repositories-management to allow specifying the Claude model used for
+        issue processing per-issue via labels, rolled out to all managed
+        repositories.
+      - >-
         Maintained 344 tests with 100% coverage while adding features in Clean
         Architecture-based TypeScript development.
   - company: Division of a leading AI company

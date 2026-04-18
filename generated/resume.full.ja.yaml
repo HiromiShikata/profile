@@ -122,6 +122,17 @@ work:
         プロジェクトアイテムがPR
         URLの場合にfindRelatedOpenPRsが例外をスローする問題を修正しました。IssueRepositoryインターフェースにgetOpenPullRequest(prUrl)を追加し、collectRejections()でPR
         URLを検出して適切に処理するよう改修しました。
+      - >-
+        issueにNextActionDateまたはNextActionHourが設定されている場合にAwaiting Quality
+        CheckではなくAwaiting Workspaceへ自動移動するよう改善し、依存issueありの場合と動作を統一しました。
+      - >-
+        llm-agentラベル付きissueでNotifyFinishがPRの必須チェックを誤って要求する不具合を修正し、categoryラベルと同様のスキップ動作に統一しました。
+      - >-
+        CLIをprogram.parse()からparseAsync()に移行してasync処理が確実に完了するようにし、デフォルトClaudeモデルをclaude-sonnet-4.6に設定しました。
+      - >-
+        HiromiShikata配下の全管理対象リポジトリで廃止予定のcategory:*ラベルをgithub-label-syncのエイリアス機能を活用してダウンタイムなしでllm-agent:*ラベルへ一括移行しました。
+      - >-
+        issue処理時に使用するClaudeモデルをissueラベル（llm-model:claude-opus-4.6/claude-sonnet-4.6/claude-haiku）で指定できる仕組みをrepositories-managementに実装し、全管理対象リポジトリへ展開しました。
       - クリーンアーキテクチャに基づくTypeScript開発で、344テスト/100%カバレッジを維持しながら機能追加を実施しました。
   - company: 大手メーカーソフトウェア開発プロジェクト向けプロダクトグローバルチーム
     position: フルリモート バックエンドエンジニア
