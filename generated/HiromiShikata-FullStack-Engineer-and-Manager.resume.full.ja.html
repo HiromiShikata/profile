@@ -689,6 +689,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">e2eテストの導入、TypeScript CDKのAWS Stackの構成をstateの観点で3種類に整理、AIを使用した開発を組み込めるよう整えました。</p>
                           <p class="highlight">biomeを1.9から2.0.0-betaに移行し、GritQLでプロジェクト固有のルールを記述して静的解析を充実させました。</p>
                           <p class="highlight">AWS Amplify Gen2にて各作業ブランチの環境を個別に作成し、20程度の環境を維持できるよう整えて動作確認とe2eを確実にする環境を構築しました。</p>
+                          <p class="highlight">Webプッシュ通知インフラをAWS CDK Custom Resourceで構築しました。ECDSA P-256キーペアを自動生成してプライベートキーをSecrets Managerに保管し、パブリックキーをLambda環境変数とフロントエンドビルドに注入することで、master・ステージング・レビュー全環境でVAPIDベースのWebプッシュ通知を機能させました。</p>
+                          <p class="highlight">マルチテナントPWAのWebアプリマニフェスト動的ルーティングを実装しました。index.htmlにインラインIIFEスクリプトを追加し、ページロード時に&#x60;?tenant&#x3D;&#x60;パラメータを読み取ってテナントごとのマニフェストhrefを設定し、複数テナントが独立してPWAをインストールできるようにしました。</p>
+                          <p class="highlight">パスキー(WebAuthn/FIDO2)のUXを改善しました。&#x60;useGetFeatureFlags&#x60;のplaceholderDataから&#x60;?? {}&#x60;を削除してフィーチャーフラグ取得前にパスキーモーダルが描画されるレースコンディションを解消し、ブラウザ・プラットフォーム情報から「Chrome on Mac」「iOS Safari」等のデバイス名を自動設定して複数のパスキーを区別できるようにしました。</p>
+                          <p class="highlight">フラキーなE2Eログインテストの根本原因を3件特定・修正しました。Cognitoの一時的なスロットリングに対するリトライロジック追加、DB/Cognitoユーザー状態デシンクの再同期処理、スタックCI待ち行列によるカスケード失敗の解消、加えてDate.now()タイムスタンプベースのID生成を11テストスイートにわたって固定IDに置換しID衝突起因のテスト失敗を根絶しました。</p>
+                          <p class="highlight">CI/CDパイプラインの信頼性向上とコスト削減を行いました。スタックCI実行のキャンセルをforce-cancel APIに切り替え、待ち行列管理ロジックにpending状態の実行も含めるよう拡張し、未使用プレースホルダーワークフローを削除し月約$8のコストを削減、DynamoDBテーブルの不要なPoint-in-time Recoveryを無効化しAWSインフラコストを削減しました。</p>
+                          <p class="highlight">API Gatewayの設定からAsyncAPI 2.6.0 WebSocket仕様を自動生成し、手作業なしでAPI仕様書のカバレッジを向上させました。</p>
                     </div>
                   </div>
                 </section>

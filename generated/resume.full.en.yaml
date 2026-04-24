@@ -322,6 +322,41 @@ work:
         verification. Investigated and identified a CloudFormation race
         condition during initial ARM64 deployment and resolved it in a follow-up
         PR.
+      - Built Web Push notification infrastructure from scratch using AWS CDK Custom Resource: >-
+          generated an ECDSA P-256 key pair automatically, stored the private
+          key in AWS Secrets Manager, and injected the public key into both
+          Lambda environment variables and the frontend build, making
+          VAPID-based Web Push notifications functional across all environments
+          (master, staging, review).
+      - >-
+        Implemented multi-tenant PWA Web App Manifest dynamic routing by adding
+        an inline IIFE script in index.html that reads the ?tenant= URL
+        parameter at page load and sets the manifest link href to the correct
+        tenant-specific manifest, enabling multiple tenants to install the PWA
+        independently.
+      - Improved passkey (WebAuthn/FIDO2) UX: >-
+          removed the ?? {} fallback from useGetFeatureFlags placeholderData so
+          isLoading stays true during initial page load, preventing the passkey
+          modal from rendering before feature flags are ready; and added
+          automatic platform-based device name detection (e.g., "Chrome on Mac",
+          "iOS Safari") so users can distinguish multiple registered passkeys.
+      - Resolved systematic E2E test reliability issues by identifying and fixing three root causes of flaky login tests: >-
+          added Cognito throttling retry logic, implemented DB/Cognito
+          user-state re-sync to fix desync failures, and eliminated a stuck CI
+          queue causing cascading failures. Also replaced Date.now()
+          timestamp-based tenant/user IDs with deterministic fixed IDs across 11
+          test suites to eliminate ID collision failures.
+      - Improved CI/CD pipeline reliability and reduced costs: >-
+          switched stale-CI-run cancellation to the force-cancel API for runs
+          stuck in-progress, extended queue-management logic to also consider
+          pending runs, deleted an unused placeholder workflow that was
+          executing 35 times/day on ubuntu-latest runners (saving approximately
+          $8/month), and disabled unnecessary point-in-time recovery on a
+          DynamoDB table to reduce AWS infrastructure costs.
+      - >-
+        Generated AsyncAPI 2.6.0 WebSocket specification automatically from AWS
+        API Gateway configuration, improving API documentation coverage without
+        manual maintenance.
   - company: OSS Development (Personal Projects)
     position: Developer & Maintainer
     startDate: '2024-05-28'
