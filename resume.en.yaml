@@ -71,6 +71,9 @@ work:
       - Resolved systematic E2E test reliability issues by identifying and fixing three root causes of flaky login tests: added Cognito throttling retry logic, implemented DB/Cognito user-state re-sync to fix desync failures, and eliminated a stuck CI queue causing cascading failures. Also replaced Date.now() timestamp-based tenant/user IDs with deterministic fixed IDs across 11 test suites to eliminate ID collision failures.
       - Improved CI/CD pipeline reliability and reduced costs: switched stale-CI-run cancellation to the force-cancel API for runs stuck in-progress, extended queue-management logic to also consider pending runs, deleted an unused placeholder workflow that was executing 35 times/day on ubuntu-latest runners (saving approximately $8/month), and disabled unnecessary point-in-time recovery on a DynamoDB table to reduce AWS infrastructure costs.
       - Generated AsyncAPI 2.6.0 WebSocket specification automatically from AWS API Gateway configuration, improving API documentation coverage without manual maintenance.
+      - Built a multi-layered AWS cloud security monitoring infrastructure for threat detection, audit logging, and access permission analysis by enabling GuardDuty (all protection plans), CloudTrail (KMS encryption with 7-year WORM retention), IAM Access Analyzer, VPC Flow Logs, and S3 Storage Lens.
+      - Systematically resolved widespread Playwright E2E test flakiness caused by waitForResponse race conditions, unexpected browser process exits, and CI timeouts, while also adding new test specs for user tags, assessments, course management, and NPS CSV exports to maintain CI stability.
+      - Improved push notification reliability by fixing click navigation routing, improving notification checkbox UI design, and adding E2E test coverage for push notification functionality.
   - company: OSS Development (Personal Projects)
     position: Developer & Maintainer
     startDate: '2024-05-28'
