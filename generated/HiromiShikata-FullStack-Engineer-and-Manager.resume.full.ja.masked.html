@@ -695,6 +695,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">フラキーなE2Eログインテストの根本原因を3件特定・修正しました。Cognitoの一時的なスロットリングに対するリトライロジック追加、DB/Cognitoユーザー状態デシンクの再同期処理、スタックCI待ち行列によるカスケード失敗の解消、加えてDate.now()タイムスタンプベースのID生成を11テストスイートにわたって固定IDに置換しID衝突起因のテスト失敗を根絶しました。</p>
                           <p class="highlight">CI/CDパイプラインの信頼性向上とコスト削減を行いました。スタックCI実行のキャンセルをforce-cancel APIに切り替え、待ち行列管理ロジックにpending状態の実行も含めるよう拡張し、未使用プレースホルダーワークフローを削除し月約$8のコストを削減、DynamoDBテーブルの不要なPoint-in-time Recoveryを無効化しAWSインフラコストを削減しました。</p>
                           <p class="highlight">API Gatewayの設定からAsyncAPI 2.6.0 WebSocket仕様を自動生成し、手作業なしでAPI仕様書のカバレッジを向上させました。</p>
+                          <p class="highlight">セキュリティ観点の私の調査結果に対して内部監査が入り、その結果は、網羅的かつ詳細で指摘できることがない、非常によい品質ですとフィードバックをいただきました。</p>
+                          <p class="highlight">PdMの方にAIの使い方を共有し、AIを使ったワークフローに作り変えることでプロダクトチーム全体の生産性向上につながりました。</p>
                     </div>
                   </div>
                 </section>
@@ -1167,7 +1169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">後半は管理画面の API サービスを再設計するタイミングができたのでクリーンアーキテクチャを採用しテスタブルかつ仕様変更しやすい設計で構築し直しました。</p>
                           <p class="highlight">swagger や docker での開発環境がなかったため構築して導入しました。</p>
                           <p class="highlight">若いメンバーも多くチームの設計、開発ツールの使い方、開発フロー関連の知識の底上げが必要と感じていたためランチ帯や業務後でのスキルアップを図るイベントをいくつか行いました。</p>
-                          <p class="highlight">開発環境構築の資料やスクリプトなどが一切なかったため、Ansible で Ubuntu と Mac 用の playbook を作成し、メンバーに共有しました。</p>
+                          <p class="highlight">開発環境構築の資料���スクリプトなどが一切なかったため、Ansible で Ubuntu と Mac 用の playbook を作成し、メンバーに共有しました。</p>
                     </div>
                   </div>
                 </section>
