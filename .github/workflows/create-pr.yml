@@ -38,9 +38,9 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           github_token: ${{ steps.app-token.outputs.token }}
-          destination_branch: 'main'
-          source_branch: ''
-          pr_title: '${{ steps.branch_name.outputs.branch }}'
+          destination_branch: "main"
+          source_branch: ""
+          pr_title: "${{ steps.branch_name.outputs.branch }}"
           pr_body: |
             :magic_wand: :sparkles:
 
