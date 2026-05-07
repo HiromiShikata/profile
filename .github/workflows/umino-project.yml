@@ -37,7 +37,7 @@ env:
   project_id: 48
   project_v2_id: PVT_kwHOAGJHa84AFWnr
   field_id: PVTF_lAHOAGJHa84AFWnrzgIk_H0
-  team_repo: "7sea.world, blog-tech, media-pinpoint-research, instagram-beauty-aesthetics-review, umino-corporait-operation, instagram-14LBaggageTraveler, hashigoya-project"
+  team_repo: '7sea.world, blog-tech, media-pinpoint-research, instagram-beauty-aesthetics-review, umino-corporait-operation, instagram-14LBaggageTraveler, hashigoya-project'
 
 jobs:
   umino-job:
@@ -102,7 +102,7 @@ jobs:
           github.event.action == 'assigned' || github.event.action == 'unassigned')
 
       - name: Create Issue
-        if: ${{ github.event_name == 'issue_comment' && github.event.action == 'created' && contains(github.event.comment.body, '/createissue') }}
+        if: ${{ github.event_name == 'issue_comment' && github.event.action == 'created' && github.event.comment.user.login == 'HiromiShikata' && contains(github.event.comment.body, '/createissue') }}
         uses: actions/github-script@v9
         with:
           github-token: ${{secrets.GH_TOKEN}}
@@ -127,7 +127,7 @@ jobs:
               assignees: ['HiromiShikata']
             });
       - name: Close Issue
-        if: ${{ github.event_name == 'issue_comment' && github.event.action == 'created' && (contains(github.event.comment.body, '/close') || contains(github.event.comment.body, '/done')) }}
+        if: ${{ github.event_name == 'issue_comment' && github.event.action == 'created' && github.event.comment.user.login == 'HiromiShikata' && (contains(github.event.comment.body, '/close') || contains(github.event.comment.body, '/done')) }}
         uses: actions/github-script@v9
         with:
           github-token: ${{secrets.GH_TOKEN}}
@@ -141,7 +141,7 @@ jobs:
               state: 'closed'
             });
       - name: Update Date Field
-        if: ${{ github.event_name == 'issue_comment' && github.event.action == 'created' && contains(github.event.comment.body, '/movenextactiondateto') }}
+        if: ${{ github.event_name == 'issue_comment' && github.event.action == 'created' && github.event.comment.user.login == 'HiromiShikata' && contains(github.event.comment.body, '/movenextactiondateto') }}
         uses: actions/github-script@v9
         env:
           PROJECT_V2_ID: ${{ env.project_v2_id }}
@@ -179,7 +179,7 @@ jobs:
               { projectId, fieldId, itemId, date: dateString }
             );
       - name: Change Assignee
-        if: ${{ github.event_name == 'issue_comment' && github.event.action == 'created' && contains(github.event.comment.body, '/changeassignee ') }}
+        if: ${{ github.event_name == 'issue_comment' && github.event.action == 'created' && github.event.comment.user.login == 'HiromiShikata' && contains(github.event.comment.body, '/changeassignee ') }}
         uses: actions/github-script@v9
         with:
           github-token: ${{secrets.GH_TOKEN}}
@@ -214,7 +214,7 @@ jobs:
         id: check-linked-issues
         if: github.event.pull_request.user.login != 'dependabot[bot]'
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**, renovate/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**, renovate/**'
           github-token: ${{ secrets.GH_TOKEN }}
           loose-matching: true
       - name: Get the output
