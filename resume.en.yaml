@@ -19,6 +19,15 @@ work:
       - Migrated deprecated category:* labels to llm-agent:* labels across all HiromiShikata-managed repositories using github-label-sync alias feature for a seamless zero-downtime transition.
       - Implemented llm-model:* label support (claude-opus-4.6/claude-sonnet-4.6/claude-haiku) in repositories-management to allow specifying the Claude model used for issue processing per-issue via labels, rolled out to all managed repositories.
       - Maintained 344 tests with 100% coverage while adding features in Clean Architecture-based TypeScript development.
+  - company: OSS Project termux-app (HS Termux)
+    position: Personal Android App Customization Development
+    startDate: '2026-05-07'
+    endDate: '2026-05-14'
+    summary: Android, Java, GitHub Actions, CI/CD, APK, Termux, fork development
+    highlights:
+      - Forked the OSS Android terminal emulator "Termux" and developed a custom app "HS Termux". Implemented Android application ID change to enable co-installation with the official Termux app, renamed the app with a custom display name, and resolved installation failure issues caused by remaining package name references.
+      - Built a CI/CD pipeline using GitHub Actions that automatically builds APKs on every branch push, stores them in GitHub Artifacts, and automatically posts download links in PR descriptions to streamline the development workflow.
+      - Implemented a new Android UI feature in Java: added a modal dialog displayed when the + button in the terminal session panel is pressed, allowing users to input a URL and short name, implemented as a new TextInputDialogUtils.java class (52 lines).
   - company: Division of a leading AI company
     position: Full-remote work AI engineer
     startDate: '2025-02-27'
