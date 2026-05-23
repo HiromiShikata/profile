@@ -69,6 +69,9 @@ work:
       - 脅威検知・監査ログ・アクセス権限分析を目的として、GuardDuty（全保護プラン）・CloudTrail（KMS暗号化・7年WORM保持）・IAM Access Analyzer・VPC Flow Logs・S3 Storage Lensを導入しAWSクラウドのセキュリティ監視体制を多層防御で構築しました。
       - PlaywrightのE2Eテストで多発していたwaitForResponse競合状態・Playwrightプロセス予期終了・CIタイムアウトなどのフレーキーネスを体系的に修正し、ユーザータグ・アセスメント・コース管理・NPSエクスポートなどの新規スペック追加も実施してCIの安定稼働を維持しました。
       - プッシュ通知のクリック時ナビゲーション修正・通知チェックボックスのUI改善・E2Eテスト整備を実施しプッシュ通知機能の信頼性を向上しました。
+      - AWS CDK・Route53・CloudFrontを活用して本番PWAドメインのDNS解決とブランチ別レビュー環境デプロイ基盤を整備しました。
+      - CloudTrail・CloudWatch Logs・Lambda・Secrets Managerを組み合わせてS3セキュリティ変更を自動検知しSlackへ通知するセキュリティアラーム基盤を構築しました。
+      - ReactのuseWatchスコープ最適化・TanStack Routerへの遷移切替・iOS動画再生フォールバック対応により、モバイル対応とテスト安定化を同時に実現しました。
   - company: AI営業SaaSスタートアップ シリーズA
     position: フルリモート 技術顧問
     startDate: "2025-04-22"
