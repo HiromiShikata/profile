@@ -4,8 +4,8 @@ on:
   pull_request:
     branches: [main]
     paths:
-      - 'resume.ja.yaml'
-      - 'resume.en.yaml'
+      - "resume.ja.yaml"
+      - "resume.en.yaml"
 
 jobs:
   check-bilingual-sync:
