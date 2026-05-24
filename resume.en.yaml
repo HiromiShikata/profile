@@ -19,15 +19,24 @@ work:
       - Migrated deprecated category:* labels to llm-agent:* labels across all HiromiShikata-managed repositories using github-label-sync alias feature for a seamless zero-downtime transition.
       - Implemented llm-model:* label support (claude-opus-4.6/claude-sonnet-4.6/claude-haiku) in repositories-management to allow specifying the Claude model used for issue processing per-issue via labels, rolled out to all managed repositories.
       - Maintained 344 tests with 100% coverage while adding features in Clean Architecture-based TypeScript development.
+  - company: OSS Project aws-event-mocks (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-21'
+    endDate: '2026-05-21'
+    summary: npm, security, .npmrc, supply chain attack prevention, fork development
+    highlights:
+      - Added .npmrc to the forked repository to enforce npm supply chain attack prevention policy including min-release-age=7 (hold newly published packages for 7 days before allowing install), ignore-scripts=true (disable install-time script execution), save-exact=true, and package-lock=true.
   - company: OSS Project termux-app (HS Termux)
     position: Personal Android App Customization Development
     startDate: '2026-05-07'
-    endDate: '2026-05-14'
+    endDate: '2026-05-15'
     summary: Android, Java, GitHub Actions, CI/CD, APK, Termux, fork development
     highlights:
       - Forked the OSS Android terminal emulator "Termux" and developed a custom app "HS Termux". Implemented Android application ID change to enable co-installation with the official Termux app, renamed the app with a custom display name, and resolved installation failure issues caused by remaining package name references.
       - Built a CI/CD pipeline using GitHub Actions that automatically builds APKs on every branch push, stores them in GitHub Artifacts, and automatically posts download links in PR descriptions to streamline the development workflow.
+      - Simplified APK download link output in CI PR descriptions from a multi-line header+individual-links format to a single list item format, improving PR description readability.
       - Implemented a new Android UI feature in Java: added a modal dialog displayed when the + button in the terminal session panel is pressed, allowing users to input a URL and short name, implemented as a new TextInputDialogUtils.java class (52 lines).
+      - Resolved Android 15 (API 35) dataSync foreground service 6-hour/day execution limit enforcement by migrating TermuxService and RunCommandService foregroundServiceType from dataSync to specialUse and adding the required PROPERTY_SPECIAL_USE_FGS_SUBTYPE property declaration to AndroidManifest.xml, ensuring uninterrupted long-duration terminal sessions.
   - company: Division of a leading AI company
     position: Full-remote work AI engineer
     startDate: '2025-02-27'
