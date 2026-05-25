@@ -651,7 +651,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <section class="content work-content">
                   <div class="row">
                     <div class="content-cat big-text">
-                          <p>2026-05-07 to 2026-05-14</p>
+                          <p>2026-05-21 to 2026-05-21</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>個人開発 セキュリティポリシー強化</strong>
+                            at <strong>OSSプロジェクト aws-event-mocks (フォーク)</strong>
+                        </p>
+                        <p>npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, fork開発</p>
+                          <p class="highlight">npm供給チェーン攻撃（typosquatting・パッケージ乗っ取り等）対策として.npmrcを追加し、min-release-age&#x3D;7（新規公開パッケージを7日間待機してからインストール可能）・ignore-scripts&#x3D;true（インストール時スクリプト実行禁止）・save-exact&#x3D;true・package-lock&#x3D;trueを設定しフォークリポジトリのセキュリティポリシーを強化しました。</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2026-05-07 to 2026-05-15</p>
                     </div>
                     <div class="content-text work-listing education-listing">
                           <p>
@@ -661,7 +676,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <p>Android, Java, GitHub Actions, CI/CD, APK, Termux, fork開発</p>
                           <p class="highlight">OSSのAndroid端末エミュレータ「Termux」をフォークしてカスタムアプリ「HS Termux」を開発しました。公式アプリとの共存インストールを実現するAndroidアプリID変更、独自アプリ名への改名、インストール障害の修正対応を行いました。</p>
                           <p class="highlight">GitHub Actionsを活用したCI/CDパイプライン構築を行いました。全ブランチpush時にAPKを自動ビルドしてGitHub Artifactsへ保存し、PRの説明文へダウンロードリンクを自動掲載する開発効率化フローを実装しました。</p>
+                          <p class="highlight">CI PR説明文に出力するAPKダウンロードリンクをヘッダー+個別リンクの複数行形式から単一リストアイテム形式に簡略化し、PR説明文の可読性を向上させました。</p>
                           <p class="highlight">Android UIのJava実装として、ターミナルセッションパネルの+ボタン押下時にURL・ショートネーム入力モーダルを表示するダイアログをTextInputDialogUtils.java（52行）として新規実装しました。</p>
+                          <p class="highlight">Android 15（API 35）でGoogleが施行したdataSync前景サービスの6時間/日実行制限に対応するため、TermuxServiceとRunCommandServiceのforegroundServiceTypeをdataSync→specialUseに変更し、AndroidManifest.xmlへ特殊用途サービス宣言（PROPERTY_SPECIAL_USE_FGS_SUBTYPE）を追加することで、ターミナルセッションの長時間継続稼働を保証しました。</p>
                     </div>
                   </div>
                 </section>
@@ -1152,7 +1169,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">機械学習を用いたエンジンを作れる企業に手伝っていただき、エンジンの組み込み部分とエンジン自体の精度を上げるため A/B テストの環境をつくりたいとのことでご依頼いただきました。</p>
                           <p class="highlight">AWS SageMaker を使いたいとの要望があったのと今後の可用性面で適していそうでしたので SageMaker での構築を行っています。</p>
                           <p class="highlight">インフラ環境の全体は terraform で構築し、まだ terraform が対応できていない SageMaker 部分は AWS client を用いて構築しました。</p>
-                          <p class="highlight">開発の環境を Ansible と docker 双方でできるよう���docker image を Ansible で構築するようにしました。</p>
+                          <p class="highlight">開発の環境を Ansible と docker 双方でできるよう、docker image を Ansible で構築するようにしました。</p>
                           <p class="highlight">今回はアプリケーション構築ではなくインフラでしたが CI/CD を導入し AI エンジンのコードが git に push され次第学習が進むよう構築を進めています。</p>
                     </div>
                   </div>
