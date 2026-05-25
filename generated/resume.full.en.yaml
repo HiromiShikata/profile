@@ -394,6 +394,18 @@ work:
         Improved push notification reliability by fixing click navigation
         routing, improving notification checkbox UI design, and adding E2E test
         coverage for push notification functionality.
+      - >-
+        Configured production PWA domain DNS resolution and per-branch review
+        environment deployment infrastructure using AWS CDK, Route53, and
+        CloudFront.
+      - >-
+        Built a security alarm infrastructure to automatically detect S3
+        security changes and send Slack notifications by integrating CloudTrail,
+        CloudWatch Logs, Lambda, and Secrets Manager.
+      - >-
+        Achieved simultaneous mobile compatibility improvements and test
+        stabilization through React useWatch scope optimization, TanStack Router
+        navigation migration, and iOS video playback fallback implementation.
   - company: OSS Development (Personal Projects)
     position: Developer & Maintainer
     startDate: '2024-05-28'

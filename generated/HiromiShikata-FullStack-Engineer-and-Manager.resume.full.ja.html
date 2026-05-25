@@ -719,6 +719,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">脅威検知・監査ログ・アクセス権限分析を目的として、GuardDuty（全保護プラン）・CloudTrail（KMS暗号化・7年WORM保持）・IAM Access Analyzer・VPC Flow Logs・S3 Storage Lensを導入しAWSクラウドのセキュリティ監視体制を多層防御で構築しました。</p>
                           <p class="highlight">PlaywrightのE2Eテストで多発していたwaitForResponse競合状態・Playwrightプロセス予期終了・CIタイムアウトなどのフレーキーネスを体系的に修正し、ユーザータグ・アセスメント・コース管理・NPSエクスポートなどの新規スペック追加も実施してCIの安定稼働を維持しました。</p>
                           <p class="highlight">プッシュ通知のクリック時ナビゲーション修正・通知チェックボックスのUI改善・E2Eテスト整備を実施しプッシュ通知機能の信頼性を向上しました。</p>
+                          <p class="highlight">AWS CDK・Route53・CloudFrontを活用して本番PWAドメインのDNS解決とブランチ別レビュー環境デプロイ基盤を整備しました。</p>
+                          <p class="highlight">CloudTrail・CloudWatch Logs・Lambda・Secrets Managerを組み合わせてS3セキュリティ変更を自動検知しSlackへ通知するセキュリティアラーム基盤を構築しました。</p>
+                          <p class="highlight">ReactのuseWatchスコープ最適化・TanStack Routerへの遷移切替・iOS動画再生フォールバック対応により、モバイル対応とテスト安定化を同時に実現しました。</p>
                     </div>
                   </div>
                 </section>
@@ -1149,7 +1152,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           <p class="highlight">機械学習を用いたエンジンを作れる企業に手伝っていただき、エンジンの組み込み部分とエンジン自体の精度を上げるため A/B テストの環境をつくりたいとのことでご依頼いただきました。</p>
                           <p class="highlight">AWS SageMaker を使いたいとの要望があったのと今後の可用性面で適していそうでしたので SageMaker での構築を行っています。</p>
                           <p class="highlight">インフラ環境の全体は terraform で構築し、まだ terraform が対応できていない SageMaker 部分は AWS client を用いて構築しました。</p>
-                          <p class="highlight">開発の環境を Ansible と docker 双方でできるよう、docker image を Ansible で構築するようにしました。</p>
+                          <p class="highlight">開発の環境を Ansible と docker 双方でできるよう���docker image を Ansible で構築するようにしました。</p>
                           <p class="highlight">今回はアプリケーション構築ではなくインフラでしたが CI/CD を導入し AI エンジンのコードが git に push され次第学習が進むよう構築を進めています。</p>
                     </div>
                   </div>
