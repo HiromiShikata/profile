@@ -101,7 +101,7 @@ skills:
       - Old, legacy environments
 work:
   - company: OSSプロジェクト npm-cli-gh-issue-preparator
-    position: 個人開発 TypeScript CLIツール開発
+    position: フルスタックエンジニア
     startDate: '2025-12-14'
     endDate: 現在
     summary: >-
@@ -134,6 +134,10 @@ work:
       - >-
         issue処理時に使用するClaudeモデルをissueラベル（llm-model:claude-opus-4.6/claude-sonnet-4.6/claude-haiku）で指定できる仕組みをrepositories-managementに実装し、全管理対象リポジトリへ展開しました。
       - クリーンアーキテクチャに基づくTypeScript開発で、344テスト/100%カバレッジを維持しながら機能追加を実施しました。
+      - >-
+        複数のAIエージェントが並行稼働する自律型開発環境で人手の介在なく開発サイクルを継続させるため、エージェント完了通知受信時のPRへのnext
+        action
+        date自動設定、LLMモデル・ログパス・設定ファイルパスの一元管理、ネットワーク障害時のリトライ強化を実施し、運用基盤の安定性を向上させました。
   - company: OSSプロジェクト aws-event-mocks (フォーク)
     position: 個人開発 セキュリティポリシー強化
     startDate: '2026-05-21'
