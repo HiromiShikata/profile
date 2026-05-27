@@ -36,7 +36,7 @@ env:
   project_id: 48
   project_v2_id: PVT_kwHOAGJHa84AFWnr
   field_id: PVTF_lAHOAGJHa84AFWnrzgIk_H0
-  team_repo: "7sea.world, blog-tech, media-pinpoint-research, instagram-beauty-aesthetics-review, umino-corporait-operation, instagram-14LBaggageTraveler, hashigoya-project"
+  team_repo: '7sea.world, blog-tech, media-pinpoint-research, instagram-beauty-aesthetics-review, umino-corporait-operation, instagram-14LBaggageTraveler, hashigoya-project'
 
 jobs:
   umino-job:
@@ -83,8 +83,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         if: >-
-          (github.event_name == 'issues' && github.event.issue.state == 'open') ||
-          (github.event_name == 'pull_request' && github.event.pull_request.state == 'open') &&
+          ((github.event_name == 'issues' && github.event.issue.state == 'open') ||
+          (github.event_name == 'pull_request' && github.event.pull_request.state == 'open')) &&
           (github.event.action == 'opened' || github.event.action == 'reopened' ||
           github.event.action == 'assigned' || github.event.action == 'unassigned')
       - run: |
@@ -228,7 +228,7 @@ jobs:
         if: >-
           github.event_name == 'issues' &&
           github.event.action == 'opened'
-        uses: pozil/auto-assign-issue@v3.0.0
+        uses: pozil/auto-assign-issue@70adb98ca8b3941524e9ecde48e89067c4f96736
         with:
           assignees: HiromiShikata
           repo-token: ${{ steps.app-token.outputs.token }}
@@ -236,7 +236,7 @@ jobs:
         if: >-
           github.event_name == 'pull_request' &&
           github.event.action == 'opened'
-        uses: pozil/auto-assign-issue@v3.0.0
+        uses: pozil/auto-assign-issue@70adb98ca8b3941524e9ecde48e89067c4f96736
         with:
           assignees: HiromiShikata
           repo-token: ${{ steps.app-token.outputs.token }}
@@ -254,13 +254,13 @@ jobs:
           app-id: ${{ secrets.HS_BOT_GH_AP_APP_ID }}
           private-key: ${{ secrets.HS_BOT_GH_AP_PRIVATE_KEY }}
           owner: HiromiShikata
-      - uses: nearform-actions/github-action-check-linked-issues@v1
+      - uses: nearform-actions/github-action-check-linked-issues@7140e2e01aa0c18b8ac61bddf5e89abde1ca760e
         id: check-linked-issues
         if: github.event.pull_request.user.login != 'dependabot[bot]'
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**, renovate/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**, renovate/**'
           github-token: ${{ steps.app-token.outputs.token }}
           loose-matching: true
-          skip-linked-issues-check-label: ""
+          skip-linked-issues-check-label: ''
       - name: Get the output
         run: echo "How many linked issues? ${{ steps.check-linked-issues.outputs.linked_issues_count }}"
