@@ -16,9 +16,8 @@ jobs:
           fetch-depth: 0
       - name: Check both resume files are updated together
         run: |
-          BASE_SHA=${{ github.event.pull_request.base.sha }}
-          JA_CHANGED=$(git diff --name-only "$BASE_SHA" HEAD -- resume.ja.yaml | wc -l)
-          EN_CHANGED=$(git diff --name-only "$BASE_SHA" HEAD -- resume.en.yaml | wc -l)
+          JA_CHANGED=$(git diff --name-only HEAD^1 HEAD -- resume.ja.yaml | wc -l)
+          EN_CHANGED=$(git diff --name-only HEAD^1 HEAD -- resume.en.yaml | wc -l)
           if [ "$JA_CHANGED" -gt 0 ] || [ "$EN_CHANGED" -gt 0 ]; then
             if [ "$JA_CHANGED" -eq 0 ] || [ "$EN_CHANGED" -eq 0 ]; then
               echo "Error: When updating resume files, both resume.ja.yaml and resume.en.yaml must be updated together."
