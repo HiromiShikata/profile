@@ -18,6 +18,9 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      - uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
       - uses: actions/create-github-app-token@v3
         id: app-token
         with:
