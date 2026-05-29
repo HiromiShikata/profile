@@ -20,6 +20,79 @@ work:
       - issue処理時に使用するClaudeモデルをissueラベル（llm-model:claude-opus-4.6/claude-sonnet-4.6/claude-haiku）で指定できる仕組みをrepositories-managementに実装し、全管理対象リポジトリへ展開しました。
       - クリーンアーキテクチャに基づくTypeScript開発で、344テスト/100%カバレッジを維持しながら機能追加を実施しました。
       - 複数のAIエージェントが並行稼働する自律型開発環境で人手の介在なく開発サイクルを継続させるため、エージェント完了通知受信時のPRへのnext action date自動設定、LLMモデル・ログパス・設定ファイルパスの一元管理、ネットワーク障害時のリトライ強化を実施し、運用基盤の安定性を向上させました。
+  - company: OSSプロジェクト simlin (フォーク)
+    position: 個人開発 セキュリティ・CI/CD整備
+    startDate: "2026-05-28"
+    endDate: "2026-05-28"
+    summary: pnpm, セキュリティ, .npmrc, 供給チェーン攻撃対策, Rust, Cargo, GitHub Actions, Prettier, fork開発
+    highlights:
+      - npm供給チェーン攻撃（Mini Shai-Hulud npm wormのようなfast-publish攻撃）対策として.npmrcにmin-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを追記し、pnpmがnpmのmin-release-ageを参照しない仕様に対応するためpnpm-workspace.yamlへminimumReleaseAge=10080（分単位の7日間指定）を追加しました。
+      - Rust依存関係の既知脆弱性に対処するためCargo.lockのthin-vecを0.2.14→0.2.18（RUSTSEC-2026-0103 / GHSA-xphw-cqx3-667jのuse-after-freeおよびdouble freeへの対応）、randを0.9.2→0.9.4および0.8.5→0.8.6（RUSTSEC-2026-0097のカスタムloggerが`rand::rng()`を使用する際の不健全性への対応）にアップグレードしました。
+      - PR品質チェック基盤としてcommit-lint・check-linked-issues・empty-format-test-job・create-pr・commitlint設定の5本のGitHub Actionsワークフローを新規追加し、check-linked-issuesにはforkからのPRでシークレットが無くても落ちないように`github.event.pull_request.head.repo.full_name == github.repository`のガードを設定しました。
+      - リポジトリ全体のMarkdown・YAML・JSファイルにPrettier整形を適用し、合わせて誤字（"isee-compatable"→"isee-compatible"、"Github"→"GitHub"）も修正してドキュメント品質を向上させました。
+  - company: OSSリポジトリ運用 不正マージのRevert対応
+    position: 個人開発 アクセス制御・運用品質維持
+    startDate: "2026-05-28"
+    endDate: "2026-05-28"
+    summary: OSS, リポジトリ運用, git revert, アクセス制御, 運用品質
+    highlights:
+      - 自身が管理するパブリックリポジトリ群（profile・entity-relation-diagram-from-ast・npm-cli-github-issue-tower-defence-management）において、明示的なユーザー承認なくマージされていた合計5件のPRを特定し、各リポジトリで対応するRevert PRを作成・マージしてリポジトリの整合性を回復しました。
+  - company: OSSプロジェクト github-action-check-linked-issues (フォーク)
+    position: 個人開発 セキュリティポリシー強化
+    startDate: "2026-05-25"
+    endDate: "2026-05-25"
+    summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, GitHub Actions, fork開発
+    highlights:
+      - npm供給チェーン攻撃対策として.npmrcにmin-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを追加し、CIではci.ymlのジョブ名整理（build→test、automerge→create_and_enable_automerge）、format.yml・commit-lint.ymlの新規追加、check-linked-issues.ymlの`pull_request_target`→`pull_request`への変更を行いブランチ保護ルールの必須ステータスチェック要件を満たすCI構成を整備しました。
+  - company: OSSプロジェクト deep-research (フォーク)
+    position: 個人開発 セキュリティポリシー強化
+    startDate: "2026-05-24"
+    endDate: "2026-05-24"
+    summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, GitHub Actions, fork開発
+    highlights:
+      - npm供給チェーン攻撃対策として.npmrcを追加し、min-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを設定しました。併せてプロジェクト管理連携のためのGitHub Actionsワークフロー（umino-project.yml・commit-lint.yml・empty-format-test-job.yml・create-pr.yml）を、`pull_request_target`を避けて`pull_request`のみを使用し、サードパーティのactionsを全てimmutable commit SHAでpinするセキュアな構成で新規追加しました。
+  - company: OSSプロジェクト gatsby-starter-amsterdam (フォーク)
+    position: 個人開発 セキュリティポリシー強化
+    startDate: "2026-05-24"
+    endDate: "2026-05-24"
+    summary: npm, セキュリティ, .npmrc, .yarnrc.yml, 供給チェーン攻撃対策, fork開発
+    highlights:
+      - npm供給チェーン攻撃対策として.npmrcにmin-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを設定しました。Yarn Berry以降でしか読まれない点と`7d`表記の既知のパース不具合を回避するため、.yarnrc.ymlにはnpmMinimalAgeGate: 10080（分単位の7日間）を整数表記で追加し、現行のYarn Classic 1.x運用を保ちつつ将来のYarn Berry移行時にもポリシーが効くようにしました。
+  - company: OSSプロジェクト deepmerge-yaml (フォーク)
+    position: 個人開発 セキュリティポリシー強化
+    startDate: "2026-05-24"
+    endDate: "2026-05-24"
+    summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, fork開発
+    highlights:
+      - npm供給チェーン攻撃（Mini Shai-Hulud npm wormなど）対策として.npmrcを追加し、min-release-age=7（公開から7日未満のパッケージのインストール拒否）・ignore-scripts=true（lifecycle script実行禁止）・save-exact=true・package-lock=trueを設定してフォークリポジトリのセキュリティポリシーを強化しました。
+  - company: OSSプロジェクト gatsby-starter-tyra (フォーク)
+    position: 個人開発 セキュリティポリシー強化
+    startDate: "2026-05-24"
+    endDate: "2026-05-24"
+    summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, fork開発
+    highlights:
+      - npm供給チェーン攻撃（Mini Shai-Hulud npm wormなど）対策として.npmrcをリポジトリルートに追加し、min-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを設定し、ローカル環境（npm 11.14.1）で`npm install`が正常完了することを検証しました。
+  - company: OSSプロジェクト jsonresume-theme-paper (フォーク)
+    position: 個人開発 セキュリティポリシー強化
+    startDate: "2026-05-24"
+    endDate: "2026-05-24"
+    summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, GitHub Actions, fork開発
+    highlights:
+      - npm供給チェーン攻撃対策として.npmrcにmin-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを設定し、設定後の状態でpackage-lock.jsonを再生成して0 vulnerabilitiesを確認し、`npm install`の成功を検証する最小のCIワークフローを併せて追加しました。
+  - company: OSSプロジェクト landy-react-template (フォーク)
+    position: 個人開発 セキュリティポリシー強化
+    startDate: "2026-05-24"
+    endDate: "2026-05-24"
+    summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, fork開発
+    highlights:
+      - npm供給チェーン攻撃（Mini Shai-Hulud npm wormなど）対策として.npmrcにmin-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを追加し、`npm install --dry-run`の成功を確認しフォークリポジトリのセキュリティポリシーを強化しました。
+  - company: OSSプロジェクト zod-to-entity-definitions (フォーク)
+    position: 個人開発 セキュリティポリシー強化
+    startDate: "2026-05-24"
+    endDate: "2026-05-24"
+    summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, GitHub Actions, fork開発
+    highlights:
+      - npm供給チェーン攻撃対策として.npmrcにmin-release-age=7・ignore-scripts=true・package-lock=trueを追加（既存のregistry・save-exact・access設定を保持）し、合わせてプロジェクト管理連携のGitHub Actionsワークフロー群（umino-project.yml・empty-format-test-job.yml・create-pr.yml・commit-lint.yml）と関連commitlint設定を追加してCI基盤を整備しました。
   - company: OSSプロジェクト aws-event-mocks (フォーク)
     position: 個人開発 セキュリティポリシー強化
     startDate: "2026-05-21"

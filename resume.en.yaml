@@ -20,6 +20,79 @@ work:
       - Implemented llm-model:* label support (claude-opus-4.6/claude-sonnet-4.6/claude-haiku) in repositories-management to allow specifying the Claude model used for issue processing per-issue via labels, rolled out to all managed repositories.
       - Maintained 344 tests with 100% coverage while adding features in Clean Architecture-based TypeScript development.
       - To sustain autonomous development cycles without human intervention in an environment where multiple AI agents run concurrently, implemented automatic next-action-date assignment to PRs upon agent completion notification, centralized management of LLM model, log file path, and config file path, and enhanced retry logic for network failures, improving operational stability.
+  - company: OSS Project simlin (Fork)
+    position: Personal Development Security and CI/CD Hardening
+    startDate: '2026-05-28'
+    endDate: '2026-05-28'
+    summary: pnpm, security, .npmrc, supply chain attack prevention, Rust, Cargo, GitHub Actions, Prettier, fork development
+    highlights:
+      - Added npm supply chain attack mitigations (against fast-publish attacks such as the Mini Shai-Hulud npm worm) by appending min-release-age=7, ignore-scripts=true, save-exact=true, and package-lock=true to .npmrc, and added minimumReleaseAge:10080 (7 days in minutes) to pnpm-workspace.yaml because pnpm does not read npm's min-release-age.
+      - Upgraded vulnerable Rust dependencies in Cargo.lock by bumping thin-vec from 0.2.14 to 0.2.18 (resolves RUSTSEC-2026-0103 / GHSA-xphw-cqx3-667j use-after-free and double free) and rand from 0.9.2 to 0.9.4 and from 0.8.5 to 0.8.6 (resolves RUSTSEC-2026-0097 unsoundness when a custom logger uses `rand::rng()`).
+      - Added five GitHub Actions workflows (commit-lint, check-linked-issues, empty-format-test-job, create-pr, and commitlint config) to establish a PR quality-check baseline, and guarded check-linked-issues with `github.event.pull_request.head.repo.full_name == github.repository` so it does not fail on fork PRs where secrets are unavailable.
+      - Applied Prettier formatting across all Markdown, YAML, and JS files in the repository and corrected documentation typos ("isee-compatable" to "isee-compatible" and "Github" to "GitHub").
+  - company: OSS Repository Operations - Revert of Unauthorized Merges
+    position: Personal Development Access Control and Operational Integrity
+    startDate: '2026-05-28'
+    endDate: '2026-05-28'
+    summary: OSS, repository operations, git revert, access control, operational integrity
+    highlights:
+      - Across personally managed public repositories (profile, entity-relation-diagram-from-ast, and npm-cli-github-issue-tower-defence-management), identified 5 pull requests that had been merged without explicit user approval, created and merged corresponding revert PRs in each repository, and restored repository integrity.
+  - company: OSS Project github-action-check-linked-issues (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-25'
+    endDate: '2026-05-25'
+    summary: npm, security, .npmrc, supply chain attack prevention, GitHub Actions, fork development
+    highlights:
+      - Added npm supply chain attack mitigations by setting min-release-age=7, ignore-scripts=true, save-exact=true, and package-lock=true in .npmrc, and updated CI to satisfy branch protection required status checks by renaming jobs in ci.yml (build to test, automerge to create_and_enable_automerge), adding new format.yml and commit-lint.yml workflows, and switching check-linked-issues.yml from `pull_request_target` to `pull_request`.
+  - company: OSS Project deep-research (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-24'
+    endDate: '2026-05-24'
+    summary: npm, security, .npmrc, supply chain attack prevention, GitHub Actions, fork development
+    highlights:
+      - Added npm supply chain attack mitigations by setting min-release-age=7, ignore-scripts=true, save-exact=true, and package-lock=true in .npmrc, and added project-management integration GitHub Actions workflows (umino-project.yml, commit-lint.yml, empty-format-test-job.yml, and create-pr.yml) using only `pull_request` (not `pull_request_target`) with all third-party actions pinned to immutable commit SHAs to maintain a secure CI configuration.
+  - company: OSS Project gatsby-starter-amsterdam (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-24'
+    endDate: '2026-05-24'
+    summary: npm, security, .npmrc, .yarnrc.yml, supply chain attack prevention, fork development
+    highlights:
+      - Added npm supply chain attack mitigations by setting min-release-age=7, ignore-scripts=true, save-exact=true, and package-lock=true in .npmrc, and added .yarnrc.yml with npmMinimalAgeGate:10080 (7 days in minutes, written as an integer to avoid the known `7d` parsing bug) so that the policy will continue to apply after a future migration from the current Yarn Classic 1.x to Yarn Berry, which alone reads this setting.
+  - company: OSS Project deepmerge-yaml (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-24'
+    endDate: '2026-05-24'
+    summary: npm, security, .npmrc, supply chain attack prevention, fork development
+    highlights:
+      - Added .npmrc to the forked repository to enforce npm supply chain attack prevention policy (mitigating Mini Shai-Hulud-style npm worm attacks) by setting min-release-age=7 (block install of packages released less than 7 days ago), ignore-scripts=true (disable lifecycle script execution), save-exact=true, and package-lock=true.
+  - company: OSS Project gatsby-starter-tyra (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-24'
+    endDate: '2026-05-24'
+    summary: npm, security, .npmrc, supply chain attack prevention, fork development
+    highlights:
+      - Added .npmrc at the repository root with hardened npm settings (min-release-age=7, ignore-scripts=true, save-exact=true, and package-lock=true) to defend against npm supply chain attacks such as the Mini Shai-Hulud npm worm, and verified that `npm install` completes successfully under npm 11.14.1.
+  - company: OSS Project jsonresume-theme-paper (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-24'
+    endDate: '2026-05-24'
+    summary: npm, security, .npmrc, supply chain attack prevention, GitHub Actions, fork development
+    highlights:
+      - Added .npmrc with min-release-age=7, ignore-scripts=true, save-exact=true, and package-lock=true, regenerated package-lock.json with the new settings applied and verified zero vulnerabilities, and added a minimal CI workflow that confirms `npm install` succeeds.
+  - company: OSS Project landy-react-template (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-24'
+    endDate: '2026-05-24'
+    summary: npm, security, .npmrc, supply chain attack prevention, fork development
+    highlights:
+      - Added .npmrc with npm supply chain attack mitigations (Mini Shai-Hulud worm protection) by setting min-release-age=7, ignore-scripts=true, save-exact=true, and package-lock=true, and verified that `npm install --dry-run` succeeds with the new settings.
+  - company: OSS Project zod-to-entity-definitions (Fork)
+    position: Personal Development Security Policy Hardening
+    startDate: '2026-05-24'
+    endDate: '2026-05-24'
+    summary: npm, security, .npmrc, supply chain attack prevention, GitHub Actions, fork development
+    highlights:
+      - Added min-release-age=7, ignore-scripts=true, and package-lock=true to .npmrc while preserving the existing registry, save-exact, and access settings, and added project-management integration GitHub Actions workflows (umino-project.yml, empty-format-test-job.yml, create-pr.yml, and commit-lint.yml) together with the commitlint configuration to establish the CI baseline.
   - company: OSS Project aws-event-mocks (Fork)
     position: Personal Development Security Policy Hardening
     startDate: '2026-05-21'
