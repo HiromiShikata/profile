@@ -96,6 +96,9 @@ work:
       - Configured production PWA domain DNS resolution and per-branch review environment deployment infrastructure using AWS CDK, Route53, and CloudFront.
       - Built a security alarm infrastructure to automatically detect S3 security changes and send Slack notifications by integrating CloudTrail, CloudWatch Logs, Lambda, and Secrets Manager.
       - Achieved simultaneous mobile compatibility improvements and test stabilization through React useWatch scope optimization, TanStack Router navigation migration, and iOS video playback fallback implementation.
+      - Delivered a full-stack implementation spanning domain model design, data layer, REST API, and UI components, covering each layer end-to-end from domain modeling through behavior verification.
+      - Resolved multiple high-severity security risks in a short period by combining dependency package vulnerability updates, access-control permission review, and security setting corrections.
+      - Reduced infrastructure cost and simultaneously improved backend performance and stability through root-cause analysis of backend asynchronous processing failures, database access optimization, and response handling improvements for bulk-fetch APIs.
   - company: OSS Development (Personal Projects)
     position: Developer & Maintainer
     startDate: '2024-05-28'
