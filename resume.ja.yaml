@@ -82,6 +82,7 @@ work:
       - AWS CDK・Route53・CloudFrontを活用して本番PWAドメインのDNS解決とブランチ別レビュー環境デプロイ基盤を整備しました。
       - CloudTrail・CloudWatch Logs・Lambda・Secrets Managerを組み合わせてS3セキュリティ変更を自動検知しSlackへ通知するセキュリティアラーム基盤を構築しました。
       - ReactのuseWatchスコープ最適化・TanStack Routerへの遷移切替・iOS動画再生フォールバック対応により、モバイル対応とテスト安定化を同時に実現しました。
+      - staging branchへマージ済みであった機能PRに対するRevert PRを複数本staging branchへマージし、リリースキャンディデートの安定化を進めました。対象は通知設定UI・エディタ読み込み処理・言語設定の共有ディレクトリ移管リファクタリング・字幕処理の多言語フォールバック修正の4機能で、うち1本は同日中にRevert of Revertを実施することで修正版の再展開を1日で完了させ、ロールバックと再投入を素早く回せる運用体制を実践しました。
   - company: AI営業SaaSスタートアップ シリーズA
     position: フルリモート 技術顧問
     startDate: "2025-04-22"
