@@ -82,6 +82,14 @@ work:
       - AWS CDK・Route53・CloudFrontを活用して本番PWAドメインのDNS解決とブランチ別レビュー環境デプロイ基盤を整備しました。
       - CloudTrail・CloudWatch Logs・Lambda・Secrets Managerを組み合わせてS3セキュリティ変更を自動検知しSlackへ通知するセキュリティアラーム基盤を構築しました。
       - ReactのuseWatchスコープ最適化・TanStack Routerへの遷移切替・iOS動画再生フォールバック対応により、モバイル対応とテスト安定化を同時に実現しました。
+      - スキルレベル研修コース機能を新規構築しました。クリーンアーキテクチャ準拠でドメイン層（SkillCustomStep、SkillCustomStepImage、SkillApprover、SkillExpiryRule、SkillFulfillmentRequirementの各ユースケース）、REST APIアダプター、TanStack Queryフック、UIコンポーネントとStorybook、E2Eテスト雛形までを一気通貫で立ち上げ、フロントエンドとバックエンドを並行開発で進められる基盤を整えました。
+      - iOSおよびAndroid双方のPWA体験を改善しました。iOS向け「ホーム画面に追加」ダイアログをログイン画面に新設、Android向けには専用Feature Flagとインストール導線ダイアログを追加、横向きランドスケープでのHLSビデオプレイヤーのタップ領域下方ずれと中央コントロールのタップ領域ずれを修正、旧PWAインストールページを廃止して導線を統一しました。
+      - グローバル検索の対象範囲を拡張しました。検索結果にアセスメントと研修コースを含めるようsearchable_contentsビューを公開済み最新アセスメントバージョン込みに修正、フォルダ候補のヒエラルキー遷移、ドロップダウンアイコンへのアセスメントカラー適用を実装し、E2EではAPI-only 3回連続成功ポーリングと決定論的なドロップダウン再クエリでフレーキー性を解消しました。
+      - 複数AIエージェントが同一リポジトリで並行稼働するためのマルチエージェント開発基盤を強化しました。pre-commitチェックを変更ファイルにスコープして同時稼働時のフックデッドロックを解消し、AI用Gitフックを呼び出し元worktreeに限定、worktree由来の自動stageに対する回帰テストを追加することで、マルチエージェント開発を安定運用できる状態にしました。
+      - CI/CDパイプラインを高速化・信頼性向上しました。セルフホストランナーイメージにChromeとPlaywright用FFMPEGを焼き込みCI時間を短縮、重複していたbiome format・type-check・pnpm store pruneステップを削除、Amplifyクリーンアップを15分間隔に短縮し、PRクローズ時クリーンアップ起動とin-progress runsキャンセル停止を統合してレビュー環境の安定性を高めました。
+      - セキュリティとアイデンティティ整合性を強化しました。ffmpeg-normalizer WebSocket APIルートの認可欠如を修正、AmplifyのSAM2 GPUスタックmasterセキュリティグループ設定を修正、Cognitoプロビジョニングを既存ユーザー時にパスワード再同期する形で冪等化することでDBとCognito間のユーザー状態デシンクを抑止しました。
+      - 動画・字幕処理のエッジケースを解消しました。動画編集時に外国語翻訳が「翻訳中」のままスタックする状態を解消、Remotion HLSマニフェストパスをuseItemVideoRenderingStatus経由でポーリング、旧動画でHLSマニフェスト不在時に日本語MP4ファイルへフォールバック、languages.json不在による字幕回帰検知E2Eを追加し、ENABLE_753_SHOW_TRANSLATION_STATUSフラグをデフォルト有効化してWIPトグル運用から正規運用に移行しました。
+      - 研修現場の運用UX課題を一週間で一括解消しました。手動アイテム一括削除後のチェックボックス自動解除、部分失敗時のリスト自動リフレッシュ、ページサイズのsessionStorage永続化、特権アクセスユーザー一覧の100ユーザー制限撤廃、研修コース所有者情報「-」表示の修正、削除モーダルのカラー統一、CourseMessage機能のREST/TanStack Query/UIフック実装、マイグレーションランナーでの手動設定Feature Flag値の保護など、現場フィードバック由来の課題を1スプリント以内で順次クローズしました。
   - company: AI営業SaaSスタートアップ シリーズA
     position: フルリモート 技術顧問
     startDate: "2025-04-22"
