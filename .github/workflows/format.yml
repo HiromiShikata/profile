@@ -5,6 +5,7 @@ on: push
 jobs:
   format:
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]'
     permissions:
       contents: write
     steps:
