@@ -96,6 +96,7 @@ work:
       - Configured production PWA domain DNS resolution and per-branch review environment deployment infrastructure using AWS CDK, Route53, and CloudFront.
       - Built a security alarm infrastructure to automatically detect S3 security changes and send Slack notifications by integrating CloudTrail, CloudWatch Logs, Lambda, and Secrets Manager.
       - Achieved simultaneous mobile compatibility improvements and test stabilization through React useWatch scope optimization, TanStack Router navigation migration, and iOS video playback fallback implementation.
+      - Stabilized the release candidate by merging multiple Revert PRs against the staging branch for previously-merged feature PRs. The reverted scope covered notification settings UI, editor loading processing, shared-directory migration refactoring of language configuration, and multilingual fallback handling in subtitle processing, with one same-day Revert of Revert performed to redeploy the fixed version within a single day, exercising a rollback-and-redeploy operational cadence.
   - company: OSS Development (Personal Projects)
     position: Developer & Maintainer
     startDate: '2024-05-28'
