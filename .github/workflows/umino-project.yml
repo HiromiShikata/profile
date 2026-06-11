@@ -45,7 +45,7 @@ env:
   project_id: 48
   project_v2_id: PVT_kwHOAGJHa84AFWnr
   field_id: PVTF_lAHOAGJHa84AFWnrzgIk_H0
-  team_repo: "7sea.world, blog-tech, media-pinpoint-research, instagram-beauty-aesthetics-review, umino-corporait-operation, instagram-14LBaggageTraveler, hashigoya-project"
+  team_repo: '7sea.world, blog-tech, media-pinpoint-research, instagram-beauty-aesthetics-review, umino-corporait-operation, instagram-14LBaggageTraveler, hashigoya-project'
 
 jobs:
   umino-job:
@@ -109,7 +109,7 @@ jobs:
             -f fieldId="PVTSSF_lAHOAGJHa84AFWnrzgDFcxE" \
             -f optionId="f75ad846"
         env:
-          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         if: >-
           ((github.event_name == 'issues' && github.event.issue.state == 'open') ||
           (github.event_name == 'pull_request' && github.event.pull_request.state == 'open')) &&
@@ -122,7 +122,7 @@ jobs:
           NUMBER=$(echo ${{ github.event_name }} | grep -q "pull_request" && echo ${{ github.event.pull_request.number }} || echo ${{ github.event.issue.number }})
 
           QUERY_DATA='{ "query": "query { repository(owner: \"'$OWNER'\", name: \"'$REPO'\") { '${ENTITY_TYPE}'(number: '$NUMBER') { projectItems(first: 10) { nodes { id } } } } }" }'
-          RESPONSE=$(curl -X POST -H "Authorization: bearer ${{ steps.app-token.outputs.token }}" -H "Content-Type: application/json" --data "$QUERY_DATA" https://api.github.com/graphql)
+          RESPONSE=$(curl -X POST -H "Authorization: Bearer $GH_PROJECT_TOKEN" -H "Content-Type: application/json" --data "$QUERY_DATA" https://api.github.com/graphql)
 
           if echo $RESPONSE | grep -q "errors"; then
             echo "Error in GraphQL query"
@@ -144,7 +144,7 @@ jobs:
           CLEAR_FIELD_DATA="{\"query\":\"mutation { clearProjectV2ItemFieldValue(input: {projectId: \\\"${{ env.project_v2_id }}\\\", fieldId: \\\"${{ env.field_id }}\\\", itemId: \\\"$ITEM_ID\\\"}) { clientMutationId }}\"}"
           CLEAR_RESPONSE=$(curl --request POST \
             --url https://api.github.com/graphql \
-            --header "Authorization: Bearer ${{ steps.app-token.outputs.token }}" \
+            --header "Authorization: Bearer $GH_PROJECT_TOKEN" \
             --header "Content-Type: application/json" \
             --data "$CLEAR_FIELD_DATA")
 
@@ -153,6 +153,8 @@ jobs:
             echo "Clear Field Response: $CLEAR_RESPONSE"
             exit 1
           fi
+        env:
+          GH_PROJECT_TOKEN: ${{ secrets.GH_TOKEN }}
         if: >-
           ((github.event_name == 'issues' && github.event.issue.state == 'open') ||
           (github.event_name == 'pull_request' && github.event.pull_request.state == 'open')) &&
@@ -289,9 +291,9 @@ jobs:
         id: check-linked-issues
         if: github.event.pull_request.user.login != 'dependabot[bot]'
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**, renovate/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**, renovate/**'
           github-token: ${{ steps.app-token.outputs.token }}
           loose-matching: true
-          skip-linked-issues-check-label: ""
+          skip-linked-issues-check-label: ''
       - name: Get the output
         run: echo "How many linked issues? ${{ steps.check-linked-issues.outputs.linked_issues_count }}"
