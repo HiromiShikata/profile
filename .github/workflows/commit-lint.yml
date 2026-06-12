@@ -50,11 +50,16 @@ jobs:
         id: check-linked-issues
         if: false
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**'
           loose-matching: true
       - name: Install commitlint
         run: |
-          npm install --save-dev @commitlint/{config-conventional,cli}
+          mkdir -p /tmp/commitlint-run
+          cd /tmp/commitlint-run
+          npm init -y
+          npm install --no-audit --no-fund --save-dev @commitlint/cli @commitlint/config-conventional
       - name: Lint commits
+        env:
+          NODE_PATH: /tmp/commitlint-run/node_modules
         run: |
-          npx commitlint --from=origin/main --to=HEAD --config ./.github/workflows/configs/commitlint.config.js
+          /tmp/commitlint-run/node_modules/.bin/commitlint --from=origin/main --to=HEAD --config $GITHUB_WORKSPACE/.github/workflows/configs/commitlint.config.js
