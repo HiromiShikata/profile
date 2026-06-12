@@ -23,10 +23,10 @@ work:
   - company: OSS Project aws-event-mocks (Fork)
     position: Personal Development Security Policy Hardening
     startDate: '2026-05-21'
-    endDate: '2026-05-21'
+    endDate: '2026-05-28'
     summary: npm, security, .npmrc, supply chain attack prevention, fork development
     highlights:
-      - Added .npmrc to the forked repository to enforce npm supply chain attack prevention policy including min-release-age=7 (hold newly published packages for 7 days before allowing install), ignore-scripts=true (disable install-time script execution), save-exact=true, and package-lock=true.
+      - Added .npmrc to multiple self-managed forked repositories to enforce npm supply chain attack prevention policy including min-release-age=7 (hold newly published packages for 7 days before allowing install), ignore-scripts=true (disable install-time script execution), save-exact=true, and package-lock=true.
   - company: OSS Project termux-app (HS Termux)
     position: Personal Android App Customization Development
     startDate: '2026-05-07'
