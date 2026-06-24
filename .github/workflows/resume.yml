@@ -32,7 +32,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v6
         with:
-          node-version: "17"
+          node-version: "20"
       - run: |
           sudo apt-get update
           sudo apt-get install -y \
@@ -53,8 +53,7 @@ jobs:
             fi
             echo "Successfully generated and validated: $pdf_file"
           }
-          export PUPPETEER_ARGS="--no-sandbox --disable-setuid-sandbox"
-          export PUPPETEER_LAUNCH_ARGS="--no-sandbox --disable-setuid-sandbox"
+          export RESUME_PUPPETEER_NO_SANDBOX=true
           export PUPPETEER_EXECUTABLE_PATH="/usr/bin/chromium-browser"
 
           echo "Current directory contents before generation:"
