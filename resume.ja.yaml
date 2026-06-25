@@ -20,7 +20,7 @@ work:
       - issue処理時に使用するClaudeモデルをissueラベル（llm-model:claude-opus-4.6/claude-sonnet-4.6/claude-haiku）で指定できる仕組みをrepositories-managementに実装し、全管理対象リポジトリへ展開しました。
       - クリーンアーキテクチャに基づくTypeScript開発で、344テスト/100%カバレッジを維持しながら機能追加を実施しました。
       - 複数のAIエージェントが並行稼働する自律型開発環境で人手の介在なく開発サイクルを継続させるため、エージェント完了通知受信時のPRへのnext action date自動設定、LLMモデル・ログパス・設定ファイルパスの一元管理、ネットワーク障害時のリトライ強化を実施し、運用基盤の安定性を向上させました。
-      - NotifyFinishedIssuePreparationUseCaseにおいてIssueComment型にauthorフィールドを追加し、allowedIssueAuthors信頼リストとの照合によって、第三者によるFrom: :robot:プレフィックス偽装やAuto Status Check: REJECTED偽装コメントでワークフローステータスを強制操作される脆弱性を修正しました。信頼外authorのコメントは拒否・無視し、allowedIssueAuthors: nullの場合は後方互換として任意authorを受理するよう実装しました。
+      - NotifyFinishedIssuePreparationUseCaseにおいてIssueComment型にauthorフィールドを追加し、allowedIssueAuthors信頼リストとの照合によって、第三者による"From::robot:"プレフィックス偽装や"Auto Status Check REJECTED"偽装コメントでワークフローステータスを強制操作される脆弱性を修正しました。信頼外authorのコメントは拒否・無視し、allowedIssueAuthors=nullの場合は後方互換として任意authorを受理するよう実装しました。
   - company: OSSプロジェクト aws-cdk (フォーク)
     position: 個人開発 供給チェーン強化
     startDate: "2026-06-02"
@@ -35,7 +35,7 @@ work:
     summary: npm, pnpm, セキュリティ, .npmrc, pnpm-workspace.yaml, 供給チェーン攻撃対策, Rust, RUSTSEC, CI, Prettier, fork開発
     highlights:
       - npm/pnpm供給チェーン攻撃（Mini Shai-Hulud wormなどのfast-publish型攻撃）対策として、.npmrcにmin-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを追加し、pnpm向けにpnpm-workspace.yamlのminimumReleaseAge=10080（7日）も追加して防御層を二重化しました。
-      - Rust依存のthin-vec 0.2.14→0.2.18（RUSTSEC-2026-0103: use-after-free / double free）とrand 0.9.2→0.9.4 / 0.8.5→0.8.6（RUSTSEC-2026-0097）を脆弱性修正版へ更新しました。
+      - Rust依存のthin-vec 0.2.14→0.2.18（RUSTSEC-2026-0103、use-after-free / double free）とrand 0.9.2→0.9.4 / 0.8.5→0.8.6（RUSTSEC-2026-0097）を脆弱性修正版へ更新しました。
       - conventional commits強制（commit-lint）・linked issue強制・Prettier整形チェック・PR自動作成の4つのCIワークフローを整備し、フォークリポジトリの品質ゲートを確立しました。
       - リポジトリ全体にPrettier整形を適用し、ドキュメント・設定ファイルの一貫性を担保しました。
   - company: OSSプロジェクト aws-event-mocks (フォーク)

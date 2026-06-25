@@ -20,7 +20,7 @@ work:
       - Implemented llm-model:* label support (claude-opus-4.6/claude-sonnet-4.6/claude-haiku) in repositories-management to allow specifying the Claude model used for issue processing per-issue via labels, rolled out to all managed repositories.
       - Maintained 344 tests with 100% coverage while adding features in Clean Architecture-based TypeScript development.
       - To sustain autonomous development cycles without human intervention in an environment where multiple AI agents run concurrently, implemented automatic next-action-date assignment to PRs upon agent completion notification, centralized management of LLM model, log file path, and config file path, and enhanced retry logic for network failures, improving operational stability.
-      - Fixed a security vulnerability in NotifyFinishedIssuePreparationUseCase by adding an author field to the IssueComment type and verifying it against an allowedIssueAuthors trust list, preventing third parties from manipulating workflow status through spoofed From: :robot: prefix comments or fake Auto Status Check: REJECTED comments. Comments from untrusted authors are rejected or ignored, with backward-compatible behavior when allowedIssueAuthors is null.
+      - Fixed a security vulnerability in NotifyFinishedIssuePreparationUseCase by adding an author field to the IssueComment type and verifying it against an allowedIssueAuthors trust list, preventing third parties from manipulating workflow status through spoofed "From::robot:" prefix comments or fake "Auto Status Check REJECTED" status comments. Comments from untrusted authors are rejected or ignored, with backward-compatible behavior when allowedIssueAuthors is null.
   - company: OSS Project aws-cdk (Fork)
     position: Personal Development Supply Chain Hardening
     startDate: '2026-06-02'
@@ -35,8 +35,8 @@ work:
     summary: npm, pnpm, security, .npmrc, pnpm-workspace.yaml, supply chain attack prevention, Rust, RUSTSEC, CI, Prettier, fork development
     highlights:
       - Added dual-layer npm/pnpm supply chain attack protection against fast-publish attacks (e.g. Mini Shai-Hulud npm worm) by configuring .npmrc with min-release-age=7, ignore-scripts=true, save-exact=true, package-lock=true, and additionally setting minimumReleaseAge=10080 (7 days) in pnpm-workspace.yaml for pnpm.
-      - Updated vulnerable Rust dependencies: thin-vec 0.2.14 to 0.2.18 (RUSTSEC-2026-0103: use-after-free / double free) and rand 0.9.2 to 0.9.4 / 0.8.5 to 0.8.6 (RUSTSEC-2026-0097).
-      - Established PR quality gates for the fork repository by setting up four CI workflows: conventional commits enforcement (commit-lint), linked issue requirement, Prettier formatting check, and automatic PR creation.
+      - Updated vulnerable Rust dependencies — thin-vec 0.2.14 to 0.2.18 (RUSTSEC-2026-0103, use-after-free / double free) and rand 0.9.2 to 0.9.4 / 0.8.5 to 0.8.6 (RUSTSEC-2026-0097).
+      - Established PR quality gates for the fork repository by setting up four CI workflows — conventional commits enforcement (commit-lint), linked issue requirement, Prettier formatting check, and automatic PR creation.
       - Applied Prettier formatting across the entire repository to ensure consistent document and configuration file style.
   - company: OSS Project aws-event-mocks (Fork)
     position: Personal Development Security Policy Hardening
