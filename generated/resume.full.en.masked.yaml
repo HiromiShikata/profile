@@ -451,6 +451,103 @@ work:
         query with a single CTE, adding pagination to an unbounded data-fetch
         API endpoint, and diagnosing and fixing the root cause of high error
         rates in asynchronous video conversion processing.
+      - >-
+        Built the skill-level course feature progressively from the Use Case
+        layer through the UI layer under Clean Architecture, implementing Skill
+        / SkillLevelContent / SkillFulfillmentRequirement / SkillCustomStep /
+        SkillApprover / SkillExpiryRule use cases and adapter interfaces, then
+        shipping REST endpoints, TanStack Query hooks, Presentational UI
+        components, Storybook stories, and E2E skeletons layer by layer to
+        enable parallel development.
+      - Wired the CourseMessage feature into production incrementally: >-
+          REST routes, TanStack Query hooks, comment-tab UI on the course
+          consumption screen and admin activity modal, and an E2E scenario gated
+          on the ENABLE_COURSE_MESSAGE feature flag, migrating the
+          implementation off the legacy ItemComment endpoint.
+      - >-
+        Extended global search to include training courses and assessments.
+        Redefined the searchable_contents PostgreSQL view with DISTINCT ON to
+        fix a bug where an unpublished draft hid the published version from
+        search results, and removed the frontend client-side merge workaround to
+        make the view the sole source of truth.
+      - >-
+        Built the PWA Add-to-Home-Screen experience for both iOS and Android,
+        split the Android-specific feature flag
+        (Enable776AndroidAddToHomeScreen) out of the general PWA flag
+        (Enable393Pwa), removed the legacy PWA install page (E_LEARNING-862),
+        and resolved an iOS WKWebView landscape-fullscreen tap-area misalignment
+        caused by the translate CSS transform (E_LEARNING-859) by switching to
+        an inset-0 + flex layout.
+      - >-
+        Flipped the translation status display feature to default-ON in
+        production by changing the ENABLE_753_SHOW_TRANSLATION_STATUS default to
+        true and removing the WIP toggle steps in E2E, so the completed feature
+        is tested under the same conditions as production.
+      - Restored compatibility around the Remotion video rendering pipeline migration: >-
+          fixed useItemVideoRenderingStatus to poll the new
+          REMOTION_HLS_MANIFEST path, added a Japanese MP4 fallback for legacy
+          items without HLS, and introduced a 60-second VTT upload grace period
+          (VTT_UPLOAD_GRACE_PERIOD_MS) to bridge the S3-to-Lambda timing gap,
+          eliminating the "converting..." display freeze.
+      - >-
+        Added an E2E regression guard for the subtitle translation pipeline by
+        creating a scenario that uploads ja.vtt with languages.json absent and
+        waits for translation-status isComplete=true, ensuring the
+        throw-on-missing pattern cannot reappear without automated detection.
+      - >-
+        Closed an unauthenticated WebSocket connection vulnerability in the
+        ffmpeg-normalizer API by adding a Lambda Authorizer (REQUEST type) on
+        the $connect route that validates Cognito ID Tokens, and updated the
+        frontend to pass the token via the ?token= query parameter.
+      - >-
+        Made Cognito user provisioning idempotent and eliminated a class of
+        flaky E2E login failures by adding a setPasswordWithVerification helper
+        that resyncs passwords on the AdminGetUser-exists path, and also
+        addressing Cognito-Disabled user re-enable and UI-created-user API
+        resync edge cases.
+      - >-
+        Removed the 100-user pagination cap on the privileged access user list
+        (E_LEARNING-868) by making Prisma's take parameter optional and adding a
+        getAllUsers use case, so admin screens viewing users across all offices
+        no longer truncate beyond 100 records.
+      - Hardened IAM role quota management for Amplify review environments: >-
+          tightened the cleanup cron from hourly to every 15 minutes, added a
+          PR-close pull_request_target trigger to bypass GitHub Actions
+          scheduled-cron drift (observed at 30-93 minutes), and prevented
+          cancel-in-progress from overwriting in-flight cleanup runs, reducing
+          deployment failures caused by the 1000/1000 IAM role quota exhausting.
+      - >-
+        Fixed the migration runner overwriting manually-set DB feature flag
+        values on sync by reworking the sync logic to preserve current DB values
+        and apply only the diff from the flag definition catalog.
+      - Raised operational stability for concurrent multi-agent development: >-
+          rewrote the worktree-isolation logic in pre-commit-for-ai.sh to fix a
+          bug where core.hooksPath invocations leaked the main repo's diff into
+          the worktree's index (using absolute GIT_DIR / GIT_WORK_TREE pinning),
+          scoped pre-commit checks to changed files to prevent shared PostgreSQL
+          exhaustion, and added a regression test for worktree auto-stage
+          behavior.
+      - >-
+        Baked Google Chrome and the Playwright bundled FFMPEG into the
+        self-hosted CodeBuild runner Docker image, eliminating the runtime
+        download hang that caused 35-minute job timeouts and made entire E2E
+        batches skip.
+      - Overhauled deterministic-wait helpers for global search and other long-disabled E2E suites: >-
+          added an API-only readiness gate (3 consecutive successes) and a
+          stale-empty-cache re-query mechanism, then re-enabled Assessment
+          result user tag filter, own-tenant-passkey-password-change,
+          own-tenant-hls-subtitle-tab-without-captions, subtitle-cache,
+          nps-tenant, and MosaicTrackingWorker E2E tests after fixing their
+          individual root causes.
+      - Cleaned up residual UI state and display inconsistencies in the manual list: >-
+          fixed checkboxes staying selected after content move/delete, the
+          delete-modal color mismatch (E_LEARNING-824), the list not refreshing
+          after partial-failure bulk delete, and the course detail side panel
+          showing a dash for the course owner. Also added sessionStorage
+          persistence for list-screen page size (E_LEARNING-856).
+      - >-
+        Updated the billing-export table name referenced by the GCP daily cost
+        report, keeping the internal cost monitoring chain unbroken.
   - company: OSS Development (Personal Projects)
     position: Developer & Maintainer
     startDate: '2024-05-28'

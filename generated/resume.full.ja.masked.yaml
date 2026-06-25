@@ -260,6 +260,76 @@ work:
       - >-
         再帰 N+1 クエリを単一 CTE に置換し、無制限データ取得 API
         にページネーションを追加し、動画変換処理の高エラー率の根本原因を特定・修正することで、バックエンドの性能と安定性を向上させました。
+      - >-
+        スキルレベル形式コース機能を Clean Architecture に沿って Skill / SkillLevelContent /
+        SkillFulfillmentRequirement / SkillCustomStep / SkillApprover /
+        SkillExpiryRule のユースケースとアダプタ I/F から実装し、REST エンドポイント・TanStack Query
+        Hooks・Presentational UI コンポーネント・Storybook ストーリー・E2E
+        スケルトンとレイヤーごとに段階的に構築して並行開発を可能にしました。
+      - >-
+        CourseMessage の REST ルート・TanStack Query Hooks・コース受講画面と管理画面活動モーダルの
+        UI・ENABLE_COURSE_MESSAGE フィーチャーフラグ付き E2E シナリオを順次実装し、コースへのコメント機能をレガシーの
+        ItemComment ベースからコース専用実装へ移行して本番接続しました。
+      - >-
+        グローバル検索を研修コース・理解度テストまで含むよう拡張しました。searchable_contents PostgreSQL ビューを
+        DISTINCT ON
+        で再定義して下書き保存中の最新バージョンが公開済みバージョンを検索結果から隠す不具合を解消し、フロントエンドのクライアントマージ回避策を撤去してビューを唯一の
+        source of truth に戻しました。
+      - >-
+        iOS と Android 双方の PWA ホーム画面追加ダイアログを実装し、Android 専用フィーチャーフラグを汎用 PWA
+        フラグから分離しました。旧 PWA インストールページの撤去（E_LEARNING-862）・URL はみ出し修正・iOS WKWebView
+        の translate 変換に起因する横向き全画面再生のタップ領域ズレ（E_LEARNING-859）を inset-0 + flex
+        構成への変更で解消する修正も併せて実施しました。
+      - >-
+        翻訳ステータス表示機能（ENABLE_753_SHOW_TRANSLATION_STATUS）を本番デフォルト ON に変更し、E2E の
+        WIP トグル処理を削除して開発完了済み機能を本番と同条件でテストできる体制に整えました。
+      - >-
+        動画レンダリングパイプライン（Remotion 移行）の前後互換性を回復しました。useItemVideoRenderingStatus
+        を新パイプラインの REMOTION_HLS_MANIFEST パスポーリングへ修正し、旧データへの日本語 MP4 フォールバックと VTT
+        アップロード後 60 秒の Grace Period を追加して「変換中...」表示が永続化する問題群を解消しました。
+      - >-
+        字幕翻訳パイプラインの回帰を E2E で自動検知できるようにしました。processing bucket から languages.json
+        が欠落した状態で translation-status isComplete=true を待つ専用シナリオを追加し、過去に staging
+        で発生した throw-on-missing パターンの再混入をリグレッションテストで自動検知する仕組みを構築しました。
+      - >-
+        ffmpeg-normalizer WebSocket API の $connect ルートに Cognito ID Token を検証する
+        Lambda Authorizer（REQUEST type）を追加し、フロントエンドから ID Token を
+        `?token=<token>` クエリパラメータで付与するよう改修して未認証 WebSocket 接続を遮断しました。
+      - >-
+        Cognito ユーザープロビジョニングの冪等性を担保し E2E のフレーキーログイン失敗を根絶しました。AdminGetUser
+        存在確認時にパスワードを再同期する setPasswordWithVerification ヘルパーを追加し、Disabled
+        ユーザーの再有効化と UI 経由作成後の API リシンクの構造的欠陥も修正しました。
+      - >-
+        特権アクセスユーザー一覧の 100 件ページング上限を撤廃しました（E_LEARNING-868）。Prisma の take
+        パラメータをオプショナル化し getAllUsers ユースケースを追加して、isIncludeAllOffice=true
+        の管理者画面で全ユーザーを参照可能にしました。
+      - >-
+        Amplify レビュー環境の IAM ロールクォータ管理を強化しました。cleanup cron を毎時から 15
+        分ごとに短縮し、GitHub Actions scheduled run drift（実測 30〜93 分遅延）への対策として PR close
+        時の pull_request_target 直接トリガーを追加して cancel-in-progress
+        による上書きも防止し、1000/1000 クォータ枯渇によるデプロイ失敗を抑制しました。
+      - >-
+        マイグレーションランナーがフィーチャーフラグ同期時に DB
+        の手動設定値を上書きする不具合を修正し、フラグ定義カタログの差分のみを反映するロジックへ改修しました。
+      - >-
+        AI エージェント並行多人数開発の運用安定性を底上げしました。core.hooksPath 経由で起動された
+        pre-commit-for-ai.sh が本流リポジトリの diff を worktree のインデックスへ混入させる不具合を GIT_DIR
+        / GIT_WORK_TREE の絶対パス pin と git rev-parse --show-toplevel
+        ベースの解決で根本解消し、共有 PostgreSQL を枯渇させていたフルテスト実行を変更ファイルスコープへ絞り込み、auto-stage
+        動作の回帰テストも追加しました。
+      - >-
+        セルフホスト CodeBuild ランナーの Docker イメージに Google Chrome と Playwright バンドル
+        FFMPEG を焼き込み、ランタイム DL ハング起因の 35 分タイムアウトによる E2E 一斉スキップを解消する基盤を整備しました。
+      - >-
+        グローバル検索系を中心に長らく無効化されていた E2E テスト群を決定的待機ヘルパーの刷新によって順次再有効化しました。API-only
+        readiness ゲート（3 回連続成功待機）と空キャッシュ再クエリを導入し、Assessment result /
+        passkey-password-change / subtitle-cache / nps-tenant 等の個別根本原因（stale
+        React Query キャッシュ・real timer 競合等）を特定・修正して復元しました。
+      - >-
+        マニュアル一覧 UI
+        の操作残留状態と表示不整合を解消しました。コンテンツ移動・削除後のチェックボックス選択残留、削除モーダルのカラー不整合（E_LEARNING-824）、部分失敗時の一覧未更新、コース詳細サイドパネルのオーナー情報「-」表示を修正し、ページサイズの
+        sessionStorage 永続化（E_LEARNING-856）も追加しました。
+      - GCP 日次コストレポートが参照する billing export テーブル名を最新フォーマットへ追従し、社内コスト監視の継続性を担保しました。
   - company: AI営業SaaSスタートアップ シリーズA
     position: フルリモート 技術顧問
     startDate: '2025-04-22'
