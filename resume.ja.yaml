@@ -20,6 +20,24 @@ work:
       - issue処理時に使用するClaudeモデルをissueラベル（llm-model:claude-opus-4.6/claude-sonnet-4.6/claude-haiku）で指定できる仕組みをrepositories-managementに実装し、全管理対象リポジトリへ展開しました。
       - クリーンアーキテクチャに基づくTypeScript開発で、344テスト/100%カバレッジを維持しながら機能追加を実施しました。
       - 複数のAIエージェントが並行稼働する自律型開発環境で人手の介在なく開発サイクルを継続させるため、エージェント完了通知受信時のPRへのnext action date自動設定、LLMモデル・ログパス・設定ファイルパスの一元管理、ネットワーク障害時のリトライ強化を実施し、運用基盤の安定性を向上させました。
+      - NotifyFinishedIssuePreparationUseCaseにおいてIssueComment型にauthorフィールドを追加し、allowedIssueAuthors信頼リストとの照合によって、第三者によるFrom: :robot:プレフィックス偽装やAuto Status Check: REJECTED偽装コメントでワークフローステータスを強制操作される脆弱性を修正しました。信頼外authorのコメントは拒否・無視し、allowedIssueAuthors: nullの場合は後方互換として任意authorを受理するよう実装しました。
+  - company: OSSプロジェクト aws-cdk (フォーク)
+    position: 個人開発 供給チェーン強化
+    startDate: "2026-06-02"
+    endDate: "2026-06-02"
+    summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, yarn workspaces, fork開発
+    highlights:
+      - AWS CDKフォークにnpm供給チェーン攻撃対策として.npmrcのmin-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを追加しました。yarn workspaces monorepoとしてルート.npmrcを全パッケージに波及させつつ、Yarn Classicは.yarnrc.ymlのnpmMinimalAgeGateを読まないため意図的に省略しました。
+  - company: OSSプロジェクト simlin (フォーク)
+    position: 個人開発 供給チェーン強化・Rust脆弱性修正
+    startDate: "2026-05-28"
+    endDate: "2026-05-28"
+    summary: npm, pnpm, セキュリティ, .npmrc, pnpm-workspace.yaml, 供給チェーン攻撃対策, Rust, RUSTSEC, CI, Prettier, fork開発
+    highlights:
+      - npm/pnpm供給チェーン攻撃（Mini Shai-Hulud wormなどのfast-publish型攻撃）対策として、.npmrcにmin-release-age=7・ignore-scripts=true・save-exact=true・package-lock=trueを追加し、pnpm向けにpnpm-workspace.yamlのminimumReleaseAge=10080（7日）も追加して防御層を二重化しました。
+      - Rust依存のthin-vec 0.2.14→0.2.18（RUSTSEC-2026-0103: use-after-free / double free）とrand 0.9.2→0.9.4 / 0.8.5→0.8.6（RUSTSEC-2026-0097）を脆弱性修正版へ更新しました。
+      - conventional commits強制（commit-lint）・linked issue強制・Prettier整形チェック・PR自動作成の4つのCIワークフローを整備し、フォークリポジトリの品質ゲートを確立しました。
+      - リポジトリ全体にPrettier整形を適用し、ドキュメント・設定ファイルの一貫性を担保しました。
   - company: OSSプロジェクト aws-event-mocks (フォーク)
     position: 個人開発 セキュリティポリシー強化
     startDate: "2026-05-21"
@@ -30,14 +48,15 @@ work:
   - company: OSSプロジェクト termux-app (HS Termux)
     position: 個人開発 Androidアプリカスタマイズ開発
     startDate: "2026-05-07"
-    endDate: "2026-05-15"
-    summary: Android, Java, GitHub Actions, CI/CD, APK, Termux, fork開発
+    endDate: "2026-05-31"
+    summary: Android, Java, SharedPreferences, GitHub Actions, CI/CD, APK, Termux, fork開発
     highlights:
       - OSSのAndroid端末エミュレータ「Termux」をフォークしてカスタムアプリ「HS Termux」を開発しました。公式アプリとの共存インストールを実現するAndroidアプリID変更、独自アプリ名への改名、インストール障害の修正対応を行いました。
       - GitHub Actionsを活用したCI/CDパイプライン構築を行いました。全ブランチpush時にAPKを自動ビルドしてGitHub Artifactsへ保存し、PRの説明文へダウンロードリンクを自動掲載する開発効率化フローを実装しました。
       - CI PR説明文に出力するAPKダウンロードリンクをヘッダー+個別リンクの複数行形式から単一リストアイテム形式に簡略化し、PR説明文の可読性を向上させました。
       - Android UIのJava実装として、ターミナルセッションパネルの+ボタン押下時にURL・ショートネーム入力モーダルを表示するダイアログをTextInputDialogUtils.java（52行）として新規実装しました。
       - Android 15（API 35）でGoogleが施行したdataSync前景サービスの6時間/日実行制限に対応するため、TermuxServiceとRunCommandServiceのforegroundServiceTypeをdataSync→specialUseに変更し、AndroidManifest.xmlへ特殊用途サービス宣言（PROPERTY_SPECIAL_USE_FGS_SUBTYPE）を追加することで、ターミナルセッションの長時間継続稼働を保証しました。
+      - サイドパネル下部にAutoSSH Configボタンを設け、{url}・{name}プレースホルダ付きコマンドテンプレートをSharedPreferencesに永続化する設定画面を追加しました。+ボタンタップ時に入力したissue URLとショートネームをPOSIXシェルクオート（シングルクォート+'\''+エスケープ）してテンプレートに差し込み、bash -cで新規namedセッションを起動するフローをTermuxTerminalSessionActivityClient#addNewAutosshSession()として実装し、コマンドインジェクション耐性を確保しました。
   - company: 大手メーカーソフトウェア開発プロジェクト向けプロダクトグローバルチーム
     position: フルリモート バックエンドエンジニア
     startDate: "2025-05-12"
