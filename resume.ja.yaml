@@ -23,10 +23,10 @@ work:
   - company: OSSプロジェクト aws-event-mocks (フォーク)
     position: 個人開発 セキュリティポリシー強化
     startDate: "2026-05-21"
-    endDate: "2026-05-21"
+    endDate: "2026-05-28"
     summary: npm, セキュリティ, .npmrc, 供給チェーン攻撃対策, fork開発
     highlights:
-      - npm供給チェーン攻撃（typosquatting・パッケージ乗っ取り等）対策として.npmrcを追加し、min-release-age=7（新規公開パッケージを7日間待機してからインストール可能）・ignore-scripts=true（インストール時スクリプト実行禁止）・save-exact=true・package-lock=trueを設定しフォークリポジトリのセキュリティポリシーを強化しました。
+      - npm供給チェーン攻撃（typosquatting・パッケージ乗っ取り等）対策として.npmrcを追加し、min-release-age=7（新規公開パッケージを7日間待機してからインストール可能）・ignore-scripts=true（インストール時スクリプト実行禁止）・save-exact=true・package-lock=trueを設定し複数の自己管理フォークリポジトリのセキュリティポリシーを強化しました。
   - company: OSSプロジェクト termux-app (HS Termux)
     position: 個人開発 Androidアプリカスタマイズ開発
     startDate: "2026-05-07"
