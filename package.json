@@ -37,7 +37,7 @@
     "jsonresume-theme-paperalt": "^0.2.5",
     "lodash": "^4.17.15",
     "mustache": "^4.0.1",
-    "npm": "^11.1.0",
+    "npm": "^12.0.1",
     "prettier": "^3.0.0",
     "resume-cli": "x.x.x",
     "commit-and-tag-version": "^9.0.0",
