@@ -13,7 +13,7 @@ env:
 
 concurrency:
   group: resume-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 jobs:
   generate:
     runs-on: ubuntu-latest
