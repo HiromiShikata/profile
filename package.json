@@ -37,12 +37,25 @@
     "jsonresume-theme-paperalt": "^0.2.5",
     "lodash": "^4.17.15",
     "mustache": "^4.0.1",
-    "npm": "^11.17.0",
     "prettier": "^3.0.0",
-    "resume-cli": "x.x.x",
+    "resume-cli": "^3.7.2",
     "commit-and-tag-version": "^13.0.0",
     "underscore.string": "^3.3.5",
     "yamljs": "^0.3.0"
+  },
+  "overrides": {
+    "axios": ">=1.8.2",
+    "brace-expansion": ">=1.1.18",
+    "dset": ">=3.1.4",
+    "ip-address": ">=10.3.1",
+    "micromatch": ">=4.0.8",
+    "pug": ">=3.0.3",
+    "pug-code-gen": ">=3.0.3",
+    "send": "^0.19.2",
+    "serve-static": "^1.16.1",
+    "socket.io-parser": "^4.2.7",
+    "tar": "^7.5.22",
+    "underscore": "^1.13.8"
   },
   "dependencies": {
     "ansi-styles": "^6.1.0",
