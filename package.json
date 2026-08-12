@@ -7,7 +7,7 @@
     "format:json": "prettier --parser json --write ./**/*.json ./*.json",
     "format:yml": "prettier --parser yaml --write ./**/*.yml # ./*.yml",
     "format:md": "prettier --parser markdown --write ./**/*.md",
-    "format:js": "prettier --write ./**/*.js",
+    "format:js": "prettier --write './**/*.js'",
     "format": "npm run format:json && npm run format:yml && npm run format:md && npm run format:js",
     "generate:pdf": "npm run generate:file --output_dir=${npm_config_output_dir} --file=${npm_config_file} --output_format=pdf",
     "generate:html": "npm run generate:file --output_dir=${npm_config_output_dir} --file=${npm_config_file} --output_format=html",
