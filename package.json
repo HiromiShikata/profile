@@ -52,6 +52,7 @@
     "markdown-it": ">=14.1.2",
     "micromatch": ">=4.0.8",
     "pug": ">=3.0.3",
+    "puppeteer": ">=25.0.0",
     "pug-code-gen": ">=3.0.3",
     "send": "^0.19.2",
     "serve-static": "^1.16.1",
