@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   commit-lint:
-    runs-on: ${{ github.event.repository.private && 'blacksmith-2vcpu-ubuntu-2204' || 'ubuntu-latest' }}
+    runs-on: ubuntu-latest
     permissions:
       issues: read
       pull-requests: write
@@ -50,7 +50,7 @@ jobs:
         id: check-linked-issues
         if: false
         with:
-          exclude-branches: "release/**, dependabot/**, project-common/**"
+          exclude-branches: 'release/**, dependabot/**, project-common/**'
           loose-matching: true
       - name: Check PR title follows conventional commit format
         uses: amannn/action-semantic-pull-request@v6
