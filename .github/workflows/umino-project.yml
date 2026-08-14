@@ -310,9 +310,9 @@ jobs:
           github.event.pull_request.user.login != 'dependabot[bot]' &&
           github.event.pull_request.user.login != 'app/dependabot'
         with:
-          exclude-branches: 'release/**, dependabot/**, dependabot-**, project-common/**, renovate/**'
+          exclude-branches: "release/**, dependabot/**, dependabot-**, project-common/**, renovate/**"
           github-token: ${{ steps.app-token.outputs.token }}
           loose-matching: true
-          skip-linked-issues-check-label: ''
+          skip-linked-issues-check-label: ""
       - name: Get the output
         run: echo "How many linked issues? ${{ steps.check-linked-issues.outputs.linked_issues_count }}"
