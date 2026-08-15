@@ -55,7 +55,7 @@
     "pug-code-gen": ">=3.0.3",
     "puppeteer": ">=25.0.0",
     "send": "^0.19.2",
-    "serve-static": "^1.16.1",
+    "serve-static": "^2.0.0",
     "socket.io-parser": "^4.2.7",
     "tar": "^7.5.22",
     "underscore": "^1.13.8"
