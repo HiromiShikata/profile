@@ -17,7 +17,7 @@
     "generate:ja": "deepmerge-yaml resume.base.yaml resume.ja.yaml > generated/resume.full.ja.yaml && npm run generate:resume --file=resume.full.ja",
     "generate:short:file": "mkdir -p generated/resume && ./node_modules/resume-cli/build/main.js export -r ${npm_config_file}.yaml generated/resume/HiromiShikata.${npm_config_file}.${npm_config_output_format} --format ${npm_config_output_format} --theme paperalt",
     "generate:short:ja": "npm run generate:short:file --file=resume.short.ja --output_format=html && npm run generate:short:file --file=resume.short.ja --output_format=pdf",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
@@ -47,6 +47,7 @@
     "axios": ">=1.8.2",
     "brace-expansion": ">=1.1.18",
     "dset": ">=3.1.4",
+    "handlebars": ">=4.7.10",
     "immutable": ">=5.0.0",
     "ip-address": ">=10.3.1",
     "markdown-it": ">=14.1.2",
