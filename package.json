@@ -45,7 +45,7 @@
   },
   "overrides": {
     "axios": ">=1.8.2",
-    "brace-expansion": ">=1.1.18",
+    "brace-expansion": ">=5.0.11",
     "dset": ">=3.1.4",
     "handlebars": ">=4.7.10",
     "immutable": ">=5.0.0",
@@ -59,7 +59,8 @@
     "serve-static": "^1.16.1",
     "socket.io-parser": "^4.2.7",
     "tar": "^7.5.22",
-    "underscore": "^1.13.8"
+    "underscore": "^1.13.8",
+    "undici": "^7.29.1"
   },
   "dependencies": {
     "ansi-styles": "^7.0.0",
