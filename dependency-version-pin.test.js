@@ -3,8 +3,8 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const MINIMUM_PATCHED_MARKED_VERSION = "18.0.14";
-const MINIMUM_PATCHED_PRETTIER_VERSION = "3.9.9";
+const MINIMUM_PATCHED_MARKED_VERSION = "18.1.0";
+const MINIMUM_PATCHED_PRETTIER_VERSION = "3.9.10";
 
 const isSemverGreaterThanOrEqual = (actualVersion, minimumVersion) => {
   const actualParts = actualVersion.split(".").map(Number);
@@ -35,7 +35,7 @@ const findInstalledPackageEntries = (packageLockJson, packageName) => {
   );
 };
 
-test("every installed marked package entry in package-lock.json resolves to at least 18.0.14", () => {
+test("every installed marked package entry in package-lock.json resolves to at least 18.1.0", () => {
   const packageLockPath = path.join(__dirname, "package-lock.json");
   const packageLockJson = JSON.parse(fs.readFileSync(packageLockPath, "utf8"));
 
@@ -60,7 +60,7 @@ test("every installed marked package entry in package-lock.json resolves to at l
   }
 });
 
-test("every installed prettier package entry in package-lock.json resolves to at least 3.9.9", () => {
+test("every installed prettier package entry in package-lock.json resolves to at least 3.9.10", () => {
   const packageLockPath = path.join(__dirname, "package-lock.json");
   const packageLockJson = JSON.parse(fs.readFileSync(packageLockPath, "utf8"));
 
