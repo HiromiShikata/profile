@@ -3,7 +3,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const MINIMUM_PATCHED_UNDICI_VERSION = "7.29.1";
+const MINIMUM_PATCHED_UNDICI_VERSION = "7.30.1";
 
 const isSemverGreaterThanOrEqual = (actualVersion, minimumVersion) => {
   const actualParts = actualVersion.split(".").map(Number);
@@ -34,7 +34,7 @@ const findInstalledUndiciPackageEntries = (packageLockJson) => {
   );
 };
 
-test("every installed undici package entry in package-lock.json is patched against GHSA-w293-vg96-wgc3 (version >= 7.29.1)", () => {
+test("every installed undici package entry in package-lock.json is patched against GHSA-w293-vg96-wgc3, GHSA-2m5v-pch6-74hx, GHSA-4w7w-5xrc-9h26, GHSA-qrxm-fqhp-jwvm and GHSA-xjj6-f33q-929c (version >= 7.30.1)", () => {
   const packageLockPath = path.join(__dirname, "package-lock.json");
   const packageLockJson = JSON.parse(fs.readFileSync(packageLockPath, "utf8"));
 
@@ -52,7 +52,7 @@ test("every installed undici package entry in package-lock.json is patched again
         packageValue.version,
         MINIMUM_PATCHED_UNDICI_VERSION,
       ),
-      `${packagePath} resolves to undici@${packageValue.version}, which is below the patched version ${MINIMUM_PATCHED_UNDICI_VERSION} required by GHSA-w293-vg96-wgc3`,
+      `${packagePath} resolves to undici@${packageValue.version}, which is below the patched version ${MINIMUM_PATCHED_UNDICI_VERSION} required by GHSA-w293-vg96-wgc3, GHSA-2m5v-pch6-74hx, GHSA-4w7w-5xrc-9h26, GHSA-qrxm-fqhp-jwvm and GHSA-xjj6-f33q-929c`,
     );
   }
 });

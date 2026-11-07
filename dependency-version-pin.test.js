@@ -84,3 +84,47 @@ test("every installed prettier package entry in package-lock.json resolves to at
     );
   }
 });
+
+test("every installed follow-redirects package entry in package-lock.json resolves to at least 1.16.2", () => {
+  const packageLockPath = path.join(__dirname, "package-lock.json");
+  const packageLockJson = JSON.parse(fs.readFileSync(packageLockPath, "utf8"));
+
+  const installedFollowRedirectsEntries = findInstalledPackageEntries(
+    packageLockJson,
+    "follow-redirects",
+  );
+
+  assert.ok(
+    installedFollowRedirectsEntries.length > 0,
+    "expected to find at least one installed follow-redirects package entry in package-lock.json, found none",
+  );
+
+  for (const [packagePath, packageValue] of installedFollowRedirectsEntries) {
+    assert.ok(
+      isSemverGreaterThanOrEqual(packageValue.version, "1.16.2"),
+      `${packagePath} resolves to follow-redirects@${packageValue.version}, which is below the patched version 1.16.2 required by GHSA-mrwp-f3q8-3g9p`,
+    );
+  }
+});
+
+test("every installed markdown-it package entry in package-lock.json resolves to at least 15.0.3", () => {
+  const packageLockPath = path.join(__dirname, "package-lock.json");
+  const packageLockJson = JSON.parse(fs.readFileSync(packageLockPath, "utf8"));
+
+  const installedMarkdownItEntries = findInstalledPackageEntries(
+    packageLockJson,
+    "markdown-it",
+  );
+
+  assert.ok(
+    installedMarkdownItEntries.length > 0,
+    "expected to find at least one installed markdown-it package entry in package-lock.json, found none",
+  );
+
+  for (const [packagePath, packageValue] of installedMarkdownItEntries) {
+    assert.ok(
+      isSemverGreaterThanOrEqual(packageValue.version, "15.0.3"),
+      `${packagePath} resolves to markdown-it@${packageValue.version}, which is below the patched version 15.0.3 required by GHSA-gfr2-rv44-r23c`,
+    );
+  }
+});
