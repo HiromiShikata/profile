@@ -8,8 +8,6 @@ on:
 
 env:
   RELEASE_APP_ID: 795363
-  RELEASE_APP_PRIVATE_KEY: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
-  PJ_GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
 concurrency:
   group: resume-${{ github.ref }}
@@ -19,20 +17,20 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor != 'dependabot[bot]' && github.actor != 'renovate[bot]' && !startsWith(github.head_ref, 'dependabot/') && !startsWith(github.head_ref, 'renovate/')
     steps:
-      - uses: step-security/harden-runner@v2
+      - uses: step-security/harden-runner@1d88384fd173af6ecb012dfd0264a306b711241a # v2
         with:
           egress-policy: audit
-      - if: ${{ env.RELEASE_APP_PRIVATE_KEY != '' }}
-        uses: actions/create-github-app-token@v3
+      - if: github.event_name != 'pull_request'
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3
         id: app-token
         with:
           app-id: ${{ env.RELEASE_APP_ID }}
-          private-key: ${{ env.RELEASE_APP_PRIVATE_KEY }}
-      - uses: actions/checkout@v7
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           token: ${{ steps.app-token.outputs.token || github.token }}
           fetch-depth: 0
-      - uses: actions/setup-node@v7
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
         with:
           node-version: "20"
       - run: |
@@ -79,7 +77,7 @@ jobs:
           check_pdf_generation "generated/resume/HiromiShikata.resume.short.ja.pdf"
 
           curl -sL "https://uploads.toptal.io/profile_photo/image/user/2891861/default_60a7a04cf286e45ce38131d735eb4e98.jpg" -o .render-jpcv/photo.jpg
-          npx render-jpcv build rirekisho.yaml
+          npx render-jpcv@1.0.5 build rirekisho.yaml
           mv rirekisho.pdf generated/resume/HiromiShikata.rirekisho.pdf
           check_pdf_generation "generated/resume/HiromiShikata.rirekisho.pdf"
 
