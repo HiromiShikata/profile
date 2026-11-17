@@ -100,6 +100,66 @@ skills:
       - Slack
       - Old, legacy environments
 work:
+  - company: SaaS Company, Subsidiary of a Listed Company
+    position: Full-remote Full-stack Engineer, 3 days a week
+    startDate: '2026-08-04'
+    endDate: Present
+    summary: >-
+      TypeScript, Next.js, React, NestJS, Prisma, PostgreSQL, Google Cloud,
+      Terraform, Playwright, Storybook, Vitest, GitHub Actions
+    highlights:
+      - >-
+        Working three days a week, merged about 1,500 pull requests in the 105
+        days after joining in August 2026, about 45 working days. That is about
+        33 per working day, while handling feature development, infrastructure
+        and quality assurance for two products in parallel.
+      - >-
+        Designed and implemented a mechanism that, when an email to a customer
+        stays unanswered as time passes, automatically notifies the person in
+        charge and then their manager, and notifies again about anything still
+        unresolved after one week, so that missed replies are prevented. It
+        avoids duplicate notifications, guarantees delivery and counts elapsed
+        time over business hours only.
+      - >-
+        Built two verification environments separated from production with
+        Terraform, so that changes can be verified without affecting production
+        users, and strengthened authentication defenses.
+  - company: Logistics SaaS Startup, Series C
+    position: Full-remote Infrastructure, Backend and Frontend Engineer
+    startDate: '2025-04-22'
+    endDate: Present
+    summary: >-
+      TypeScript, React, Prisma, PostgreSQL, AWS, Playwright, Vitest, GitHub
+      Actions
+    highlights:
+      - >-
+        In January to March 2026, after moving to AI-agent-centered development,
+        merged about 1,250 pull requests while working two to three days a week.
+        That is about 14 per calendar day, or about 32 per working day at three
+        days a week.
+  - company: Medical Expert Matching Service Company
+    position: Full-remote Full-stack and Infrastructure Engineer, 3 days a week
+    startDate: '2026-04-19'
+    endDate: Present
+    summary: >-
+      Python, Django, React, TypeScript, PostgreSQL, AWS, Terraform, Docker,
+      Playwright, GitHub Actions
+    highlights:
+      - >-
+        Working three days a week, merged about 660 pull requests in about seven
+        months after joining in April 2026, about 91 working days. That is about
+        7 per working day.
+      - >-
+        Cut document PDF generation from over 20 seconds to 2 to 3 seconds per
+        document, about one tenth, and resolved concurrent generation that took
+        over 60 seconds and exceeded the 30-second timeout, by moving font
+        processing to container image build time.
+      - >-
+        Made passing all 26 backend test targets mandatory in the pre-deployment
+        quality gate, reducing the risk of defects reaching production.
+      - >-
+        Strengthened the encryption of external service integrations and
+        optimized cloud costs, both without stopping the service.
   - company: OSS Project npm-cli-gh-issue-preparator
     position: Personal TypeScript CLI Tool Development
     startDate: '2025-12-14'
